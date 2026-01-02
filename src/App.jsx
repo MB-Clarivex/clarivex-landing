@@ -11,6 +11,7 @@ import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 import PrivacyPolicy from '@/components/PrivacyPolicy';
 import TermsOfService from '@/components/TermsOfService';
+import DataDeletion from '@/components/DataDeletion';
 import { Toaster } from '@/components/ui/toaster';
 
 // Landing page component
@@ -57,6 +58,7 @@ function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/privatumas" element={<PrivacyPolicy />} />
       <Route path="/salygos" element={<TermsOfService />} />
+      <Route path="/duomenu-istrynimas" element={<DataDeletion />} />
     </Routes>
   );
 }
