@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import ScrollToTop from '@/components/ScrollToTop';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -56,6 +57,8 @@ function LandingPage() {
 
 function App() {
   return (
+    <>
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/privatumas" element={<PrivacyPolicy />} />
@@ -64,6 +67,7 @@ function App() {
       <Route path="/duk" element={<FAQ />} />
       <Route path="/statusas" element={<Status />} />
     </Routes>
+    </>
   );
 }
 
