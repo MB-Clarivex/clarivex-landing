@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Check, Sparkles, Zap, Crown, ArrowRight, Calculator } from 'lucide-react';
+import { Check, Sparkles, Zap, Crown, ArrowRight, Calculator, Building2 } from 'lucide-react';
 
 const plans = [
   {
@@ -63,6 +63,10 @@ const Pricing = () => {
   const handleCustomPurchase = (amount) => {
     if (!amount || parseInt(amount) < 1) return;
     window.location.href = `https://app.clarivex.ai/billing?custom=${amount}`;
+  };
+
+  const handleBankTransfer = () => {
+    window.location.href = 'https://app.clarivex.ai/billing?bank=true';
   };
 
   const handleCustomAmountChange = (e) => {
@@ -131,7 +135,7 @@ const Pricing = () => {
         </motion.div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.price}
@@ -280,6 +284,67 @@ const Pricing = () => {
                 className="w-full py-5 rounded-xl font-medium bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
               >
                 Pirkti
+              </Button>
+            </div>
+          </motion.div>
+
+          {/* Bank Transfer */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="relative group"
+          >
+            <div className="relative bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-3xl p-6 flex flex-col h-full hover:border-blue-400 transition-all duration-300">
+              {/* Icon */}
+              <div className="flex justify-center mb-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 flex items-center justify-center">
+                  <Building2 className="w-6 h-6 text-emerald-400" />
+                </div>
+              </div>
+              
+              {/* Title */}
+              <div className="text-center mb-4">
+                <p className="text-xl font-bold text-white mb-2">🏦 Pavedimu</p>
+                <p className="text-sm text-gray-400">
+                  Mokėkite bankiniu pavedimu ir gaukite sąskaitą
+                </p>
+              </div>
+              
+              {/* Divider */}
+              <div className="border-t border-gray-700/50 my-4" />
+              
+              {/* Features */}
+              <ul className="space-y-2 mb-6 flex-grow">
+                <li className="flex items-center gap-2 text-sm text-gray-400">
+                  <Check className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                  SEPA pervedimai
+                </li>
+                <li className="flex items-center gap-2 text-sm text-gray-400">
+                  <Check className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                  Wise banko sąskaita
+                </li>
+                <li className="flex items-center gap-2 text-sm text-gray-400">
+                  <Check className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                  Sąskaita el. paštu
+                </li>
+                <li className="flex items-center gap-2 text-sm text-gray-400">
+                  <Check className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                  Tie patys bonus %
+                </li>
+              </ul>
+              
+              <div className="text-center text-xs text-gray-500 mb-4">
+                ⏱️ Kreditai pridedami per 24 val.
+              </div>
+              
+              {/* Button */}
+              <Button
+                onClick={handleBankTransfer}
+                className="w-full py-5 rounded-xl font-medium bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 border border-emerald-500/30 transition-all duration-300"
+              >
+                Gauti sąskaitą
               </Button>
             </div>
           </motion.div>
