@@ -94,11 +94,11 @@ const CTA = () => {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-green-400 rounded-full" />
-              <span>2000 kreditų nemokamai</span>
+              <span>200 kr. su email</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full" />
-              <span>Atšaukti bet kada</span>
+              <div className="w-2 h-2 bg-blue-400 rounded-full" />
+              <span className="text-blue-400">+1800 kr. su Telegram</span>
             </div>
           </motion.div>
         </motion.div>

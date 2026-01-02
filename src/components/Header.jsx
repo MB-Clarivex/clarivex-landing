@@ -7,7 +7,7 @@ const navLinks = [
   { id: 'home', label: 'Pradžia' },
   { id: 'features', label: 'Funkcijos' },
   { id: 'how-it-works', label: 'Kaip veikia' },
-  { id: 'benefits', label: 'Nauda' },
+  { id: 'telegram', label: 'Telegram' },
   { id: 'pricing', label: 'Kainodara' },
   { id: 'cta', label: 'Kontaktai' },
 ];
