@@ -36,7 +36,7 @@ const TermsOfService = () => {
               <h2 className="text-2xl font-semibold text-white mb-4">1. Sąlygų priėmimas</h2>
               <p className="text-gray-300 leading-relaxed">
                 Šios naudojimosi sąlygos (toliau – Sąlygos) sudaro teisiškai įpareigojančią sutartį tarp jūsų 
-                ir UAB „Clarivex" (toliau – Clarivex, mes, mūsų) dėl prieigos prie svetainės clarivex.ai, 
+                ir MB „Clarivex" (toliau – Clarivex, mes, mūsų) dėl prieigos prie svetainės clarivex.ai, 
                 app.clarivex.ai ir visų susijusių paslaugų (toliau – Paslaugos) naudojimo.
               </p>
               <p className="text-gray-300 leading-relaxed mt-4">
@@ -284,7 +284,7 @@ const TermsOfService = () => {
                 Jei turite klausimų apie šias Sąlygas, susisiekite su mumis:
               </p>
               <div className="bg-gray-900 rounded-lg p-6 mt-4">
-                <p className="text-white font-medium">UAB „Clarivex"</p>
+                <p className="text-white font-medium">MB „Clarivex"</p>
                 <p className="text-gray-300 mt-2">
                   El. paštas: <a href="mailto:info@clarivex.ai" className="text-blue-400 hover:text-blue-300">info@clarivex.ai</a>
                 </p>

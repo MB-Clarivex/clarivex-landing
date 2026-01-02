@@ -35,7 +35,7 @@ const PrivacyPolicy = () => {
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">1. Bendrosios nuostatos</h2>
               <p className="text-gray-300 leading-relaxed">
-                Ši privatumo politika (toliau – Politika) nustato, kaip UAB „Clarivex" (toliau – Clarivex, mes, mūsų) 
+                Ši privatumo politika (toliau – Politika) nustato, kaip MB „Clarivex" (toliau – Clarivex, mes, mūsų) 
                 renka, naudoja, saugo ir atskleidžia informaciją, gautą iš svetainės clarivex.ai ir susijusių 
                 paslaugų (toliau – Paslaugos) naudotojų.
               </p>
@@ -49,7 +49,7 @@ const PrivacyPolicy = () => {
               <h2 className="text-2xl font-semibold text-white mb-4">2. Duomenų valdytojas</h2>
               <p className="text-gray-300 leading-relaxed">
                 Jūsų asmens duomenų valdytojas yra:<br />
-                <strong className="text-white">UAB „Clarivex"</strong><br />
+                <strong className="text-white">MB „Clarivex"</strong><br />
                 El. paštas: <a href="mailto:info@clarivex.ai" className="text-blue-400 hover:text-blue-300">info@clarivex.ai</a><br />
                 Svetainė: <a href="https://clarivex.ai" className="text-blue-400 hover:text-blue-300">clarivex.ai</a>
               </p>
@@ -204,7 +204,7 @@ const PrivacyPolicy = () => {
                 tvarkymo, susisiekite su mumis:
               </p>
               <div className="bg-gray-900 rounded-lg p-6 mt-4">
-                <p className="text-white font-medium">UAB „Clarivex"</p>
+                <p className="text-white font-medium">MB „Clarivex"</p>
                 <p className="text-gray-300 mt-2">
                   El. paštas: <a href="mailto:info@clarivex.ai" className="text-blue-400 hover:text-blue-300">info@clarivex.ai</a>
                 </p>
