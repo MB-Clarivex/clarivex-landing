@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { id: 'home', label: 'Pradžia' },
@@ -58,10 +58,11 @@ const Header = () => {
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <div className="relative">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-lg group-hover:shadow-blue-500/25 transition-all duration-300">
-                <Sparkles className="w-5 h-5 text-white" />
-              </div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl blur opacity-0 group-hover:opacity-30 transition-all duration-300" />
+              <img 
+                src="/logo.png" 
+                alt="Clarivex" 
+                className="w-10 h-10 object-contain"
+              />
             </div>
             <span className="text-xl md:text-2xl font-bold text-white group-hover:text-blue-300 transition-colors">
               Clarivex
