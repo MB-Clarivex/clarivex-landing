@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles, Mic, Calendar, Image, Mail, Clock, Zap } from 'lucide-react';
+import { ArrowRight, Sparkles, Mic, Calendar, Image, Mail, Clock, Zap, Smartphone } from 'lucide-react';
 
 const voiceCommands = [
   {
@@ -88,8 +88,12 @@ const Hero = () => {
     }
   }, [showResult]);
 
-  const handleGetStarted = () => {
-    window.location.href = "https://app.clarivex.ai/";
+  const handleTelegramRegister = () => {
+    window.open('https://t.me/clarivex_notify_bot', '_blank');
+  };
+
+  const handleEmailRegister = () => {
+    window.location.href = "https://app.clarivex.ai/auth";
   };
 
   const handleDemo = () => {
@@ -176,24 +180,40 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center pt-4"
+            className="space-y-4 pt-4"
           >
-            <Button
-              size="lg"
-              onClick={handleGetStarted}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 group"
-            >
-              Išbandyk nemokamai
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={handleDemo}
-              className="border-2 border-gray-600 hover:border-blue-500 bg-gray-800/50 hover:bg-gray-700/50 text-white px-8 py-6 text-lg rounded-xl transition-all duration-300"
-            >
-              Kaip tai veikia?
-            </Button>
+            {/* Primary CTA - Telegram */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start items-center">
+              <Button
+                size="lg"
+                onClick={handleTelegramRegister}
+                className="w-full sm:w-auto bg-gradient-to-r from-[#0088cc] to-[#0077b5] hover:from-[#0077b5] hover:to-[#006699] text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-2xl hover:shadow-[#0088cc]/25 transition-all duration-300 group"
+              >
+                <Smartphone className="mr-2 w-5 h-5" />
+                Registruotis su Telegram
+                <span className="ml-2 text-sm opacity-75">2000 kr.</span>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={handleDemo}
+                className="w-full sm:w-auto border-2 border-gray-600 hover:border-blue-500 bg-gray-800/50 hover:bg-gray-700/50 text-white px-8 py-6 text-lg rounded-xl transition-all duration-300"
+              >
+                Kaip tai veikia?
+              </Button>
+            </div>
+            
+            {/* Secondary option - Email */}
+            <div className="flex justify-center md:justify-start">
+              <button
+                onClick={handleEmailRegister}
+                className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2"
+              >
+                <Mail className="w-4 h-4" />
+                Arba registruotis su email (200 kr.)
+                <ArrowRight className="w-3 h-3" />
+              </button>
+            </div>
           </motion.div>
         </motion.div>
 

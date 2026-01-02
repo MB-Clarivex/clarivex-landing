@@ -1,11 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles, Zap, Mail, MessageCircle } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Mail, MessageCircle, Smartphone } from 'lucide-react';
 
 const CTA = () => {
-  const handleGetStarted = () => {
-    window.location.href = "https://app.clarivex.ai/";
+  const handleTelegramRegister = () => {
+    window.open('https://t.me/clarivex_notify_bot', '_blank');
+  };
+
+  const handleEmailRegister = () => {
+    window.location.href = "https://app.clarivex.ai/auth";
   };
 
   const handleContact = () => {
@@ -58,26 +62,37 @@ const CTA = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button
-              size="lg"
-              onClick={handleGetStarted}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-7 text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 group"
-            >
-              <Zap className="w-5 h-5 mr-2" />
-              Pradėti nemokamai
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+          <div className="flex flex-col gap-4 justify-center items-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                size="lg"
+                onClick={handleTelegramRegister}
+                className="bg-gradient-to-r from-[#0088cc] to-[#0077b5] hover:from-[#0077b5] hover:to-[#006699] text-white px-10 py-7 text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-[#0088cc]/25 transition-all duration-300 group"
+              >
+                <Smartphone className="w-5 h-5 mr-2" />
+                Registruotis su Telegram
+                <span className="ml-2 text-sm opacity-75">2000 kr.</span>
+              </Button>
+              
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={handleContact}
+                className="border-2 border-gray-600 hover:border-blue-500 bg-gray-800/50 hover:bg-gray-700/50 text-white px-10 py-7 text-lg rounded-2xl transition-all duration-300"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Susisiekti
+              </Button>
+            </div>
             
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={handleContact}
-              className="border-2 border-gray-600 hover:border-blue-500 bg-gray-800/50 hover:bg-gray-700/50 text-white px-10 py-7 text-lg rounded-2xl transition-all duration-300"
+            <button
+              onClick={handleEmailRegister}
+              className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2"
             >
-              <Mail className="w-5 h-5 mr-2" />
-              Susisiekti
-            </Button>
+              <Mail className="w-4 h-4" />
+              Arba registruotis su email (200 kr.)
+              <ArrowRight className="w-3 h-3" />
+            </button>
           </div>
 
           {/* Trust indicators */}
