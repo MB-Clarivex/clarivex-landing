@@ -194,6 +194,9 @@ const Footer = () => {
             <Link to="/salygos" className="text-gray-500 hover:text-gray-300 transition-colors">
               Naudojimosi sąlygos
             </Link>
+            <Link to="/duomenu-istrynimas" className="text-gray-500 hover:text-gray-300 transition-colors">
+              Duomenų ištrynimas
+            </Link>
           </div>
         </div>
       </div>
