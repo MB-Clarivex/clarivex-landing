@@ -137,7 +137,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="mailto:pagalba@clarivex.ai" 
+                  href="mailto:info@clarivex.ai" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Susisiekti
@@ -152,13 +152,13 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a 
-                  href="mailto:pagalba@clarivex.ai" 
+                  href="mailto:info@clarivex.ai" 
                   className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
                 >
                   <div className="w-9 h-9 rounded-lg bg-gray-800 border border-gray-700 flex items-center justify-center group-hover:border-blue-500/50 transition-all">
                     <Mail className="w-4 h-4" />
                   </div>
-                  <span className="text-sm">pagalba@clarivex.ai</span>
+                  <span className="text-sm">info@clarivex.ai</span>
                 </a>
               </li>
               <li>

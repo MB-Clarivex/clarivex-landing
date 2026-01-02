@@ -9,7 +9,7 @@ const CTA = () => {
   };
 
   const handleContact = () => {
-    window.location.href = "mailto:pagalba@clarivex.ai";
+    window.location.href = "mailto:info@clarivex.ai";
   };
 
   return (
@@ -155,11 +155,11 @@ const CTA = () => {
           <p className="text-gray-500 mb-4">Turite klausimų? Mielai padėsime!</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a 
-              href="mailto:pagalba@clarivex.ai" 
+              href="mailto:info@clarivex.ai" 
               className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-gray-300 hover:border-blue-500 hover:text-white transition-all"
             >
               <Mail className="w-4 h-4" />
-              pagalba@clarivex.ai
+              info@clarivex.ai
             </a>
             <a 
               href="https://t.me/clarivex_support" 
