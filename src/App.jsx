@@ -12,6 +12,8 @@ import Footer from '@/components/Footer';
 import PrivacyPolicy from '@/components/PrivacyPolicy';
 import TermsOfService from '@/components/TermsOfService';
 import DataDeletion from '@/components/DataDeletion';
+import FAQ from '@/components/FAQ';
+import Status from '@/components/Status';
 import { Toaster } from '@/components/ui/toaster';
 
 // Landing page component
@@ -59,6 +61,8 @@ function App() {
       <Route path="/privatumas" element={<PrivacyPolicy />} />
       <Route path="/salygos" element={<TermsOfService />} />
       <Route path="/duomenu-istrynimas" element={<DataDeletion />} />
+      <Route path="/duk" element={<FAQ />} />
+      <Route path="/statusas" element={<Status />} />
     </Routes>
   );
 }

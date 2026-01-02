@@ -115,20 +115,20 @@ const Footer = () => {
             <p className="font-semibold text-white mb-5">Pagalba</p>
             <ul className="space-y-3">
               <li>
-                <a 
-                  href="https://docs.clarivex.ai" 
+                <Link 
+                  to="/duk" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
-                  Dokumentacija
-                </a>
+                  DUK
+                </Link>
               </li>
               <li>
-                <a 
-                  href="https://status.clarivex.ai" 
+                <Link 
+                  to="/statusas" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Sistemos statusas
-                </a>
+                </Link>
               </li>
               <li>
                 <span 
