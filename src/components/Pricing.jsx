@@ -55,8 +55,14 @@ const usageExamples = [
 const Pricing = () => {
   const [customAmount, setCustomAmount] = useState('');
 
-  const handlePurchase = (planName) => {
-    window.location.href = "https://app.clarivex.ai/";
+  const handlePurchase = (packageId) => {
+    // Redirect to billing page - it will handle auth check
+    window.location.href = `https://app.clarivex.ai/billing?package=${packageId}`;
+  };
+
+  const handleCustomPurchase = (amount) => {
+    if (!amount || parseInt(amount) < 1) return;
+    window.location.href = `https://app.clarivex.ai/billing?custom=${amount}`;
   };
 
   const handleCustomAmountChange = (e) => {
@@ -192,7 +198,7 @@ const Pricing = () => {
                 
                 {/* Button */}
                 <Button
-                  onClick={() => handlePurchase(`€${plan.price}`)}
+                  onClick={() => handlePurchase(`credits_${plan.price}`)}
                   className={`w-full py-5 rounded-xl font-medium transition-all duration-300 ${
                     plan.highlight
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl'
@@ -269,7 +275,7 @@ const Pricing = () => {
               
               {/* Button */}
               <Button
-                onClick={() => handlePurchase(`€${customAmount || 0}`)}
+                onClick={() => handleCustomPurchase(customAmount)}
                 disabled={!customAmount || parseInt(customAmount) < 1}
                 className="w-full py-5 rounded-xl font-medium bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
               >
