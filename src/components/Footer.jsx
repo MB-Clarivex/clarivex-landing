@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Sparkles, Mail, MessageCircle, Instagram, Facebook, Linkedin } from 'lucide-react';
 
@@ -185,12 +186,12 @@ const Footer = () => {
           </p>
           
           <div className="flex items-center gap-6 text-sm">
-            <a href="/privacy" className="text-gray-500 hover:text-gray-300 transition-colors">
+            <Link to="/privatumas" className="text-gray-500 hover:text-gray-300 transition-colors">
               Privatumo politika
-            </a>
-            <a href="/terms" className="text-gray-500 hover:text-gray-300 transition-colors">
+            </Link>
+            <Link to="/salygos" className="text-gray-500 hover:text-gray-300 transition-colors">
               Naudojimosi sąlygos
-            </a>
+            </Link>
           </div>
         </div>
       </div>

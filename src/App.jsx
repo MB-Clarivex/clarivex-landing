@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -8,9 +9,12 @@ import Benefits from '@/components/Benefits';
 import Pricing from '@/components/Pricing';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
+import PrivacyPolicy from '@/components/PrivacyPolicy';
+import TermsOfService from '@/components/TermsOfService';
 import { Toaster } from '@/components/ui/toaster';
 
-function App() {
+// Landing page component
+function LandingPage() {
   return (
     <>
       <Helmet>
@@ -44,6 +48,16 @@ function App() {
         <Toaster />
       </div>
     </>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/privatumas" element={<PrivacyPolicy />} />
+      <Route path="/salygos" element={<TermsOfService />} />
+    </Routes>
   );
 }
 
