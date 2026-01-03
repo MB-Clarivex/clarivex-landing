@@ -203,16 +203,23 @@ const Hero = () => {
               </Button>
             </div>
             
-            {/* Secondary option - Email */}
-            <div className="flex justify-center md:justify-start">
+            {/* Secondary options */}
+            <div className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-3 sm:gap-6">
               <button
                 onClick={handleEmailRegister}
                 className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2"
               >
                 <Mail className="w-4 h-4" />
-                Arba registruotis su email (200 kr.)
-                <ArrowRight className="w-3 h-3" />
+                Registruotis su email (200 kr.)
               </button>
+              <span className="hidden sm:block text-gray-600">|</span>
+              <a
+                href="https://app.clarivex.ai/"
+                className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors flex items-center gap-1"
+              >
+                Jau turite paskyrą? Prisijungti
+                <ArrowRight className="w-3 h-3" />
+              </a>
             </div>
           </motion.div>
         </motion.div>

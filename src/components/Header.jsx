@@ -90,8 +90,18 @@ const Header = () => {
             initial={{ x: 20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="flex items-center gap-3"
+            className="flex items-center gap-2 sm:gap-3"
           >
+            {/* Prisijungti - visada matomas */}
+            <Button
+              variant="ghost"
+              onClick={handleLogin}
+              className="text-gray-300 hover:text-white hover:bg-white/10 px-3 sm:px-4 py-2 text-sm font-medium rounded-xl transition-all duration-200"
+            >
+              Prisijungti
+            </Button>
+            
+            {/* Pradėti - desktop */}
             <Button
               size="lg"
               onClick={handleLogin}
