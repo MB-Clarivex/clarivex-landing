@@ -92,21 +92,12 @@ const Header = () => {
             transition={{ delay: 0.5, duration: 0.5 }}
             className="flex items-center gap-2 sm:gap-3"
           >
-            {/* Prisijungti - visada matomas su fonu */}
+            {/* Prisijungti - ryškus mygtukas */}
             <Button
               onClick={handleLogin}
-              className="bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/30 text-white px-4 sm:px-5 py-2 text-sm font-medium rounded-xl backdrop-blur-sm transition-all duration-200"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-5 sm:px-6 py-2 sm:py-2.5 text-sm font-medium rounded-xl shadow-lg hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300"
             >
               Prisijungti
-            </Button>
-            
-            {/* Pradėti - desktop */}
-            <Button
-              size="lg"
-              onClick={handleLogin}
-              className="hidden sm:flex bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2.5 text-sm font-medium rounded-xl shadow-lg hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300"
-            >
-              Pradėti
             </Button>
             
             {/* Mobile Menu Button */}
