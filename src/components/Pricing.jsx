@@ -45,12 +45,12 @@ const features = [
 ];
 
 const usageExamples = [
-  { name: 'AI pokalbis (1 žinutė)', credits: '~2-5', icon: '💬' },
-  { name: 'Postas su tekstu', credits: '~10-20', icon: '📝' },
-  { name: 'Paveikslėlis (HD/4K)', credits: '80-160', icon: '🎨' },
-  { name: 'PDF analizė (10 psl.)', credits: '~15', icon: '📄' },
-  { name: 'El. laiško atsakymas', credits: '~5-10', icon: '📧' },
-  { name: 'Balso komanda', credits: '~15', icon: '🎤' },
+  { name: 'AI pokalbis (1 žinutė)', credits: '~1-3', icon: '💬' },
+  { name: 'Postas su tekstu', credits: '~2-8', icon: '📝' },
+  { name: 'Paveikslėlis (HD/4K)', credits: '88-176', icon: '🎨' },
+  { name: 'PDF analizė (10 psl.)', credits: '~5-15', icon: '📄' },
+  { name: 'El. laiško atsakymas', credits: '~3-8', icon: '📧' },
+  { name: 'Balso komanda', credits: '~10-20', icon: '🎤' },
 ];
 
 const Pricing = () => {
