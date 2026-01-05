@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Check, Sparkles, Zap, Crown, ArrowRight, Calculator, Building2 } from 'lucide-react';
+import { Check, Sparkles, Zap, Crown, ArrowRight, Calculator, Building2, Gift, Smartphone } from 'lucide-react';
 
 const plans = [
   {
@@ -10,7 +10,8 @@ const plans = [
     bonus: 0,
     bonusText: null,
     highlight: false,
-    icon: Zap
+    icon: Zap,
+    minBadge: 'Min. kortelė'
   },
   {
     price: 10,
@@ -127,10 +128,80 @@ const Pricing = () => {
             Papildyk kreditus ir naudok kada nori.
           </p>
           
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800/50 rounded-full text-gray-300 text-sm">
-            <span className="font-bold text-blue-400">1€ = 1000 kreditų</span>
-            <span className="text-gray-500">•</span>
-            <span>Kreditai negali būti panaudoti</span>
+          <div className="flex flex-wrap justify-center gap-3 text-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800/50 rounded-full text-gray-300">
+              <span className="font-bold text-blue-400">1€ = 1000 kreditų</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full text-green-400">
+              <span>✓ €0 pradžia</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full text-emerald-400">
+              <span>✓ nuo €1 pavedimas</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400">
+              <span>✓ nuo €5 kortelė</span>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* FREE STARTER Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-12"
+        >
+          <div className="relative max-w-2xl mx-auto">
+            {/* Glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-3xl blur-xl" />
+            
+            <div className="relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border-2 border-green-500/50 rounded-3xl p-8 overflow-hidden">
+              {/* Badge */}
+              <div className="absolute -top-px left-1/2 -translate-x-1/2 px-6 py-1.5 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-bold rounded-b-xl shadow-lg">
+                🎁 NEMOKAMA PRADŽIA
+              </div>
+              
+              <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-4">
+                {/* Left side - pricing */}
+                <div className="text-center md:text-left">
+                  <div className="flex items-baseline justify-center md:justify-start gap-2 mb-2">
+                    <span className="text-6xl font-bold text-green-400">€0</span>
+                    <span className="text-gray-400 text-lg">/ pradžia</span>
+                  </div>
+                  <p className="text-2xl font-semibold text-white mb-1">2000 kreditų dovanų</p>
+                  <p className="text-gray-400">Registruokitės su Telegram ir gaukite iškart</p>
+                </div>
+                
+                {/* Middle - features */}
+                <div className="flex flex-wrap justify-center gap-3">
+                  <div className="flex items-center gap-2 px-3 py-1.5 bg-green-500/10 border border-green-500/30 rounded-full text-green-400 text-sm">
+                    <Check className="w-4 h-4" />
+                    Visos funkcijos
+                  </div>
+                  <div className="flex items-center gap-2 px-3 py-1.5 bg-green-500/10 border border-green-500/30 rounded-full text-green-400 text-sm">
+                    <Check className="w-4 h-4" />
+                    Neribotas galiojimas
+                  </div>
+                  <div className="flex items-center gap-2 px-3 py-1.5 bg-green-500/10 border border-green-500/30 rounded-full text-green-400 text-sm">
+                    <Check className="w-4 h-4" />
+                    Jokių įsipareigojimų
+                  </div>
+                </div>
+                
+                {/* Right side - CTA */}
+                <div className="flex flex-col gap-2">
+                  <Button
+                    onClick={() => window.open('https://t.me/clarivex_notify_bot', '_blank')}
+                    className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl hover:shadow-green-500/25 transition-all duration-300"
+                  >
+                    <Smartphone className="w-5 h-5 mr-2" />
+                    Pradėti nemokamai
+                  </Button>
+                  <p className="text-xs text-gray-500 text-center">Nereikia kortelės</p>
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
 
@@ -157,6 +228,11 @@ const Pricing = () => {
                 {plan.highlight && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold rounded-full shadow-lg">
                     ⭐ Populiariausias
+                  </div>
+                )}
+                {plan.minBadge && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-gray-700 text-gray-300 text-xs font-medium rounded-full border border-gray-600">
+                    💳 {plan.minBadge}
                   </div>
                 )}
                 
@@ -296,9 +372,14 @@ const Pricing = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="relative group"
           >
-            <div className="relative bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-3xl p-6 flex flex-col h-full hover:border-blue-400 transition-all duration-300">
+            <div className="relative bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-3xl p-6 flex flex-col h-full hover:border-emerald-400 transition-all duration-300">
+              {/* Badge */}
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-emerald-500 text-white text-xs font-bold rounded-full shadow-lg">
+                nuo €1
+              </div>
+              
               {/* Icon */}
-              <div className="flex justify-center mb-4">
+              <div className="flex justify-center mb-4 mt-2">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 flex items-center justify-center">
                   <Building2 className="w-6 h-6 text-emerald-400" />
                 </div>
@@ -306,9 +387,10 @@ const Pricing = () => {
               
               {/* Title */}
               <div className="text-center mb-4">
-                <p className="text-xl font-bold text-white mb-2">🏦 Pavedimu</p>
+                <p className="text-xl font-bold text-white mb-1">🏦 Pavedimu</p>
+                <p className="text-lg font-semibold text-emerald-400 mb-2">Be komisinių!</p>
                 <p className="text-sm text-gray-400">
-                  Mokėkite bankiniu pavedimu ir gaukite sąskaitą
+                  Idealus mažoms sumoms
                 </p>
               </div>
               
