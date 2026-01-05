@@ -203,10 +203,10 @@ const Hero = () => {
                     <span className="text-green-400">✓</span> Balso komandos
                   </li>
                   <li className="flex items-center gap-1.5">
-                    <span className="text-green-400">✓</span> Push priminimai
+                    <span className="text-green-400">✓</span> Push priminimai telefone
                   </li>
                   <li className="flex items-center gap-1.5">
-                    <span className="text-green-400">✓</span> AI visada po ranka
+                    <span className="text-green-400">✓</span> AI bet kur, bet kada
                   </li>
                 </ul>
                 <div className="mt-3 text-center py-2 bg-[#0088cc] group-hover:bg-[#0077b5] rounded-lg text-white text-sm font-medium transition-colors">
@@ -229,10 +229,10 @@ const Hero = () => {
                 </div>
                 <ul className="space-y-1 text-xs text-gray-400">
                   <li className="flex items-center gap-1.5">
-                    <span className="text-green-400">✓</span> Pilna web platforma
+                    <span className="text-green-400">✓</span> Balso komandos
                   </li>
                   <li className="flex items-center gap-1.5">
-                    <span className="text-gray-500">−</span> Be balso komandų
+                    <span className="text-green-400">✓</span> Pilna web platforma
                   </li>
                   <li className="flex items-center gap-1.5">
                     <span className="text-gray-500">−</span> Be push priminimų
