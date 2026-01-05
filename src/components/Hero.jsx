@@ -181,39 +181,76 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="space-y-4 pt-4"
+            className="space-y-5 pt-4"
           >
-            {/* Primary CTA - Telegram */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start items-center">
-              <Button
-                size="lg"
+            {/* Registration Options - Side by Side */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto md:mx-0">
+              {/* Telegram Option - Recommended */}
+              <button
                 onClick={handleTelegramRegister}
-                className="w-full sm:w-auto bg-gradient-to-r from-[#0088cc] to-[#0077b5] hover:from-[#0077b5] hover:to-[#006699] text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-2xl hover:shadow-[#0088cc]/25 transition-all duration-300 group"
+                className="relative group bg-gradient-to-br from-[#0088cc]/20 to-[#0077b5]/20 hover:from-[#0088cc]/30 hover:to-[#0077b5]/30 border-2 border-[#0088cc]/50 hover:border-[#0088cc] rounded-2xl p-4 transition-all duration-300 text-left"
               >
-                <Smartphone className="mr-2 w-5 h-5" />
-                Registruotis su Telegram
-                <span className="ml-2 text-sm opacity-75">2000 kr.</span>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={handleDemo}
-                className="w-full sm:w-auto border-2 border-gray-600 hover:border-blue-500 bg-gray-800/50 hover:bg-gray-700/50 text-white px-8 py-6 text-lg rounded-xl transition-all duration-300"
-              >
-                Kaip tai veikia?
-              </Button>
-            </div>
-            
-            {/* Secondary options */}
-            <div className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-3 sm:gap-6">
+                <div className="absolute -top-2.5 left-3 px-2 py-0.5 bg-[#0088cc] text-white text-xs font-bold rounded-full">
+                  REKOMENDUOJAMA
+                </div>
+                <div className="flex items-center gap-2 mb-2">
+                  <Smartphone className="w-5 h-5 text-[#0088cc]" />
+                  <span className="font-bold text-white">Telegram</span>
+                  <span className="ml-auto text-green-400 font-bold text-sm">+2000 kr.</span>
+                </div>
+                <ul className="space-y-1 text-xs text-gray-300">
+                  <li className="flex items-center gap-1.5">
+                    <span className="text-green-400">✓</span> Balso komandos
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <span className="text-green-400">✓</span> Push priminimai
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <span className="text-green-400">✓</span> AI visada po ranka
+                  </li>
+                </ul>
+                <div className="mt-3 text-center py-2 bg-[#0088cc] group-hover:bg-[#0077b5] rounded-lg text-white text-sm font-medium transition-colors">
+                  Pradėti su Telegram →
+                </div>
+              </button>
+
+              {/* Email Option - Simple */}
               <button
                 onClick={handleEmailRegister}
-                className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2"
+                className="relative group bg-gray-800/50 hover:bg-gray-800/70 border-2 border-gray-700 hover:border-gray-600 rounded-2xl p-4 transition-all duration-300 text-left"
               >
-                <Mail className="w-4 h-4" />
-                Registruotis su email (200 kr.)
+                <div className="absolute -top-2.5 left-3 px-2 py-0.5 bg-gray-600 text-white text-xs font-medium rounded-full">
+                  PAPRASTA
+                </div>
+                <div className="flex items-center gap-2 mb-2">
+                  <Mail className="w-5 h-5 text-gray-400" />
+                  <span className="font-bold text-white">Email</span>
+                  <span className="ml-auto text-gray-400 font-bold text-sm">+200 kr.</span>
+                </div>
+                <ul className="space-y-1 text-xs text-gray-400">
+                  <li className="flex items-center gap-1.5">
+                    <span className="text-green-400">✓</span> Pilna web platforma
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <span className="text-gray-500">−</span> Be balso komandų
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <span className="text-gray-500">−</span> Be push priminimų
+                  </li>
+                </ul>
+                <div className="mt-3 text-center py-2 bg-gray-700 group-hover:bg-gray-600 rounded-lg text-white text-sm font-medium transition-colors">
+                  Pradėti su Email →
+                </div>
               </button>
-              <span className="hidden sm:block text-gray-600">|</span>
+            </div>
+
+            {/* Info text */}
+            <p className="text-center md:text-left text-xs text-gray-500">
+              💡 Telegram galėsite susieti vėliau ir gauti visas funkcijas
+            </p>
+            
+            {/* Login link */}
+            <div className="flex justify-center md:justify-start">
               <a
                 href="https://app.clarivex.ai/"
                 className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors flex items-center gap-1"
