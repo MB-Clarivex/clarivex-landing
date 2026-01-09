@@ -133,7 +133,40 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">7. Jūsų teisės</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">7. Google API naudojimas</h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                Clarivex naudoja Google API paslaugas el. pašto valdymo funkcijoms (Gmail). 
+                Mūsų programėlės naudojimasis informacija, gauta iš Google API, atitinka{' '}
+                <a 
+                  href="https://developers.google.com/terms/api-services-user-data-policy" 
+                  className="text-blue-400 hover:text-blue-300" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Google API Services User Data Policy
+                </a>, 
+                įskaitant Limited Use reikalavimus.
+              </p>
+              
+              <h3 className="text-xl font-medium text-white mt-6 mb-3">Kaip naudojame Gmail duomenis:</h3>
+              <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <li>Laiškų skaitymas ir rodymas programėlėje</li>
+                <li>AI atsakymų generavimas (duomenys naudojami tik konkrečiam atsakymui sukurti)</li>
+                <li>Laiškų siuntimas jūsų vardu (su jūsų leidimu)</li>
+              </ul>
+              
+              <div className="bg-blue-500/10 border border-blue-500/30 rounded-xl p-4 mt-6">
+                <p className="text-blue-200 font-medium">Svarbios garantijos:</p>
+                <ul className="list-disc list-inside text-blue-200/80 text-sm mt-2 space-y-1">
+                  <li>Gmail duomenys NENAUDOJAMI AI modelių apmokymui</li>
+                  <li>Gmail duomenys nesiunčiami trečiosioms šalims (išskyrus OpenAI, tik atsakymo generavimui)</li>
+                  <li>Galite bet kada atšaukti prieigą ir ištrinti duomenis</li>
+                </ul>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-white mb-4">8. Jūsų teisės</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
                 Pagal BDAR (Bendrąjį duomenų apsaugos reglamentą) turite šias teises:
               </p>
@@ -153,7 +186,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">8. Slapukai</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">9. Slapukai</h2>
               <p className="text-gray-300 leading-relaxed">
                 Naudojame slapukus ir panašias technologijas, kad pagerintume jūsų patirtį. 
                 Slapukai yra maži tekstiniai failai, saugomi jūsų įrenginyje.
@@ -171,7 +204,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">9. Vaikų privatumas</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">10. Vaikų privatumas</h2>
               <p className="text-gray-300 leading-relaxed">
                 Mūsų Paslaugos nėra skirtos asmenims iki 16 metų. Sąmoningai nerenkame asmens 
                 duomenų iš vaikų. Jei sužinosime, kad surinkome vaiko duomenis, nedelsdami juos ištrinsime.
@@ -179,7 +212,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">10. Tarptautiniai duomenų perdavimai</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">11. Tarptautiniai duomenų perdavimai</h2>
               <p className="text-gray-300 leading-relaxed">
                 Jūsų duomenys gali būti perduodami ir apdorojami serveriuose, esančiuose už Europos 
                 ekonominės erdvės (EEE) ribų, ypač JAV (OpenAI, Cloudflare). Tokiais atvejais 
@@ -189,7 +222,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">11. Politikos pakeitimai</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">12. Politikos pakeitimai</h2>
               <p className="text-gray-300 leading-relaxed">
                 Galime periodiškai atnaujinti šią Privatumo politiką. Apie reikšmingus pakeitimus 
                 pranešime el. paštu arba per mūsų svetainę. Rekomenduojame reguliariai peržiūrėti 
@@ -198,7 +231,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">12. Kontaktai</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">13. Kontaktai</h2>
               <p className="text-gray-300 leading-relaxed">
                 Jei turite klausimų ar nusiskundimų dėl šios Privatumo politikos ar jūsų duomenų 
                 tvarkymo, susisiekite su mumis:
