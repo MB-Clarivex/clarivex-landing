@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 
@@ -8,13 +9,15 @@ const navLinks = [
   { id: 'features', label: 'Funkcijos' },
   { id: 'how-it-works', label: 'Kaip veikia' },
   { id: 'telegram', label: 'Telegram' },
-  { id: 'pricing', label: 'Kainodara' },
+  { id: 'pricing', label: 'Kainodara', href: '/kainos' },
   { id: 'cta', label: 'Kontaktai' },
 ];
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +28,11 @@ const Header = () => {
   }, []);
 
   const handleScrollTo = (id) => {
+    // Jei ne pagrindiniame puslapyje, grįžti į pagrindinį
+    if (!isHomePage) {
+      window.location.href = `/#${id}`;
+      return;
+    }
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -72,16 +80,32 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link, index) => (
-              <motion.button
-                key={link.id}
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.3 + index * 0.05, duration: 0.3 }}
-                onClick={() => handleScrollTo(link.id)}
-                className="px-4 py-2 text-gray-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-200"
-              >
-                {link.label}
-              </motion.button>
+              link.href ? (
+                <motion.div
+                  key={link.id}
+                  initial={{ y: -10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.3 + index * 0.05, duration: 0.3 }}
+                >
+                  <Link
+                    to={link.href}
+                    className="px-4 py-2 text-gray-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-200 block"
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
+              ) : (
+                <motion.button
+                  key={link.id}
+                  initial={{ y: -10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.3 + index * 0.05, duration: 0.3 }}
+                  onClick={() => handleScrollTo(link.id)}
+                  className="px-4 py-2 text-gray-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-200"
+                >
+                  {link.label}
+                </motion.button>
+              )
             ))}
           </nav>
 
@@ -124,16 +148,33 @@ const Header = () => {
             <div className="bg-gray-950/98 backdrop-blur-xl border-b border-gray-800 shadow-xl">
               <nav className="container mx-auto max-w-7xl px-4 py-4 flex flex-col gap-1">
                 {navLinks.map((link, index) => (
-                  <motion.button
-                    key={link.id}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                    onClick={() => handleScrollTo(link.id)}
-                    className="w-full px-4 py-3 text-left text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all"
-                  >
-                    {link.label}
-                  </motion.button>
+                  link.href ? (
+                    <motion.div
+                      key={link.id}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                    >
+                      <Link
+                        to={link.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="w-full px-4 py-3 text-left text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all block"
+                      >
+                        {link.label}
+                      </Link>
+                    </motion.div>
+                  ) : (
+                    <motion.button
+                      key={link.id}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                      onClick={() => handleScrollTo(link.id)}
+                      className="w-full px-4 py-3 text-left text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all"
+                    >
+                      {link.label}
+                    </motion.button>
+                  )
                 ))}
                 <div className="border-t border-gray-800 my-2" />
                 <Button

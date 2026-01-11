@@ -16,6 +16,7 @@ import TermsOfService from '@/components/TermsOfService';
 import DataDeletion from '@/components/DataDeletion';
 import FAQ from '@/components/FAQ';
 import Status from '@/components/Status';
+import PricingPage from '@/components/PricingPage';
 import { Toaster } from '@/components/ui/toaster';
 
 // Landing page component
@@ -68,6 +69,7 @@ function App() {
       <Route path="/duomenu-istrynimas" element={<DataDeletion />} />
       <Route path="/duk" element={<FAQ />} />
       <Route path="/statusas" element={<Status />} />
+      <Route path="/kainos" element={<PricingPage />} />
     </Routes>
     </>
   );
