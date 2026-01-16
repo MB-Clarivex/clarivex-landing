@@ -34,7 +34,7 @@ const plans = [
 const features = [
   'Visi AI modeliai (GPT-5, DALL-E 3)',
   'Balso komandos lietuviškai',
-  'Instagram + Facebook postai',
+  'Instagram + Facebook postai (iki 25/d.)*',
   'El. pašto valdymas su AI',
   'Paveikslėlių generavimas',
   'Dokumentų analizė (PDF, Word)',
@@ -494,6 +494,10 @@ const Pricing = () => {
               </motion.div>
             ))}
           </div>
+          
+          <p className="text-center text-xs text-gray-500 mt-6">
+            * Meta platformos limitas, ne Clarivex apribojimas
+          </p>
         </motion.div>
       </div>
     </section>

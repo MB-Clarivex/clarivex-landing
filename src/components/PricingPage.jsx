@@ -519,6 +519,77 @@ export default function PricingPage() {
             </div>
           </section>
           
+          {/* Socialinių tinklų limitai */}
+          <section className="px-4 mb-16">
+            <div className="container mx-auto max-w-5xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mb-8"
+              >
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                  📱 Socialinių tinklų limitai
+                </h2>
+                <p className="text-gray-400">
+                  Meta (Instagram/Facebook) platformos apribojimai – ne Clarivex
+                </p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-gray-800/30 border border-gray-700/50 rounded-2xl overflow-hidden"
+              >
+                <div className="px-6 py-4 border-b border-gray-700/50 flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-pink-500/20 to-purple-500/20 border border-pink-500/30 flex items-center justify-center">
+                    <span className="text-lg">📸</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white">Meta API limitai</h3>
+                    <p className="text-xs text-gray-500">Taikoma kiekvienam vartotojui per 24 valandas</p>
+                  </div>
+                </div>
+                
+                <div className="divide-y divide-gray-700/30">
+                  {[
+                    { icon: '📷', name: 'Instagram publikacijos', limit: 'iki 25', period: '/ 24h', color: 'pink' },
+                    { icon: '📖', name: 'Instagram Stories', limit: 'iki 25', period: '/ 24h', color: 'purple' },
+                    { icon: '💬', name: 'Instagram komentarų atsakymai', limit: 'iki 60', period: '/ val.', color: 'blue' },
+                    { icon: '📘', name: 'Facebook publikacijos', limit: 'iki 25', period: '/ 24h', color: 'blue' },
+                    { icon: '🔄', name: 'API užklausos', limit: 'iki 200', period: '/ val.', color: 'gray' },
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-center justify-between px-6 py-4 hover:bg-gray-700/20 transition-colors">
+                      <div className="flex items-center gap-3">
+                        <span className="text-xl">{item.icon}</span>
+                        <span className="text-gray-300">{item.name}</span>
+                      </div>
+                      <div className="text-right">
+                        <span className={`font-semibold ${
+                          item.color === 'pink' ? 'text-pink-400' :
+                          item.color === 'purple' ? 'text-purple-400' :
+                          item.color === 'blue' ? 'text-blue-400' :
+                          'text-gray-400'
+                        }`}>{item.limit}</span>
+                        <span className="text-gray-500 text-sm ml-1">{item.period}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="px-6 py-4 bg-orange-500/5 border-t border-orange-500/20">
+                  <div className="flex items-start gap-3">
+                    <span className="text-lg">⚠️</span>
+                    <div className="text-sm text-gray-400">
+                      <p>Šie limitai nustatyti <span className="text-orange-400 font-medium">Meta platformos</span>, ne Clarivex. Pasiekus limitą, publikavimas bus laikinai sustabdytas ir atsinaujins automatiškai.</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+          
           {/* Failų siuntimas */}
           <section className="px-4 mb-16">
             <div className="container mx-auto max-w-5xl">
