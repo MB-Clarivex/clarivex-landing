@@ -10,7 +10,10 @@ import {
   Image,
   Brain,
   Gift,
-  ChevronRight
+  ChevronRight,
+  StickyNote,
+  ShoppingCart,
+  Lightbulb
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -26,24 +29,24 @@ const telegramFeatures = [
     description: '"Primink rytoj 9:00 paskambinti" — gausite push pranešimą laiku.',
   },
   {
-    icon: Image,
-    title: 'Paveikslėliai per sekundes',
-    description: '"Sugeneruok logotipą..." — rezultatas tiesiai į Telegram pokalbį.',
+    icon: StickyNote,
+    title: 'Užrašai balsu',
+    description: '"Užsirašyk, kad Jonas nori pasiūlymo" — viskas išsaugoma ir prieinama.',
   },
   {
-    icon: MessageCircle,
-    title: 'Greitieji postai',
-    description: 'Viena žinutė = paruoštas postas Instagram ir Facebook.',
+    icon: ShoppingCart,
+    title: 'Pirkinių sąrašai',
+    description: '"Pridėk kavos ir cukraus" — automatiškai sukuria sąrašą su elementais.',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Idėjos → Postai',
+    description: '"Turiu idėją postui apie akciją" — vėliau paversk postu vienu mygtuku.',
   },
   {
     icon: Brain,
-    title: '"Atsimink" balsu',
+    title: 'Ilgalaikė atmintis',
     description: 'Pasakykite ką reikia atsiminti — Clarivex išsaugos visam laikui.',
-  },
-  {
-    icon: Clock,
-    title: 'AI 24/7 kišenėje',
-    description: 'Net kai kompiuteris išjungtas — jūsų asistentas visada pasiekiamas.',
   },
 ];
 
@@ -130,40 +133,42 @@ const TelegramSection = () => {
                   
                   {/* Chat messages */}
                   <div className="p-4 space-y-3 min-h-[300px] bg-[#0e1621]">
-                    {/* User message */}
+                    {/* User message - shopping */}
                     <div className="flex justify-end">
                       <div className="bg-[#2b5278] rounded-2xl rounded-br-sm px-4 py-2 max-w-[85%]">
-                        <p className="text-white text-sm">🎤 Primink rytoj 9:00 paskambinti Jonui</p>
+                        <p className="text-white text-sm">🎤 Pridėk kavos, pieno ir duonos</p>
                         <p className="text-gray-400 text-xs text-right mt-1">18:41</p>
                       </div>
                     </div>
                     
-                    {/* Bot response */}
+                    {/* Bot response - shopping list */}
                     <div className="flex justify-start">
                       <div className="bg-[#182533] rounded-2xl rounded-bl-sm px-4 py-2 max-w-[85%]">
-                        <p className="text-white text-sm">✅ <b>Priminimas nustatytas!</b></p>
-                        <p className="text-gray-300 text-sm mt-1">⏰ Rytoj 9:00</p>
-                        <p className="text-gray-300 text-sm">📝 Paskambinti Jonui</p>
+                        <p className="text-white text-sm">🛒 <b>Pirkinių sąrašas!</b></p>
+                        <p className="text-gray-300 text-sm mt-1">☐ Kava</p>
+                        <p className="text-gray-300 text-sm">☐ Pienas</p>
+                        <p className="text-gray-300 text-sm">☐ Duona</p>
                         <p className="text-gray-400 text-xs text-right mt-1">18:41</p>
                       </div>
                     </div>
                     
-                    {/* User message 2 */}
+                    {/* User message 2 - idea */}
                     <div className="flex justify-end">
                       <div className="bg-[#2b5278] rounded-2xl rounded-br-sm px-4 py-2 max-w-[85%]">
-                        <p className="text-white text-sm">🎤 Sukurk postą apie nuolaidas</p>
+                        <p className="text-white text-sm">🎤 Turiu idėją postui apie akciją</p>
                         <p className="text-gray-400 text-xs text-right mt-1">18:42</p>
                       </div>
                     </div>
                     
-                    {/* Bot typing */}
+                    {/* Bot response - idea with button */}
                     <div className="flex justify-start">
-                      <div className="bg-[#182533] rounded-2xl rounded-bl-sm px-4 py-3">
-                        <div className="flex gap-1">
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                      <div className="bg-[#182533] rounded-2xl rounded-bl-sm px-4 py-2 max-w-[85%]">
+                        <p className="text-white text-sm">💡 <b>Idėja išsaugota!</b></p>
+                        <p className="text-gray-300 text-sm mt-1">Postui apie akciją</p>
+                        <div className="mt-2 px-3 py-1.5 bg-[#0088cc]/20 rounded-lg text-[#0088cc] text-xs text-center">
+                          🚀 Sukurti postą
                         </div>
+                        <p className="text-gray-400 text-xs text-right mt-1">18:42</p>
                       </div>
                     </div>
                   </div>
@@ -288,6 +293,9 @@ const TelegramSection = () => {
 };
 
 export default TelegramSection;
+
+
+
 
 
 

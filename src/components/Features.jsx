@@ -12,7 +12,10 @@ import {
   Clock,
   Sparkles,
   LayoutGrid,
-  ShoppingBag
+  ShoppingBag,
+  StickyNote,
+  ShoppingCart,
+  Lightbulb
 } from 'lucide-react';
 
 const features = [
@@ -24,6 +27,15 @@ const features = [
     badge: 'Populiariausia',
     stats: '~3s',
     statsLabel: 'vidutinis laikas'
+  },
+  {
+    icon: StickyNote,
+    title: 'Balso Užrašai',
+    description: 'Užrašai, pirkinių sąrašai, idėjos — pasakyk ir sistema supras ko nori. Idėją gali paversti postu vienu paspaudimu.',
+    gradient: 'from-amber-500 to-orange-500',
+    badge: 'Nauja',
+    stats: '4',
+    statsLabel: 'tipai'
   },
   {
     icon: Calendar,
