@@ -38,7 +38,7 @@ const faqCategories = [
       },
       {
         q: 'Ką galiu padaryti su 1000 kreditų?',
-        a: 'Su 1000 kreditų (~1€) galite: parašyti ~50 AI tekstų, sugeneruoti 12 paveikslėlių (DALL-E 3), transkribuoti ~80 minučių balso, arba atlikti ~50 web paieškų. Tikslios kainos priklauso nuo naudojamo AI modelio.'
+        a: 'Su 1000 kreditų (~1€) galite: parašyti ~100+ AI žinučių su GPT-5 mini (arba ~30 su GPT-5.1), sugeneruoti 12 paveikslėlių (DALL-E 3), transkribuoti ~80 minučių balso, arba atlikti ~50 web paieškų. Naudojant ekonomišką GPT-5 mini modelį, kreditai trunka daug ilgiau!'
       },
       {
         q: 'Ar kreditai baigiasi?',
@@ -65,7 +65,11 @@ const faqCategories = [
     questions: [
       {
         q: 'Kokie AI modeliai naudojami?',
-        a: 'Naudojame naujausius OpenAI modelius: GPT-4o ir GPT-4o-mini tekstui, DALL-E 3 paveikslėliams, Whisper balso transkripcijai. Modelis parenkamas automatiškai pagal užduoties sudėtingumą.'
+        a: 'Naudojame naujausius OpenAI modelius: GPT-5.2, GPT-5.1 ir GPT-5 mini tekstui, DALL-E 3 paveikslėliams, Whisper balso transkripcijai. Galite patys pasirinkti modelį kiekviename pokalbyje!'
+      },
+      {
+        q: 'Kurį AI modelį pasirinkti?',
+        a: 'GPT-5 mini (numatytasis) — idealus kasdienėms užduotims: paprasti pokalbiai, el. laiškai, receptai, patarimai, vertimai. Greitas ir ekonomiškas. GPT-5.1 — sudėtingesniems darbams: ilgų dokumentų analizė, detalūs verslo planai, programavimas. GPT-5.2 — maksimali kokybė: mokslinė analizė, sudėtingas loginis mąstymas, kritiškai svarbūs projektai. Patarimas: pradėkite nuo mini — jei rezultatas netenkina, perjunkite į 5.1 ar 5.2.'
       },
       {
         q: 'Ar AI prisimena mano ankstesnius pokalbius?',
@@ -309,6 +313,9 @@ const FAQ = () => {
 };
 
 export default FAQ;
+
+
+
 
 
 
