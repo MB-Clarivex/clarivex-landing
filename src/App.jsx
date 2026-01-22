@@ -71,7 +71,7 @@ function App() {
       <Route path="/duk" element={<FAQ />} />
       <Route path="/statusas" element={<Status />} />
       <Route path="/kainos" element={<PricingPage />} />
-      <Route path="/galimybes" element={<FeaturesPage />} />
+      <Route path="/features" element={<FeaturesPage />} />
     </Routes>
     </>
   );

@@ -554,7 +554,7 @@ const FeaturesPage = () => {
           name="description" 
           content="Visos Clarivex galimybės vienoje vietoje. AI pokalbiai, socialinių tinklų valdymas, el. paštas, Telegram integracija ir daug daugiau." 
         />
-        <link rel="canonical" href="https://clarivex.ai/galimybes" />
+        <link rel="canonical" href="https://clarivex.ai/features" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-950 text-white antialiased">
