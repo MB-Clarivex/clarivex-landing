@@ -17,6 +17,7 @@ import DataDeletion from '@/components/DataDeletion';
 import FAQ from '@/components/FAQ';
 import Status from '@/components/Status';
 import PricingPage from '@/components/PricingPage';
+import FeaturesPage from '@/components/FeaturesPage';
 import { Toaster } from '@/components/ui/toaster';
 
 // Landing page component
@@ -70,6 +71,7 @@ function App() {
       <Route path="/duk" element={<FAQ />} />
       <Route path="/statusas" element={<Status />} />
       <Route path="/kainos" element={<PricingPage />} />
+      <Route path="/galimybes" element={<FeaturesPage />} />
     </Routes>
     </>
   );
