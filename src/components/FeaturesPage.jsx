@@ -29,7 +29,6 @@ import {
   Lightbulb,
   Image,
   Eye,
-  PenTool,
   Languages,
   MousePointer,
   Package,
@@ -382,7 +381,7 @@ const FEATURE_CATEGORIES = [
     title: 'Vizualai',
     icon: Image,
     color: 'from-pink-500 to-rose-600',
-    description: 'AI paveikslėliai ir redagavimas',
+    description: 'AI paveikslėlių generavimas ir analizė',
     features: [
       {
         name: 'Paveikslėlių generavimas',
@@ -402,16 +401,6 @@ const FEATURE_CATEGORIES = [
           'Paveikslėlio aprašymas',
           'OCR teksto ištraukimas',
           'Analizės istorija',
-        ],
-      },
-      {
-        name: 'Vizualų redaktorius',
-        icon: PenTool,
-        description: 'Paprastas online redaktorius',
-        capabilities: [
-          'Teksto pridėjimas',
-          'Formų pridėjimas',
-          'PNG eksportas',
         ],
       },
     ],
