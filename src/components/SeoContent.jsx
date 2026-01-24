@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SeoContent = () => {
   return (
@@ -91,6 +92,32 @@ const SeoContent = () => {
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="mt-12">
+          <h3 className="text-2xl font-semibold text-white mb-4">Naudingos vidinės nuorodos</h3>
+          <ul className="space-y-2 text-gray-300">
+            <li>
+              <Link to="/features" className="text-blue-400 hover:text-blue-300">
+                Plačiau apie Clarivex funkcijas
+              </Link>
+            </li>
+            <li>
+              <Link to="/kainos" className="text-blue-400 hover:text-blue-300">
+                Peržiūrėti kainodarą ir kreditų sistemą
+              </Link>
+            </li>
+            <li>
+              <Link to="/duk" className="text-blue-400 hover:text-blue-300">
+                Dažniausiai užduodami klausimai (DUK)
+              </Link>
+            </li>
+            <li>
+              <Link to="/privatumas" className="text-blue-400 hover:text-blue-300">
+                Privatumo politika ir duomenų apsauga
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
