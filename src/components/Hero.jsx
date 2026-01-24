@@ -165,6 +165,16 @@ const Hero = () => {
             Socialiniai tinklai, el. paštas, priminimai, paveikslėliai — 
             <span className="text-blue-400 font-semibold"> viena balso komanda</span> ir viskas padaryta per sekundes.
           </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="text-sm md:text-base text-gray-400 max-w-xl mx-auto md:mx-0 leading-relaxed"
+          >
+            Clarivex automatizuoja turinio kūrimą ir klientų komunikaciją lietuviškai. Kurk postus,
+            atsakyk į laiškus, planuok publikacijas ir naudok AI kaip kasdienį asistentą — be
+            mėnesinių mokesčių, su lanksčia kreditų sistema.
+          </motion.p>
 
           {/* Pricing Stats */}
           <motion.div
@@ -193,7 +203,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
             className="space-y-5 pt-4"
           >
             {/* Registration Options - Side by Side */}

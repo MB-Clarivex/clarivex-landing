@@ -2,7 +2,7 @@ import React from 'react';
 
 const SeoContent = () => {
   return (
-    <section id="apie-clarivex" className="cvx-content-visibility py-20 px-4 relative overflow-hidden">
+    <section id="apie-clarivex" className="py-20 px-4 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950" />
       <div className="container mx-auto max-w-4xl relative z-10">
         <div className="text-center mb-10">
