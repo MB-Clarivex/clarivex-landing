@@ -5,12 +5,9 @@ import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
-import HowItWorks from '@/components/HowItWorks';
-import Benefits from '@/components/Benefits';
-import Pricing from '@/components/Pricing';
 import CTA from '@/components/CTA';
-import TelegramSection from '@/components/TelegramSection';
 import SeoContent from '@/components/SeoContent';
+import QuickLinks from '@/components/QuickLinks';
 import Footer from '@/components/Footer';
 import PrivacyPolicy from '@/components/PrivacyPolicy';
 import TermsOfService from '@/components/TermsOfService';
@@ -19,6 +16,9 @@ import FAQ from '@/components/FAQ';
 import Status from '@/components/Status';
 import PricingPage from '@/components/PricingPage';
 import FeaturesPage from '@/components/FeaturesPage';
+import HowItWorksPage from '@/components/HowItWorksPage';
+import BenefitsPage from '@/components/BenefitsPage';
+import TelegramPage from '@/components/TelegramPage';
 import { Toaster } from '@/components/ui/toaster';
 
 // Landing page component
@@ -92,10 +92,7 @@ function LandingPage() {
         <main>
           <Hero />
           <Features />
-          <HowItWorks />
-          <Benefits />
-          <TelegramSection />
-          <Pricing />
+          <QuickLinks />
           <CTA />
           <SeoContent />
         </main>
@@ -115,6 +112,9 @@ export const routes = [
   { path: '/statusas', element: <Status /> },
   { path: '/kainos', element: <PricingPage /> },
   { path: '/features', element: <FeaturesPage /> },
+  { path: '/kaip-veikia', element: <HowItWorksPage /> },
+  { path: '/nauda', element: <BenefitsPage /> },
+  { path: '/telegram', element: <TelegramPage /> },
 ];
 
 function App() {

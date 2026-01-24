@@ -6,10 +6,10 @@ import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { id: 'home', label: 'Pradžia' },
-  { id: 'features', label: 'Funkcijos' },
-  { id: 'galimybes', label: 'Galimybės', href: '/features' },
-  { id: 'how-it-works', label: 'Kaip veikia' },
-  { id: 'telegram', label: 'Telegram' },
+  { id: 'features', label: 'Funkcijos', href: '/features' },
+  { id: 'how-it-works', label: 'Kaip veikia', href: '/kaip-veikia' },
+  { id: 'benefits', label: 'Nauda', href: '/nauda' },
+  { id: 'telegram', label: 'Telegram', href: '/telegram' },
   { id: 'pricing', label: 'Kainodara', href: '/kainos' },
   { id: 'cta', label: 'Kontaktai' },
 ];

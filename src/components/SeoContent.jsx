@@ -103,6 +103,21 @@ const SeoContent = () => {
               </Link>
             </li>
             <li>
+              <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">
+                Kaip veikia Clarivex platforma
+              </Link>
+            </li>
+            <li>
+              <Link to="/nauda" className="text-blue-400 hover:text-blue-300">
+                Privalumai ir naudojimo scenarijai
+              </Link>
+            </li>
+            <li>
+              <Link to="/telegram" className="text-blue-400 hover:text-blue-300">
+                Telegram integracija ir balso komandos
+              </Link>
+            </li>
+            <li>
               <Link to="/kainos" className="text-blue-400 hover:text-blue-300">
                 Peržiūrėti kainodarą ir kreditų sistemą
               </Link>

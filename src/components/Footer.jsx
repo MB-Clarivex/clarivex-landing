@@ -80,28 +80,36 @@ const Footer = () => {
             <p className="font-semibold text-white mb-5">Platforma</p>
             <ul className="space-y-3">
               <li>
-                <span 
-                  onClick={() => handleScrollTo('features')} 
-                  className="text-gray-400 hover:text-blue-400 cursor-pointer transition-colors text-sm"
+                <Link 
+                  to="/features" 
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Funkcijos
-                </span>
+                </Link>
               </li>
               <li>
-                <span 
-                  onClick={() => handleScrollTo('how-it-works')} 
-                  className="text-gray-400 hover:text-blue-400 cursor-pointer transition-colors text-sm"
+                <Link 
+                  to="/kaip-veikia" 
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Kaip veikia
-                </span>
+                </Link>
               </li>
               <li>
-                <span 
-                  onClick={() => handleScrollTo('pricing')} 
-                  className="text-gray-400 hover:text-blue-400 cursor-pointer transition-colors text-sm"
+                <Link 
+                  to="/kainos" 
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Kainodara
-                </span>
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/nauda" 
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                >
+                  Nauda
+                </Link>
               </li>
               <li>
                 <a 
@@ -135,12 +143,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <span 
-                  onClick={() => handleScrollTo('cta')} 
-                  className="text-gray-400 hover:text-blue-400 cursor-pointer transition-colors text-sm"
+                <Link 
+                  to="/telegram" 
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
-                  DUK
-                </span>
+                  Telegram integracija
+                </Link>
               </li>
               <li>
                 <a 
