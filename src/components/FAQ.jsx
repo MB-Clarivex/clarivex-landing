@@ -186,6 +186,22 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
 const FAQ = () => {
   const [openItems, setOpenItems] = useState({});
   const [activeCategory, setActiveCategory] = useState('general');
+  const canonicalUrl = 'https://clarivex.ai/duk';
+  const socialImage = 'https://clarivex.ai/og.svg';
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqCategories.flatMap((category) =>
+      category.questions.map((item) => ({
+        "@type": "Question",
+        "name": item.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.a
+        }
+      }))
+    )
+  };
 
   const toggleItem = (categoryId, questionIndex) => {
     const key = `${categoryId}-${questionIndex}`;
@@ -202,6 +218,23 @@ const FAQ = () => {
       <Helmet>
         <title>DUK — Dažnai užduodami klausimai — Clarivex</title>
         <meta name="description" content="Raskite atsakymus į dažniausiai užduodamus klausimus apie Clarivex AI platformą, kainas, funkcijas ir daugiau." />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="DUK — Dažnai užduodami klausimai — Clarivex" />
+        <meta property="og:description" content="Raskite atsakymus į dažniausiai užduodamus klausimus apie Clarivex AI platformą, kainas, funkcijas ir daugiau." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Clarivex" />
+        <meta property="og:locale" content="lt_LT" />
+        <meta property="og:image" content={socialImage} />
+        <meta property="og:image:alt" content="Clarivex logotipas" />
+        <meta property="og:image:type" content="image/svg+xml" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="DUK — Dažnai užduodami klausimai — Clarivex" />
+        <meta name="twitter:description" content="Raskite atsakymus į dažniausiai užduodamus klausimus apie Clarivex AI platformą, kainas, funkcijas ir daugiau." />
+        <meta name="twitter:image" content={socialImage} />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       
       <div className="min-h-screen bg-gray-950 text-white">

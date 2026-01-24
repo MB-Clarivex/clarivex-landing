@@ -22,6 +22,42 @@ import { Toaster } from '@/components/ui/toaster';
 
 // Landing page component
 function LandingPage() {
+  const canonicalUrl = 'https://clarivex.ai/';
+  const socialImage = 'https://clarivex.ai/og.svg';
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://clarivex.ai/#organization",
+        "name": "Clarivex",
+        "url": "https://clarivex.ai/",
+        "logo": "https://clarivex.ai/logo.png"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://clarivex.ai/#website",
+        "name": "Clarivex",
+        "url": "https://clarivex.ai/",
+        "inLanguage": "lt-LT",
+        "publisher": {
+          "@id": "https://clarivex.ai/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://clarivex.ai/#webpage",
+        "name": "Clarivex — AI asistentas, kuris supranta lietuviškai",
+        "url": "https://clarivex.ai/",
+        "description": "Pasakyk ką nori — Clarivex padarys. Socialiniai tinklai, el. paštas, priminimai, paveikslėliai — viena balso komanda ir viskas padaryta per sekundes.",
+        "inLanguage": "lt-LT",
+        "isPartOf": {
+          "@id": "https://clarivex.ai/#website"
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <Helmet>
@@ -34,11 +70,20 @@ function LandingPage() {
         <meta property="og:title" content="Clarivex — AI asistentas, kuris supranta lietuviškai" />
         <meta property="og:description" content="Pasakyk ką nori — Clarivex padarys. Viena balso komanda ir viskas padaryta per sekundes." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://clarivex.ai" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Clarivex" />
+        <meta property="og:locale" content="lt_LT" />
+        <meta property="og:image" content={socialImage} />
+        <meta property="og:image:alt" content="Clarivex logotipas" />
+        <meta property="og:image:type" content="image/svg+xml" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Clarivex — AI asistentas" />
         <meta name="twitter:description" content="Pasakyk ką nori — Clarivex padarys. AI automatizavimas lietuviškai." />
-        <link rel="canonical" href="https://clarivex.ai" />
+        <meta name="twitter:image" content={socialImage} />
+        <link rel="canonical" href={canonicalUrl} />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       
       <div className="min-h-screen bg-gray-950 text-white antialiased">

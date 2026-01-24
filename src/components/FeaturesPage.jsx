@@ -530,6 +530,8 @@ const STATS = [
 
 const FeaturesPage = () => {
   const [activeCategory, setActiveCategory] = useState(null);
+  const canonicalUrl = 'https://clarivex.ai/features';
+  const socialImage = 'https://clarivex.ai/og.svg';
 
   const handleLogin = () => {
     window.location.href = "https://app.clarivex.ai/";
@@ -543,7 +545,22 @@ const FeaturesPage = () => {
           name="description" 
           content="Visos Clarivex galimybės vienoje vietoje. AI pokalbiai, socialinių tinklų valdymas, el. paštas, Telegram integracija ir daug daugiau." 
         />
-        <link rel="canonical" href="https://clarivex.ai/features" />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Galimybės — Clarivex AI Platforma" />
+        <meta property="og:description" content="Visos Clarivex galimybės vienoje vietoje. AI pokalbiai, socialinių tinklų valdymas, el. paštas, Telegram integracija ir daug daugiau." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Clarivex" />
+        <meta property="og:locale" content="lt_LT" />
+        <meta property="og:image" content={socialImage} />
+        <meta property="og:image:alt" content="Clarivex logotipas" />
+        <meta property="og:image:type" content="image/svg+xml" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Galimybės — Clarivex AI Platforma" />
+        <meta name="twitter:description" content="Visos Clarivex galimybės vienoje vietoje. AI pokalbiai, socialinių tinklų valdymas, el. paštas, Telegram integracija ir daugiau." />
+        <meta name="twitter:image" content={socialImage} />
       </Helmet>
 
       <div className="min-h-screen bg-gray-950 text-white antialiased">

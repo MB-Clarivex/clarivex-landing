@@ -9,6 +9,8 @@ const DataDeletion = () => {
   const [reason, setReason] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const canonicalUrl = 'https://clarivex.ai/duomenu-istrynimas';
+  const socialImage = 'https://clarivex.ai/og.svg';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,6 +47,22 @@ const DataDeletion = () => {
       <Helmet>
         <title>Duomenų ištrynimas — Clarivex</title>
         <meta name="description" content="Pateikite prašymą ištrinti savo asmens duomenis iš Clarivex sistemos." />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Duomenų ištrynimas — Clarivex" />
+        <meta property="og:description" content="Pateikite prašymą ištrinti savo asmens duomenis iš Clarivex sistemos." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Clarivex" />
+        <meta property="og:locale" content="lt_LT" />
+        <meta property="og:image" content={socialImage} />
+        <meta property="og:image:alt" content="Clarivex logotipas" />
+        <meta property="og:image:type" content="image/svg+xml" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Duomenų ištrynimas — Clarivex" />
+        <meta name="twitter:description" content="Pateikite prašymą ištrinti savo asmens duomenis iš Clarivex sistemos." />
+        <meta name="twitter:image" content={socialImage} />
       </Helmet>
       
       <div className="min-h-screen bg-gray-950 text-white">

@@ -78,6 +78,8 @@ const recentIncidents = [
 
 const Status = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
+  const canonicalUrl = 'https://clarivex.ai/statusas';
+  const socialImage = 'https://clarivex.ai/og.svg';
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -100,6 +102,22 @@ const Status = () => {
       <Helmet>
         <title>Sistemos statusas — Clarivex</title>
         <meta name="description" content="Patikrinkite Clarivex paslaugų būklę realiu laiku. Visos sistemos ir jų veikimo statusas." />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Sistemos statusas — Clarivex" />
+        <meta property="og:description" content="Patikrinkite Clarivex paslaugų būklę realiu laiku. Visos sistemos ir jų veikimo statusas." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Clarivex" />
+        <meta property="og:locale" content="lt_LT" />
+        <meta property="og:image" content={socialImage} />
+        <meta property="og:image:alt" content="Clarivex logotipas" />
+        <meta property="og:image:type" content="image/svg+xml" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Sistemos statusas — Clarivex" />
+        <meta name="twitter:description" content="Patikrinkite Clarivex paslaugų būklę realiu laiku. Visos sistemos ir jų veikimo statusas." />
+        <meta name="twitter:image" content={socialImage} />
       </Helmet>
       
       <div className="min-h-screen bg-gray-950 text-white">

@@ -380,12 +380,30 @@ function TipCard({ tip }) {
 
 export default function PricingPage() {
   const [showAllModels, setShowAllModels] = useState(false);
+  const canonicalUrl = 'https://clarivex.ai/kainos';
+  const socialImage = 'https://clarivex.ai/og.svg';
   
   return (
     <>
       <Helmet>
         <title>Kainodara — Clarivex AI</title>
         <meta name="description" content="Skaidri Clarivex kainodara. AI modelių, vaizdų generavimo, failų siuntimo ir kitų paslaugų kainos. Patarimai kaip taupyti kreditus." />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Kainodara — Clarivex AI" />
+        <meta property="og:description" content="Skaidri Clarivex kainodara. AI modelių, vaizdų generavimo, failų siuntimo ir kitų paslaugų kainos. Patarimai kaip taupyti kreditus." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Clarivex" />
+        <meta property="og:locale" content="lt_LT" />
+        <meta property="og:image" content={socialImage} />
+        <meta property="og:image:alt" content="Clarivex logotipas" />
+        <meta property="og:image:type" content="image/svg+xml" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Kainodara — Clarivex AI" />
+        <meta name="twitter:description" content="Skaidri Clarivex kainodara. AI modelių, vaizdų generavimo, failų siuntimo ir kitų paslaugų kainos." />
+        <meta name="twitter:image" content={socialImage} />
       </Helmet>
       
       <div className="min-h-screen bg-gray-950 text-white">

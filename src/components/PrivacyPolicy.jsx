@@ -4,11 +4,30 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
 const PrivacyPolicy = () => {
+  const canonicalUrl = 'https://clarivex.ai/privatumas';
+  const socialImage = 'https://clarivex.ai/og.svg';
+
   return (
     <>
       <Helmet>
         <title>Privatumo politika — Clarivex</title>
         <meta name="description" content="Clarivex privatumo politika. Sužinokite, kaip renkame, naudojame ir saugome jūsų asmens duomenis." />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Privatumo politika — Clarivex" />
+        <meta property="og:description" content="Clarivex privatumo politika. Sužinokite, kaip renkame, naudojame ir saugome jūsų asmens duomenis." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="Clarivex" />
+        <meta property="og:locale" content="lt_LT" />
+        <meta property="og:image" content={socialImage} />
+        <meta property="og:image:alt" content="Clarivex logotipas" />
+        <meta property="og:image:type" content="image/svg+xml" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Privatumo politika — Clarivex" />
+        <meta name="twitter:description" content="Clarivex privatumo politika. Sužinokite, kaip renkame, naudojame ir saugome jūsų asmens duomenis." />
+        <meta name="twitter:image" content={socialImage} />
       </Helmet>
       
       <div className="min-h-screen bg-gray-950 text-white">
