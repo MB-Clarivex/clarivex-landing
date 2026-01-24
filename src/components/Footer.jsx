@@ -32,6 +32,10 @@ const Footer = () => {
               <img 
                 src="/logo.png" 
                 alt="Clarivex" 
+                width="40"
+                height="40"
+                loading="lazy"
+                decoding="async"
                 className="w-10 h-10 object-contain"
               />
               <span className="text-xl font-bold text-white">Clarivex</span>

@@ -70,6 +70,10 @@ const Header = () => {
               <img 
                 src="/logo.png" 
                 alt="Clarivex" 
+                width="40"
+                height="40"
+                decoding="async"
+                fetchpriority="high"
                 className="w-10 h-10 object-contain"
               />
             </div>

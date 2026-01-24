@@ -127,7 +127,7 @@ const CTA = () => {
           className="mt-20 grid md:grid-cols-2 gap-6"
         >
           <div className="bg-gray-800/30 border border-gray-700/50 rounded-2xl p-6">
-            <h4 className="font-bold text-white mb-2">🤔 Kaip veikia kreditai?</h4>
+            <h3 className="font-bold text-white mb-2">🤔 Kaip veikia kreditai?</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               1€ = 1000 kreditų. Kreditai naudojami AI veiksmams: pokalbiai, postai, 
               paveikslėliai. Nenaudoti kreditai lieka ir niekada nesibaigia.
@@ -135,7 +135,7 @@ const CTA = () => {
           </div>
           
           <div className="bg-gray-800/30 border border-gray-700/50 rounded-2xl p-6">
-            <h4 className="font-bold text-white mb-2">🌍 Ar veikia lietuviškai?</h4>
+            <h3 className="font-bold text-white mb-2">🌍 Ar veikia lietuviškai?</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               Taip! Clarivex puikiai supranta lietuvių kalbą — ir balsu, ir tekstu. 
               Taip pat palaiko 100+ kitų kalbų.
@@ -143,7 +143,7 @@ const CTA = () => {
           </div>
           
           <div className="bg-gray-800/30 border border-gray-700/50 rounded-2xl p-6">
-            <h4 className="font-bold text-white mb-2">📱 Ar galiu naudoti telefone?</h4>
+            <h3 className="font-bold text-white mb-2">📱 Ar galiu naudoti telefone?</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               Taip! Web aplikacija veikia visuose įrenginiuose. Taip pat turime 
               Telegram botą — valdyk viską tiesiog iš messenger'io.
@@ -151,7 +151,7 @@ const CTA = () => {
           </div>
           
           <div className="bg-gray-800/30 border border-gray-700/50 rounded-2xl p-6">
-            <h4 className="font-bold text-white mb-2">🔒 Ar mano duomenys saugūs?</h4>
+            <h3 className="font-bold text-white mb-2">🔒 Ar mano duomenys saugūs?</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               Absoliučiai. Visi duomenys šifruojami ir saugomi Europos serveriuose. 
               Niekada neparduodame ir nesidalijame jūsų informacija.

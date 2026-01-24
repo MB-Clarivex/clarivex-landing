@@ -214,7 +214,7 @@ const TelegramSection = () => {
                       <feature.icon className="w-5 h-5 text-[#0088cc]" />
                     </div>
                     <div>
-                      <h4 className="text-white font-medium mb-1">{feature.title}</h4>
+                      <h3 className="text-white font-medium mb-1">{feature.title}</h3>
                       <p className="text-gray-400 text-sm">{feature.description}</p>
                     </div>
                   </div>

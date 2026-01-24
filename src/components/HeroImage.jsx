@@ -6,6 +6,10 @@ const HeroImage = () => {
       <img 
         src='https://imagedelivery.net/LqiWLm-3MGbYHtFuUbcBtA/119580eb-abd9-4191-b93a-f01938786700/public' 
         alt='Clarivex product preview' 
+        width="720"
+        height="480"
+        loading="lazy"
+        decoding="async"
       />
     </div>
   );
