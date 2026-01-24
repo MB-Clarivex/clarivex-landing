@@ -58,6 +58,8 @@ const writeRouteHtml = async (template, routePath, appHtml, helmetHtml) => {
 };
 
 const run = async () => {
+  console.log('[prerender] Starting prerender...');
+  console.log(`[prerender] Dist dir: ${distDir}`);
   const vite = await createServer({
     logLevel: 'error',
     server: { middlewareMode: true },
@@ -70,6 +72,7 @@ const run = async () => {
   const routePaths = routes
     .map((route) => route.path)
     .filter((routePath) => typeof routePath === 'string');
+  console.log(`[prerender] Routes: ${routePaths.join(', ')}`);
 
   await Promise.all(
     routePaths.map(async (routePath) => {
@@ -79,6 +82,7 @@ const run = async () => {
   );
 
   await vite.close();
+  console.log('[prerender] Done.');
 };
 
 run().catch((error) => {
