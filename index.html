@@ -38,9 +38,53 @@
 			content="Pasakyk ką nori — Clarivex padarys. Socialiniai tinklai, el. paštas, priminimai, paveikslėliai — viena balso komanda ir viskas padaryta per sekundes."
 		/>
 		<meta name="twitter:image" content="https://clarivex.ai/og.svg" />
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@graph": [
+					{
+						"@type": "Organization",
+						"@id": "https://clarivex.ai/#organization",
+						"name": "Clarivex",
+						"url": "https://clarivex.ai/",
+						"logo": "https://clarivex.ai/logo.png"
+					},
+					{
+						"@type": "WebSite",
+						"@id": "https://clarivex.ai/#website",
+						"name": "Clarivex",
+						"url": "https://clarivex.ai/",
+						"inLanguage": "lt-LT",
+						"publisher": {
+							"@id": "https://clarivex.ai/#organization"
+						}
+					},
+					{
+						"@type": "WebPage",
+						"@id": "https://clarivex.ai/#webpage",
+						"name": "Clarivex — AI asistentas, kuris supranta lietuviškai",
+						"url": "https://clarivex.ai/",
+						"description": "Pasakyk ką nori — Clarivex padarys. Socialiniai tinklai, el. paštas, priminimai, paveikslėliai — viena balso komanda ir viskas padaryta per sekundes.",
+						"inLanguage": "lt-LT",
+						"isPartOf": {
+							"@id": "https://clarivex.ai/#website"
+						}
+					}
+				]
+			}
+		</script>
 	</head>
 	<body>
 		<div id="root"></div>
+		<noscript>
+			<main style="padding: 24px; font-family: Arial, sans-serif; background: #0b0f1f; color: #ffffff;">
+				<h1>Clarivex — AI asistentas, kuris supranta lietuviškai</h1>
+				<p>
+					Pasakyk ką nori — Clarivex padarys. Socialiniai tinklai, el. paštas, priminimai, paveikslėliai —
+					viena balso komanda ir viskas padaryta per sekundes.
+				</p>
+			</main>
+		</noscript>
 		<script type="module" src="/src/main.jsx"></script>
 	</body>
 </html>

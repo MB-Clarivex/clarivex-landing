@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Clarivex  AI asistentas, kuris supranta lietuviakai</title>
+  <title id="title">Clarivex — AI asistentas, kuris supranta lietuviškai</title>
   <desc id="desc">Clarivex AI asistento pristatymo vaizdas socialiniams tinklams.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -24,10 +24,10 @@
     </text>
     <rect x="0" y="18" width="330" height="6" rx="3" fill="url(#accent)" />
     <text x="0" y="88" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="500" fill="#cbd5f5">
-      AI asistentas, kuris supranta lietuviakai
+      AI asistentas, kuris supranta lietuviškai
     </text>
     <text x="0" y="138" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="400" fill="#94a3b8">
-      Socialiniai tinklai, el. paatas, priminimai, paveikslliai  viena balso komanda.
+      Socialiniai tinklai, el. paštas, priminimai, paveikslėliai — viena balso komanda.
     </text>
   </g>
 
