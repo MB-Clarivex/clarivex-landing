@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { useRoutes } from 'react-router-dom';
 import ScrollToTop from '@/components/ScrollToTop';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
@@ -104,20 +104,24 @@ function LandingPage() {
   );
 }
 
+export const routes = [
+  { path: '/', element: <LandingPage /> },
+  { path: '/privatumas', element: <PrivacyPolicy /> },
+  { path: '/salygos', element: <TermsOfService /> },
+  { path: '/duomenu-istrynimas', element: <DataDeletion /> },
+  { path: '/duk', element: <FAQ /> },
+  { path: '/statusas', element: <Status /> },
+  { path: '/kainos', element: <PricingPage /> },
+  { path: '/features', element: <FeaturesPage /> },
+];
+
 function App() {
+  const routing = useRoutes(routes);
+
   return (
     <>
-    <ScrollToTop />
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/privatumas" element={<PrivacyPolicy />} />
-      <Route path="/salygos" element={<TermsOfService />} />
-      <Route path="/duomenu-istrynimas" element={<DataDeletion />} />
-      <Route path="/duk" element={<FAQ />} />
-      <Route path="/statusas" element={<Status />} />
-      <Route path="/kainos" element={<PricingPage />} />
-      <Route path="/features" element={<FeaturesPage />} />
-    </Routes>
+      <ScrollToTop />
+      {routing}
     </>
   );
 }
