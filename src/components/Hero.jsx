@@ -65,6 +65,7 @@ const useTypingEffect = (text, speed = 30, startDelay = 0) => {
 const Hero = () => {
   const [currentCommand, setCurrentCommand] = useState(0);
   const [showResult, setShowResult] = useState(false);
+  const [showDemo, setShowDemo] = useState(false);
   
   const command = voiceCommands[currentCommand];
   const { displayedText: voiceText, isComplete: voiceComplete } = useTypingEffect(
@@ -87,6 +88,18 @@ const Hero = () => {
       return () => clearTimeout(nextTimer);
     }
   }, [showResult]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return undefined;
+    let handle;
+    const reveal = () => setShowDemo(true);
+    if ('requestIdleCallback' in window) {
+      handle = window.requestIdleCallback(reveal, { timeout: 1500 });
+      return () => window.cancelIdleCallback?.(handle);
+    }
+    handle = setTimeout(reveal, 1200);
+    return () => clearTimeout(handle);
+  }, []);
 
   const handleTelegramRegister = () => {
     window.open('https://t.me/clarivex_notify_bot', '_blank');
@@ -269,140 +282,148 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="relative hidden md:flex justify-center items-center"
         >
-          <div className="relative w-full max-w-md">
-            {/* Glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-2xl" />
-            
-            {/* Main card */}
-            <div className="relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl shadow-2xl overflow-hidden">
-              {/* Header */}
-              <div className="flex items-center justify-between p-5 border-b border-gray-700/50 bg-gray-800/50">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
-                    <Zap className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">Clarivex AI</p>
-                    <p className="text-xs text-green-400 flex items-center gap-1">
-                      <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
-                      Klausau...
-                    </p>
-                  </div>
-                </div>
-                <Mic className="w-5 h-5 text-red-400 animate-pulse" />
-              </div>
-
-              {/* Chat area */}
-              <div className="p-5 space-y-4 min-h-[280px]">
-                <AnimatePresence mode="wait">
-                  {/* Voice command */}
-                  <motion.div
-                    key={`voice-${currentCommand}`}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="flex justify-end"
-                  >
-                    <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white p-4 rounded-2xl rounded-br-md max-w-[90%] shadow-lg">
-                      <p className="text-sm font-medium">{voiceText}</p>
-                      {voiceComplete && (
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          className="flex items-center gap-1 mt-2 text-blue-200 text-xs"
-                        >
-                          <Mic className="w-3 h-3" />
-                          <span>Balso komanda</span>
-                        </motion.div>
-                      )}
+          {showDemo ? (
+            <div className="relative w-full max-w-md">
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-2xl" />
+              
+              {/* Main card */}
+              <div className="relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl shadow-2xl overflow-hidden">
+                {/* Header */}
+                <div className="flex items-center justify-between p-5 border-b border-gray-700/50 bg-gray-800/50">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
+                      <Zap className="w-5 h-5 text-white" />
                     </div>
-                  </motion.div>
+                    <div>
+                      <p className="font-semibold text-white">Clarivex AI</p>
+                      <p className="text-xs text-green-400 flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
+                        Klausau...
+                      </p>
+                    </div>
+                  </div>
+                  <Mic className="w-5 h-5 text-red-400 animate-pulse" />
+                </div>
 
-                  {/* Result */}
-                  {showResult && (
+                {/* Chat area */}
+                <div className="p-5 space-y-4 min-h-[280px]">
+                  <AnimatePresence mode="wait">
+                    {/* Voice command */}
                     <motion.div
-                      key={`result-${currentCommand}`}
-                      initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      key={`voice-${currentCommand}`}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                      className="flex justify-start"
+                      className="flex justify-end"
                     >
-                      <div className="bg-gray-800/80 border border-gray-700/50 p-4 rounded-2xl rounded-bl-md max-w-[90%] shadow-lg">
-                        <div className="flex items-center gap-3 mb-3">
-                          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-500/30 flex items-center justify-center">
-                            <command.icon className="w-5 h-5 text-green-400" />
-                          </div>
-                          <div>
-                            <p className="font-bold text-green-400">{command.result}</p>
-                            <p className="text-xs text-gray-400">{command.detail}</p>
-                          </div>
-                        </div>
-                        <div className="flex items-center justify-between pt-2 border-t border-gray-700/50">
-                          <span className="text-xs text-gray-500">Atlikta per</span>
-                          <span className="text-sm font-bold text-blue-400">{command.time}</span>
-                        </div>
+                      <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white p-4 rounded-2xl rounded-br-md max-w-[90%] shadow-lg">
+                        <p className="text-sm font-medium">{voiceText}</p>
+                        {voiceComplete && (
+                          <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            className="flex items-center gap-1 mt-2 text-blue-200 text-xs"
+                          >
+                            <Mic className="w-3 h-3" />
+                            <span>Balso komanda</span>
+                          </motion.div>
+                        )}
                       </div>
                     </motion.div>
-                  )}
-                </AnimatePresence>
+
+                    {/* Result */}
+                    {showResult && (
+                      <motion.div
+                        key={`result-${currentCommand}`}
+                        initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                        className="flex justify-start"
+                      >
+                        <div className="bg-gray-800/80 border border-gray-700/50 p-4 rounded-2xl rounded-bl-md max-w-[90%] shadow-lg">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-500/30 flex items-center justify-center">
+                              <command.icon className="w-5 h-5 text-green-400" />
+                            </div>
+                            <div>
+                              <p className="font-bold text-green-400">{command.result}</p>
+                              <p className="text-xs text-gray-400">{command.detail}</p>
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between pt-2 border-t border-gray-700/50">
+                            <span className="text-xs text-gray-500">Atlikta per</span>
+                            <span className="text-sm font-bold text-blue-400">{command.time}</span>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                {/* Footer - voice indicator */}
+                <div className="p-4 border-t border-gray-700/50 bg-gray-800/30">
+                  <div className="flex items-center justify-center gap-2">
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <motion.div
+                          key={i}
+                          className="w-1 bg-blue-400 rounded-full"
+                          animate={{
+                            height: [8, 20, 8],
+                          }}
+                          transition={{
+                            duration: 0.8,
+                            repeat: Infinity,
+                            delay: i * 0.1,
+                          }}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-sm text-gray-400 ml-2">Pasakyk ką nori...</span>
+                  </div>
+                </div>
               </div>
 
-              {/* Footer - voice indicator */}
-              <div className="p-4 border-t border-gray-700/50 bg-gray-800/30">
-                <div className="flex items-center justify-center gap-2">
-                  <div className="flex gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <motion.div
-                        key={i}
-                        className="w-1 bg-blue-400 rounded-full"
-                        animate={{
-                          height: [8, 20, 8],
-                        }}
-                        transition={{
-                          duration: 0.8,
-                          repeat: Infinity,
-                          delay: i * 0.1,
-                        }}
-                      />
-                    ))}
+              {/* Floating badges */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 1, duration: 0.5 }}
+                className="absolute -left-4 top-1/4 bg-gray-800/90 backdrop-blur border border-gray-700 rounded-xl p-3 shadow-xl"
+              >
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-5 h-5 text-blue-400" />
+                  <div>
+                    <p className="text-xs text-gray-400">Šią savaitę</p>
+                    <p className="text-sm font-bold text-white">12 postų</p>
                   </div>
-                  <span className="text-sm text-gray-400 ml-2">Pasakyk ką nori...</span>
                 </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 1.2, duration: 0.5 }}
+                className="absolute -right-4 bottom-1/4 bg-gray-800/90 backdrop-blur border border-gray-700 rounded-xl p-3 shadow-xl"
+              >
+                <div className="flex items-center gap-2">
+                  <Mail className="w-5 h-5 text-purple-400" />
+                  <div>
+                    <p className="text-xs text-gray-400">Atsakyta</p>
+                    <p className="text-sm font-bold text-white">47 laiškai</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          ) : (
+            <div className="relative w-full max-w-md">
+              <div className="relative bg-gray-900/60 border border-gray-700/40 rounded-3xl p-10 text-center text-gray-400">
+                Įkeliame demonstraciją…
               </div>
             </div>
-
-            {/* Floating badges */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1, duration: 0.5 }}
-              className="absolute -left-4 top-1/4 bg-gray-800/90 backdrop-blur border border-gray-700 rounded-xl p-3 shadow-xl"
-            >
-              <div className="flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-blue-400" />
-                <div>
-                  <p className="text-xs text-gray-400">Šią savaitę</p>
-                  <p className="text-sm font-bold text-white">12 postų</p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.2, duration: 0.5 }}
-              className="absolute -right-4 bottom-1/4 bg-gray-800/90 backdrop-blur border border-gray-700 rounded-xl p-3 shadow-xl"
-            >
-              <div className="flex items-center gap-2">
-                <Mail className="w-5 h-5 text-purple-400" />
-                <div>
-                  <p className="text-xs text-gray-400">Atsakyta</p>
-                  <p className="text-sm font-bold text-white">47 laiškai</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+          )}
         </motion.div>
       </div>
 
