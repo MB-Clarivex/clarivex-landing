@@ -129,6 +129,11 @@ body {
   animation: pulse-glow 2s ease-in-out infinite;
 }
 
+.cvx-content-visibility {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1000px;
+}
+
 @layer base {
   :root {
     --background: 222.2 84% 4.9%;

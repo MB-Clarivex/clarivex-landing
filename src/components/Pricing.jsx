@@ -87,7 +87,7 @@ const Pricing = () => {
   const customCredits = calculateCustomCredits();
 
   return (
-    <section id="pricing" className="py-24 px-4 relative overflow-hidden">
+    <section id="pricing" className="cvx-content-visibility py-24 px-4 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900" />
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />

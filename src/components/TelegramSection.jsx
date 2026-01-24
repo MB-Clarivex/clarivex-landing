@@ -56,7 +56,7 @@ const TelegramSection = () => {
   };
 
   return (
-    <section id="telegram" className="py-24 px-4 relative overflow-hidden">
+    <section id="telegram" className="cvx-content-visibility py-24 px-4 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-[#0f172a] to-gray-900" />
       
