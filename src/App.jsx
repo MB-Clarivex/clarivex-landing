@@ -10,6 +10,7 @@ import Benefits from '@/components/Benefits';
 import Pricing from '@/components/Pricing';
 import CTA from '@/components/CTA';
 import TelegramSection from '@/components/TelegramSection';
+import SeoContent from '@/components/SeoContent';
 import Footer from '@/components/Footer';
 import PrivacyPolicy from '@/components/PrivacyPolicy';
 import TermsOfService from '@/components/TermsOfService';
@@ -96,6 +97,7 @@ function LandingPage() {
           <TelegramSection />
           <Pricing />
           <CTA />
+          <SeoContent />
         </main>
         <Footer />
         <Toaster />
