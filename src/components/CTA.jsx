@@ -58,7 +58,7 @@ const CTA = () => {
           {/* Description */}
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
             Prisijunk prie šimtų verslų, kurie jau automatizavo savo 
-            kasdienius darbus su Clarivex. Pirmi 2000 kreditų — mūsų dovana.
+            kasdienius darbus su Clarivex. 250 kr. nemokamai, iki 1000 kr. užbaigus profilį.
           </p>
 
           {/* CTA Buttons */}
@@ -66,12 +66,12 @@ const CTA = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                onClick={handleTelegramRegister}
-                className="bg-gradient-to-r from-[#0088cc] to-[#0077b5] hover:from-[#0077b5] hover:to-[#006699] text-white px-10 py-7 text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-[#0088cc]/25 transition-all duration-300 group"
+                onClick={handleEmailRegister}
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-10 py-7 text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 group"
               >
-                <Smartphone className="w-5 h-5 mr-2" />
-                Registruotis su Telegram
-                <span className="ml-2 text-sm opacity-75">2000 kr.</span>
+                <Zap className="w-5 h-5 mr-2" />
+                Pradėti nemokamai
+                <span className="ml-2 text-sm opacity-75">+250 kr.</span>
               </Button>
               
               <Button
@@ -84,15 +84,6 @@ const CTA = () => {
                 Susisiekti
               </Button>
             </div>
-            
-            <button
-              onClick={handleEmailRegister}
-              className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2"
-            >
-              <Mail className="w-4 h-4" />
-              Arba registruotis su email (200 kr.)
-              <ArrowRight className="w-3 h-3" />
-            </button>
           </div>
 
           {/* Trust indicators */}
@@ -109,11 +100,11 @@ const CTA = () => {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-green-400 rounded-full" />
-              <span>200 kr. su email</span>
+              <span>250 kr. registracijai</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-blue-400 rounded-full" />
-              <span className="text-blue-400">+1800 kr. su Telegram</span>
+              <span className="text-blue-400">Iki 1000 kr. užbaigus profilį</span>
             </div>
           </motion.div>
         </motion.div>

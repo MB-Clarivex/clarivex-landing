@@ -92,7 +92,7 @@ const TelegramSection = () => {
           
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Susieti Telegram ir valdyti Clarivex balsu bet kur ir bet kada. 
-            Gauk <span className="text-[#0088cc] font-semibold">+1800 bonus kreditų</span> už susiejimą!
+            Gauk <span className="text-[#0088cc] font-semibold">+250 bonus kreditų</span> už susiejimą!
           </p>
         </motion.div>
 
@@ -263,25 +263,25 @@ const TelegramSection = () => {
                   <Gift className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">+1800 bonus kreditų</h3>
-                  <p className="text-gray-400">Susieti Telegram ir gauti papildomus kreditus nemokamai</p>
+                  <h3 className="text-2xl font-bold text-white">Iki 1000 kr. nemokamai</h3>
+                  <p className="text-gray-400">Registracija + užbaigtas profilis = maksimalus bonus</p>
                 </div>
               </div>
               
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <div className="text-center px-6 py-3 bg-gray-800/50 rounded-xl border border-gray-700/50">
-                  <p className="text-sm text-gray-400">Email registracija</p>
-                  <p className="text-2xl font-bold text-white">200 <span className="text-sm text-gray-400">kr.</span></p>
+                  <p className="text-sm text-gray-400">Registracija</p>
+                  <p className="text-2xl font-bold text-white">250 <span className="text-sm text-gray-400">kr.</span></p>
                 </div>
                 <div className="text-2xl text-gray-500">+</div>
                 <div className="text-center px-6 py-3 bg-[#0088cc]/10 rounded-xl border border-[#0088cc]/30">
-                  <p className="text-sm text-[#0088cc]">+ Telegram</p>
-                  <p className="text-2xl font-bold text-[#0088cc]">+1800 <span className="text-sm">kr.</span></p>
+                  <p className="text-sm text-[#0088cc]">Profilio žingsniai</p>
+                  <p className="text-2xl font-bold text-[#0088cc]">3×250 <span className="text-sm">kr.</span></p>
                 </div>
                 <div className="text-2xl text-gray-500">=</div>
                 <div className="text-center px-6 py-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl border border-green-500/30">
                   <p className="text-sm text-green-400">Iš viso</p>
-                  <p className="text-2xl font-bold text-green-400">2000 <span className="text-sm">kr.</span></p>
+                  <p className="text-2xl font-bold text-green-400">1000 <span className="text-sm">kr.</span></p>
                 </div>
               </div>
             </div>

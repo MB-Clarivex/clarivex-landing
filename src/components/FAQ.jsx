@@ -34,7 +34,7 @@ const faqCategories = [
     questions: [
       {
         q: 'Kiek kainuoja Clarivex?',
-        a: 'Clarivex veikia kreditų sistema be mėnesinių mokesčių. Perkate kreditus, kai jų reikia: 1€ = 1000 kreditų. Nauji vartotojai gauna 2000 nemokamų kreditų pradžiai!'
+        a: 'Clarivex veikia kreditų sistema be mėnesinių mokesčių. Perkate kreditus, kai jų reikia: 1€ = 1000 kreditų. Nauji vartotojai gauna 250 kreditų registracijos metu, o užbaigus profilį — iki 1000 kreditų pradžiai!'
       },
       {
         q: 'Ką galiu padaryti su 1000 kreditų?',

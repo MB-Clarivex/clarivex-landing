@@ -74,7 +74,7 @@ const SeoContent = () => {
             <div>
               <p className="font-semibold text-white">Ar reikia kortelės registracijai?</p>
               <p>
-                Ne. Registracija nemokama, o nauji vartotojai gauna 2000 kreditų dovanų.
+                Ne. Registracija nemokama, o nauji vartotojai gauna iki 1000 kreditų dovanų.
               </p>
             </div>
             <div>

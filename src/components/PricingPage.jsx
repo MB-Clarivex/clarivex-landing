@@ -448,7 +448,7 @@ export default function PricingPage() {
                   </div>
                   <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-full text-purple-400 text-sm">
                     <CheckCircle2 className="w-4 h-4" />
-                    2000 kr dovanų pradžiai
+                    Iki 1000 kr dovanų pradžiai
                   </div>
                 </div>
               </motion.div>
@@ -756,7 +756,7 @@ export default function PricingPage() {
                     Pasiruošęs pradėti?
                   </h2>
                   <p className="text-gray-400 mb-8 max-w-lg mx-auto">
-                    Gauk <span className="text-green-400 font-semibold">2000 kreditų dovanų</span> užsiregistravęs.
+                    Gauk <span className="text-green-400 font-semibold">iki 1000 kreditų dovanų</span> užsiregistravęs ir užbaigęs profilį.
                     Jokių įsipareigojimų – papildysi kai norėsi.
                   </p>
                   

@@ -169,8 +169,8 @@ const Pricing = () => {
                     <span className="text-6xl font-bold text-green-400">€0</span>
                     <span className="text-gray-400 text-lg">/ pradžia</span>
                   </div>
-                  <p className="text-2xl font-semibold text-white mb-1">2000 kreditų dovanų</p>
-                  <p className="text-gray-400">Registruokitės su Telegram ir gaukite iškart</p>
+                  <p className="text-2xl font-semibold text-white mb-1">Iki 1000 kreditų dovanų</p>
+                  <p className="text-gray-400">Registruokitės ir užbaikite profilį — gaukite iškart</p>
                 </div>
                 
                 {/* Middle - features */}

@@ -108,7 +108,7 @@ const TermsOfService = () => {
               </p>
               <ul className="list-disc list-inside text-gray-300 space-y-2 mt-4">
                 <li>1 EUR = 1000 kreditų</li>
-                <li>Nauji vartotojai gauna 2000 nemokamų kreditų</li>
+                <li>Nauji vartotojai gauna iki 1000 nemokamų kreditų (250 registracijai + iki 750 užbaigus profilį)</li>
                 <li>Kreditai negrąžinami ir negali būti iškeisti į pinigus</li>
                 <li>Nepanaudoti kreditai niekada nesibaigia</li>
               </ul>

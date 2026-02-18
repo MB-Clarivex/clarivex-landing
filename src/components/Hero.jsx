@@ -140,7 +140,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-300 text-sm font-medium"
           >
             <Sparkles className="w-4 h-4" />
-            <span>🎁 Pradėk NEMOKAMAI — 2000 kreditų dovanų</span>
+            <span>🎁 Pradėk NEMOKAMAI — iki 1000 kreditų dovanų</span>
           </motion.div>
 
           <motion.h1
@@ -186,7 +186,7 @@ const Hero = () => {
             <div className="text-center px-4 py-3 bg-green-500/10 border border-green-500/30 rounded-xl">
               <p className="text-2xl font-bold text-green-400">€0</p>
               <p className="text-xs text-green-300/80">Pradžia</p>
-              <p className="text-xs text-gray-500">+2000 kr.</p>
+              <p className="text-xs text-gray-500">+250 kr.</p>
             </div>
             <div className="text-center px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl">
               <p className="text-2xl font-bold text-white">nuo €1</p>
@@ -206,70 +206,48 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="space-y-5 pt-4"
           >
-            {/* Registration Options - Side by Side */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto md:mx-0">
-              {/* Telegram Option - Recommended */}
+            {/* Registration Options */}
+            <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto md:mx-0">
               <button
-                onClick={handleTelegramRegister}
-                className="relative group bg-gradient-to-br from-[#0088cc]/20 to-[#0077b5]/20 hover:from-[#0088cc]/30 hover:to-[#0077b5]/30 border-2 border-[#0088cc]/50 hover:border-[#0088cc] rounded-2xl p-4 transition-all duration-300 text-left"
+                onClick={handleEmailRegister}
+                className="group flex-1 bg-gradient-to-br from-blue-600/20 to-purple-600/20 hover:from-blue-600/30 hover:to-purple-600/30 border-2 border-blue-500/50 hover:border-blue-500 rounded-2xl p-4 transition-all duration-300 text-left"
               >
-                <div className="absolute -top-2.5 left-3 px-2 py-0.5 bg-[#0088cc] text-white text-xs font-bold rounded-full">
-                  REKOMENDUOJAMA
-                </div>
                 <div className="flex items-center gap-2 mb-2">
-                  <Smartphone className="w-5 h-5 text-[#0088cc]" />
-                  <span className="font-bold text-white">Telegram</span>
-                  <span className="ml-auto text-green-400 font-bold text-sm">+2000 kr.</span>
+                  <Mail className="w-5 h-5 text-blue-400" />
+                  <span className="font-bold text-white">Pradėti nemokamai</span>
+                  <span className="ml-auto text-green-400 font-bold text-sm">+250 kr.</span>
                 </div>
-                <ul className="space-y-1 text-xs text-gray-300">
-                  <li className="flex items-center gap-1.5">
-                    <span className="text-green-400">✓</span> Balso komandos
-                  </li>
-                  <li className="flex items-center gap-1.5">
-                    <span className="text-green-400">✓</span> Push priminimai telefone
-                  </li>
-                  <li className="flex items-center gap-1.5">
-                    <span className="text-green-400">✓</span> AI bet kur, bet kada
-                  </li>
-                </ul>
-                <div className="mt-3 text-center py-2 bg-[#0088cc] group-hover:bg-[#0077b5] rounded-lg text-white text-sm font-medium transition-colors">
-                  Pradėti su Telegram →
+                <p className="text-xs text-gray-400 mb-3">
+                  Užbaigęs profilį gausi iki 1000 kr. Registracija per 30 sek.
+                </p>
+                <div className="text-center py-2 bg-blue-600 group-hover:bg-blue-500 rounded-lg text-white text-sm font-medium transition-colors">
+                  Registruotis →
                 </div>
               </button>
 
-              {/* Email Option - Simple */}
-              <button
-                onClick={handleEmailRegister}
-                className="relative group bg-gray-800/50 hover:bg-gray-800/70 border-2 border-gray-700 hover:border-gray-600 rounded-2xl p-4 transition-all duration-300 text-left"
+              <a
+                href="https://t.me/clarivex_notify_bot"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex-1 bg-gray-800/50 hover:bg-gray-800/70 border-2 border-gray-700 hover:border-[#0088cc] rounded-2xl p-4 transition-all duration-300 text-left"
               >
-                <div className="absolute -top-2.5 left-3 px-2 py-0.5 bg-gray-600 text-white text-xs font-medium rounded-full">
-                  PAPRASTA
-                </div>
                 <div className="flex items-center gap-2 mb-2">
-                  <Mail className="w-5 h-5 text-gray-400" />
-                  <span className="font-bold text-white">Email</span>
-                  <span className="ml-auto text-gray-400 font-bold text-sm">+200 kr.</span>
+                  <Smartphone className="w-5 h-5 text-[#0088cc]" />
+                  <span className="font-bold text-white">Telegram</span>
+                  <span className="ml-auto text-green-400 font-bold text-sm">+250 kr.</span>
                 </div>
-                <ul className="space-y-1 text-xs text-gray-400">
-                  <li className="flex items-center gap-1.5">
-                    <span className="text-green-400">✓</span> Balso komandos
-                  </li>
-                  <li className="flex items-center gap-1.5">
-                    <span className="text-green-400">✓</span> Pilna web platforma
-                  </li>
-                  <li className="flex items-center gap-1.5">
-                    <span className="text-gray-500">−</span> Be push priminimų
-                  </li>
-                </ul>
-                <div className="mt-3 text-center py-2 bg-gray-700 group-hover:bg-gray-600 rounded-lg text-white text-sm font-medium transition-colors">
-                  Pradėti su Email →
+                <p className="text-xs text-gray-400 mb-3">
+                  Balso komandos ir push pranešimai. Taip pat gali prisijungti vėliau.
+                </p>
+                <div className="text-center py-2 bg-[#0088cc] group-hover:bg-[#0077b5] rounded-lg text-white text-sm font-medium transition-colors">
+                  Pradėti su Telegram →
                 </div>
-              </button>
+              </a>
             </div>
 
             {/* Info text */}
             <p className="text-center md:text-left text-xs text-gray-500">
-              💡 Telegram galėsite susieti vėliau ir gauti visas funkcijas
+              💡 Užbaigęs profilį (rekvizitai, Telegram, telefonas) gausi iki 1000 kr.
             </p>
             
             {/* Login link */}
