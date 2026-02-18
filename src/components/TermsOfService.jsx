@@ -47,7 +47,7 @@ const TermsOfService = () => {
         {/* Content */}
         <main className="max-w-4xl mx-auto px-4 py-12">
           <h1 className="text-4xl font-bold mb-2">Naudojimosi sąlygos</h1>
-          <p className="text-gray-400 mb-8">Paskutinį kartą atnaujinta: 2026 m. sausio 2 d.</p>
+          <p className="text-gray-400 mb-8">Paskutinį kartą atnaujinta: 2026 m. vasario 17 d.</p>
 
           <div className="prose prose-invert prose-gray max-w-none space-y-8">
             
@@ -99,9 +99,27 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">4. Kreditų sistema ir mokėjimai</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">4. Marketingo pranešimai</h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                Registruodamiesi galite pasirinkti gauti marketingo pranešimus el. paštu, SMS žinutėmis 
+                arba per Telegram. Šis sutikimas yra <strong className="text-white">neprivalomas</strong> – 
+                be jo galite pilnai naudotis Paslaugomis.
+              </p>
+              <ul className="list-disc list-inside text-gray-300 space-y-2 mb-4">
+                <li><strong className="text-white">Naujienlaiškiai el. paštu:</strong> produktų naujienos, patarimai ir pasiūlymai</li>
+                <li><strong className="text-white">SMS ir Telegram:</strong> svarbūs pranešimai, atnaujinimai ir pasiūlymai</li>
+              </ul>
+              <p className="text-gray-300 leading-relaxed">
+                <strong className="text-white">Atsisakymas:</strong> Bet kada galite atsisakyti marketingo 
+                pranešimų – nustatymuose (app.clarivex.ai) arba paspaudę „Atsisakyti" nuorodą el. laiške. 
+                Po atsisakymo nebetiksime jūsų rinkinio, nebent vėl sutiksite.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-white mb-4">5. Kreditų sistema ir mokėjimai</h2>
               
-              <h3 className="text-xl font-medium text-white mt-6 mb-3">4.1. Kreditų sistema</h3>
+              <h3 className="text-xl font-medium text-white mt-6 mb-3">5.1. Kreditų sistema</h3>
               <p className="text-gray-300 leading-relaxed">
                 Paslaugos veikia kreditų pagrindu. Kreditai naudojami AI užklausoms, paveikslėlių 
                 generavimui, failų saugojimui ir kitoms funkcijoms apmokėti.
@@ -113,7 +131,7 @@ const TermsOfService = () => {
                 <li>Nepanaudoti kreditai niekada nesibaigia</li>
               </ul>
 
-              <h3 className="text-xl font-medium text-white mt-6 mb-3">4.2. Mokėjimai</h3>
+              <h3 className="text-xl font-medium text-white mt-6 mb-3">5.2. Mokėjimai</h3>
               <p className="text-gray-300 leading-relaxed">
                 Mokėjimai apdorojami per Stripe. Pirkdami kreditus, sutinkate su Stripe 
                 <a href="https://stripe.com/legal" className="text-blue-400 hover:text-blue-300 mx-1" target="_blank" rel="noopener noreferrer">
@@ -128,7 +146,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">5. Leistinas naudojimas</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">6. Leistinas naudojimas</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
                 Naudodamiesi Paslaugomis, įsipareigojate:
               </p>
@@ -142,7 +160,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">6. Draudžiamas turinys</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">7. Draudžiamas turinys</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
                 Draudžiama kurti, įkelti ar dalintis turiniu, kuris:
               </p>
@@ -162,22 +180,22 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">7. Intelektinė nuosavybė</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">8. Intelektinė nuosavybė</h2>
               
-              <h3 className="text-xl font-medium text-white mt-6 mb-3">7.1. Clarivex nuosavybė</h3>
+              <h3 className="text-xl font-medium text-white mt-6 mb-3">8.1. Clarivex nuosavybė</h3>
               <p className="text-gray-300 leading-relaxed">
                 Visos teisės į Paslaugas, įskaitant programinę įrangą, dizainą, logotipus ir turinį, 
                 priklauso Clarivex arba mūsų licencijų davėjams. Jums suteikiama ribota, neišskirtinė 
                 licencija naudotis Paslaugomis pagal šias Sąlygas.
               </p>
 
-              <h3 className="text-xl font-medium text-white mt-6 mb-3">7.2. Jūsų turinys</h3>
+              <h3 className="text-xl font-medium text-white mt-6 mb-3">8.2. Jūsų turinys</h3>
               <p className="text-gray-300 leading-relaxed">
                 Jūs išlaikote visas teises į turinį, kurį įkeliate ar kuriate naudodamiesi Paslaugomis. 
                 Suteikiate mums ribotą licenciją naudoti šį turinį tik tiek, kiek būtina Paslaugoms teikti.
               </p>
 
-              <h3 className="text-xl font-medium text-white mt-6 mb-3">7.3. AI sugeneruotas turinys</h3>
+              <h3 className="text-xl font-medium text-white mt-6 mb-3">8.3. AI sugeneruotas turinys</h3>
               <p className="text-gray-300 leading-relaxed">
                 Turinys, sukurtas naudojant AI (tekstai, paveikslėliai), priklauso jums, su sąlyga, 
                 kad laikotės OpenAI naudojimo politikos. Esate atsakingi už sugeneruoto turinio 
@@ -186,7 +204,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">8. Trečiųjų šalių integracija</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">9. Trečiųjų šalių integracija</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
                 Paslaugos integruojasi su trečiųjų šalių platformomis:
               </p>
@@ -203,7 +221,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">9. Paslaugų prieinamumas</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">10. Paslaugų prieinamumas</h2>
               <p className="text-gray-300 leading-relaxed">
                 Stengiamės užtikrinti Paslaugų prieinamumą 24/7, tačiau negarantuojame nepertraukiamo 
                 veikimo. Paslaugos gali būti laikinai neprieinamos dėl:
@@ -217,7 +235,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">10. Atsakomybės ribojimas</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">11. Atsakomybės ribojimas</h2>
               <p className="text-gray-300 leading-relaxed">
                 <strong className="text-white">PASLAUGOS TEIKIAMOS „TOKIOS, KOKIOS YRA" IR „KAIP PRIEINAMOS".</strong>
               </p>
@@ -236,7 +254,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">11. Žalos atlyginimas</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">12. Žalos atlyginimas</h2>
               <p className="text-gray-300 leading-relaxed">
                 Sutinkate apsaugoti, ginti ir atlyginti nuostolius Clarivex, jos direktoriams, 
                 darbuotojams ir partneriams nuo bet kokių pretenzijų, nuostolių, išlaidų ar žalos, 
@@ -245,7 +263,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">12. Paskyros sustabdymas ir nutraukimas</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">13. Paskyros sustabdymas ir nutraukimas</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
                 Galime sustabdyti ar nutraukti jūsų prieigą prie Paslaugų:
               </p>
@@ -262,7 +280,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">13. Sąlygų pakeitimai</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">14. Sąlygų pakeitimai</h2>
               <p className="text-gray-300 leading-relaxed">
                 Galime bet kada keisti šias Sąlygas. Apie reikšmingus pakeitimus pranešime el. paštu 
                 arba per Paslaugas bent prieš 30 dienų iki jų įsigaliojimo. Toliau naudodamiesi 
@@ -271,7 +289,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">14. Taikoma teisė ir ginčų sprendimas</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">15. Taikoma teisė ir ginčų sprendimas</h2>
               <p className="text-gray-300 leading-relaxed">
                 Šioms Sąlygoms taikoma Lietuvos Respublikos teisė. Bet kokie ginčai, kylantys iš 
                 šių Sąlygų ar susiję su jomis, bus sprendžiami Lietuvos Respublikos teismuose 
@@ -284,7 +302,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">15. Bendrosios nuostatos</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">16. Bendrosios nuostatos</h2>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
                 <li><strong className="text-white">Visa sutartis:</strong> Šios Sąlygos kartu su Privatumo 
                   politika sudaro visą sutartį tarp jūsų ir Clarivex.</li>
@@ -298,7 +316,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">16. Kontaktai</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">17. Kontaktai</h2>
               <p className="text-gray-300 leading-relaxed">
                 Jei turite klausimų apie šias Sąlygas, susisiekite su mumis:
               </p>
