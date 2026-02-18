@@ -234,10 +234,10 @@ const Hero = () => {
                 <div className="flex items-center gap-2 mb-2">
                   <Smartphone className="w-5 h-5 text-[#0088cc]" />
                   <span className="font-bold text-white">Telegram</span>
-                  <span className="ml-auto text-green-400 font-bold text-sm">+250 kr.</span>
+                  <span className="ml-auto text-green-400 font-bold text-sm">+500 kr.</span>
                 </div>
                 <p className="text-xs text-gray-400 mb-3">
-                  Balso komandos ir push pranešimai. Taip pat gali prisijungti vėliau.
+                  Iškart 500 kr. — registracija + Telegram. Balso komandos ir push pranešimai.
                 </p>
                 <div className="text-center py-2 bg-[#0088cc] group-hover:bg-[#0077b5] rounded-lg text-white text-sm font-medium transition-colors">
                   Pradėti su Telegram →

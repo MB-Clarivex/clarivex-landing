@@ -100,7 +100,7 @@ const CTA = () => {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-green-400 rounded-full" />
-              <span>250 kr. registracijai</span>
+              <span>250 kr. su email, 500 kr. su Telegram</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-blue-400 rounded-full" />

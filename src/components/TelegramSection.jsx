@@ -269,14 +269,15 @@ const TelegramSection = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row items-center gap-4">
-                <div className="text-center px-6 py-3 bg-gray-800/50 rounded-xl border border-gray-700/50">
-                  <p className="text-sm text-gray-400">Registracija</p>
-                  <p className="text-2xl font-bold text-white">250 <span className="text-sm text-gray-400">kr.</span></p>
+                <div className="text-center px-6 py-3 bg-[#0088cc]/10 rounded-xl border border-[#0088cc]/30">
+                  <p className="text-sm text-[#0088cc]">Telegram registracija</p>
+                  <p className="text-2xl font-bold text-[#0088cc]">500 <span className="text-sm">kr.</span></p>
+                  <p className="text-xs text-gray-500">iškart</p>
                 </div>
                 <div className="text-2xl text-gray-500">+</div>
-                <div className="text-center px-6 py-3 bg-[#0088cc]/10 rounded-xl border border-[#0088cc]/30">
-                  <p className="text-sm text-[#0088cc]">Profilio žingsniai</p>
-                  <p className="text-2xl font-bold text-[#0088cc]">3×250 <span className="text-sm">kr.</span></p>
+                <div className="text-center px-6 py-3 bg-gray-800/50 rounded-xl border border-gray-700/50">
+                  <p className="text-sm text-gray-400">Rekvizitai + telefonas</p>
+                  <p className="text-2xl font-bold text-white">2×250 <span className="text-sm text-gray-400">kr.</span></p>
                 </div>
                 <div className="text-2xl text-gray-500">=</div>
                 <div className="text-center px-6 py-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl border border-green-500/30">
