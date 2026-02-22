@@ -92,6 +92,7 @@ function LandingPage() {
         <main>
           <Hero />
           <Features />
+          <StatsSection />
           <QuickLinks />
           <CTA />
           <SeoContent />

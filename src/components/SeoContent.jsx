@@ -40,7 +40,7 @@ const SeoContent = () => {
               <li>Socialinių tinklų turinio planavimą ir publikavimą</li>
               <li>El. laiškų rašymą, atsakymus ir taisykles</li>
               <li>Priminimus, užrašus ir idėjų kaupimą</li>
-              <li>Paveikslėlių generavimą ir dokumentų analizę</li>
+              <li>Paveikslėlių generavimą, dokumentų analizę ir failų siuntimą (Transfer)</li>
             </ul>
           </div>
           <div className="bg-gray-800/40 border border-gray-700/50 rounded-2xl p-6">

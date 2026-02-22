@@ -154,7 +154,7 @@ const OTHER_SERVICES = [
     price: '196 kr',
     unit: 'paveikslėlis',
     icon: Image,
-    description: '1536× arba didesnė kokybė',
+    description: '1792×1024 arba 1024×1792 HD',
   },
   {
     name: 'Balso transkripcija (Whisper)',
