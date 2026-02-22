@@ -146,7 +146,7 @@ const faqCategories = [
     questions: [
       {
         q: 'Kaip susisiekti su pagalba?',
-        a: 'Galite parašyti el. laišką info@clarivex.ai arba susisiekti per Telegram @clarivex_support. Atsakome per 24 valandas darbo dienomis.'
+        a: 'Galite parašyti el. laišką info@clarivex.ai. Atsakome per 24 valandas darbo dienomis.'
       },
       {
         q: 'Ar turite vaizdo instrukcijas?',
@@ -321,14 +321,6 @@ const FAQ = () => {
               >
                 <MessageCircle className="w-5 h-5" />
                 Parašyti el. laišką
-              </a>
-              <a 
-                href="https://t.me/clarivex_support"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-xl text-white font-medium transition-all"
-              >
-                Telegram palaikymas
               </a>
             </div>
           </div>

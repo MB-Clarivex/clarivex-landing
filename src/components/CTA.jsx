@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles, Zap, Mail, MessageCircle, Smartphone } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Mail, Smartphone } from 'lucide-react';
 
 const CTA = () => {
   const handleTelegramRegister = () => {
@@ -166,15 +166,6 @@ const CTA = () => {
             >
               <Mail className="w-4 h-4" />
               info@clarivex.ai
-            </a>
-            <a 
-              href="https://t.me/clarivex_support" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-gray-300 hover:border-blue-500 hover:text-white transition-all"
-            >
-              <MessageCircle className="w-4 h-4" />
-              Telegram palaikymas
             </a>
           </div>
         </motion.div>

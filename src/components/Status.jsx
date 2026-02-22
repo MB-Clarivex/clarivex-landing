@@ -232,19 +232,17 @@ const Status = () => {
             </div>
           </div>
 
-          {/* Subscribe to Updates */}
+          {/* Contact for issues */}
           <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/20 rounded-2xl p-8 text-center">
-            <h3 className="text-xl font-semibold mb-2">Gaukite pranešimus apie incidentus</h3>
+            <h3 className="text-xl font-semibold mb-2">Turite problemų?</h3>
             <p className="text-gray-400 mb-6">
-              Sekite mūsų Telegram kanalą, kad gautumėte pranešimus apie sistemos būklę
+              Jei pastebėjote neveikiančias paslaugas arba turite klausimų — rašykite
             </p>
             <a 
-              href="https://t.me/clarivex_status"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:info@clarivex.ai"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-xl text-white font-medium transition-all"
             >
-              Sekti Telegram
+              info@clarivex.ai
             </a>
           </div>
         </main>
