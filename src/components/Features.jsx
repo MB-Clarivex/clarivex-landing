@@ -9,13 +9,13 @@ import {
   Brain,
   Instagram,
   Facebook,
-  Clock,
   Sparkles,
   LayoutGrid,
-  ShoppingBag,
   StickyNote,
-  ShoppingCart,
-  Lightbulb
+  Lightbulb,
+  Search,
+  Globe,
+  CheckCircle
 } from 'lucide-react';
 
 const features = [
@@ -87,7 +87,6 @@ const features = [
 const integrations = [
   { icon: Instagram, name: 'Instagram', color: 'text-pink-400' },
   { icon: Facebook, name: 'Facebook', color: 'text-blue-400' },
-  { icon: ShoppingBag, name: 'E-parduotuvė', color: 'text-green-400' },
   { icon: Mail, name: 'Gmail', color: 'text-red-400' },
   { icon: Calendar, name: 'Kalendorius', color: 'text-yellow-400' },
   { icon: LayoutGrid, name: 'Telegram', color: 'text-cyan-400' },
@@ -190,9 +189,9 @@ const Features = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <p className="text-gray-400 mb-6 text-lg">Integruojasi su įrankiais, kuriuos jau naudoji</p>
+          <p className="text-gray-400 mb-8 text-lg">Integruojasi su įrankiais, kuriuos jau naudoji</p>
           
-          <div className="flex flex-wrap justify-center gap-4 mb-6">
+          <div className="flex flex-wrap justify-center gap-4">
             {integrations.map((integration, index) => (
               <motion.div
                 key={index}
@@ -207,33 +206,6 @@ const Features = () => {
                 <span className="text-gray-300 font-medium">{integration.name}</span>
               </motion.div>
             ))}
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-3 pt-4 border-t border-gray-700/30">
-            <span className="text-xs text-gray-500 uppercase tracking-wider w-full text-center mb-2">Dar daugiau:</span>
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="flex flex-wrap justify-center gap-2 w-full"
-            >
-              <span className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-800/50 border border-gray-700/50 rounded-lg text-gray-400 text-sm">
-                <Search className="w-3.5 h-3.5 text-amber-400" />
-                SEO auditas
-              </span>
-              <span className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-800/50 border border-gray-700/50 rounded-lg text-gray-400 text-sm">
-                <Globe className="w-3.5 h-3.5 text-green-400" />
-                WordPress • Shopify
-              </span>
-              <span className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-800/50 border border-gray-700/50 rounded-lg text-gray-400 text-sm">
-                <CheckCircle className="w-3.5 h-3.5 text-blue-400" />
-                Approval workflow
-              </span>
-              <span className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-800/50 border border-gray-700/50 rounded-lg text-gray-400 text-sm">
-                <FileText className="w-3.5 h-3.5 text-indigo-400" />
-                Dokumentų AI
-              </span>
-            </motion.div>
           </div>
         </motion.div>
       </div>
