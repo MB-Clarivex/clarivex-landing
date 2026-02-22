@@ -146,7 +146,7 @@ const faqCategories = [
     questions: [
       {
         q: 'Kaip susisiekti su pagalba?',
-        a: 'Galite parašyti el. laišką info@clarivex.ai. Atsakome per 24 valandas darbo dienomis.'
+        a: 'Parašykite per Telegram @clarivex_support_bot – greičiausias būdas, atsakome per 1–2 valandas. Arba el. paštu info@clarivex.ai.'
       },
       {
         q: 'Ar turite vaizdo instrukcijas?',
@@ -154,7 +154,7 @@ const faqCategories = [
       },
       {
         q: 'Radau klaidą, kur pranešti?',
-        a: 'Ačiū, kad padedame tobulėti! Prašome pranešti apie klaidas el. paštu info@clarivex.ai su kuo detalesniu aprašymu – ką darėte, kas nutiko, kokį klaidos pranešimą matėte.'
+        a: 'Ačiū, kad padedame tobulėti! Parašykite per Telegram @clarivex_support_bot su kuo detalesniu aprašymu – ką darėte, kas nutiko, kokį klaidos pranešimą matėte. Arba el. paštu info@clarivex.ai.'
       },
     ]
   },
@@ -313,14 +313,22 @@ const FAQ = () => {
           {/* Contact CTA */}
           <div className="mt-16 text-center bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/20 rounded-2xl p-8">
             <h3 className="text-2xl font-semibold mb-4">Neradote atsakymo?</h3>
-            <p className="text-gray-400 mb-6">Susisiekite su mumis ir mielai padėsime!</p>
+            <p className="text-gray-400 mb-6">Rašykite per Telegram – atsakome per 1–2 valandas</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="mailto:info@clarivex.ai"
+                href="https://t.me/clarivex_support_bot"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-xl text-white font-medium transition-all"
               >
                 <MessageCircle className="w-5 h-5" />
-                Parašyti el. laišką
+                Parašyti per Telegram
+              </a>
+              <a 
+                href="mailto:info@clarivex.ai"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-xl text-white font-medium transition-all"
+              >
+                El. paštas info@clarivex.ai
               </a>
             </div>
           </div>

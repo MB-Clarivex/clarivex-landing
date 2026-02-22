@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Mail, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { Mail, MessageCircle, Instagram, Facebook, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const handleScrollTo = (id) => {
@@ -152,7 +152,9 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="mailto:info@clarivex.ai" 
+                  href="https://t.me/clarivex_support_bot" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Susisiekti
@@ -165,6 +167,19 @@ const Footer = () => {
           <div>
             <p className="font-semibold text-white mb-5">Kontaktai</p>
             <ul className="space-y-4">
+              <li>
+                <a 
+                  href="https://t.me/clarivex_support_bot" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
+                >
+                  <div className="w-9 h-9 rounded-lg bg-gray-800 border border-gray-700 flex items-center justify-center group-hover:border-blue-500/50 transition-all">
+                    <MessageCircle className="w-4 h-4" />
+                  </div>
+                  <span className="text-sm">Palaikymas per Telegram</span>
+                </a>
+              </li>
               <li>
                 <a 
                   href="mailto:info@clarivex.ai" 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles, Zap, Mail, Smartphone } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Mail, MessageCircle, Smartphone } from 'lucide-react';
 
 const CTA = () => {
   const handleTelegramRegister = () => {
@@ -13,7 +13,7 @@ const CTA = () => {
   };
 
   const handleContact = () => {
-    window.location.href = "mailto:info@clarivex.ai";
+    window.open('https://t.me/clarivex_support_bot', '_blank');
   };
 
   return (
@@ -80,8 +80,8 @@ const CTA = () => {
                 onClick={handleContact}
                 className="border-2 border-gray-600 hover:border-blue-500 bg-gray-800/50 hover:bg-gray-700/50 text-white px-10 py-7 text-lg rounded-2xl transition-all duration-300"
               >
-                <Mail className="w-5 h-5 mr-2" />
-                Susisiekti
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Susisiekti per Telegram
               </Button>
             </div>
           </div>
@@ -158,8 +158,17 @@ const CTA = () => {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="mt-16 text-center"
         >
-          <p className="text-gray-500 mb-4">Turite klausimų? Mielai padėsime!</p>
+          <p className="text-gray-500 mb-4">Turite klausimų? Rašykite per Telegram!</p>
           <div className="flex flex-wrap justify-center gap-4">
+            <a 
+              href="https://t.me/clarivex_support_bot" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-500/40 rounded-lg text-blue-300 hover:border-blue-400 hover:text-white transition-all"
+            >
+              <MessageCircle className="w-4 h-4" />
+              @clarivex_support_bot
+            </a>
             <a 
               href="mailto:info@clarivex.ai" 
               className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-gray-300 hover:border-blue-500 hover:text-white transition-all"
