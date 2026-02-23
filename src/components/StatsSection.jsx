@@ -17,7 +17,7 @@ const stats = [
   },
   {
     icon: Image,
-    value: '1792×1024',
+    value: ['1792', '×', '1024'],
     label: 'HD vaizdai',
     gradient: 'from-orange-500 to-pink-500',
   },
@@ -83,8 +83,10 @@ const StatsSection = () => {
                     <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${stat.gradient} mb-4 group-hover:scale-110 transition-transform duration-300`}>
                       <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <div className="text-2xl md:text-3xl font-bold text-white mb-1">
-                      {stat.value}
+                    <div className="text-2xl md:text-3xl font-bold text-white mb-1 flex flex-col items-center justify-center gap-0 leading-tight">
+                      {Array.isArray(stat.value)
+                        ? stat.value.map((line, i) => <span key={i}>{line}</span>)
+                        : stat.value}
                     </div>
                     <div className="text-xs md:text-sm text-gray-400">
                       {stat.label}
