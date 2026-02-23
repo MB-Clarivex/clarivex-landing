@@ -172,9 +172,8 @@ const Hero = () => {
             transition={{ duration: 0 }}
             className="text-sm md:text-base text-gray-400 max-w-xl mx-auto md:mx-0 leading-relaxed"
           >
-            Clarivex automatizuoja turinio kūrimą ir klientų komunikaciją lietuviškai. Kurk postus,
-            atsakyk į laiškus, planuok publikacijas ir naudok AI kaip kasdienį asistentą — be
-            mėnesinių mokesčių, su lanksčia kreditų sistema.
+            Clarivex automatizuoja turinio kūrimą ir klientų komunikaciją lietuviškai. <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">Sužinokite, kaip veikia</Link> — kurk postus,
+            atsakyk į laiškus, planuok publikacijas. Be mėnesinių mokesčių, <Link to="/kainos" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">lanksčia kreditų sistema</Link>.
           </motion.p>
 
           {/* Pricing Stats */}

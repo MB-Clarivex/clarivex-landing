@@ -8,8 +8,7 @@ const QuickLinks = () => {
       <div className="container mx-auto max-w-5xl relative z-10 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Plačiau apie AI asistentą</h2>
         <p className="text-gray-400 mb-8">
-          Naršykite svarbiausias temas ir sužinokite, kaip Clarivex padeda automatizuoti kasdienius
-          procesus, pagerinti komunikaciją ir sutaupyti laiką.
+          <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 font-medium">Sužinokite, kaip veikia Clarivex</Link> — naršykite svarbiausias temas ir pamatykite, kaip platforma padeda automatizuoti procesus, pagerinti komunikaciją ir sutaupyti laiką.
         </p>
         <div className="flex flex-wrap justify-center gap-4 text-sm">
           <Link to="/features" className="px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-300 hover:text-white hover:border-blue-500/50 transition-all">
