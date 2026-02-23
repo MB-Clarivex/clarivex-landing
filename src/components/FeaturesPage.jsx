@@ -39,7 +39,6 @@ import {
   TrendingUp,
   ChevronRight,
   ExternalLink,
-  Linkedin,
   Instagram,
   Facebook
 } from 'lucide-react';
@@ -164,7 +163,7 @@ const FEATURE_CATEGORIES = [
           'Hashtagų siūlymai',
           'AI paveikslėlių generavimas',
         ],
-        platforms: ['Facebook', 'Instagram', 'LinkedIn', 'TikTok'],
+        platforms: ['Facebook', 'Instagram'],
       },
       {
         name: 'Kalendorius',
@@ -231,16 +230,6 @@ const FEATURE_CATEGORIES = [
     color: 'from-emerald-500 to-green-600',
     description: 'AI straipsniai ir blog integracija',
     features: [
-      {
-        name: 'WordPress integracija',
-        icon: Globe,
-        description: 'Tiesioginė WordPress blog integracija',
-        capabilities: [
-          'Straipsnių publikavimas',
-          'Draft valdymas',
-          'Kategorijų valdymas',
-        ],
-      },
       {
         name: 'Shopify integracija',
         icon: ShoppingCart,
@@ -514,8 +503,6 @@ const FEATURE_CATEGORIES = [
 const PLATFORMS = [
   { name: 'Facebook', icon: Facebook, color: 'text-blue-400' },
   { name: 'Instagram', icon: Instagram, color: 'text-pink-400' },
-  { name: 'LinkedIn', icon: Linkedin, color: 'text-sky-400' },
-  { name: 'WordPress', icon: Globe, color: 'text-blue-300' },
   { name: 'Shopify', icon: ShoppingCart, color: 'text-green-400' },
   { name: 'Gmail', icon: Mail, color: 'text-red-400' },
   { name: 'Telegram', icon: Send, color: 'text-cyan-400' },
