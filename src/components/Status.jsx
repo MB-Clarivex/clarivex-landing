@@ -259,8 +259,16 @@ const Status = () => {
 
         {/* Footer */}
         <footer className="border-t border-gray-800 py-8 mt-12">
-          <div className="max-w-4xl mx-auto px-4 text-center text-gray-500">
-            <p>© 2026 Clarivex. Visos teisės saugomos.</p>
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <nav className="flex flex-wrap justify-center gap-6 text-sm mb-4">
+              <Link to="/" className="text-gray-400 hover:text-white transition-colors">Pradžia</Link>
+              <Link to="/kaip-veikia" className="text-gray-400 hover:text-white transition-colors">Kaip veikia</Link>
+              <Link to="/kainos" className="text-gray-400 hover:text-white transition-colors">Kainodara</Link>
+              <Link to="/features" className="text-gray-400 hover:text-white transition-colors">Funkcijos</Link>
+              <Link to="/duk" className="text-gray-400 hover:text-white transition-colors">DUK</Link>
+              <Link to="/telegram" className="text-gray-400 hover:text-white transition-colors">Telegram</Link>
+            </nav>
+            <p className="text-gray-500 text-sm">© 2026 Clarivex. Visos teisės saugomos.</p>
           </div>
         </footer>
       </div>

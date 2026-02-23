@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mic, Zap, CheckCircle, Rocket, ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -200,7 +201,7 @@ const HowItWorks = () => {
               </div>
 
               {/* CTA */}
-              <div className="p-5 border-t border-gray-700/50 bg-gray-800/30">
+              <div className="p-5 border-t border-gray-700/50 bg-gray-800/30 space-y-3">
                 <Button
                   onClick={handleTry}
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-5 rounded-xl font-medium group"
@@ -208,6 +209,11 @@ const HowItWorks = () => {
                   Išbandyk pats
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
+                <p className="text-center text-xs text-gray-500">
+                  <Link to="/kainos" className="text-blue-400 hover:text-blue-300">Peržiūrėti kainas</Link>
+                  {' · '}
+                  <Link to="/features" className="text-blue-400 hover:text-blue-300">Visi funkcijos</Link>
+                </p>
               </div>
             </div>
           </motion.div>

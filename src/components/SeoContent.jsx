@@ -17,20 +17,18 @@ const SeoContent = () => {
         </div>
 
         <div className="space-y-5 text-gray-300 leading-relaxed">
-          <p>
-            Sistema supranta lietuviškai ir veikia tiek tekstu, tiek balsu. AI padeda parengti
-            įrašus, atsakyti klientams ir suplanuoti publikacijas. Tai reiškia mažiau rutinos ir
-            daugiau laiko augimui.
-          </p>
-          <p>
-            Clarivex tinka e‑parduotuvėms, agentūroms, mažoms įmonėms ir freelancer’iams. Galite
-            kurti taisykles el. paštui, generuoti vizualus ir automatizuoti pasikartojančias
-            užduotis. Kreditų sistema leidžia mokėti tik už naudojimą.
-          </p>
-          <p>
-            Saugumas svarbus. Duomenys šifruojami, integracijos vyksta per oficialius OAuth
-            prisijungimus. Jūsų turinys nenaudojamas AI modelių mokymui.
-          </p>
+          <div>
+            <h3 className="text-xl font-semibold text-white mb-2">Kaip tai veikia?</h3>
+            <p>Sistema supranta lietuviškai — tiek tekstu, tiek balsu. AI padeda parengti įrašus, atsakyti klientams ir suplanuoti publikacijas. Mažiau rutinos, daugiau laiko augimui.</p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-white mb-2">Kam tinka?</h3>
+            <p>Clarivex tinka e‑parduotuvėms, agentūroms, mažoms įmonėms ir freelancer’iams. Kurti el. pašto taisykles, generuoti vizualus, automatizuoti užduotis. Mokėti tik už naudojimą — kreditų sistema be mėnesinių mokesčių.</p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-white mb-2">Saugumas</h3>
+            <p>Duomenys šifruojami. Integracijos per oficialius OAuth. Jūsų turinys nenaudojamas AI mokymui.</p>
+          </div>
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -40,7 +38,7 @@ const SeoContent = () => {
               <li>Socialinių tinklų turinio planavimą ir publikavimą</li>
               <li>El. laiškų rašymą, atsakymus ir taisykles</li>
               <li>Priminimus, užrašus ir idėjų kaupimą</li>
-              <li>Paveikslėlių generavimą, dokumentų analizę ir failų siuntimą (Transfer)</li>
+              <li>Paveikslėlių generavimą ir dokumentų analizę</li>
             </ul>
           </div>
           <div className="bg-gray-800/40 border border-gray-700/50 rounded-2xl p-6">
@@ -87,44 +85,30 @@ const SeoContent = () => {
           </div>
         </div>
 
-        <div className="mt-12">
-          <h3 className="text-2xl font-semibold text-white mb-4">Naudingos vidinės nuorodos</h3>
-          <ul className="space-y-2 text-gray-300">
-            <li>
-              <Link to="/features" className="text-blue-400 hover:text-blue-300">
-                AI asistentas lietuvių kalbai — funkcijos
-              </Link>
-            </li>
-            <li>
-              <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">
-                Kaip veikia AI asistentas verslui
-              </Link>
-            </li>
-            <li>
-              <Link to="/nauda" className="text-blue-400 hover:text-blue-300">
-                AI sprendimai verslui ir privalumai
-              </Link>
-            </li>
-            <li>
-              <Link to="/telegram" className="text-blue-400 hover:text-blue-300">
-                Telegram integracija ir balso komandos lietuviškai
-              </Link>
-            </li>
-            <li>
-              <Link to="/kainos" className="text-blue-400 hover:text-blue-300">
-                Kainodara ir kreditų sistema
-              </Link>
-            </li>
-            <li>
-              <Link to="/duk" className="text-blue-400 hover:text-blue-300">
-                Dažniausiai užduodami klausimai (DUK)
-              </Link>
-            </li>
-            <li>
-              <Link to="/privatumas" className="text-blue-400 hover:text-blue-300">
-                Privatumo politika ir duomenų apsauga
-              </Link>
-            </li>
+        <div className="mt-12 text-center">
+          <h3 className="text-2xl font-semibold text-white mb-6">Paruošti pradėti?</h3>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <a
+              href="https://app.clarivex.ai/auth"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all"
+            >
+              Išbandyti Clarivex
+            </a>
+            <Link
+              to="/kainos"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-700 hover:bg-gray-600 border border-gray-600 text-white font-semibold rounded-xl transition-all"
+            >
+              Peržiūrėti kainas
+            </Link>
+          </div>
+          <h3 className="text-xl font-semibold text-white mb-4">Naudingos nuorodos</h3>
+          <ul className="space-y-2 text-gray-300 max-w-md mx-auto text-left">
+            <li><Link to="/features" className="text-blue-400 hover:text-blue-300">Funkcijos ir galimybės</Link></li>
+            <li><Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">Kaip veikia</Link></li>
+            <li><Link to="/nauda" className="text-blue-400 hover:text-blue-300">Privalumai verslui</Link></li>
+            <li><Link to="/telegram" className="text-blue-400 hover:text-blue-300">Telegram integracija</Link></li>
+            <li><Link to="/kainos" className="text-blue-400 hover:text-blue-300">Kainodara</Link></li>
+            <li><Link to="/duk" className="text-blue-400 hover:text-blue-300">DUK</Link></li>
           </ul>
         </div>
       </div>

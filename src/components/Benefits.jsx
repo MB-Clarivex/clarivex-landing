@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Clock, Zap, Shield, TrendingUp, Users, Globe, Sparkles, CheckCircle } from 'lucide-react';
 
@@ -153,6 +154,15 @@ const Benefits = () => {
             </p>
           </div>
 
+          <p className="text-gray-400 text-sm mb-6 max-w-2xl mx-auto">
+            Ieškote konkretesnių pavyzdžių?{' '}
+            <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 font-medium">Kaip veikia</Link>
+            ,{' '}
+            <Link to="/kainos" className="text-blue-400 hover:text-blue-300 font-medium">kainodara</Link>
+            {' ir '}
+            <Link to="/telegram" className="text-blue-400 hover:text-blue-300 font-medium">Telegram integracija</Link>
+            .
+          </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
               <motion.div

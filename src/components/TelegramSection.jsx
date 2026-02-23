@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Mic, 
@@ -242,7 +243,11 @@ const TelegramSection = () => {
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
               <p className="text-gray-500 text-sm mt-3">
-                Arba ieškokite <span className="text-[#0088cc]">@clarivex_notify_bot</span> Telegram programėlėje
+                Arba ieškokite <span className="text-[#0088cc]">@clarivex_notify_bot</span> Telegram programėlėje. Daugiau:{' '}
+                <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">kaip veikia</Link>
+                ,{' '}
+                <Link to="/kainos" className="text-blue-400 hover:text-blue-300">kainos</Link>
+                .
               </p>
             </motion.div>
           </motion.div>

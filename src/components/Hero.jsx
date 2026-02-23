@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles, Mic, Calendar, Image, Mail, Clock, Zap, Smartphone } from 'lucide-react';
@@ -94,10 +95,10 @@ const Hero = () => {
     let handle;
     const reveal = () => setShowDemo(true);
     if ('requestIdleCallback' in window) {
-      handle = window.requestIdleCallback(reveal, { timeout: 1500 });
+      handle = window.requestIdleCallback(reveal, { timeout: 400 });
       return () => window.cancelIdleCallback?.(handle);
     }
-    handle = setTimeout(reveal, 1200);
+    handle = setTimeout(reveal, 400);
     return () => clearTimeout(handle);
   }, []);
 
@@ -250,15 +251,19 @@ const Hero = () => {
               💡 Užbaigęs profilį (rekvizitai, Telegram, telefonas) gausi iki 1000 kr.
             </p>
             
-            {/* Login link */}
-            <div className="flex justify-center md:justify-start">
+            {/* Login + quick links */}
+            <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm">
               <a
                 href="https://app.clarivex.ai/"
-                className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors flex items-center gap-1"
+                className="text-blue-400 hover:text-blue-300 font-medium transition-colors flex items-center gap-1"
               >
                 Jau turite paskyrą? Prisijungti
                 <ArrowRight className="w-3 h-3" />
               </a>
+              <span className="text-gray-600 hidden sm:inline">|</span>
+              <Link to="/kaip-veikia" className="text-gray-400 hover:text-white transition-colors">Kaip veikia</Link>
+              <Link to="/kainos" className="text-gray-400 hover:text-white transition-colors">Kainos</Link>
+              <Link to="/telegram" className="text-gray-400 hover:text-white transition-colors">Telegram</Link>
             </div>
           </motion.div>
         </motion.div>
