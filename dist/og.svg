@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Clarivex — AI asistentas, kuris supranta lietuviškai</title>
+  <desc id="desc">Clarivex AI asistento pristatymo vaizdas socialiniams tinklams.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0f1f" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0b0f1f" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="220" cy="160" r="140" fill="#2563eb" opacity="0.18" />
+  <circle cx="980" cy="480" r="180" fill="#7c3aed" opacity="0.18" />
+
+  <g transform="translate(140, 180)">
+    <text x="0" y="0" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="700" fill="#ffffff">
+      Clarivex
+    </text>
+    <rect x="0" y="18" width="330" height="6" rx="3" fill="url(#accent)" />
+    <text x="0" y="88" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="500" fill="#cbd5f5">
+      AI asistentas, kuris supranta lietuviškai
+    </text>
+    <text x="0" y="138" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="400" fill="#94a3b8">
+      Socialiniai tinklai, el. paštas, priminimai, paveikslėliai — viena balso komanda.
+    </text>
+  </g>
+
+  <g transform="translate(920, 120)">
+    <rect width="160" height="160" rx="36" fill="#111827" stroke="#2f3a55" stroke-width="2" />
+    <circle cx="80" cy="80" r="42" fill="url(#accent)" />
+    <text x="80" y="90" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700" fill="#0b0f1f">
+      C
+    </text>
+  </g>
+</svg>

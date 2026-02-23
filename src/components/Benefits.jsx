@@ -82,17 +82,20 @@ const Benefits = () => {
             Kodėl Clarivex?
           </motion.div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-white">Mažiau darbo,</span>
             <br />
             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               daugiau rezultatų
             </span>
-          </h2>
+          </h1>
           
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
             Clarivex nėra tik dar vienas įrankis. Tai tavo virtualus asistentas, 
             kuris dirba už tave kol tu fokusuojiesi į strategiją.
+          </p>
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
+            Tūkstančiai lietuvių verslų jau naudoja Clarivex socialiniams tinklams, el. paštui ir kasdieniam darbui. Automatizavimas sutaupo ne tik laiką — jis sumažina klaidas ir palaiko nuoseklų prekės ženklo balsą visuose kanaluose. Pradėkite nemokamai ir pamatykite skirtumą per pirmą savaitę.
           </p>
         </motion.div>
 
@@ -127,7 +130,7 @@ const Benefits = () => {
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>
+                <h2 className="text-lg font-bold text-white mb-2">{benefit.title}</h2>
                 <p className="text-gray-400 text-sm leading-relaxed">{benefit.description}</p>
               </div>
             </motion.div>
@@ -142,9 +145,9 @@ const Benefits = () => {
           transition={{ duration: 0.6 }}
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Sukurta įvairiems poreikiams
-            </h3>
+            </h2>
             <p className="text-gray-400 max-w-xl mx-auto">
               Nesvarbu ar esi vienas žmogus ar didelė komanda — Clarivex prisitaiko prie tavęs.
             </p>
@@ -161,7 +164,7 @@ const Benefits = () => {
                 whileHover={{ scale: 1.02 }}
                 className="bg-gray-800/30 border border-gray-700/50 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300"
               >
-                <h4 className="text-xl font-bold text-white mb-2">{useCase.title}</h4>
+                <h3 className="text-xl font-bold text-white mb-2">{useCase.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{useCase.description}</p>
                 
                 <ul className="space-y-2">

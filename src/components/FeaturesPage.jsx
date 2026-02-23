@@ -532,6 +532,15 @@ const FeaturesPage = () => {
   const [activeCategory, setActiveCategory] = useState(null);
   const canonicalUrl = 'https://clarivex.ai/features';
   const socialImage = 'https://clarivex.ai/og.svg';
+  const pageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Clarivex galimybės — AI platforma',
+    url: canonicalUrl,
+    description: 'Visos Clarivex galimybės: AI pokalbiai, socialinių tinklų valdymas, el. paštas, Telegram. Viskas vienoje platformoje.',
+    inLanguage: 'lt-LT',
+    isPartOf: { '@id': 'https://clarivex.ai/#website' },
+  };
 
   const handleLogin = () => {
     window.location.href = "https://app.clarivex.ai/";
@@ -561,6 +570,7 @@ const FeaturesPage = () => {
         <meta name="twitter:title" content="Galimybės — Clarivex AI Platforma" />
         <meta name="twitter:description" content="Visos Clarivex galimybės vienoje vietoje. AI pokalbiai, socialinių tinklų valdymas, el. paštas, Telegram integracija ir daugiau." />
         <meta name="twitter:image" content={socialImage} />
+        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
 
       <div className="min-h-screen bg-gray-950 text-white antialiased">

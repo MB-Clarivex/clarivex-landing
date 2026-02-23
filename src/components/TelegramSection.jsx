@@ -82,17 +82,20 @@ const TelegramSection = () => {
             Telegram Botas
           </motion.div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-white">AI asistentas</span>
             <br />
             <span className="bg-gradient-to-r from-[#0088cc] to-cyan-400 bg-clip-text text-transparent">
               tavo kišenėje
             </span>
-          </h2>
+          </h1>
           
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
             Susieti Telegram ir valdyti Clarivex balsu bet kur ir bet kada. 
             Gauk <span className="text-[#0088cc] font-semibold">+250 bonus kreditų</span> už susiejimą!
+          </p>
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
+            Clarivex Telegram botas leidžia naudoti AI asistentą tiesiog iš mobilaus telefono. Diktuokite žinutes, kurkite pirkinių sąrašus balsu, gaukite priminimus ir valdykite savo Clarivex paskyrą — visa tai per pažįstamą Telegram programėlę. Idealu užimtiems žmonėms, kurie nori produktyvumo be papildomų programų.
           </p>
         </motion.div>
 
@@ -214,7 +217,7 @@ const TelegramSection = () => {
                       <feature.icon className="w-5 h-5 text-[#0088cc]" />
                     </div>
                     <div>
-                      <h3 className="text-white font-medium mb-1">{feature.title}</h3>
+                      <h2 className="text-white font-medium mb-1">{feature.title}</h2>
                       <p className="text-gray-400 text-sm">{feature.description}</p>
                     </div>
                   </div>
@@ -263,7 +266,7 @@ const TelegramSection = () => {
                   <Gift className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">Iki 1000 kr. nemokamai</h3>
+                  <h2 className="text-2xl font-bold text-white">Iki 1000 kr. nemokamai</h2>
                   <p className="text-gray-400">Registracija + užbaigtas profilis = maksimalus bonus</p>
                 </div>
               </div>

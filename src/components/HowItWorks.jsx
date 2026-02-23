@@ -73,16 +73,19 @@ const HowItWorks = () => {
             4 paprasti žingsniai
           </motion.div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-white">Nuo idėjos iki rezultato</span>
             <br />
             <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
               per 10 sekundžių
             </span>
-          </h2>
+          </h1>
           
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
             Jokių sudėtingų nustatymų. Jokio mokymosi. Tiesiog pasakyk ką nori — ir Clarivex tai padarys.
+          </p>
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
+            Clarivex yra AI asistentas, sukurtas lietuvių verslui. Nesvarbu ar kuriate Instagram postus, rašote el. laiškus ar planuojate turinį — platforma supranta lietuvišką kalbą ir atlieka užduotis per kelias sekundes. Tausodami laiką, galite susitelkti į strategiją ir klientų aptarnavimą.
           </p>
         </motion.div>
 
@@ -116,9 +119,9 @@ const HowItWorks = () => {
                   
                   {/* Content */}
                   <div className="flex-1 pt-1">
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                    <h2 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
                       {step.title}
-                    </h3>
+                    </h2>
                     <p className="text-gray-400 mb-3 text-sm leading-relaxed">
                       {step.description}
                     </p>

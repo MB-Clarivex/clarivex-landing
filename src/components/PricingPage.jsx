@@ -154,7 +154,7 @@ const OTHER_SERVICES = [
     price: '196 kr',
     unit: 'paveikslėlis',
     icon: Image,
-    description: '1792×1024 arba 1024×1792 HD',
+    description: '1536× arba didesnė kokybė',
   },
   {
     name: 'Balso transkripcija (Whisper)',
@@ -382,7 +382,16 @@ export default function PricingPage() {
   const [showAllModels, setShowAllModels] = useState(false);
   const canonicalUrl = 'https://clarivex.ai/kainos';
   const socialImage = 'https://clarivex.ai/og.svg';
-  
+  const pageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Clarivex kainodara — skaidri kainos',
+    url: canonicalUrl,
+    description: 'Skaidri Clarivex kainodara: AI modelių, vaizdų generavimo, failų siuntimo kainos. 1€ = 1000 kreditų. Jokių mėnesinių mokesčių.',
+    inLanguage: 'lt-LT',
+    isPartOf: { '@id': 'https://clarivex.ai/#website' },
+  };
+
   return (
     <>
       <Helmet>
@@ -404,6 +413,7 @@ export default function PricingPage() {
         <meta name="twitter:title" content="Kainodara — Clarivex AI" />
         <meta name="twitter:description" content="Skaidri Clarivex kainodara. AI modelių, vaizdų generavimo, failų siuntimo ir kitų paslaugų kainos." />
         <meta name="twitter:image" content={socialImage} />
+        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
       
       <div className="min-h-screen bg-gray-950 text-white">
