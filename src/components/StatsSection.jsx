@@ -18,7 +18,7 @@ const stats = [
   {
     icon: Image,
     value: '1792×1024',
-    label: 'HD paveikslėliai',
+    label: 'HD vaizdai',
     gradient: 'from-orange-500 to-pink-500',
   },
   {
