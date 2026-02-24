@@ -14,7 +14,8 @@ import {
   ChevronRight,
   StickyNote,
   ShoppingCart,
-  Lightbulb
+  Lightbulb,
+  Keyboard
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -225,6 +226,37 @@ const TelegramSection = () => {
                 </motion.div>
               ))}
             </div>
+
+            {/* Raktazodžiai */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="mt-8 p-5 bg-gray-800/40 border border-gray-700/50 rounded-xl"
+            >
+              <div className="flex items-center gap-2 mb-4">
+                <Keyboard className="w-5 h-5 text-[#0088cc]" />
+                <h3 className="font-semibold text-white">Raktazodžiai — pasakyk ir Clarivex supras</h3>
+              </div>
+              <p className="text-xs text-gray-400 mb-3">
+                Šios frazės veikia <strong className="text-gray-300">visur</strong> — naršyklėje (app.clarivex.ai) ir Telegram.
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+                <div><span className="text-[#0088cc]">Primink</span> — priminimas laiku</div>
+                <div><span className="text-[#0088cc]">Atsimink</span> — įsiminti apie save</div>
+                <div><span className="text-[#0088cc]">Užsirašyk</span> — paprastas užrašas</div>
+                <div><span className="text-[#0088cc]">Pirkinių sąrašas</span> — pridėk į sąrašą</div>
+                <div><span className="text-[#0088cc]">Sukurk postą</span> — social media</div>
+                <div><span className="text-[#0088cc]">Turiu idėją</span> — išsaugoti idėją</div>
+                <div><span className="text-[#0088cc]">Sugeneruok paveikslėlį</span> — AI vaizdas</div>
+                <div><span className="text-[#0088cc]">Papildyk X užrašą</span> — pridėti info</div>
+              </div>
+              <p className="text-xs text-gray-500 mt-3">
+                Balsu ir tekstu, bet kur — naršyklėje ar Telegram. Pilnesnis sąrašas —{' '}
+                <Link to="/duk" className="text-[#0088cc] hover:text-cyan-300">DUK</Link>.
+              </p>
+            </motion.div>
 
             {/* CTA */}
             <motion.div

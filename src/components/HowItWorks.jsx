@@ -8,8 +8,9 @@ const steps = [
   {
     icon: Mic,
     title: 'Pasakyk arba parašyk',
-    description: 'Balsu ar tekstu — lietuviškai, angliškai, ar bet kuria kalba. Clarivex supranta natūralią kalbą.',
+    description: 'Balsu ar tekstu — lietuviškai, angliškai, ar bet kuria kalba. Veikia naršyklėje ir Telegram. Clarivex supranta natūralią kalbą.',
     example: '"Sukurk postą apie akcijas"',
+    moreExamples: ['"Primink rytoj 9:00"', '"Atsimink mano vardas Jonas"', '"Pridėk pieno į pirkinių sąrašą"'],
     color: 'from-blue-500 to-cyan-500'
   },
   {
@@ -130,6 +131,15 @@ const HowItWorks = () => {
                       <span className="text-blue-400">→</span>
                       {step.example}
                     </div>
+                    {step.moreExamples && (
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        {step.moreExamples.map((ex, i) => (
+                          <span key={i} className="px-2 py-1 bg-gray-800/30 rounded text-xs text-gray-400 border border-gray-700/50">
+                            {ex}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </motion.div>

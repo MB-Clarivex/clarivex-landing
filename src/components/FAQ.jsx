@@ -84,6 +84,10 @@ const faqCategories = [
         a: 'Tiesiog paspauskite mikrofono mygtuką ir kalbėkite lietuviškai. AI automatiškai transkribuos jūsų balsą ir atliks užklausą. Veikia ir per Telegram botą!'
       },
       {
+        q: 'Ką galiu pasakyti Clarivex? Kokie raktazodžiai veikia?',
+        a: 'Šios komandos veikia visur Clarivex platformoje — naršyklėje (app.clarivex.ai) ir Telegram. Clarivex supranta natūralią kalbą. Pradėkite nuo šių frazių:\n\n• Primink — priminimui su laiku (pvz. "Primink rytoj 9:00 paskambinti")\n• Atsimink / Prisimink — įsiminti informaciją apie save (pvz. "Atsimink mano vardas Jonas")\n• Užsirašyk / Pasižymėk — paprastas užrašas (pvz. "Užsirašyk kad Jonas nori pasiūlymo")\n• Pirkinių sąrašas / Pridėk į sąrašą — pirkinių krepšelis (pvz. "Pridėk pieno ir duonos")\n• Sukurk postą — social media postas (pvz. "Sukurk postą apie akciją")\n• Turiu idėją — išsaugoti idėją (pvz. "Turiu idėją postui apie vasarą")\n• Sugeneruok paveikslėlį — AI vaizdo generavimas\n• Papildyk X užrašą — pridėti info į esamą užrašą (pvz. "Papildyk Jono užrašą: jis atidavė 100€")\n• Kas su X? / Parodyk X užrašą — peržiūrėti užrašą\n• Sukurk pasiūlymą / Sukurk sutartį — dokumentų generavimas\n\nGalite kalbėti balsu ar rašyti tekstu — bet kurioje platformoje.'
+      },
+      {
         q: 'Ar AI gali analizuoti mano dokumentus?',
         a: 'Taip! Galite įkelti PDF, Word, Excel ir kitus failus. AI juos išanalizuos ir galės atsakyti į klausimus apie dokumento turinį, apibendrinti informaciją ar išgauti konkrečius duomenis.'
       },
@@ -175,7 +179,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
         )}
       </button>
       {isOpen && (
-        <div className="pb-5 text-gray-300 leading-relaxed">
+        <div className="pb-5 text-gray-300 leading-relaxed whitespace-pre-line">
           {answer}
         </div>
       )}
