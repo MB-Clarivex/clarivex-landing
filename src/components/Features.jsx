@@ -15,7 +15,12 @@ import {
   Lightbulb,
   Search,
   Globe,
-  CheckCircle
+  CheckCircle,
+  Languages,
+  Bot,
+  Package,
+  BarChart3,
+  ShoppingCart
 } from 'lucide-react';
 
 const features = [
@@ -81,6 +86,42 @@ const features = [
     badge: 'Unikalus',
     stats: '∞',
     statsLabel: 'prisiminimų'
+  },
+  {
+    icon: Languages,
+    title: 'Vertėjas',
+    description: 'AI tekstų ir dokumentų vertimas į daugelį kalbų. Live ir HQ režimai, žodynas (glossary), lietuvių kalba.',
+    gradient: 'from-teal-500 to-cyan-500',
+    badge: null,
+    stats: 'LT+',
+    statsLabel: 'kalbos'
+  },
+  {
+    icon: Bot,
+    title: 'AI Asistentai',
+    description: 'Sukurkite savo AI asistentus su individualiomis instrukcijomis. Pasirinkite modelį, web search, atmintį.',
+    gradient: 'from-slate-500 to-zinc-500',
+    badge: null,
+    stats: '∞',
+    statsLabel: 'asistentai'
+  },
+  {
+    icon: Package,
+    title: 'Failų Siuntimas',
+    description: 'WeTransfer stiliaus failų siuntimas. Iki 3 GB nemokamai per transfer, iki 30 GB/mėn. Slaptažodžio apsauga.',
+    gradient: 'from-sky-500 to-blue-500',
+    badge: null,
+    stats: '3 GB',
+    statsLabel: 'nemokamai'
+  },
+  {
+    icon: BarChart3,
+    title: 'SEO Auditas',
+    description: 'Svetainės SEO analizė – Core Web Vitals, meta tags, struktūra. Rekomendacijos kaip pagerinti matomumą.',
+    gradient: 'from-lime-500 to-green-500',
+    badge: null,
+    stats: '✓',
+    statsLabel: 'Core Web Vitals'
   }
 ];
 
@@ -90,6 +131,7 @@ const integrations = [
   { icon: Mail, name: 'El. paštas', color: 'text-red-400' },
   { icon: Calendar, name: 'Kalendorius', color: 'text-yellow-400' },
   { icon: LayoutGrid, name: 'Telegram', color: 'text-cyan-400' },
+  { icon: ShoppingCart, name: 'Shopify', color: 'text-green-400' },
 ];
 
 const Features = () => {
