@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Mail, MessageCircle, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { Mail, MessageCircle, Instagram, Facebook } from 'lucide-react';
 
 const Footer = () => {
   const handleScrollTo = (id) => {
@@ -49,7 +49,7 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex gap-3">
               <a 
-                href="https://instagram.com/clarivex.ai" 
+                href="https://www.instagram.com/clarivex_ai/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400 hover:text-pink-400 hover:border-pink-400/50 transition-all"
@@ -57,20 +57,12 @@ const Footer = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a 
-                href="https://facebook.com/clarivex.ai" 
+                href="https://www.facebook.com/Clarivex/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400 hover:text-blue-400 hover:border-blue-400/50 transition-all"
               >
                 <Facebook className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://linkedin.com/company/clarivex" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400 hover:text-blue-500 hover:border-blue-500/50 transition-all"
-              >
-                <Linkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
