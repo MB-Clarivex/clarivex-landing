@@ -1,59 +1,69 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Clock, Zap, Shield, TrendingUp, Users, Globe, Sparkles, CheckCircle } from 'lucide-react';
+import { Clock, Zap, Shield, TrendingUp, Sparkles, CheckCircle } from 'lucide-react';
 
 const benefits = [
   {
     icon: Clock,
-    title: 'Sutaupyk 10+ val. / savaitę',
-    description: 'Postų kūrimas, el. laiškai, priminimai — viskas automatizuota. Daugiau laiko tam, kas svarbu.',
+    title: 'Tau grąžina 10+ val. per savaitę',
+    description: 'Tai 2 pilnos dienos, kurias gali skirti klientams, produktams ar savęs tobulinimui — ne postams ir el. paštui.',
     stat: '10h+',
-    statLabel: 'sutaupoma'
+    statLabel: 'tau grąžinama'
   },
   {
     icon: Zap,
-    title: 'Rezultatai per sekundes',
-    description: 'Jokio laukimo. Pasakei — gavai. AI veikia 24/7 ir niekada neužmiega.',
-    stat: '3s',
-    statLabel: 'vidutiniškai'
+    title: 'Pasakei — gavai. Per sekundes.',
+    description: 'Postas, juodraštis, priminimas — nereikia laukti grafikų, freelancerių ar susitikimų. AI veikia kai tau reikia.',
+    stat: '~3s',
+    statLabel: 'vidutinis atsakymas'
   },
   {
     icon: Shield,
-    title: 'Tavo stilius, tavo balsas',
-    description: 'Clarivex prisimena tavo prekės ženklą, terminus, toną. Kiekvienas postas — tikrai tavo.',
+    title: 'Tavo balsas visur — automatiškai',
+    description: 'Clarivex išmoksta tavo toną, terminus ir prekės ženklą. Kiekvienas atsakymas skamba kaip tau parašytas.',
     stat: '100%',
-    statLabel: 'nuoseklumas'
+    statLabel: 'tavo stilius'
   },
   {
     icon: TrendingUp,
-    title: 'Augink be papildomų darbuotojų',
-    description: 'Vienas žmogus gali valdyti tai, kam anksčiau reikėjo komandos. Skalėjimas be ribų.',
+    title: 'Augink be naujų etatų',
+    description: 'Vienas žmogus — tai, kam anksčiau reikėjo 2–3. Tai tau reiškia mažesnes išlaidas ir greitesnį sprendimų priėmimą.',
     stat: '5x',
-    statLabel: 'efektyvumas'
+    statLabel: 'daugiau su tiek pat žmonių'
   }
+];
+
+const dayScenario = [
+  { time: '08:00', action: 'Pasakai balsu: „Postas apie akciją“', result: '3 platformoms paruošta per 10 s' },
+  { time: '12:00', action: 'Atsakai į DM ir el. laiškus', result: 'AI siūlo atsakymus — 1 paspaudimas' },
+  { time: '16:00', action: '„Primink rytoj 10:00 paskambinti“', result: 'Priminimas nustatytas per Telegram' },
 ];
 
 const useCases = [
   {
     title: 'E-parduotuvės',
-    description: 'Automatiniai produktų postai, akcijų skelbimai, klientų atsakymai',
-    features: ['Produktų carousel', 'Kainų atnaujinimai', 'Atsiliepimų valdymas']
+    description: 'Produktų postai, akcijų skelbimai, klientų klausimai.',
+    outcome: 'Tu gauni: daugiau pardavimų su tuo pačiu laiku.',
+    features: ['Produktų carousel iš katalogų', 'Kainų atnaujinimai', 'Komentarų ir DM atsakymai']
   },
   {
     title: 'Influenceriai',
-    description: 'Turinio kalendorius, bendradarbiavimų valdymas, analitika',
-    features: ['Postų planavimas', 'Stories idėjos', 'Statistika']
+    description: 'Turinio planavimas, bendradarbiavimai, matomumo sekimas.',
+    outcome: 'Tu gauni: daugiau laiko kurti turinį, ne valdyti planavimą.',
+    features: ['Postų ir Stories kalendorius', 'Ideos ir hashtagai', 'Įsitraukimo statistika']
   },
   {
     title: 'Smulkus verslas',
-    description: 'Profesionalus marketingas be marketingo komandos',
-    features: ['Social media', 'El. paštas', 'Priminimai']
+    description: 'Profesionalus marketingas be marketingo etato.',
+    outcome: 'Tu gauni: konkurencingą vaizdą be papildomų atlyginimų.',
+    features: ['Social media + el. paštas', 'Balso užrašai ir priminimai', 'Viskas vienoje vietoje']
   },
   {
     title: 'Agentūros',
-    description: 'Kelių klientų valdymas vienoje platformoje',
-    features: ['Multi-brand', 'Komandinis darbas', 'Ataskaitos']
+    description: 'Kelių klientų valdymas vienoje platformoje.',
+    outcome: 'Tu gauni: didesnį klientų skaičių be papildomų žmonių.',
+    features: ['Multi-brand profiliai', 'Approval workflow', 'Vienas dashboard']
   }
 ];
 
@@ -92,11 +102,12 @@ const Benefits = () => {
           </h1>
           
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-            Clarivex nėra tik dar vienas įrankis. Tai tavo virtualus asistentas, 
-            kuris dirba už tave kol tu fokusuojiesi į strategiją.
+            Tau — tai daugiau laiko, mažiau rutinos. Clarivex atlieka tai, ką dabar darai ranka: 
+            postai, atsakymai, priminimai. Tu lieki strategijai ir žmonėms.
           </p>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
-            Tūkstančiai lietuvių verslų jau naudoja Clarivex socialiniams tinklams, el. paštui ir kasdieniam darbui. Automatizavimas sutaupo ne tik laiką — jis sumažina klaidas ir palaiko nuoseklų prekės ženklo balsą visuose kanaluose. Pradėkite nemokamai ir pamatykite skirtumą per pirmą savaitę.
+            Sutaupytas laikas yra tavo laikas. Nesvarbu ar vertini savo valandą 10€ ar 50€ — 
+            10 val./savaitė reiškia realų pinigų sutaupymą. Pradėk nemokamai ir pamatyk per pirmą savaitę.
           </p>
         </motion.div>
 
@@ -138,6 +149,45 @@ const Benefits = () => {
           ))}
         </div>
 
+        {/* Tavo tipinė diena */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-24"
+        >
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Tavo tipinė diena su Clarivex
+            </h2>
+            <p className="text-gray-400 max-w-xl mx-auto">
+              Nuo balso komandos iki paruošto turinio — per kelias sekundes.
+            </p>
+          </div>
+          <div className="max-w-2xl mx-auto space-y-4">
+            {dayScenario.map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="flex items-start gap-4 p-4 rounded-xl bg-gray-800/40 border border-gray-700/50 hover:border-purple-500/30 transition-colors"
+              >
+                <span className="text-purple-400 font-mono text-sm shrink-0">{step.time}</span>
+                <div className="flex-1 min-w-0">
+                  <p className="text-white font-medium">{step.action}</p>
+                  <p className="text-gray-400 text-sm">→ {step.result}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <p className="text-center mt-6 text-gray-500 text-sm">
+            Viską gali daryti balsu per Telegram arba naršyklėje — be jokių sudėtingų nustatymų.
+          </p>
+        </motion.div>
+
         {/* Use Cases */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -150,7 +200,7 @@ const Benefits = () => {
               Sukurta įvairiems poreikiams
             </h2>
             <p className="text-gray-400 max-w-xl mx-auto">
-              Nesvarbu ar esi vienas žmogus ar didelė komanda — Clarivex prisitaiko prie tavęs.
+              Kiekvienam segmentui — konkretus rezultatas tau.
             </p>
           </div>
 
@@ -175,7 +225,8 @@ const Benefits = () => {
                 className="bg-gray-800/30 border border-gray-700/50 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300"
               >
                 <h3 className="text-xl font-bold text-white mb-2">{useCase.title}</h3>
-                <p className="text-gray-400 text-sm mb-4">{useCase.description}</p>
+                <p className="text-gray-400 text-sm mb-2">{useCase.description}</p>
+                <p className="text-purple-300 text-sm font-medium mb-4">→ {useCase.outcome}</p>
                 
                 <ul className="space-y-2">
                   {useCase.features.map((feature, i) => (
@@ -188,6 +239,23 @@ const Benefits = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16 text-center"
+          >
+            <p className="text-gray-400 mb-4">Pamatytai sau naudą? Pradėk nemokamai — 250 kr. dovanų.</p>
+            <a
+              href="https://app.clarivex.ai/auth"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-medium rounded-xl transition-all"
+            >
+              Pradėti nemokamai
+              <Sparkles className="w-4 h-4" />
+            </a>
+          </motion.div>
         </motion.div>
       </div>
     </section>

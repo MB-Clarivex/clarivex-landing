@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Check, Sparkles, Zap, Crown, ArrowRight, Calculator, Building2, Gift, Smartphone } from 'lucide-react';
@@ -45,12 +46,14 @@ const features = [
 ];
 
 const usageExamples = [
-  { name: 'AI pokalbis (1 žinutė)', credits: '~1-3', icon: '💬' },
-  { name: 'Postas su tekstu', credits: '~2-8', icon: '📝' },
-  { name: 'Paveikslėlis (HD)', credits: '98-196', icon: '🎨' },
-  { name: 'PDF analizė (10 psl.)', credits: '~5-15', icon: '📄' },
-  { name: 'El. laiško atsakymas', credits: '~3-8', icon: '📧' },
-  { name: 'Balso komanda', credits: '~10-20', icon: '🎤' },
+  { name: 'AI žinutė (1 atsakymas)', credits: '~1-15', sub: 'priklauso nuo modelio', icon: '💬' },
+  { name: 'Postas (tekstas)', credits: '~5-15', sub: 'AI generavimas', icon: '📝' },
+  { name: 'Posto publikavimas', credits: '15', sub: 'IG / FB / Blog', icon: '📤' },
+  { name: 'DM arba komentaro atsakymas', credits: '~2-10', sub: 'AI siūlymas', icon: '💬' },
+  { name: 'Paveikslėlis (AI)', credits: '35-196', sub: 'GPT Image arba DALL-E 3', icon: '🎨' },
+  { name: 'El. laiškas (atsakymas + siuntimas)', credits: '~5-12', sub: 'AI + 2.5 kr siuntimui', icon: '📧' },
+  { name: 'Balso komanda', credits: '~10-25', sub: 'transkripcija + AI', icon: '🎤' },
+  { name: 'PDF analizė (10 psl.)', credits: '~5-15', sub: 'AI skaitymas', icon: '📄' },
 ];
 
 const Pricing = () => {
@@ -444,7 +447,7 @@ const Pricing = () => {
             💡 Kiek kainuoja veiksmai?
           </h3>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {usageExamples.map((example, index) => (
               <motion.div
                 key={index}
@@ -452,18 +455,21 @@ const Pricing = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05, duration: 0.4 }}
-                className="text-center p-4 bg-gray-900/50 rounded-xl border border-gray-700/50"
+                className="text-center p-4 bg-gray-900/50 rounded-xl border border-gray-700/50 hover:border-blue-500/30 transition-colors"
               >
                 <div className="text-2xl mb-2">{example.icon}</div>
-                <p className="text-xs text-gray-400 mb-1">{example.name}</p>
-                <p className="text-lg font-bold text-blue-400">{example.credits}</p>
-                <p className="text-xs text-gray-500">kreditų</p>
+                <p className="text-xs text-gray-400 mb-1 leading-tight">{example.name}</p>
+                <p className="text-lg font-bold text-blue-400">{example.credits} kr</p>
+                {example.sub && (
+                  <p className="text-xs text-gray-500 mt-0.5">{example.sub}</p>
+                )}
               </motion.div>
             ))}
           </div>
           
           <p className="text-center text-sm text-gray-500 mt-6">
-            * Tikslus kreditų skaičius priklauso nuo turinio ilgio ir sudėtingumo
+            * Tikslus skaičius priklauso nuo modelio ir turinio. Pilna kainodara —{' '}
+            <Link to="/kainos" className="text-blue-400 hover:text-blue-300">/kainos</Link>
           </p>
         </motion.div>
 

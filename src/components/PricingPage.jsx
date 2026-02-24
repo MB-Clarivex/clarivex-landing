@@ -425,6 +425,52 @@ export default function PricingPage() {
               </motion.div>
             </div>
           </section>
+
+          {/* Kas kainuoja — greita nuoroda */}
+          <section className="px-4 mb-16">
+            <div className="container mx-auto max-w-5xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mb-6"
+              >
+                <h2 className="text-2xl font-bold text-white mb-2">
+                  ⚡ Kiek kainuoja tipiniai veiksmai?
+                </h2>
+                <p className="text-gray-400 text-sm">
+                  1€ = 1000 kreditų. Žemiau — apytiksliai kreditų skaičiai.
+                </p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"
+              >
+                {[
+                  { name: 'AI žinutė', credits: '~1-15 kr', note: 'priklauso nuo modelio' },
+                  { name: 'Posto tekstas', credits: '~5-15 kr', note: 'AI generavimas' },
+                  { name: 'Publikavimas', credits: '15 kr', note: 'IG / FB / Blog' },
+                  { name: 'DM atsakymas', credits: '~2-10 kr', note: 'Inbox AI' },
+                  { name: 'Paveikslėlis', credits: '35-196 kr', note: 'GPT Image / DALL-E' },
+                  { name: 'El. laiškas', credits: '~5-12 kr', note: 'atsakymas + siuntimas' },
+                  { name: 'Balso komanda', credits: '~10-25 kr', note: 'Whisper + AI' },
+                  { name: 'Web paieška', credits: '~25 kr', note: 'SerpApi' },
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="p-4 rounded-xl bg-gray-800/40 border border-gray-700/50 hover:border-blue-500/30 transition-colors"
+                  >
+                    <p className="text-sm font-medium text-white">{item.name}</p>
+                    <p className="text-lg font-bold text-blue-400 mt-1">{item.credits}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{item.note}</p>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+          </section>
           
           {/* AI Modeliai */}
           <section className="px-4 mb-16">

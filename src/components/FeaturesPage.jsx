@@ -215,7 +215,7 @@ const FEATURE_CATEGORIES = [
         description: 'Komandinis postų patvirtinimas',
         capabilities: [
           'Draft → Pending → Approved',
-          'Team roles (admin, editor)',
+          'Komandos rolės (admin, member)',
           'Komentarai prie postų',
         ],
         isNew: true,
@@ -376,7 +376,7 @@ const FEATURE_CATEGORIES = [
         icon: Sparkles,
         description: 'AI sukuria unikalius paveikslėlius',
         capabilities: [
-          'GPT Image 1.5 ir DALL-E generavimas',
+          'GPT Image 1.5 ir DALL-E 3 generavimas',
           'Dydžio pasirinkimas',
           'Social media formatai',
         ],
@@ -492,7 +492,7 @@ const PLATFORMS = [
   { name: 'Facebook', icon: Facebook, color: 'text-blue-400' },
   { name: 'Instagram', icon: Instagram, color: 'text-pink-400' },
   { name: 'Shopify', icon: ShoppingCart, color: 'text-green-400' },
-  { name: 'Gmail', icon: Mail, color: 'text-red-400' },
+  { name: 'El. paštas', icon: Mail, color: 'text-red-400' },
   { name: 'Telegram', icon: Send, color: 'text-cyan-400' },
 ];
 
