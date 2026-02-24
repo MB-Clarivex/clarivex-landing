@@ -27,7 +27,7 @@ const SeoContent = () => {
           </div>
           <div>
             <h3 className="text-xl font-semibold text-white mb-2">Saugumas</h3>
-            <p>Duomenys šifruojami. Integracijos per oficialius OAuth. Jūsų turinys nenaudojamas AI mokymui.</p>
+            <p>Duomenys šifruojami. Socialiniai tinklai per OAuth, el. paštas per IMAP/SMTP. Jūsų turinys nenaudojamas AI mokymui.</p>
           </div>
         </div>
 
@@ -78,8 +78,7 @@ const SeoContent = () => {
             <div>
               <p className="font-semibold text-white">Ar mano duomenys saugūs?</p>
               <p>
-                Duomenys šifruojami ir saugomi ES serveriuose. Prieigos per OAuth, be slaptažodžių
-                saugojimo mūsų pusėje.
+                Duomenys šifruojami ir saugomi ES serveriuose. Socialiniai tinklai per OAuth, el. paštas per IMAP – slaptažodžių nesaugome.
               </p>
             </div>
           </div>

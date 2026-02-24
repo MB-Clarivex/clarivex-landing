@@ -102,59 +102,20 @@ const AI_MODELS = [
   },
 ];
 
-const REASONING_MODELS = [
-  { 
-    name: 'o1', 
-    inPrice: 36.80, 
-    outPrice: 147.18, 
-    tier: 'premium',
-    badge: '🧠 Deep Think',
-    description: 'Sudėtingiems mąstymo ir logikos uždaviniams',
-  },
-  { 
-    name: 'o1-mini', 
-    inPrice: 2.70, 
-    outPrice: 10.79, 
-    tier: 'standard',
-    description: 'Lengvesniam loginiam mąstymui',
-  },
-  { 
-    name: 'o3', 
-    inPrice: 4.91, 
-    outPrice: 19.62, 
-    tier: 'standard',
-    description: 'Naujesnė reasoning versija',
-  },
-  { 
-    name: 'o3-mini', 
-    inPrice: 2.70, 
-    outPrice: 10.79, 
-    tier: 'economy',
-    description: 'Ekonomiškas reasoning',
-  },
-  { 
-    name: 'o4-mini', 
-    inPrice: 2.70, 
-    outPrice: 10.79, 
-    tier: 'economy',
-    description: 'Naujausias mini reasoning',
-  },
-];
-
 const OTHER_SERVICES = [
   {
-    name: 'DALL-E 3 Standard',
-    price: '98 kr',
+    name: 'GPT Image 1.5',
+    price: '~35–98 kr',
     unit: 'paveikslėlis',
     icon: Image,
-    description: '1024×1024 kokybė',
+    description: 'Pagrindinis modelis – fotorealizmas, produktai',
   },
   {
-    name: 'DALL-E 3 HD',
-    price: '196 kr',
+    name: 'DALL-E 3',
+    price: '98–196 kr',
     unit: 'paveikslėlis',
     icon: Image,
-    description: '1536× arba didesnė kokybė',
+    description: 'Tekstas paveiksle, logotipai, iliustracijos',
   },
   {
     name: 'Balso transkripcija (Whisper)',
@@ -488,12 +449,15 @@ export default function PricingPage() {
                 icon={MessageSquare} 
               />
               
-              <div className="mt-6">
-                <ModelTable 
-                  models={REASONING_MODELS} 
-                  title="Reasoning modeliai (logikai)" 
-                  icon={Brain} 
-                />
+              {/* Reasoning modeliai – greitu metu */}
+              <div className="mt-6 bg-gray-800/30 border border-gray-700/50 rounded-2xl px-6 py-4">
+                <div className="flex items-center gap-3">
+                  <Brain className="w-5 h-5 text-gray-400" />
+                  <div>
+                    <h3 className="font-semibold text-white">Reasoning modeliai (o1, o1-mini ir kt.)</h3>
+                    <p className="text-sm text-gray-500">Greitu metu – dirbame prie integracijos</p>
+                  </div>
+                </div>
               </div>
               
               {/* Paaiškinimas */}

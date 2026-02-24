@@ -58,11 +58,11 @@ const features = [
   {
     icon: Image,
     title: 'Paveikslėlių Generavimas',
-    description: 'DALL-E 3 integracija. Aprašyk ką nori matyti — gauk profesionalų paveikslėlį per 8 sekundes. HD ir 4K kokybė.',
+    description: 'GPT Image 1.5 ir DALL-E 3. Aprašyk ką nori matyti — AI automatiškai pasirinks modelį ir sukurs profesionalų paveikslėlį. HD kokybė iki 1792×1024.',
     gradient: 'from-orange-500 to-red-500',
     badge: null,
-    stats: 'iki 4K',
-    statsLabel: 'HD/4K kokybė'
+    stats: '1792×1024',
+    statsLabel: 'HD kokybė'
   },
   {
     icon: FileText,
@@ -87,7 +87,7 @@ const features = [
 const integrations = [
   { icon: Instagram, name: 'Instagram', color: 'text-pink-400' },
   { icon: Facebook, name: 'Facebook', color: 'text-blue-400' },
-  { icon: Mail, name: 'Gmail', color: 'text-red-400' },
+  { icon: Mail, name: 'El. paštas', color: 'text-red-400' },
   { icon: Calendar, name: 'Kalendorius', color: 'text-yellow-400' },
   { icon: LayoutGrid, name: 'Telegram', color: 'text-cyan-400' },
 ];

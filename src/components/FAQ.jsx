@@ -19,7 +19,7 @@ const faqCategories = [
       },
       {
         q: 'Kokias platformas palaiko Clarivex?',
-        a: 'Šiuo metu palaikome: Instagram (postai, stories, reels), Facebook (puslapiai, grupės), Gmail integraciją, Telegram botą ir WordPress blogus. Nuolat dirbame prie naujų integracijų.'
+        a: 'Šiuo metu palaikome: Instagram (postai, Stories, Reels, carousel), Facebook (puslapiai), Telegram botą ir Shopify blogus. El. paštui – IMAP/SMTP (Gmail, Outlook ir kt. per App Password). Nuolat dirbame prie naujų integracijų.'
       },
       {
         q: 'Ar galiu naudotis Clarivex mobiliajame telefone?',
@@ -38,7 +38,7 @@ const faqCategories = [
       },
       {
         q: 'Ką galiu padaryti su 1000 kreditų?',
-        a: 'Su 1000 kreditų (~1€) galite: parašyti ~100+ AI žinučių su GPT-5 mini (arba ~30 su GPT-5.1), sugeneruoti 12 paveikslėlių (DALL-E 3), transkribuoti ~80 minučių balso, arba atlikti ~50 web paieškų. Naudojant ekonomišką GPT-5 mini modelį, kreditai trunka daug ilgiau!'
+        a: 'Su 1000 kreditų (~1€) galite: parašyti ~100+ AI žinučių su GPT-4.1 mini (arba ~30 su GPT-5.1), sugeneruoti 10–12 paveikslėlių (GPT Image 1.5 arba DALL-E 3), transkribuoti ~80 minučių balso, arba atlikti ~50 web paieškų. Naudojant ekonomišką GPT-4.1 mini modelį, kreditai trunka daug ilgiau!'
       },
       {
         q: 'Ar kreditai baigiasi?',
@@ -65,11 +65,11 @@ const faqCategories = [
     questions: [
       {
         q: 'Kokie AI modeliai naudojami?',
-        a: 'Naudojame naujausius OpenAI modelius: GPT-5.2, GPT-5.1 ir GPT-5 mini tekstui, DALL-E 3 paveikslėliams, Whisper balso transkripcijai. Galite patys pasirinkti modelį kiekviename pokalbyje!'
+        a: 'Naudojame OpenAI modelius: GPT-5.2, GPT-5.1 ir GPT-4.1 mini tekstui; GPT Image 1.5 ir DALL-E 3 paveikslėliams; Whisper balso transkripcijai. Galite patys pasirinkti modelį kiekviename pokalbyje!'
       },
       {
         q: 'Kurį AI modelį pasirinkti?',
-        a: 'GPT-5 mini (numatytasis) — idealus kasdienėms užduotims: paprasti pokalbiai, el. laiškai, receptai, patarimai, vertimai. Greitas ir ekonomiškas. GPT-5.1 — sudėtingesniems darbams: ilgų dokumentų analizė, detalūs verslo planai, programavimas. GPT-5.2 — maksimali kokybė: mokslinė analizė, sudėtingas loginis mąstymas, kritiškai svarbūs projektai. Patarimas: pradėkite nuo mini — jei rezultatas netenkina, perjunkite į 5.1 ar 5.2.'
+        a: 'GPT-4.1 mini (numatytasis) — idealus kasdienėms užduotims: paprasti pokalbiai, el. laiškai, receptai, patarimai, vertimai. Greitas ir ekonomiškas. GPT-5.1 — sudėtingesniems darbams: ilgų dokumentų analizė, failų su paveikslėliais analizė, programavimas. GPT-5.2 — maksimali kokybė: mokslinė analizė, sudėtingas loginis mąstymas. Patarimas: pradėkite nuo mini — jei rezultatas netenkina, perjunkite į 5.1 ar 5.2.'
       },
       {
         q: 'Ar AI prisimena mano ankstesnius pokalbius?',
@@ -77,7 +77,7 @@ const faqCategories = [
       },
       {
         q: 'Ar galiu generuoti paveikslėlius?',
-        a: 'Taip! Naudojame DALL-E 3 modelį, kuris generuoja aukštos kokybės paveikslėlius iki 1792x1024 pikselių. Tiesiog aprašykite, ko norite, ir AI sukurs unikalų paveikslėlį.'
+        a: 'Taip! Naudojame GPT Image 1.5 (pagrindinis – fotorealizmas, produktai) ir DALL-E 3 (tekstas paveiksle, logotipai). Paveikslėliai iki 1792×1024 pikselių. Tiesiog aprašykite, ko norite, ir AI automatiškai pasirinks tinkamą modelį.'
       },
       {
         q: 'Kaip veikia balso komandos?',
@@ -104,7 +104,7 @@ const faqCategories = [
       },
       {
         q: 'Ar palaikote Instagram Stories ir Reels?',
-        a: 'Stories publikavimas šiuo metu nepalaikomas dėl Instagram API apribojimų. Reels palaikomi – galite įkelti video ir publikuoti kaip Reel.'
+        a: 'Taip! Palaikome ir Stories, ir Reels. Stories – viena nuotrauka arba video (9:16 formatas). Reels – įkelkite video ir publikuokite kaip Reel. Abu veikia ir Instagram, ir Facebook.'
       },
       {
         q: 'Kiek nuotraukų galiu įkelti į vieną postą?',
@@ -127,7 +127,7 @@ const faqCategories = [
       },
       {
         q: 'Ar Clarivex mato mano slaptažodžius?',
-        a: 'Ne. Socialinių tinklų ir el. pašto prisijungimai vyksta tiesiogiai per oficialias platformų sistemas (OAuth). Mes nematome ir nesaugome jūsų slaptažodžių.'
+        a: 'Ne. Socialinių tinklų prisijungimai vyksta per oficialų OAuth. El. paštui naudojate IMAP/SMTP arba App Password – mes nematome ir nesaugome jūsų slaptažodžių.'
       },
       {
         q: 'Ar galiu ištrinti savo duomenis?',

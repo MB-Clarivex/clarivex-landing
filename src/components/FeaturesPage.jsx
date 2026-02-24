@@ -30,7 +30,6 @@ import {
   Image,
   Eye,
   Languages,
-  MousePointer,
   Package,
   CreditCard,
   Wallet,
@@ -56,7 +55,7 @@ const FEATURE_CATEGORIES = [
       {
         name: 'AI Pokalbiai',
         icon: MessageSquare,
-        description: 'Pokalbiai su GPT-5, GPT-4o ir kitais pažangiausiais modeliais',
+        description: 'Pokalbiai su GPT-5.1, GPT-5.2, GPT-4.1 mini ir kt.',
         capabilities: [
           'Kelių AI modelių pasirinkimas',
           'Failų įkėlimas ir analizė',
@@ -264,8 +263,8 @@ const FEATURE_CATEGORIES = [
         icon: Inbox,
         description: 'Pilnas el. pašto klientas',
         capabilities: [
-          'IMAP/SMTP prijungimas',
-          'Gmail OAuth',
+          'IMAP/SMTP prijungimas (Gmail, Outlook ir kt.)',
+          'App Password palaikymas',
           'Labels sistema',
           'Thread vaizdas',
           'Attachments',
@@ -377,7 +376,7 @@ const FEATURE_CATEGORIES = [
         icon: Sparkles,
         description: 'AI sukuria unikalius paveikslėlius',
         capabilities: [
-          'DALL-E generavimas',
+          'GPT Image 1.5 ir DALL-E generavimas',
           'Dydžio pasirinkimas',
           'Social media formatai',
         ],
@@ -411,17 +410,6 @@ const FEATURE_CATEGORIES = [
           'Žodynas (glossary)',
           'Dokumentų vertimas',
         ],
-      },
-      {
-        name: 'Browser agentas',
-        icon: MousePointer,
-        description: 'AI valdoma naršyklė automatizacijai',
-        capabilities: [
-          'Automatinis naršymas',
-          'E-commerce integracija',
-          'Krepšelio valdymas',
-        ],
-        isBeta: true,
       },
       {
         name: 'Failų siuntimas',
