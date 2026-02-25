@@ -45,7 +45,7 @@ const useCases = [
     title: 'E-parduotuvės',
     description: 'Blogo turinys Shopify parduotuvei, postai apie produktus.',
     outcome: 'Tu gauni: profesionalų turinį be papildomo etato.',
-    features: ['Shopify blog integracija', 'AI sugeneruotas turinys', 'Social media postai']
+    features: ['Shopify blog integracija', 'SEO optimizuoti blogai', 'AI sugeneruotas turinys', 'Social media postai']
   },
   {
     title: 'Influenceriai',
