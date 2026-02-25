@@ -7,6 +7,7 @@ import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import StatsSection from '@/components/StatsSection';
 import CTA from '@/components/CTA';
+import PapildymoSection from '@/components/PapildymoSection';
 import SeoContent from '@/components/SeoContent';
 import QuickLinks from '@/components/QuickLinks';
 import Footer from '@/components/Footer';
@@ -95,6 +96,7 @@ function LandingPage() {
           <Features />
           <StatsSection />
           <QuickLinks />
+          <PapildymoSection />
           <CTA />
           <SeoContent />
         </main>
