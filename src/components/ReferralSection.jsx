@@ -43,6 +43,9 @@ const ReferralSection = () => {
             Pasiūlyk Clarivex draugui — jis registruojasi per tavo nuorodą ir papildo bent €10. 
             Tu ir tavo draugas gaunate po 10% papildomų kreditų. Vienkartinis bonusas už pirmą papildymą.
           </p>
+          <p className="text-base text-emerald-400/90 max-w-xl mx-auto mt-4 font-medium">
+            Kuo daugiau papildo — tuo daugiau gauna abu: €20 → +2 000 kr., €50 → +5 000 kr. ir t. t.
+          </p>
         </motion.div>
 
         {/* How it works - two columns */}
@@ -110,7 +113,7 @@ const ReferralSection = () => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-emerald-400 mt-0.5">✓</span>
-                <span>Pavyzdys: €10 papildymas → +1 000 kr. bonus abiem</span>
+                <span>10% nuo bet kokios sumos (€10, €20, €50…) — kuo daugiau, tuo daugiau bonus</span>
               </li>
             </ul>
           </div>
@@ -126,28 +129,35 @@ const ReferralSection = () => {
         >
           <div className="relative bg-gradient-to-r from-emerald-500/10 to-green-500/10 border border-emerald-500/30 rounded-2xl p-6 overflow-hidden">
             <div className="absolute top-0 right-0 w-40 h-40 bg-emerald-500/10 rounded-full blur-2xl" />
-            <div className="relative flex flex-col sm:flex-row items-center justify-center gap-6 text-center sm:text-left">
-              <div className="flex items-center gap-3">
-                <div className="w-14 h-14 rounded-xl bg-emerald-500/20 flex items-center justify-center">
+            <div className="relative">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-14 h-14 rounded-xl bg-emerald-500/20 flex items-center justify-center shrink-0">
                   <Sparkles className="w-7 h-7 text-emerald-400" />
                 </div>
                 <div>
-                  <p className="font-bold text-white">Pavyzdys</p>
-                  <p className="text-sm text-gray-400">Draugas papildo €10</p>
+                  <p className="font-bold text-white">Pavyzdžiai — 10% nuo bet kokios sumos</p>
+                  <p className="text-sm text-gray-400">Kuo daugiau papildo, tuo daugiau gauna abu</p>
                 </div>
               </div>
-              <div className="flex items-center gap-2 sm:gap-4 flex-wrap justify-center">
+              <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
                 <div className="px-4 py-2 bg-gray-800/50 rounded-lg">
-                  <p className="text-xs text-gray-500">Tu gauni</p>
-                  <p className="text-lg font-bold text-emerald-400">+1 000 kr.</p>
+                  <span className="text-gray-400">€10</span>
+                  <span className="text-emerald-400 font-bold ml-2">→ +1 000 kr.</span>
                 </div>
-                <ArrowRight className="w-5 h-5 text-gray-500 hidden sm:block" />
                 <div className="px-4 py-2 bg-gray-800/50 rounded-lg">
-                  <p className="text-xs text-gray-500">Draugas gauna</p>
-                  <p className="text-lg font-bold text-emerald-400">+1 000 kr.</p>
+                  <span className="text-gray-400">€20</span>
+                  <span className="text-emerald-400 font-bold ml-2">→ +2 000 kr.</span>
+                </div>
+                <div className="px-4 py-2 bg-gray-800/50 rounded-lg">
+                  <span className="text-gray-400">€30</span>
+                  <span className="text-emerald-400 font-bold ml-2">→ +3 000 kr.</span>
+                </div>
+                <div className="px-4 py-2 bg-gray-800/50 rounded-lg">
+                  <span className="text-gray-400">€50</span>
+                  <span className="text-emerald-400 font-bold ml-2">→ +5 000 kr.</span>
                 </div>
               </div>
-              <p className="text-sm text-gray-500">Abu laimi — vienkartinis bonusas už pirmą papildymą.</p>
+              <p className="text-sm text-gray-500 mt-4 text-center sm:text-left">Abu laimi — vienkartinis bonusas už pirmą papildymą.</p>
             </div>
           </div>
         </motion.div>
