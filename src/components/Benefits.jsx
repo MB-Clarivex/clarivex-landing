@@ -35,7 +35,7 @@ const benefits = [
 ];
 
 const dayScenario = [
-  { time: '08:00', action: 'Pasakai balsu: „Postas apie akciją“', result: '3 platformoms paruošta per 10 s' },
+  { time: '08:00', action: 'Pasakai balsu: „Postas apie akciją“', result: '2 platformoms paruošta per 10 s' },
   { time: '12:00', action: 'Atsakai į DM ir el. laiškus', result: 'AI siūlo atsakymus — 1 paspaudimas' },
   { time: '16:00', action: '„Primink rytoj 10:00 paskambinti“', result: 'Priminimas nustatytas per Telegram' },
 ];
@@ -43,9 +43,9 @@ const dayScenario = [
 const useCases = [
   {
     title: 'E-parduotuvės',
-    description: 'Produktų postai, akcijų skelbimai, klientų klausimai.',
-    outcome: 'Tu gauni: daugiau pardavimų su tuo pačiu laiku.',
-    features: ['Produktų carousel iš katalogų', 'Kainų atnaujinimai', 'Komentarų ir DM atsakymai']
+    description: 'Blogo turinys Shopify parduotuvei, postai apie produktus.',
+    outcome: 'Tu gauni: profesionalų turinį be papildomo etato.',
+    features: ['Shopify blog integracija', 'AI sugeneruotas turinys', 'Social media postai']
   },
   {
     title: 'Influenceriai',
@@ -247,7 +247,7 @@ const Benefits = () => {
             viewport={{ once: true }}
             className="mt-16 text-center"
           >
-            <p className="text-gray-400 mb-4">Pamatytai sau naudą? Pradėk nemokamai — 250 kr. dovanų.</p>
+            <p className="text-gray-400 mb-4">Pamatytai sau naudą? Pradėk nemokamai — iki 1000 kr. dovanų.</p>
             <a
               href="https://app.clarivex.ai/auth"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-medium rounded-xl transition-all"
