@@ -105,6 +105,14 @@ const Footer = () => {
               </li>
               <li>
                 <a 
+                  href="/#pakviesk" 
+                  className="text-gray-400 hover:text-emerald-400 transition-colors text-sm"
+                >
+                  Pakviesk draugą
+                </a>
+              </li>
+              <li>
+                <a 
                   href="https://app.clarivex.ai/" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >

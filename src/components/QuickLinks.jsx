@@ -26,6 +26,9 @@ const QuickLinks = () => {
           <Link to="/kainos" className="px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-300 hover:text-white hover:border-blue-500/50 transition-all">
             Kainodara ir kreditų sistema
           </Link>
+          <a href="/#pakviesk" className="px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-300 hover:text-white hover:border-emerald-500/50 transition-all">
+            Pakviesk draugą — 10% abiem
+          </a>
           <Link to="/duk" className="px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-300 hover:text-white hover:border-blue-500/50 transition-all">
             DUK
           </Link>

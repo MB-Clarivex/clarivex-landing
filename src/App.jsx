@@ -8,6 +8,7 @@ import Features from '@/components/Features';
 import StatsSection from '@/components/StatsSection';
 import CTA from '@/components/CTA';
 import PapildymoSection from '@/components/PapildymoSection';
+import ReferralSection from '@/components/ReferralSection';
 import SeoContent from '@/components/SeoContent';
 import QuickLinks from '@/components/QuickLinks';
 import Footer from '@/components/Footer';
@@ -97,6 +98,7 @@ function LandingPage() {
           <StatsSection />
           <QuickLinks />
           <PapildymoSection />
+          <ReferralSection />
           <CTA />
           <SeoContent />
         </main>

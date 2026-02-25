@@ -11,6 +11,7 @@ const navLinks = [
   { id: 'benefits', label: 'Nauda', href: '/nauda' },
   { id: 'telegram', label: 'Telegram', href: '/telegram' },
   { id: 'pricing', label: 'Kainodara', href: '/kainos' },
+  { id: 'pakviesk', label: 'Pakviesk draugą' },
   { id: 'cta', label: 'Kontaktai' },
 ];
 
