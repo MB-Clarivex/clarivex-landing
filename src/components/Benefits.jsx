@@ -102,12 +102,15 @@ const Benefits = () => {
           </h1>
           
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-            Tau — tai daugiau laiko, mažiau rutinos. Clarivex atlieka tai, ką dabar darai ranka: 
-            postai, atsakymai, priminimai. Tu lieki strategijai ir žmonėms.
+            Tau — daugiau laiko, mažiau rutinos.
+            Clarivex perima tai, ką šiandien darai ranka: postus, atsakymus, priminimus, paveikslėlius.
+            Tu lieki strategijai ir klientams, o visos tos kasdienės užduotys kainuoja vos kelis eurus.
           </p>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
-            Sutaupytas laikas yra tavo laikas. Nesvarbu ar vertini savo valandą 10€ ar 50€ — 
-            10 val./savaitė reiškia realų pinigų sutaupymą. Pradėk nemokamai ir pamatyk per pirmą savaitę.
+            Sutaupytas laikas — tai tavo pinigai.
+            Nesvarbu, ar savo valandą vertini 10€, ar 50€ — 10 val. per savaitę virsta šimtais eurų.
+            Pradėk su nemokamais kreditais ir per pirmą savaitę pamatyk,
+            kiek darbo Clarivex gali perimti už tave.
           </p>
         </motion.div>
 
@@ -247,12 +250,16 @@ const Benefits = () => {
             viewport={{ once: true }}
             className="mt-16 text-center"
           >
-            <p className="text-gray-400 mb-4">Pamatytai sau naudą? Pradėk nemokamai — iki 1000 kr. dovanų.</p>
+            <p className="text-gray-400 mb-4">
+              Nori pamatyti, kaip tai veikia praktiškai? Pradėk su
+              {' '}<span className="text-green-400 font-semibold">iki 1 000 kreditų</span>{' '}
+              — be įsipareigojimų, be kortelės.
+            </p>
             <a
               href="https://app.clarivex.ai/auth"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-medium rounded-xl transition-all"
             >
-              Pradėti nemokamai
+              Išbandyti nemokamai
               <Sparkles className="w-4 h-4" />
             </a>
           </motion.div>

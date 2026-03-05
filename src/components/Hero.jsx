@@ -141,7 +141,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-300 text-sm font-medium"
           >
             <Sparkles className="w-4 h-4" />
-            <span>🎁 Pradėk NEMOKAMAI — iki 1000 kreditų dovanų</span>
+            <span>🎁 Pradėk NEMOKAMAI — gauk iki 1 000 kreditų startui</span>
           </motion.div>
 
           <motion.h1
@@ -163,8 +163,9 @@ const Hero = () => {
             transition={{ duration: 0 }}
             className="text-lg md:text-xl text-gray-300 max-w-xl mx-auto md:mx-0 leading-relaxed"
           >
-            Socialiniai tinklai, el. paštas, priminimai, paveikslėliai — 
-            <span className="text-blue-400 font-semibold"> viena balso komanda</span> ir viskas padaryta per sekundes.
+            Socialiniai tinklai, el. paštas, priminimai, paveikslėliai —
+            viena komanda lietuviškai ir rezultatas per kelias sekundes.
+            Clarivex supranta kontekstą, paruošia turinį ir, jei nori, iškart publikuoja ar išsiunčia.
           </motion.p>
           <motion.p
             initial={{ opacity: 1, y: 0 }}
@@ -172,8 +173,18 @@ const Hero = () => {
             transition={{ duration: 0 }}
             className="text-sm md:text-base text-gray-400 max-w-xl mx-auto md:mx-0 leading-relaxed"
           >
-            Clarivex automatizuoja turinio kūrimą ir klientų komunikaciją lietuviškai. <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">Sužinokite, kaip veikia</Link> — kurk postus,
-            atsakyk į laiškus, planuok publikacijas. Be mėnesinių mokesčių, <Link to="/kainos" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">lanksčia kreditų sistema</Link>.
+            Clarivex — AI asistentų platforma lietuvių kalba.
+            Automatizuoja turinio kūrimą ir klientų komunikaciją, o tu moki tik už tai, ką naudoji.
+            Jokių mėnesinių planų — lanksti kreditų sistema nuo €1.
+            {' '}
+            <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
+              Kaip veikia
+            </Link>
+            {' · '}
+            <Link to="/kainos" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
+              Kainos
+            </Link>
+            .
           </motion.p>
 
           {/* Pricing Stats */}
@@ -186,7 +197,7 @@ const Hero = () => {
             <div className="text-center px-4 py-3 bg-green-500/10 border border-green-500/30 rounded-xl">
               <p className="text-2xl font-bold text-green-400">€0</p>
               <p className="text-xs text-green-300/80">Pradžia</p>
-              <p className="text-xs text-gray-500">+250 kr.</p>
+              <p className="text-xs text-gray-500">+250 kreditų</p>
             </div>
             <div className="text-center px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl">
               <p className="text-2xl font-bold text-white">nuo €1</p>
@@ -215,10 +226,12 @@ const Hero = () => {
                 <div className="flex items-center gap-2 mb-2">
                   <Mail className="w-5 h-5 text-blue-400" />
                   <span className="font-bold text-white">Pradėti nemokamai</span>
-                  <span className="ml-auto text-green-400 font-bold text-sm">+250 kr.</span>
+                  <span className="ml-auto text-green-400 font-bold text-sm">iki 1 000</span>
                 </div>
                 <p className="text-xs text-gray-400 mb-3">
-                  Užbaigęs profilį gausi iki 1000 kr. Registracija per 30 sek.
+                  Registracija per ~30 sek. Užbaigęs profilį gauni iki
+                  {' '}<span className="text-green-400 font-semibold">1 000 kreditų</span>{' '}
+                  startui — pakanka kelioms dešimtims AI užduočių.
                 </p>
                 <div className="text-center py-2 bg-blue-600 group-hover:bg-blue-500 rounded-lg text-white text-sm font-medium transition-colors">
                   Registruotis →
@@ -234,10 +247,12 @@ const Hero = () => {
                 <div className="flex items-center gap-2 mb-2">
                   <Smartphone className="w-5 h-5 text-[#0088cc]" />
                   <span className="font-bold text-white">Telegram</span>
-                  <span className="ml-auto text-green-400 font-bold text-sm">+500 kr.</span>
+                  <span className="ml-auto text-green-400 font-bold text-sm">+250 kr.</span>
                 </div>
                 <p className="text-xs text-gray-400 mb-3">
-                  Iškart 500 kr. — registracija + Telegram. Balso komandos ir push pranešimai.
+                  Valdyk Clarivex balsu iš telefono. Susiek Telegram ir gauk
+                  {' '}<span className="text-green-400 font-semibold">+250 kreditų</span>{' '}
+                  papildomai. Priminimai, pirkinių sąrašai, postai — vienu balso pranešimu.
                 </p>
                 <div className="text-center py-2 bg-[#0088cc] group-hover:bg-[#0077b5] rounded-lg text-white text-sm font-medium transition-colors">
                   Pradėti su Telegram →
@@ -247,7 +262,9 @@ const Hero = () => {
 
             {/* Info text */}
             <p className="text-center md:text-left text-xs text-gray-500">
-              💡 Užbaigęs profilį (rekvizitai, Telegram, telefonas) gausi iki 1000 kr.
+              💡 Registracija + profilio užbaigimas = iki
+              {' '}<span className="text-green-400 font-semibold">1 000 kreditų</span>{' '}
+              startui. Telegram — papildomi kreditai ir balso funkcijos.
             </p>
             
             {/* Login + quick links */}

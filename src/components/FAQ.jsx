@@ -34,11 +34,11 @@ const faqCategories = [
     questions: [
       {
         q: 'Kiek kainuoja Clarivex?',
-        a: 'Clarivex veikia kreditų sistema be mėnesinių mokesčių. Perkate kreditus, kai jų reikia: 1€ = 1000 kreditų. Nauji vartotojai gauna 250 kreditų registracijos metu, o užbaigus profilį — iki 1000 kreditų pradžiai!'
+        a: 'Clarivex veikia kreditų sistema — be mėnesinių mokesčių ir be kontraktų. Papildai kreditus tada, kai reikia: 1 € = 1 000 kreditų. Nauji vartotojai gauna iki 1 000 nemokamų kreditų startui, kad galėtų realiai viską išbandyti be rizikos.'
       },
       {
-        q: 'Ką galiu padaryti su 1000 kreditų?',
-        a: 'Su 1000 kreditų (~1€) galite: parašyti ~100+ AI žinučių su GPT-4.1 mini (arba ~30 su GPT-5.1), sugeneruoti 10–12 paveikslėlių (GPT Image 1.5 arba DALL-E 3), transkribuoti ~80 minučių balso, arba atlikti ~50 web paieškų. Naudojant ekonomišką GPT-4.1 mini modelį, kreditai trunka daug ilgiau!'
+        q: 'Ką galiu padaryti su 1 000 kreditų?',
+        a: 'Su 1 000 kreditų (~1 €) gali: parašyti ~100 AI žinučių su GPT-4.1 mini arba ~30 su GPT-5.1, sugeneruoti 10–12 paveikslėlių, transkribuoti ~80 min. balso arba atlikti ~50 web paieškų. Net nedidelė suma leidžia labai daug išbandyti. Patarimas: naudojant GPT-4.1 mini modelį kreditai trunka kelis kartus ilgiau, o kokybė kasdienėms užduotims — puiki.'
       },
       {
         q: 'Ar kreditai baigiasi?',

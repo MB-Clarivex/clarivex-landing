@@ -403,9 +403,11 @@ export default function PricingPage() {
                 </h1>
                 
                 <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-                  Jokių paslėptų mokesčių. Moki tik už tai, ką naudoji.
+                  Jokių paslėptų mokesčių ir mėnesinių planų.
+                  Moki tik už tai, ką realiai naudoji — AI žinutes, postus, paveikslėlius, el. laiškus.
                   <br />
-                  <span className="text-blue-400 font-semibold">1€ = 1000 kreditų</span>
+                  <span className="text-blue-400 font-semibold">1 € = 1 000 kreditų</span> — to paprastai pakanka
+                  kelioms dešimtims AI žinučių ir keliems paveikslėliams.
                 </p>
                 
                 <div className="flex flex-wrap justify-center gap-3">
@@ -439,7 +441,8 @@ export default function PricingPage() {
                   ⚡ Kiek kainuoja tipiniai veiksmai?
                 </h2>
                 <p className="text-gray-400 text-sm">
-                  1€ = 1000 kreditų. Žemiau — apytiksliai kreditų skaičiai.
+                  1 € = 1 000 kreditų. Žemiau — apytikslės kreditų kainos dažniausiems veiksmams,
+                  kad lengviau suplanuotum savo biudžetą.
                 </p>
               </motion.div>
               

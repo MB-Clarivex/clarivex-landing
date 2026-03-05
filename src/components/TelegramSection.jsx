@@ -93,8 +93,11 @@ const TelegramSection = () => {
           </h1>
           
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-            Susieti Telegram ir valdyti Clarivex balsu bet kur ir bet kada. 
-            Gauk <span className="text-[#0088cc] font-semibold">+250 bonus kreditų</span> už susiejimą!
+            Nori valdyti Clarivex balsu? Susiek Telegram ir naudok AI asistentą bet kur, bet kada —
+            tiesiai iš telefono.
+            Už susiejimą gauni <span className="text-[#0088cc] font-semibold">+250 kreditų</span>,
+            o užbaigęs profilį — iš viso iki
+            {' '}<span className="text-[#0088cc] font-semibold">1 000 kreditų</span> startui.
           </p>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
             Clarivex Telegram botas leidžia naudoti AI asistentą tiesiog iš mobilaus telefono. Diktuokite žinutes, kurkite pirkinių sąrašus balsu, gaukite priminimus ir valdykite savo Clarivex paskyrą — visa tai per pažįstamą Telegram programėlę. Idealu užimtiems žmonėms, kurie nori produktyvumo be papildomų programų.
@@ -303,26 +306,29 @@ const TelegramSection = () => {
                   <Gift className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-white">Iki 1000 kr. nemokamai</h2>
-                  <p className="text-gray-400">Registracija + užbaigtas profilis = maksimalus bonus</p>
+                  <h2 className="text-2xl font-bold text-white">Iki 1 000 kreditų startui</h2>
+                  <p className="text-gray-400">
+                    Registracija + profilio užbaigimas + Telegram = maksimalus startas.
+                    Kreditai leidžia išbandyti visas AI funkcijas be rizikos ir įsipareigojimų.
+                  </p>
                 </div>
               </div>
               
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <div className="text-center px-6 py-3 bg-[#0088cc]/10 rounded-xl border border-[#0088cc]/30">
-                  <p className="text-sm text-[#0088cc]">Telegram registracija</p>
-                  <p className="text-2xl font-bold text-[#0088cc]">500 <span className="text-sm">kr.</span></p>
+                  <p className="text-sm text-[#0088cc]">Telegram susiejimas</p>
+                  <p className="text-2xl font-bold text-[#0088cc]">250 <span className="text-sm">kr.</span></p>
                   <p className="text-xs text-gray-500">iškart</p>
                 </div>
                 <div className="text-2xl text-gray-500">+</div>
                 <div className="text-center px-6 py-3 bg-gray-800/50 rounded-xl border border-gray-700/50">
-                  <p className="text-sm text-gray-400">Rekvizitai + telefonas</p>
-                  <p className="text-2xl font-bold text-white">2×250 <span className="text-sm text-gray-400">kr.</span></p>
+                  <p className="text-sm text-gray-400">Profilio užbaigimas</p>
+                  <p className="text-2xl font-bold text-white">750 <span className="text-sm text-gray-400">kr.</span></p>
                 </div>
                 <div className="text-2xl text-gray-500">=</div>
                 <div className="text-center px-6 py-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl border border-green-500/30">
                   <p className="text-sm text-green-400">Iš viso</p>
-                  <p className="text-2xl font-bold text-green-400">1000 <span className="text-sm">kr.</span></p>
+                  <p className="text-2xl font-bold text-green-400">1 000 <span className="text-sm">kr.</span></p>
                 </div>
               </div>
             </div>

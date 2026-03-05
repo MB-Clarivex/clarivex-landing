@@ -27,7 +27,7 @@ const features = [
   {
     icon: Mic,
     title: 'Balso Komandos',
-    description: 'Pasakyk ką nori — postas, priminimas, paveikslėlis. Clarivex supranta lietuviškai ir padaro per sekundes.',
+    description: 'Pasakyk lietuviškai, ką reikia padaryti — postą, priminimą ar paveikslėlį. Clarivex supranta kontekstą ir per kelias sekundes paruošia galutinį variantą. Veikia naršyklėje ir per Telegram.',
     gradient: 'from-blue-500 to-cyan-500',
     badge: 'Populiariausia',
     stats: '~3s',
@@ -81,7 +81,7 @@ const features = [
   {
     icon: Brain,
     title: 'Ilgalaikė Atmintis',
-    description: 'Clarivex atsimena tavo prekės ženklą, klientus, terminus. Kuo daugiau naudoji — tuo protingesnis tampa.',
+    description: 'Clarivex atsimena tavo prekės ženklą, terminus ir svarbias detales. Kuo daugiau bendrauji, tuo tiksliau AI pritaiko atsakymus prie tavo stiliaus — lyg būtum parašęs pats.',
     gradient: 'from-violet-500 to-purple-500',
     badge: 'Unikalus',
     stats: '∞',
