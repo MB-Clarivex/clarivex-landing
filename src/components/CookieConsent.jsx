@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   getConsent,
@@ -9,10 +9,14 @@ import {
 } from '@/lib/cookieConsent';
 
 const CookieConsent = () => {
+  const { pathname } = useLocation();
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [analytics, setAnalytics] = useState(false);
   const [marketing, setMarketing] = useState(false);
+
+  const isPrivacyPage = pathname === '/privatumas';
+  const shouldBlock = isVisible && !isPrivacyPage;
 
   useEffect(() => {
     if (!hasConsent()) {
@@ -21,7 +25,7 @@ const CookieConsent = () => {
   }, []);
 
   useEffect(() => {
-    if (isVisible) {
+    if (shouldBlock) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
@@ -29,7 +33,7 @@ const CookieConsent = () => {
     return () => {
       document.body.style.overflow = '';
     };
-  }, [isVisible]);
+  }, [shouldBlock]);
 
   useEffect(() => {
     const handler = () => {
@@ -67,26 +71,28 @@ const CookieConsent = () => {
 
   return (
     <AnimatePresence>
-      {isVisible && (
+      {shouldBlock && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+          className="fixed inset-0 z-[90] bg-black/70 backdrop-blur-sm"
           onClick={(e) => e.target === e.currentTarget && e.stopPropagation()}
+        />
+      )}
+      {isVisible && (
+        <motion.div
+          initial={{ y: '100%' }}
+          animate={{ y: 0 }}
+          exit={{ y: '100%' }}
+          transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+          className="fixed bottom-0 left-0 right-0 z-[100] border-t border-gray-700 bg-gray-900 shadow-2xl"
         >
-          <motion.div
-            initial={{ scale: 0.95, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.95, opacity: 0 }}
-            transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="w-full max-w-lg sm:max-w-xl md:max-w-2xl bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="max-w-6xl mx-auto">
             {/* Settings panel */}
             {showSettings ? (
-              <div className="p-5 sm:p-6 md:p-8">
+              <div className="p-4 sm:p-5 md:p-6 max-h-[80vh] overflow-y-auto">
                 <h3 className="text-white font-semibold text-lg md:text-xl mb-4">
                   Slapukų nustatymai
                 </h3>
@@ -169,13 +175,13 @@ const CookieConsent = () => {
                 <div className="flex flex-wrap gap-3">
                   <button
                     onClick={handleSaveSettings}
-                    className="px-5 py-3 md:px-6 md:py-3.5 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-xl text-sm md:text-base transition-colors"
+                    className="px-4 py-2 sm:px-5 sm:py-2.5 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg text-sm transition-colors"
                   >
                     Išsaugoti pasirinkimą
                   </button>
                   <button
                     onClick={() => setShowSettings(false)}
-                    className="px-5 py-3 md:px-6 md:py-3.5 bg-gray-700 hover:bg-gray-600 text-gray-300 font-medium rounded-xl text-sm md:text-base transition-colors"
+                    className="px-4 py-2 sm:px-5 sm:py-2.5 bg-gray-700 hover:bg-gray-600 text-gray-300 font-medium rounded-lg text-sm transition-colors"
                   >
                     Atgal
                   </button>
@@ -183,8 +189,8 @@ const CookieConsent = () => {
               </div>
             ) : (
               /* Banner */
-              <div className="p-5 sm:p-6 md:p-8 flex flex-col gap-6 md:gap-8">
-                <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+              <div className="p-4 sm:p-5 md:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <p className="text-gray-300 text-sm sm:text-base leading-relaxed flex-1 min-w-0">
                   Naudojame slapukus, kad pagerintume jūsų patirtį. Galite
                   pasirinkti, su kuo sutinkate.{' '}
                   <Link
@@ -194,10 +200,10 @@ const CookieConsent = () => {
                     Privatumo politika
                   </Link>
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <div className="flex flex-wrap gap-2 sm:gap-3 shrink-0">
                   <button
                     onClick={handleEssentialOnly}
-                    className="flex-1 sm:flex-none px-5 py-3 md:px-6 md:py-3.5 bg-gray-700 hover:bg-gray-600 text-gray-300 font-medium rounded-xl text-sm md:text-base transition-colors"
+                    className="px-4 py-2 sm:px-5 sm:py-2.5 bg-gray-700 hover:bg-gray-600 text-gray-300 font-medium rounded-lg text-sm transition-colors"
                   >
                     Tik būtiniai
                   </button>
@@ -208,20 +214,20 @@ const CookieConsent = () => {
                       setMarketing(c?.marketing ?? false);
                       setShowSettings(true);
                     }}
-                    className="flex-1 sm:flex-none px-5 py-3 md:px-6 md:py-3.5 bg-gray-700 hover:bg-gray-600 text-gray-300 font-medium rounded-xl text-sm md:text-base transition-colors"
+                    className="px-4 py-2 sm:px-5 sm:py-2.5 bg-gray-700 hover:bg-gray-600 text-gray-300 font-medium rounded-lg text-sm transition-colors"
                   >
                     Nustatymai
                   </button>
                   <button
                     onClick={handleAcceptAll}
-                    className="flex-1 sm:flex-none px-5 py-3 md:px-6 md:py-3.5 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-xl text-sm md:text-base transition-colors"
+                    className="px-4 py-2 sm:px-5 sm:py-2.5 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg text-sm transition-colors"
                   >
                     Priimti visus
                   </button>
                 </div>
               </div>
             )}
-          </motion.div>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
