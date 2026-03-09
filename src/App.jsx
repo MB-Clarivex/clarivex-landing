@@ -22,6 +22,7 @@ import FeaturesPage from '@/components/FeaturesPage';
 import HowItWorksPage from '@/components/HowItWorksPage';
 import BenefitsPage from '@/components/BenefitsPage';
 import TelegramPage from '@/components/TelegramPage';
+import CookieConsent from '@/components/CookieConsent';
 import { Toaster } from '@/components/ui/toaster';
 
 // Landing page component
@@ -130,6 +131,7 @@ function App() {
     <>
       <ScrollToTop />
       {routing}
+      <CookieConsent />
     </>
   );
 }
