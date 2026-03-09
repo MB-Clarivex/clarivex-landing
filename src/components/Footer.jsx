@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { OPEN_SETTINGS_EVENT } from '@/lib/cookieConsent';
 import { motion } from 'framer-motion';
 import { Mail, MessageCircle, Instagram, Facebook } from 'lucide-react';
 
@@ -202,6 +203,13 @@ const Footer = () => {
           </p>
           
           <div className="flex items-center gap-6 text-sm">
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent(OPEN_SETTINGS_EVENT))}
+              className="text-gray-500 hover:text-gray-300 transition-colors"
+            >
+              Slapukų nustatymai
+            </button>
             <Link to="/privatumas" className="text-gray-500 hover:text-gray-300 transition-colors">
               Privatumo politika
             </Link>
