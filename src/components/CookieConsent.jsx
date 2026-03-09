@@ -81,16 +81,16 @@ const CookieConsent = () => {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="w-full max-w-lg bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden"
+            className="w-full max-w-lg sm:max-w-xl md:max-w-2xl bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Settings panel */}
             {showSettings ? (
-              <div className="p-4 md:p-6">
-                <h3 className="text-white font-semibold mb-4">
+              <div className="p-5 sm:p-6 md:p-8">
+                <h3 className="text-white font-semibold text-lg md:text-xl mb-4">
                   Slapukų nustatymai
                 </h3>
-                <p className="text-gray-400 text-sm mb-6">
+                <p className="text-gray-400 text-sm md:text-base mb-6 leading-relaxed">
                   Pasirinkite, su kokiomis slapukų kategorijomis sutinkate.
                   Skaitykite daugiau{' '}
                   <Link
@@ -101,10 +101,10 @@ const CookieConsent = () => {
                   </Link>
                   .
                 </p>
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-start justify-between gap-4 p-3 rounded-lg bg-gray-800/50">
+                <div className="space-y-4 md:space-y-5 mb-6 md:mb-8">
+                  <div className="flex items-start justify-between gap-4 p-4 md:p-5 rounded-xl bg-gray-800/50">
                     <div>
-                      <p className="text-white font-medium text-sm">
+                      <p className="text-white font-medium text-sm md:text-base">
                         Būtiniai
                       </p>
                       <p className="text-gray-500 text-xs mt-0.5">
@@ -115,9 +115,9 @@ const CookieConsent = () => {
                       Visada įjungti
                     </span>
                   </div>
-                  <div className="flex items-start justify-between gap-4 p-3 rounded-lg bg-gray-800/50">
+                  <div className="flex items-start justify-between gap-4 p-4 md:p-5 rounded-xl bg-gray-800/50">
                     <div>
-                      <p className="text-white font-medium text-sm">
+                      <p className="text-white font-medium text-sm md:text-base">
                         Analitika
                       </p>
                       <p className="text-gray-500 text-xs mt-0.5">
@@ -140,9 +140,9 @@ const CookieConsent = () => {
                       />
                     </button>
                   </div>
-                  <div className="flex items-start justify-between gap-4 p-3 rounded-lg bg-gray-800/50">
+                  <div className="flex items-start justify-between gap-4 p-4 md:p-5 rounded-xl bg-gray-800/50">
                     <div>
-                      <p className="text-white font-medium text-sm">
+                      <p className="text-white font-medium text-sm md:text-base">
                         Marketingas
                       </p>
                       <p className="text-gray-500 text-xs mt-0.5">
@@ -166,16 +166,16 @@ const CookieConsent = () => {
                     </button>
                   </div>
                 </div>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   <button
                     onClick={handleSaveSettings}
-                    className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg text-sm transition-colors"
+                    className="px-5 py-3 md:px-6 md:py-3.5 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-xl text-sm md:text-base transition-colors"
                   >
                     Išsaugoti pasirinkimą
                   </button>
                   <button
                     onClick={() => setShowSettings(false)}
-                    className="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-gray-300 font-medium rounded-lg text-sm transition-colors"
+                    className="px-5 py-3 md:px-6 md:py-3.5 bg-gray-700 hover:bg-gray-600 text-gray-300 font-medium rounded-xl text-sm md:text-base transition-colors"
                   >
                     Atgal
                   </button>
@@ -183,23 +183,21 @@ const CookieConsent = () => {
               </div>
             ) : (
               /* Banner */
-              <div className="p-4 md:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div className="flex-1">
-                  <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                    Naudojame slapukus, kad pagerintume jūsų patirtį. Galite
-                    pasirinkti, su kuo sutinkate.{' '}
-                    <Link
-                      to="/privatumas"
-                      className="text-blue-400 hover:text-blue-300 underline underline-offset-2"
-                    >
-                      Privatumo politika
-                    </Link>
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-2 shrink-0">
+              <div className="p-5 sm:p-6 md:p-8 flex flex-col gap-6 md:gap-8">
+                <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+                  Naudojame slapukus, kad pagerintume jūsų patirtį. Galite
+                  pasirinkti, su kuo sutinkate.{' '}
+                  <Link
+                    to="/privatumas"
+                    className="text-blue-400 hover:text-blue-300 underline underline-offset-2"
+                  >
+                    Privatumo politika
+                  </Link>
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                   <button
                     onClick={handleEssentialOnly}
-                    className="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-gray-300 font-medium rounded-lg text-sm transition-colors"
+                    className="flex-1 sm:flex-none px-5 py-3 md:px-6 md:py-3.5 bg-gray-700 hover:bg-gray-600 text-gray-300 font-medium rounded-xl text-sm md:text-base transition-colors"
                   >
                     Tik būtiniai
                   </button>
@@ -210,13 +208,13 @@ const CookieConsent = () => {
                       setMarketing(c?.marketing ?? false);
                       setShowSettings(true);
                     }}
-                    className="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-gray-300 font-medium rounded-lg text-sm transition-colors"
+                    className="flex-1 sm:flex-none px-5 py-3 md:px-6 md:py-3.5 bg-gray-700 hover:bg-gray-600 text-gray-300 font-medium rounded-xl text-sm md:text-base transition-colors"
                   >
                     Nustatymai
                   </button>
                   <button
                     onClick={handleAcceptAll}
-                    className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg text-sm transition-colors"
+                    className="flex-1 sm:flex-none px-5 py-3 md:px-6 md:py-3.5 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-xl text-sm md:text-base transition-colors"
                   >
                     Priimti visus
                   </button>
