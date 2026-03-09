@@ -33,7 +33,7 @@ const plans = [
 ];
 
 const features = [
-  'Visi AI modeliai (GPT-4.1 mini, GPT-5.1/5.2, GPT Image 1.5, DALL-E 3)',
+  'Visi AI modeliai (GPT-4.1 mini, GPT-5.1/5.2, Nano Banana 2, GPT Image, DALL-E)',
   'Balso komandos lietuviškai',
   'Instagram + Facebook postai (iki 25/d.)*',
   'El. pašto valdymas su AI',
@@ -50,7 +50,7 @@ const usageExamples = [
   { name: 'Postas (tekstas)', credits: '~5-15', sub: 'AI generavimas', icon: '📝' },
   { name: 'Posto publikavimas', credits: '15', sub: 'IG / FB / Blog', icon: '📤' },
   { name: 'DM arba komentaro atsakymas', credits: '~2-10', sub: 'AI siūlymas', icon: '💬' },
-  { name: 'Paveikslėlis (AI)', credits: '35-196', sub: 'GPT Image arba DALL-E 3', icon: '🎨' },
+  { name: 'Paveikslėlis (AI)', credits: '~125', sub: 'Nano Banana 2 (Gemini)', icon: '🎨' },
   { name: 'El. laiškas (atsakymas + siuntimas)', credits: '~5-12', sub: 'AI + 2.5 kr siuntimui', icon: '📧' },
   { name: 'Balso komanda', credits: '~10-25', sub: 'transkripcija + AI', icon: '🎤' },
   { name: 'PDF analizė (10 psl.)', credits: '~5-15', sub: 'AI skaitymas', icon: '📄' },

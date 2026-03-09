@@ -63,11 +63,11 @@ const features = [
   {
     icon: Image,
     title: 'Paveikslėlių Generavimas',
-    description: 'GPT Image 1.5 ir DALL-E 3. Aprašyk ką nori matyti — AI automatiškai pasirinks modelį ir sukurs profesionalų paveikslėlį. HD kokybė iki 1792×1024.',
+    description: 'Nano Banana 2 (Gemini) – pro kokybė, greitas, puikiai rašo tekstą ant paveikslėlių. 2K rezoliucija. OpenAI fallback.',
     gradient: 'from-orange-500 to-red-500',
     badge: null,
-    stats: '1792×1024',
-    statsLabel: 'HD kokybė'
+    stats: '2K',
+    statsLabel: 'pro kokybė'
   },
   {
     icon: FileText,

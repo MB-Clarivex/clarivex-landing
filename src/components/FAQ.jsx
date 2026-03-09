@@ -38,7 +38,7 @@ const faqCategories = [
       },
       {
         q: 'Ką galiu padaryti su 1 000 kreditų?',
-        a: 'Su 1 000 kreditų (~1 €) gali: parašyti ~100 AI žinučių su GPT-4.1 mini arba ~30 su GPT-5.1, sugeneruoti 10–12 paveikslėlių, transkribuoti ~80 min. balso arba atlikti ~50 web paieškų. Net nedidelė suma leidžia labai daug išbandyti. Patarimas: naudojant GPT-4.1 mini modelį kreditai trunka kelis kartus ilgiau, o kokybė kasdienėms užduotims — puiki.'
+        a: 'Su 1 000 kreditų (~1 €) gali: parašyti ~100 AI žinučių su GPT-4.1 mini arba ~30 su GPT-5.1, sugeneruoti ~8 paveikslėlių (Nano Banana 2, pro kokybė), transkribuoti ~80 min. balso arba atlikti ~50 web paieškų. Net nedidelė suma leidžia labai daug išbandyti. Patarimas: naudojant GPT-4.1 mini modelį kreditai trunka kelis kartus ilgiau, o kokybė kasdienėms užduotims — puiki.'
       },
       {
         q: 'Ar kreditai baigiasi?',
@@ -65,7 +65,7 @@ const faqCategories = [
     questions: [
       {
         q: 'Kokie AI modeliai naudojami?',
-        a: 'Naudojame OpenAI modelius: GPT-5.2, GPT-5.1 ir GPT-4.1 mini tekstui; GPT Image 1.5 ir DALL-E 3 paveikslėliams; Whisper balso transkripcijai. Galite patys pasirinkti modelį kiekviename pokalbyje!'
+        a: 'Naudojame OpenAI modelius tekstui (GPT-5.2, GPT-5.1, GPT-4.1 mini); Nano Banana 2 (Gemini) paveikslėliams – pro kokybė, puikiai rašo tekstą; OpenAI fallback (GPT Image, DALL-E); Whisper balso transkripcijai. Galite patys pasirinkti modelį kiekviename pokalbyje!'
       },
       {
         q: 'Kurį AI modelį pasirinkti?',
@@ -77,7 +77,7 @@ const faqCategories = [
       },
       {
         q: 'Ar galiu generuoti paveikslėlius?',
-        a: 'Taip! Naudojame GPT Image 1.5 (pagrindinis – fotorealizmas, produktai) ir DALL-E 3 (tekstas paveiksle, logotipai). Paveikslėliai iki 1792×1024 pikselių. Tiesiog aprašykite, ko norite, ir AI automatiškai pasirinks tinkamą modelį.'
+        a: 'Taip! Naudojame Nano Banana 2 (Gemini) – pro kokybė, 2K rezoliucija, puikiai rašo tekstą ant paveikslėlių (lietuviškai ir anglų). Tiesiog aprašykite, ko norite. OpenAI (GPT Image, DALL-E) – fallback, kai Gemini neprieinamas.'
       },
       {
         q: 'Kaip veikia balso komandos?',
