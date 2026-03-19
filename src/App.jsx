@@ -17,24 +17,44 @@ import MetaPixel from '@/components/MetaPixel';
 import { contentPages, siteConfig } from '@/content/seoPages';
 import { Toaster } from '@/components/ui/toaster';
 
+const isServer = import.meta.env.SSR;
+
 function lazyPage(loader) {
   const Component = lazy(loader);
   Component.preload = loader;
   return Component;
 }
 
-const PrivacyPolicy = lazyPage(() => import('@/components/PrivacyPolicy'));
-const TermsOfService = lazyPage(() => import('@/components/TermsOfService'));
-const DataDeletion = lazyPage(() => import('@/components/DataDeletion'));
-const FAQ = lazyPage(() => import('@/components/FAQ'));
-const Status = lazyPage(() => import('@/components/Status'));
-const PricingPage = lazyPage(() => import('@/components/PricingPage'));
-const FeaturesPage = lazyPage(() => import('@/components/FeaturesPage'));
-const HowItWorksPage = lazyPage(() => import('@/components/HowItWorksPage'));
-const BenefitsPage = lazyPage(() => import('@/components/BenefitsPage'));
-const TelegramPage = lazyPage(() => import('@/components/TelegramPage'));
-const ResourcesHubPage = lazyPage(() => import('@/components/ResourcesHubPage'));
-const SeoResourcePage = lazyPage(() => import('@/components/SeoResourcePage'));
+const pageModules = isServer
+  ? import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,ResourcesHubPage,SeoResourcePage}.jsx', { eager: true })
+  : import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,ResourcesHubPage,SeoResourcePage}.jsx');
+
+function createPageComponent(modulePath) {
+  const moduleOrLoader = pageModules[modulePath];
+
+  if (!moduleOrLoader) {
+    throw new Error(`Missing page module: ${modulePath}`);
+  }
+
+  if (isServer) {
+    return moduleOrLoader.default;
+  }
+
+  return lazyPage(moduleOrLoader);
+}
+
+const PrivacyPolicy = createPageComponent('./components/PrivacyPolicy.jsx');
+const TermsOfService = createPageComponent('./components/TermsOfService.jsx');
+const DataDeletion = createPageComponent('./components/DataDeletion.jsx');
+const FAQ = createPageComponent('./components/FAQ.jsx');
+const Status = createPageComponent('./components/Status.jsx');
+const PricingPage = createPageComponent('./components/PricingPage.jsx');
+const FeaturesPage = createPageComponent('./components/FeaturesPage.jsx');
+const HowItWorksPage = createPageComponent('./components/HowItWorksPage.jsx');
+const BenefitsPage = createPageComponent('./components/BenefitsPage.jsx');
+const TelegramPage = createPageComponent('./components/TelegramPage.jsx');
+const ResourcesHubPage = createPageComponent('./components/ResourcesHubPage.jsx');
+const SeoResourcePage = createPageComponent('./components/SeoResourcePage.jsx');
 
 // Landing page component
 function LandingPage() {
@@ -171,7 +191,9 @@ export const routeDefinitions = [
 
 export const routes = routeDefinitions.map(({ path, component: Component, props }) => ({
   path,
-  element: (
+  element: isServer ? (
+    <Component {...props} />
+  ) : (
     <Suspense fallback={null}>
       <Component {...props} />
     </Suspense>
