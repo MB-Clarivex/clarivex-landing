@@ -68,14 +68,17 @@ const run = async () => {
 
   const templatePath = path.join(distDir, 'index.html');
   const template = await fs.readFile(templatePath, 'utf8');
-  const { default: App, routes } = await vite.ssrLoadModule('/src/App.jsx');
-  const routePaths = routes
+  const { default: App, routeDefinitions } = await vite.ssrLoadModule('/src/App.jsx');
+  const routePaths = routeDefinitions
     .map((route) => route.path)
     .filter((routePath) => typeof routePath === 'string');
   console.log(`[prerender] Routes: ${routePaths.join(', ')}`);
 
   await Promise.all(
-    routePaths.map(async (routePath) => {
+    routeDefinitions.map(async ({ path: routePath, component }) => {
+      if (typeof component?.preload === 'function') {
+        await component.preload();
+      }
       const { appHtml, helmetHtml } = renderRoute(routePath, App);
       await writeRouteHtml(template, routePath, appHtml, helmetHtml);
     })

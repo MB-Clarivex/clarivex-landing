@@ -124,6 +124,33 @@ const SeoContent = () => {
         </div>
 
         <div className="mt-12">
+          <h2 className="text-2xl font-semibold text-white mb-3">Kaip pradėti naudotis Clarivex</h2>
+          <p className="text-gray-300">
+            Pirmam bandymui nereikia ilgo pasiruošimo. Dažniausiai užtenka pasirinkti vieną procesą ir
+            jį išsibandyti su nemokamais kreditais.
+          </p>
+          <ol className="mt-4 space-y-3 list-decimal pl-5 text-gray-300">
+            <li>Užsiregistruokite ir gaukite startinius kreditus.</li>
+            <li>Išbandykite vieną aiškią užduotį: el. laišką, postą, priminimą arba Telegram komandą.</li>
+            <li>Įvertinkite rezultatą ir tik tada plėskite naudojimą į kitus procesus.</li>
+          </ol>
+          <p className="mt-3">
+            Pradžiai naudingi puslapiai:{' '}
+            <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">
+              Kaip veikia
+            </Link>
+            {' · '}
+            <Link to="/features" className="text-blue-400 hover:text-blue-300">
+              Funkcijos
+            </Link>
+            {' · '}
+            <Link to="/kainos" className="text-blue-400 hover:text-blue-300">
+              Kainos
+            </Link>.
+          </p>
+        </div>
+
+        <div className="mt-12">
           <h3 className="text-2xl font-semibold text-white mb-4">Dažniausiai užduodami klausimai</h3>
           <div className="space-y-4 text-gray-300">
             <div>

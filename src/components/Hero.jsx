@@ -184,8 +184,20 @@ const Hero = () => {
               Kaip veikia
             </Link>
             {' · '}
+            <Link to="/features" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
+              Funkcijos
+            </Link>
+            {' · '}
+            <Link to="/nauda" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
+              Nauda
+            </Link>
+            {' · '}
             <Link to="/kainos" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
               Kainos
+            </Link>
+            {' · '}
+            <Link to="/telegram" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
+              Telegram
             </Link>
             .
           </motion.p>

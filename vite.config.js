@@ -257,6 +257,11 @@ export default defineConfig({
 		extensions: ['.jsx', '.js', '.tsx', '.ts', '.json', ],
 		alias: {
 			'@': path.resolve(__dirname, './src'),
+			...(isDev
+				? {}
+				: {
+					'framer-motion': path.resolve(__dirname, './src/lib/framer-motion-lite.jsx'),
+				}),
 		},
 	},
 	build: {

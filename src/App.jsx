@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { useRoutes } from 'react-router-dom';
 import ScrollToTop from '@/components/ScrollToTop';
 import { Helmet } from 'react-helmet';
@@ -12,22 +12,29 @@ import ReferralSection from '@/components/ReferralSection';
 import SeoContent from '@/components/SeoContent';
 import QuickLinks from '@/components/QuickLinks';
 import Footer from '@/components/Footer';
-import PrivacyPolicy from '@/components/PrivacyPolicy';
-import TermsOfService from '@/components/TermsOfService';
-import DataDeletion from '@/components/DataDeletion';
-import FAQ from '@/components/FAQ';
-import Status from '@/components/Status';
-import PricingPage from '@/components/PricingPage';
-import FeaturesPage from '@/components/FeaturesPage';
-import HowItWorksPage from '@/components/HowItWorksPage';
-import BenefitsPage from '@/components/BenefitsPage';
-import TelegramPage from '@/components/TelegramPage';
 import CookieConsent from '@/components/CookieConsent';
 import MetaPixel from '@/components/MetaPixel';
-import ResourcesHubPage from '@/components/ResourcesHubPage';
-import SeoResourcePage from '@/components/SeoResourcePage';
 import { contentPages, siteConfig } from '@/content/seoPages';
 import { Toaster } from '@/components/ui/toaster';
+
+function lazyPage(loader) {
+  const Component = lazy(loader);
+  Component.preload = loader;
+  return Component;
+}
+
+const PrivacyPolicy = lazyPage(() => import('@/components/PrivacyPolicy'));
+const TermsOfService = lazyPage(() => import('@/components/TermsOfService'));
+const DataDeletion = lazyPage(() => import('@/components/DataDeletion'));
+const FAQ = lazyPage(() => import('@/components/FAQ'));
+const Status = lazyPage(() => import('@/components/Status'));
+const PricingPage = lazyPage(() => import('@/components/PricingPage'));
+const FeaturesPage = lazyPage(() => import('@/components/FeaturesPage'));
+const HowItWorksPage = lazyPage(() => import('@/components/HowItWorksPage'));
+const BenefitsPage = lazyPage(() => import('@/components/BenefitsPage'));
+const TelegramPage = lazyPage(() => import('@/components/TelegramPage'));
+const ResourcesHubPage = lazyPage(() => import('@/components/ResourcesHubPage'));
+const SeoResourcePage = lazyPage(() => import('@/components/SeoResourcePage'));
 
 // Landing page component
 function LandingPage() {
@@ -142,24 +149,34 @@ function LandingPage() {
   );
 }
 
-export const routes = [
-  { path: '/', element: <LandingPage /> },
-  { path: '/privatumas', element: <PrivacyPolicy /> },
-  { path: '/salygos', element: <TermsOfService /> },
-  { path: '/duomenu-istrynimas', element: <DataDeletion /> },
-  { path: '/duk', element: <FAQ /> },
-  { path: '/statusas', element: <Status /> },
-  { path: '/kainos', element: <PricingPage /> },
-  { path: '/features', element: <FeaturesPage /> },
-  { path: '/kaip-veikia', element: <HowItWorksPage /> },
-  { path: '/nauda', element: <BenefitsPage /> },
-  { path: '/telegram', element: <TelegramPage /> },
-  { path: '/resursai', element: <ResourcesHubPage /> },
+export const routeDefinitions = [
+  { path: '/', component: LandingPage },
+  { path: '/privatumas', component: PrivacyPolicy },
+  { path: '/salygos', component: TermsOfService },
+  { path: '/duomenu-istrynimas', component: DataDeletion },
+  { path: '/duk', component: FAQ },
+  { path: '/statusas', component: Status },
+  { path: '/kainos', component: PricingPage },
+  { path: '/features', component: FeaturesPage },
+  { path: '/kaip-veikia', component: HowItWorksPage },
+  { path: '/nauda', component: BenefitsPage },
+  { path: '/telegram', component: TelegramPage },
+  { path: '/resursai', component: ResourcesHubPage },
   ...contentPages.map((page) => ({
     path: page.path,
-    element: <SeoResourcePage page={page} />,
+    component: SeoResourcePage,
+    props: { page },
   })),
 ];
+
+export const routes = routeDefinitions.map(({ path, component: Component, props }) => ({
+  path,
+  element: (
+    <Suspense fallback={null}>
+      <Component {...props} />
+    </Suspense>
+  ),
+}));
 
 function App() {
   const routing = useRoutes(routes);
