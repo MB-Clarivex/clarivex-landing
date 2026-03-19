@@ -20,14 +20,14 @@ const BenefitsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Privalumai ir nauda — Clarivex AI</title>
+        <title>Clarivex AI nauda verslui</title>
         <meta
           name="description"
-          content="Sutaupykite 10+ valandų per savaitę. Sužinokite kokią naudą Clarivex suteikia verslui: efektyvumas, automatizavimas ir laiko taupymas. Pradėkite nemokamai."
+          content="Sužinokite, kokią naudą Clarivex AI suteikia verslui: mažiau rutinos, greitesnė komunikacija ir daugiau aiškumo kasdieniuose workflow."
         />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Privalumai ir nauda — Clarivex AI" />
-        <meta property="og:description" content="Mažiau darbo, daugiau rezultatų. Sutaupykite 10+ valandų per savaitę su Clarivex AI. Išbandykite nemokamai." />
+        <meta property="og:title" content="Clarivex AI nauda verslui" />
+        <meta property="og:description" content="Mažiau rutinos, greitesnė komunikacija ir aiškesni workflow su Clarivex AI." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:image" content={socialImage} />
@@ -35,8 +35,8 @@ const BenefitsPage = () => {
         <meta property="og:site_name" content="Clarivex" />
         <meta property="og:locale" content="lt_LT" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Privalumai ir nauda — Clarivex AI" />
-        <meta name="twitter:description" content="Mažiau darbo, daugiau rezultatų. Sutaupykite laiką su Clarivex." />
+        <meta name="twitter:title" content="Clarivex AI nauda verslui" />
+        <meta name="twitter:description" content="Mažiau rutinos ir daugiau rezultato: sužinokite, kaip Clarivex AI padeda verslui kasdienėse užduotyse." />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>

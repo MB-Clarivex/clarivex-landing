@@ -8,26 +8,70 @@ const SeoContent = () => {
       <div className="container mx-auto max-w-4xl relative z-10">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Clarivex — AI asistentas lietuvių kalbai
+            Clarivex AI asistentas lietuvių kalba
           </h2>
           <p className="text-lg text-gray-400">
-            Clarivex automatizuoja kasdienius verslo darbus. Turinys, el. paštas, priminimai,
-            dokumentai ir socialiniai tinklai — vienoje platformoje.
+            Vienoje vietoje sujungiami socialiniai tinklai, el. paštas, priminimai ir Telegram.
+            Clarivex padeda greičiau atlikti kasdienius verslo darbus lietuvių kalba.
           </p>
         </div>
 
         <div className="space-y-5 text-gray-300 leading-relaxed">
           <div>
-            <h3 className="text-xl font-semibold text-white mb-2">Kaip tai veikia?</h3>
-            <p>Sistema supranta lietuviškai — tiek tekstu, tiek balsu. AI padeda parengti įrašus, atsakyti klientams ir suplanuoti publikacijas. Mažiau rutinos, daugiau laiko augimui.</p>
+            <h3 className="text-xl font-semibold text-white mb-2">Kaip veikia Clarivex AI</h3>
+            <p>
+              Jūs parašote arba pasakote, ko reikia. Clarivex supranta lietuvių kalbą, paruošia
+              rezultatą ir padeda pereiti nuo idėjos prie realaus veiksmo.
+            </p>
+            <p className="mt-3">
+              Tai gali būti socialinio tinklo postas, laiško juodraštis, priminimas, užrašas ar
+              kita pasikartojanti užduotis. Plačiau skaitykite puslapyje{' '}
+              <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">
+                Kaip veikia
+              </Link>.
+            </p>
           </div>
           <div>
-            <h3 className="text-xl font-semibold text-white mb-2">Kam tinka?</h3>
-            <p>Clarivex tinka e‑parduotuvėms, agentūroms, mažoms įmonėms ir freelancer’iams. Kurti el. pašto taisykles, generuoti vizualus, automatizuoti užduotis. Mokėti tik už naudojimą — kreditų sistema be mėnesinių mokesčių.</p>
+            <h3 className="text-xl font-semibold text-white mb-2">Pagrindinės funkcijos verslui</h3>
+            <p>
+              Clarivex tinka mažoms įmonėms, e. parduotuvėms, agentūroms ir freelancer'iams.
+              Svarbiausia vertė atsiranda tada, kai viena sistema padeda su turiniu, komunikacija
+              ir rutina.
+            </p>
+            <p className="mt-3">
+              Visas pagrindines galimybes rasite puslapyje{' '}
+              <Link to="/features" className="text-blue-400 hover:text-blue-300">
+                Funkcijos
+              </Link>.
+            </p>
           </div>
           <div>
-            <h3 className="text-xl font-semibold text-white mb-2">Saugumas</h3>
-            <p>Duomenys šifruojami. Socialiniai tinklai per OAuth, el. paštas per IMAP/SMTP. Jūsų turinys nenaudojamas AI mokymui.</p>
+            <h3 className="text-xl font-semibold text-white mb-2">Nauda kasdienėms užduotims</h3>
+            <p>
+              AI didžiausią vertę duoda ne tada, kai parašo vieną gražų tekstą, o kai sutrumpina
+              keliolika mažų veiksmų per dieną. Mažiau kopijavimo, mažiau perrašinėjimo ir daugiau
+              aiškumo komandoje.
+            </p>
+            <p className="mt-3">
+              Praktinius panaudojimo atvejus aprašome puslapyje{' '}
+              <Link to="/nauda" className="text-blue-400 hover:text-blue-300">
+                Nauda verslui
+              </Link>.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-white mb-2">Kaip pradėti naudotis Clarivex</h3>
+            <p>
+              Pradėti paprasta: išsirenkate vieną procesą, kurį norite sutrumpinti. Dažniausiai tai
+              būna socialinių tinklų turinys, el. pašto atsakymai arba Telegram darbo eiga.
+            </p>
+            <p className="mt-3">
+              Paskui galite peržiūrėti{' '}
+              <Link to="/kainos" className="text-blue-400 hover:text-blue-300">
+                kainodarą
+              </Link>{' '}
+              ir pradėti nuo mažo testavimo be mėnesinio plano.
+            </p>
           </div>
         </div>
 
@@ -78,7 +122,8 @@ const SeoContent = () => {
             <div>
               <p className="font-semibold text-white">Ar mano duomenys saugūs?</p>
               <p>
-                Duomenys šifruojami ir saugomi ES serveriuose. Socialiniai tinklai per OAuth, el. paštas per IMAP – slaptažodžių nesaugome.
+                Duomenys šifruojami ir saugomi ES serveriuose. Socialiniai tinklai jungiami per
+                OAuth, o el. paštui naudojamas IMAP arba App Password principas.
               </p>
             </div>
           </div>

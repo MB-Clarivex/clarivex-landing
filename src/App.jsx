@@ -58,9 +58,9 @@ function LandingPage() {
       {
         "@type": "WebPage",
         "@id": `${siteConfig.url}/#webpage`,
-        "name": "Clarivex — AI asistentas, kuris supranta lietuviškai",
+        "name": "Clarivex AI asistentas lietuvių kalba verslui",
         "url": `${siteConfig.url}/`,
-        "description": "Pasakyk ką nori — Clarivex padarys. Socialiniai tinklai, el. paštas, priminimai, paveikslėliai — viena balso komanda ir viskas padaryta per sekundes.",
+        "description": "Clarivex yra AI asistentas lietuvių kalba, padedantis greičiau kurti turinį, atsakyti į el. laiškus ir automatizuoti kasdienius verslo veiksmus.",
         "inLanguage": siteConfig.language,
         "isPartOf": {
           "@id": `${siteConfig.url}/#website`
@@ -96,14 +96,14 @@ function LandingPage() {
   return (
     <>
       <Helmet>
-        <title>Clarivex — AI asistentas, kuris supranta lietuviškai</title>
+        <title>Clarivex AI asistentas lietuvių kalba verslui</title>
         <meta 
           name="description" 
-          content="Pasakyk ką nori — Clarivex padarys. Socialiniai tinklai, el. paštas, priminimai, paveikslėliai — viena balso komanda ir viskas padaryta per sekundes." 
+          content="Clarivex yra AI asistentas lietuvių kalba verslui. Greičiau kurkite turinį, atsakykite į el. laiškus ir automatizuokite kasdienes užduotis vienoje platformoje." 
         />
         <meta name="keywords" content="AI asistentas, dirbtinis intelektas, socialiniai tinklai, automatizavimas, Lietuva, lietuviškai, Instagram, Facebook, el. paštas" />
-        <meta property="og:title" content="Clarivex — AI asistentas, kuris supranta lietuviškai" />
-        <meta property="og:description" content="Pasakyk ką nori — Clarivex padarys. Viena balso komanda ir viskas padaryta per sekundes." />
+        <meta property="og:title" content="Clarivex AI asistentas lietuvių kalba verslui" />
+        <meta property="og:description" content="AI asistentas socialiniams tinklams, el. paštui, Telegram ir kasdieniam verslo automatizavimui lietuvių kalba." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -114,8 +114,8 @@ function LandingPage() {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Clarivex — AI asistentas" />
-        <meta name="twitter:description" content="Pasakyk ką nori — Clarivex padarys. AI automatizavimas lietuviškai." />
+        <meta name="twitter:title" content="Clarivex AI asistentas lietuvių kalba" />
+        <meta name="twitter:description" content="AI asistentas lietuvių kalba socialiniams tinklams, el. paštui ir kasdieniam verslo automatizavimui." />
         <meta name="twitter:image" content={socialImage} />
         <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
@@ -125,13 +125,15 @@ function LandingPage() {
         <Header />
         <main>
           <Hero />
-          <Features />
-          <StatsSection />
-          <QuickLinks />
-          <PapildymoSection />
-          <ReferralSection />
-          <CTA />
-          <SeoContent />
+          <div className="cvx-content-visibility">
+            <Features />
+            <StatsSection />
+            <QuickLinks />
+            <PapildymoSection />
+            <ReferralSection />
+            <CTA />
+            <SeoContent />
+          </div>
         </main>
         <Footer />
         <Toaster />

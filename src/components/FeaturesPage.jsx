@@ -524,14 +524,14 @@ const FeaturesPage = () => {
   return (
     <>
       <Helmet>
-        <title>Galimybės — Clarivex AI Platforma</title>
+        <title>Clarivex AI funkcijos verslui</title>
         <meta 
           name="description" 
-          content="Visos Clarivex galimybės vienoje vietoje. AI pokalbiai, socialinių tinklų valdymas, el. paštas, Telegram integracija ir daug daugiau." 
+          content="Clarivex AI funkcijos verslui: socialinių tinklų valdymas, el. paštas, Telegram, AI pokalbiai ir kasdienio darbo automatizavimas." 
         />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Galimybės — Clarivex AI Platforma" />
-        <meta property="og:description" content="Visos Clarivex galimybės vienoje vietoje. AI pokalbiai, socialinių tinklų valdymas, el. paštas, Telegram integracija ir daug daugiau." />
+        <meta property="og:title" content="Clarivex AI funkcijos verslui" />
+        <meta property="og:description" content="AI funkcijos socialiniams tinklams, el. paštui, Telegram ir kasdieniam verslo automatizavimui vienoje platformoje." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -542,8 +542,8 @@ const FeaturesPage = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Galimybės — Clarivex AI Platforma" />
-        <meta name="twitter:description" content="Visos Clarivex galimybės vienoje vietoje. AI pokalbiai, socialinių tinklų valdymas, el. paštas, Telegram integracija ir daugiau." />
+        <meta name="twitter:title" content="Clarivex AI funkcijos verslui" />
+        <meta name="twitter:description" content="AI funkcijos socialiniams tinklams, el. paštui, Telegram ir kasdieniam verslo automatizavimui." />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>

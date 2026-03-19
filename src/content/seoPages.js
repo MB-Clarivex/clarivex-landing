@@ -5,7 +5,7 @@ export const siteConfig = {
   url: 'https://clarivex.ai',
   language: 'lt-LT',
   socialImage: 'https://clarivex.ai/og.svg',
-  logo: 'https://clarivex.ai/logo.png',
+  logo: 'https://clarivex.ai/logo.svg',
   supportEmail: 'info@clarivex.ai',
   appUrl: 'https://app.clarivex.ai/auth',
   sameAs: [

@@ -6,15 +6,24 @@ import { ArrowLeft } from 'lucide-react';
 const TermsOfService = () => {
   const canonicalUrl = 'https://clarivex.ai/salygos';
   const socialImage = 'https://clarivex.ai/og.svg';
+  const pageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Naudojimosi sąlygos — Clarivex',
+    url: canonicalUrl,
+    description: 'Clarivex naudojimosi sąlygos ir pagrindinės taisyklės, taikomos platformos paslaugoms.',
+    inLanguage: 'lt-LT',
+    isPartOf: { '@id': 'https://clarivex.ai/#website' },
+  };
 
   return (
     <>
       <Helmet>
         <title>Naudojimosi sąlygos — Clarivex</title>
-        <meta name="description" content="Clarivex naudojimosi sąlygos. Susipažinkite su paslaugų teikimo taisyklėmis ir sąlygomis." />
+        <meta name="description" content="Clarivex naudojimosi sąlygos. Susipažinkite su pagrindinėmis platformos naudojimo taisyklėmis ir paslaugų teikimo sąlygomis." />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content="Naudojimosi sąlygos — Clarivex" />
-        <meta property="og:description" content="Clarivex naudojimosi sąlygos. Susipažinkite su paslaugų teikimo taisyklėmis ir sąlygomis." />
+        <meta property="og:description" content="Clarivex naudojimosi sąlygos. Susipažinkite su pagrindinėmis platformos naudojimo taisyklėmis ir paslaugų teikimo sąlygomis." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -26,8 +35,9 @@ const TermsOfService = () => {
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Naudojimosi sąlygos — Clarivex" />
-        <meta name="twitter:description" content="Clarivex naudojimosi sąlygos. Susipažinkite su paslaugų teikimo taisyklėmis ir sąlygomis." />
+        <meta name="twitter:description" content="Clarivex naudojimosi sąlygos. Susipažinkite su pagrindinėmis platformos naudojimo taisyklėmis ir paslaugų teikimo sąlygomis." />
         <meta name="twitter:image" content={socialImage} />
+        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
       
       <div className="min-h-screen bg-gray-950 text-white">

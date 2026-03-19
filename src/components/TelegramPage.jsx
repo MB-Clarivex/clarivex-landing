@@ -20,14 +20,14 @@ const TelegramPage = () => {
   return (
     <>
       <Helmet>
-        <title>Telegram integracija — Clarivex AI</title>
+        <title>Clarivex Telegram AI botas</title>
         <meta
           name="description"
-          content="Clarivex Telegram botas: balso komandos, priminimai, užrašai ir AI asistentas telefone. Gaukite +250 kreditų už susiejimą. Pradėkite dabar."
+          content="Clarivex Telegram AI botas leidžia naudoti balso komandas, priminimus, užrašus ir AI pagalbą telefone lietuvių kalba."
         />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Telegram integracija — Clarivex AI" />
-        <meta property="og:description" content="AI asistentas tavo kišenėje. Balso komandos, priminimai ir daugiau per Telegram. Gaukite bonus kreditų už susiejimą." />
+        <meta property="og:title" content="Clarivex Telegram AI botas" />
+        <meta property="og:description" content="Balso komandos, priminimai, užrašai ir AI pagalba telefone per Clarivex Telegram botą." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:image" content={socialImage} />
@@ -35,8 +35,8 @@ const TelegramPage = () => {
         <meta property="og:site_name" content="Clarivex" />
         <meta property="og:locale" content="lt_LT" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Telegram integracija — Clarivex AI" />
-        <meta name="twitter:description" content="AI asistentas kišenėje. Balso komandos ir priminimai per Telegram." />
+        <meta name="twitter:title" content="Clarivex Telegram AI botas" />
+        <meta name="twitter:description" content="AI asistentas telefone: balso komandos, priminimai ir užrašai per Clarivex Telegram botą." />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>

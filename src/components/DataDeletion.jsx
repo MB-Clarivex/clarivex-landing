@@ -11,6 +11,15 @@ const DataDeletion = () => {
   const [error, setError] = useState('');
   const canonicalUrl = 'https://clarivex.ai/duomenu-istrynimas';
   const socialImage = 'https://clarivex.ai/og.svg';
+  const pageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Duomenų ištrynimas — Clarivex',
+    url: canonicalUrl,
+    description: 'Pateikite prašymą ištrinti savo asmens duomenis iš Clarivex sistemos ir susipažinkite su ištrynimo eiga.',
+    inLanguage: 'lt-LT',
+    isPartOf: { '@id': 'https://clarivex.ai/#website' },
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -46,10 +55,10 @@ const DataDeletion = () => {
     <>
       <Helmet>
         <title>Duomenų ištrynimas — Clarivex</title>
-        <meta name="description" content="Pateikite prašymą ištrinti savo asmens duomenis iš Clarivex sistemos." />
+        <meta name="description" content="Pateikite prašymą ištrinti savo asmens duomenis iš Clarivex sistemos ir sužinokite, kaip vyksta ištrynimo procesas." />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content="Duomenų ištrynimas — Clarivex" />
-        <meta property="og:description" content="Pateikite prašymą ištrinti savo asmens duomenis iš Clarivex sistemos." />
+        <meta property="og:description" content="Pateikite prašymą ištrinti savo asmens duomenis iš Clarivex sistemos ir sužinokite, kaip vyksta ištrynimo procesas." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -61,8 +70,9 @@ const DataDeletion = () => {
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Duomenų ištrynimas — Clarivex" />
-        <meta name="twitter:description" content="Pateikite prašymą ištrinti savo asmens duomenis iš Clarivex sistemos." />
+        <meta name="twitter:description" content="Pateikite prašymą ištrinti savo asmens duomenis iš Clarivex sistemos ir sužinokite, kaip vyksta ištrynimo procesas." />
         <meta name="twitter:image" content={socialImage} />
+        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
       
       <div className="min-h-screen bg-gray-950 text-white">

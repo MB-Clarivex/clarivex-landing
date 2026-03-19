@@ -6,15 +6,24 @@ import { ArrowLeft } from 'lucide-react';
 const PrivacyPolicy = () => {
   const canonicalUrl = 'https://clarivex.ai/privatumas';
   const socialImage = 'https://clarivex.ai/og.svg';
+  const pageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Privatumo politika — Clarivex',
+    url: canonicalUrl,
+    description: 'Clarivex privatumo politika ir informacija apie tai, kaip tvarkomi naudotojų duomenys.',
+    inLanguage: 'lt-LT',
+    isPartOf: { '@id': 'https://clarivex.ai/#website' },
+  };
 
   return (
     <>
       <Helmet>
         <title>Privatumo politika — Clarivex</title>
-        <meta name="description" content="Clarivex privatumo politika. Sužinokite, kaip renkame, naudojame ir saugome jūsų asmens duomenis." />
+        <meta name="description" content="Clarivex privatumo politika. Sužinokite, kokius duomenis renkame, kaip juos naudojame ir kaip užtikriname jų saugumą." />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content="Privatumo politika — Clarivex" />
-        <meta property="og:description" content="Clarivex privatumo politika. Sužinokite, kaip renkame, naudojame ir saugome jūsų asmens duomenis." />
+        <meta property="og:description" content="Clarivex privatumo politika. Sužinokite, kokius duomenis renkame, kaip juos naudojame ir kaip užtikriname jų saugumą." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -26,8 +35,9 @@ const PrivacyPolicy = () => {
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Privatumo politika — Clarivex" />
-        <meta name="twitter:description" content="Clarivex privatumo politika. Sužinokite, kaip renkame, naudojame ir saugome jūsų asmens duomenis." />
+        <meta name="twitter:description" content="Clarivex privatumo politika. Sužinokite, kokius duomenis renkame, kaip juos naudojame ir kaip užtikriname jų saugumą." />
         <meta name="twitter:image" content={socialImage} />
+        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
       
       <div className="min-h-screen bg-gray-950 text-white">

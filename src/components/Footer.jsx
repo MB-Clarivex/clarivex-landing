@@ -31,7 +31,7 @@ const Footer = () => {
               className="flex items-center gap-2 mb-6 cursor-pointer group"
             >
               <img 
-                src="/logo.png" 
+                src="/logo.svg" 
                 alt="Clarivex" 
                 width="40"
                 height="40"

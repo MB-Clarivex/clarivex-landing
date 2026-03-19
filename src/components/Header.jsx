@@ -70,7 +70,7 @@ const Header = () => {
           >
             <div className="relative">
               <img 
-                src="/logo.png" 
+                src="/logo.svg" 
                 alt="Clarivex" 
                 width="40"
                 height="40"

@@ -80,6 +80,15 @@ const Status = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const canonicalUrl = 'https://clarivex.ai/statusas';
   const socialImage = 'https://clarivex.ai/og.svg';
+  const pageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Sistemos statusas — Clarivex',
+    url: canonicalUrl,
+    description: 'Clarivex paslaugų būklė realiu laiku: pagrindinės sistemos, integracijos ir jų veikimo statusas.',
+    inLanguage: 'lt-LT',
+    isPartOf: { '@id': 'https://clarivex.ai/#website' },
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -118,6 +127,7 @@ const Status = () => {
         <meta name="twitter:title" content="Sistemos statusas — Clarivex" />
         <meta name="twitter:description" content="Patikrinkite Clarivex paslaugų būklę realiu laiku. Visos sistemos ir jų veikimo statusas." />
         <meta name="twitter:image" content={socialImage} />
+        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
       
       <div className="min-h-screen bg-gray-950 text-white">

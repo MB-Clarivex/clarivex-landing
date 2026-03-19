@@ -2,13 +2,15 @@
 <html lang="lt">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/png" href="/logo.png" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" href="/logo.svg" />
+		<link rel="manifest" href="/site.webmanifest" />
 		<meta name="generator" content="Clarivex" /><!-- -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Clarivex — AI asistentas, kuris supranta lietuviškai</title>
+		<title>Clarivex AI asistentas lietuvių kalba verslui</title>
 		<meta
 			name="description"
-			content="Pasakyk ką nori — Clarivex padarys. Socialiniai tinklai, el. paštas, priminimai, paveikslėliai — viena balso komanda ir viskas padaryta per sekundes."
+			content="Clarivex yra AI asistentas lietuvių kalba verslui. Greičiau kurkite turinį, atsakykite į el. laiškus ir automatizuokite kasdienes užduotis vienoje platformoje."
 		/>
 		<meta
 			name="keywords"
@@ -16,17 +18,11 @@
 		/>
 		<meta name="robots" content="index, follow" />
 		<meta name="theme-color" content="#0b0f1f" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-		/>
 		<link rel="canonical" href="https://clarivex.ai/" />
-		<meta property="og:title" content="Clarivex — AI asistentas, kuris supranta lietuviškai" />
+		<meta property="og:title" content="Clarivex AI asistentas lietuvių kalba verslui" />
 		<meta
 			property="og:description"
-			content="Pasakyk ką nori — Clarivex padarys. Socialiniai tinklai, el. paštas, priminimai, paveikslėliai — viena balso komanda ir viskas padaryta per sekundes."
+			content="AI asistentas socialiniams tinklams, el. paštui, Telegram ir kasdieniam verslo automatizavimui lietuvių kalba."
 		/>
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://clarivex.ai/" />
@@ -38,10 +34,10 @@
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Clarivex — AI asistentas, kuris supranta lietuviškai" />
+		<meta name="twitter:title" content="Clarivex AI asistentas lietuvių kalba verslui" />
 		<meta
 			name="twitter:description"
-			content="Pasakyk ką nori — Clarivex padarys. Socialiniai tinklai, el. paštas, priminimai, paveikslėliai — viena balso komanda ir viskas padaryta per sekundes."
+			content="AI asistentas socialiniams tinklams, el. paštui, Telegram ir kasdieniam verslo automatizavimui lietuvių kalba."
 		/>
 		<meta name="twitter:image" content="https://clarivex.ai/og.svg" />
 		<script type="application/ld+json">
@@ -53,7 +49,13 @@
 						"@id": "https://clarivex.ai/#organization",
 						"name": "Clarivex",
 						"url": "https://clarivex.ai/",
-						"logo": "https://clarivex.ai/logo.png"
+						"logo": "https://clarivex.ai/logo.svg",
+						"sameAs": [
+							"https://www.facebook.com/Clarivex/",
+							"https://www.instagram.com/clarivex_ai/",
+							"https://t.me/clarivex_support_bot"
+						],
+						"email": "info@clarivex.ai"
 					},
 					{
 						"@type": "WebSite",
@@ -68,9 +70,9 @@
 					{
 						"@type": "WebPage",
 						"@id": "https://clarivex.ai/#webpage",
-						"name": "Clarivex — AI asistentas, kuris supranta lietuviškai",
+						"name": "Clarivex AI asistentas lietuvių kalba verslui",
 						"url": "https://clarivex.ai/",
-						"description": "Pasakyk ką nori — Clarivex padarys. Socialiniai tinklai, el. paštas, priminimai, paveikslėliai — viena balso komanda ir viskas padaryta per sekundes.",
+						"description": "Clarivex yra AI asistentas lietuvių kalba, padedantis greičiau kurti turinį, atsakyti į el. laiškus ir automatizuoti kasdienius verslo veiksmus.",
 						"inLanguage": "lt-LT",
 						"isPartOf": {
 							"@id": "https://clarivex.ai/#website"
@@ -84,21 +86,32 @@
 	<body>
 		<div id="root">
 			<main style="padding: 24px; font-family: Arial, sans-serif; background: #0b0f1f; color: #ffffff;">
-				<img src="/logo.png" alt="Clarivex logotipas" width="40" height="40" style="display: block; margin-bottom: 12px;" />
+				<img src="/logo.svg" alt="Clarivex logotipas" width="40" height="40" style="display: block; margin-bottom: 12px;" />
 				<h1>Clarivex — AI asistentas, kuris supranta lietuviškai</h1>
 				<p>
-					Pasakyk ką nori — Clarivex padarys. Socialiniai tinklai, el. paštas, priminimai, paveikslėliai —
-					viena balso komanda ir viskas padaryta per sekundes.
+					Clarivex yra AI asistentas lietuvių kalba. Jis padeda greičiau kurti turinį, atsakyti į el.
+					laiškus, planuoti užduotis ir nepamesti svarbių idėjų.
 				</p>
-				<h2>Pagrindinės galimybės</h2>
+				<h2>Kaip veikia Clarivex AI</h2>
+				<p>
+					Jūs parašote arba padiktuojate užduotį. Clarivex supranta kontekstą ir paruošia aiškų
+					rezultatą: postą, laiško juodraštį, priminimą ar kitą veiksmą.
+				</p>
+				<h2>Pagrindinės funkcijos verslui</h2>
 				<ul>
 					<li>AI pokalbiai, balso komandos ir užrašai</li>
 					<li>Instagram, Facebook ir el. pašto automatizavimas</li>
-					<li>Telegram botas ir priminimai telefone</li>
+					<li>Telegram botas, priminimai ir kasdieniai workflow</li>
 				</ul>
+				<h2>Nauda kasdienėms užduotims</h2>
 				<p>
-					Su Clarivex sutaupysi laiką ir automatizuosi kasdienius darbus — nuo turinio kūrimo iki
-					klientų komunikacijos.
+					Clarivex padeda mažoms komandoms sutaupyti laiką. Mažiau rankinio darbo, mažiau perrašinėjimo
+					ir daugiau aiškumo tarp socialinių tinklų, klientų komunikacijos ir vidinių užduočių.
+				</p>
+				<h2>Kaip pradėti naudotis Clarivex</h2>
+				<p>
+					Pirmiausia peržiūrėkite pagrindines funkcijas ir veikimo logiką. Tada įvertinkite kainodarą
+					ir pasirinkite, nuo kurio workflow pradėti.
 				</p>
 				<h2>Naudingos nuorodos</h2>
 				<ul>
@@ -107,16 +120,19 @@
 					<li><a href="/nauda">Privalumai ir naudojimo atvejai</a></li>
 					<li><a href="/telegram">Telegram integracija</a></li>
 					<li><a href="/kainos">Kainodara ir kreditai</a></li>
+					<li><a href="/resursai">AI resursų centras</a></li>
 					<li><a href="/duk">Dažniausiai užduodami klausimai</a></li>
 				</ul>
 			</main>
 		</div>
 		<noscript>
 			<main style="padding: 24px; font-family: Arial, sans-serif; background: #0b0f1f; color: #ffffff;">
+				<h1>Clarivex AI asistentas lietuvių kalba verslui</h1>
 				<p>
-					Pasakyk ką nori — Clarivex padarys. Socialiniai tinklai, el. paštas, priminimai, paveikslėliai —
-					viena balso komanda ir viskas padaryta per sekundes.
+					Clarivex padeda greičiau kurti turinį, atsakyti į el. laiškus ir automatizuoti kasdienes
+					užduotis lietuvių kalba.
 				</p>
+				<p><a href="/features">Funkcijos</a> · <a href="/kaip-veikia">Kaip veikia</a> · <a href="/kainos">Kainodara</a></p>
 			</main>
 		</noscript>
 		<script type="module" src="/src/main.jsx"></script>

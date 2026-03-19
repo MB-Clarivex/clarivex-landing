@@ -20,14 +20,14 @@ const HowItWorksPage = () => {
   return (
     <>
       <Helmet>
-        <title>Kaip veikia — Clarivex AI</title>
+        <title>Kaip veikia Clarivex AI</title>
         <meta
           name="description"
-          content="Sužinokite, kaip Clarivex veikia: 4 paprasti žingsniai nuo užklausos iki rezultato. Balsu ar tekstu — AI apdoroja akimirksniu. Pradėkite nemokamai."
+          content="Sužinokite, kaip veikia Clarivex AI: nuo užklausos lietuvių kalba iki paruošto rezultato socialiniams tinklams, el. paštui ar kitam veiksmui."
         />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Kaip veikia — Clarivex AI" />
-        <meta property="og:description" content="4 paprasti žingsniai: pasakyk ką nori — Clarivex padarys per sekundes. Balsu ar tekstu lietuviškai. Išbandykite nemokamai." />
+        <meta property="og:title" content="Kaip veikia Clarivex AI" />
+        <meta property="og:description" content="Nuo užklausos lietuvių kalba iki paruošto rezultato socialiniams tinklams, el. paštui ar kitam workflow." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:image" content={socialImage} />
@@ -35,8 +35,8 @@ const HowItWorksPage = () => {
         <meta property="og:site_name" content="Clarivex" />
         <meta property="og:locale" content="lt_LT" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kaip veikia — Clarivex AI" />
-        <meta name="twitter:description" content="4 paprasti žingsniai nuo idėjos iki rezultato per 10 sekundžių. Išbandykite nemokamai." />
+        <meta name="twitter:title" content="Kaip veikia Clarivex AI" />
+        <meta name="twitter:description" content="Sužinokite, kaip Clarivex AI paverčia užklausą lietuvių kalba į konkretų veiksmą ar paruoštą rezultatą." />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>

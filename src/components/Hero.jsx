@@ -35,11 +35,17 @@ const voiceCommands = [
   }
 ];
 
-const useTypingEffect = (text, speed = 30, startDelay = 0) => {
+const useTypingEffect = (text, speed = 30, startDelay = 0, enabled = true) => {
   const [displayedText, setDisplayedText] = useState('');
   const [isComplete, setIsComplete] = useState(false);
   
   useEffect(() => {
+    if (!enabled) {
+      setDisplayedText(text);
+      setIsComplete(true);
+      return undefined;
+    }
+
     setDisplayedText('');
     setIsComplete(false);
     let index = 0;
@@ -58,7 +64,7 @@ const useTypingEffect = (text, speed = 30, startDelay = 0) => {
     }, startDelay);
     
     return () => clearTimeout(startTimeout);
-  }, [text, speed, startDelay]);
+  }, [enabled, text, speed, startDelay]);
   
   return { displayedText, isComplete };
 };
@@ -67,31 +73,41 @@ const Hero = () => {
   const [currentCommand, setCurrentCommand] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [showDemo, setShowDemo] = useState(false);
+  const [enableInteractiveDemo, setEnableInteractiveDemo] = useState(false);
   
   const command = voiceCommands[currentCommand];
   const { displayedText: voiceText, isComplete: voiceComplete } = useTypingEffect(
-    command.voice, 25, 500
+    command.voice, 25, 500, enableInteractiveDemo
   );
   
   useEffect(() => {
-    if (voiceComplete) {
+    if (enableInteractiveDemo && voiceComplete) {
       const resultTimer = setTimeout(() => setShowResult(true), 800);
       return () => clearTimeout(resultTimer);
     }
-  }, [voiceComplete]);
+    return undefined;
+  }, [enableInteractiveDemo, voiceComplete]);
   
   useEffect(() => {
-    if (showResult) {
+    if (enableInteractiveDemo && showResult) {
       const nextTimer = setTimeout(() => {
         setShowResult(false);
         setCurrentCommand((prev) => (prev + 1) % voiceCommands.length);
       }, 3500);
       return () => clearTimeout(nextTimer);
     }
-  }, [showResult]);
+    return undefined;
+  }, [enableInteractiveDemo, showResult]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return undefined;
+    const shouldEnable =
+      window.matchMedia('(min-width: 768px)').matches &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    setEnableInteractiveDemo(shouldEnable);
+    if (!shouldEnable) return undefined;
+
     let handle;
     const reveal = () => setShowDemo(true);
     if ('requestIdleCallback' in window) {
@@ -102,19 +118,8 @@ const Hero = () => {
     return () => clearTimeout(handle);
   }, []);
 
-  const handleTelegramRegister = () => {
-    window.open('https://t.me/clarivex_notify_bot', '_blank');
-  };
-
   const handleEmailRegister = () => {
     window.location.href = "https://app.clarivex.ai/auth";
-  };
-
-  const handleDemo = () => {
-    const element = document.getElementById('how-it-works');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
   };
 
   return (
@@ -163,9 +168,9 @@ const Hero = () => {
             transition={{ duration: 0 }}
             className="text-lg md:text-xl text-gray-300 max-w-xl mx-auto md:mx-0 leading-relaxed"
           >
-            Socialiniai tinklai, el. paštas, priminimai, paveikslėliai —
-            viena komanda lietuviškai ir rezultatas per kelias sekundes.
-            Clarivex supranta kontekstą, paruošia turinį ir, jei nori, iškart publikuoja ar išsiunčia.
+            Clarivex yra AI asistentas lietuvių kalba. Jis padeda greičiau paruošti turinį,
+            atsakyti į el. laiškus, susidėti priminimus ir atlikti kasdienius veiksmus be
+            papildomo chaoso tarp kelių įrankių.
           </motion.p>
           <motion.p
             initial={{ opacity: 1, y: 0 }}
@@ -173,9 +178,8 @@ const Hero = () => {
             transition={{ duration: 0 }}
             className="text-sm md:text-base text-gray-400 max-w-xl mx-auto md:mx-0 leading-relaxed"
           >
-            Clarivex — AI asistentų platforma lietuvių kalba.
-            Automatizuoja turinio kūrimą ir klientų komunikaciją, o tu moki tik už tai, ką naudoji.
-            Jokių mėnesinių planų — lanksti kreditų sistema nuo €1.
+            Vienoje vietoje rasi socialinių tinklų, el. pašto, Telegram ir AI workflow
+            automatizavimą. Moki tik už tai, ką naudoji, todėl pradėti galima be mėnesinio plano.
             {' '}
             <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
               Kaip veikia
@@ -291,7 +295,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="relative hidden md:flex justify-center items-center"
         >
-          {showDemo ? (
+          {enableInteractiveDemo && showDemo ? (
             <div className="relative w-full max-w-md">
               {/* Glow effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-2xl" />

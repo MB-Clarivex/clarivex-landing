@@ -345,22 +345,39 @@ export default function PricingPage() {
   const socialImage = 'https://clarivex.ai/og.svg';
   const pageSchema = {
     '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'Clarivex kainodara — skaidri kainos',
-    url: canonicalUrl,
-    description: 'Skaidri Clarivex kainodara: AI modelių, vaizdų generavimo, failų siuntimo kainos. 1€ = 1000 kreditų. Jokių mėnesinių mokesčių.',
-    inLanguage: 'lt-LT',
-    isPartOf: { '@id': 'https://clarivex.ai/#website' },
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        name: 'Clarivex kainodara — skaidri kainos',
+        url: canonicalUrl,
+        description: 'Skaidri Clarivex kainodara: AI modelių, vaizdų generavimo, failų siuntimo kainos. 1€ = 1000 kreditų. Jokių mėnesinių mokesčių.',
+        inLanguage: 'lt-LT',
+        isPartOf: { '@id': 'https://clarivex.ai/#website' },
+      },
+      {
+        '@type': 'SoftwareApplication',
+        name: 'Clarivex',
+        applicationCategory: 'BusinessApplication',
+        operatingSystem: 'Web',
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'EUR',
+          price: '1',
+          url: canonicalUrl,
+          description: 'Clarivex kreditų sistema prasideda nuo 1 €.',
+        },
+      },
+    ],
   };
 
   return (
     <>
       <Helmet>
-        <title>Kainodara — Clarivex AI</title>
-        <meta name="description" content="Skaidri Clarivex kainodara. AI modelių, vaizdų generavimo, failų siuntimo ir kitų paslaugų kainos. Patarimai kaip taupyti kreditus." />
+        <title>Clarivex AI kainodara ir kreditų sistema</title>
+        <meta name="description" content="Peržiūrėkite Clarivex AI kainodarą ir kreditų sistemą. Mokėkite tik už tai, ką naudojate: AI žinutes, vaizdus, el. paštą ir kitus veiksmus." />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Kainodara — Clarivex AI" />
-        <meta property="og:description" content="Skaidri Clarivex kainodara. AI modelių, vaizdų generavimo, failų siuntimo ir kitų paslaugų kainos. Patarimai kaip taupyti kreditus." />
+        <meta property="og:title" content="Clarivex AI kainodara ir kreditų sistema" />
+        <meta property="og:description" content="Mokėkite tik už tai, ką naudojate: AI žinutes, vaizdus, el. paštą ir kitus Clarivex veiksmus be mėnesinio plano." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -371,8 +388,8 @@ export default function PricingPage() {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kainodara — Clarivex AI" />
-        <meta name="twitter:description" content="Skaidri Clarivex kainodara. AI modelių, vaizdų generavimo, failų siuntimo ir kitų paslaugų kainos." />
+        <meta name="twitter:title" content="Clarivex AI kainodara ir kreditų sistema" />
+        <meta name="twitter:description" content="Skaidri Clarivex kainodara be mėnesinio plano: mokėkite tik už realiai naudojamas AI funkcijas." />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
