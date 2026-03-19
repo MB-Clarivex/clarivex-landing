@@ -54,11 +54,11 @@ const DataDeletion = () => {
   return (
     <>
       <Helmet>
-        <title>Duomenų ištrynimas — Clarivex</title>
-        <meta name="description" content="Pateikite prašymą ištrinti savo asmens duomenis iš Clarivex sistemos ir sužinokite, kaip vyksta ištrynimo procesas." />
+        <title>Clarivex duomenų ištrynimas - BDAR prašymas internetu</title>
+        <meta name="description" content="Pateikite Clarivex duomenų ištrynimo prašymą internetu ir sužinokite, kaip vyksta BDAR pagrindu atliekamas ištrynimo procesas." />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Duomenų ištrynimas — Clarivex" />
-        <meta property="og:description" content="Pateikite prašymą ištrinti savo asmens duomenis iš Clarivex sistemos ir sužinokite, kaip vyksta ištrynimo procesas." />
+        <meta property="og:title" content="Clarivex duomenų ištrynimas - BDAR prašymas internetu" />
+        <meta property="og:description" content="Pateikite Clarivex duomenų ištrynimo prašymą internetu ir sužinokite, kaip vyksta BDAR pagrindu atliekamas ištrynimo procesas." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -69,8 +69,8 @@ const DataDeletion = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Duomenų ištrynimas — Clarivex" />
-        <meta name="twitter:description" content="Pateikite prašymą ištrinti savo asmens duomenis iš Clarivex sistemos ir sužinokite, kaip vyksta ištrynimo procesas." />
+        <meta name="twitter:title" content="Clarivex duomenų ištrynimas - BDAR prašymas internetu" />
+        <meta name="twitter:description" content="Pateikite Clarivex duomenų ištrynimo prašymą internetu ir sužinokite, kaip vyksta BDAR pagrindu atliekamas ištrynimo procesas." />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>

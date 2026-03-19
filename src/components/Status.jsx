@@ -83,9 +83,9 @@ const Status = () => {
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Sistemos statusas — Clarivex',
+    name: 'Clarivex sistemos statusas - paslaugų veikimas realiu laiku',
     url: canonicalUrl,
-    description: 'Clarivex paslaugų būklė realiu laiku: pagrindinės sistemos, integracijos ir jų veikimo statusas.',
+    description: 'Patikrinkite Clarivex paslaugų būklę realiu laiku: platformos, AI, el. pašto, Telegram ir kitų integracijų veikimą.',
     inLanguage: 'lt-LT',
     isPartOf: { '@id': 'https://clarivex.ai/#website' },
   };
@@ -109,11 +109,11 @@ const Status = () => {
   return (
     <>
       <Helmet>
-        <title>Sistemos statusas — Clarivex</title>
-        <meta name="description" content="Patikrinkite Clarivex paslaugų būklę realiu laiku. Visos sistemos ir jų veikimo statusas." />
+        <title>Clarivex sistemos statusas - paslaugų veikimas realiu laiku</title>
+        <meta name="description" content="Patikrinkite Clarivex paslaugų būklę realiu laiku. Matykite platformos, AI, Telegram, el. pašto ir kitų sistemų veikimo statusą." />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Sistemos statusas — Clarivex" />
-        <meta property="og:description" content="Patikrinkite Clarivex paslaugų būklę realiu laiku. Visos sistemos ir jų veikimo statusas." />
+        <meta property="og:title" content="Clarivex sistemos statusas - paslaugų veikimas realiu laiku" />
+        <meta property="og:description" content="Patikrinkite Clarivex paslaugų būklę realiu laiku. Matykite platformos, AI, Telegram, el. pašto ir kitų sistemų veikimo statusą." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -124,8 +124,8 @@ const Status = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sistemos statusas — Clarivex" />
-        <meta name="twitter:description" content="Patikrinkite Clarivex paslaugų būklę realiu laiku. Visos sistemos ir jų veikimo statusas." />
+        <meta name="twitter:title" content="Clarivex sistemos statusas - paslaugų veikimas realiu laiku" />
+        <meta name="twitter:description" content="Patikrinkite Clarivex paslaugų būklę realiu laiku. Matykite platformos, AI, Telegram, el. pašto ir kitų sistemų veikimo statusą." />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
@@ -159,6 +159,14 @@ const Status = () => {
                   </h1>
                   <p className="text-gray-400 mt-1">
                     Atnaujinta: {currentTime.toLocaleString('lt-LT')}
+                  </p>
+                  <p className="text-sm text-gray-500 mt-3">
+                    Susipažinti su produktu galite čia:{' '}
+                    <Link to="/features" className="text-blue-400 hover:text-blue-300">funkcijos</Link>
+                    {' · '}
+                    <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">kaip veikia</Link>
+                    {' · '}
+                    <Link to="/kainos" className="text-blue-400 hover:text-blue-300">kainos</Link>
                   </p>
                 </div>
               </div>

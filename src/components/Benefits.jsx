@@ -262,6 +262,14 @@ const Benefits = () => {
               Išbandyti nemokamai
               <Sparkles className="w-4 h-4" />
             </a>
+            <p className="text-sm text-gray-500 mt-4">
+              Toliau skaitykite:{' '}
+              <Link to="/features" className="text-blue-400 hover:text-blue-300 font-medium">funkcijos</Link>
+              {' · '}
+              <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 font-medium">kaip veikia</Link>
+              {' · '}
+              <Link to="/kainos" className="text-blue-400 hover:text-blue-300 font-medium">kainos</Link>
+            </p>
           </motion.div>
         </motion.div>
       </div>

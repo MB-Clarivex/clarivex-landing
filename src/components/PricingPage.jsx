@@ -348,9 +348,9 @@ export default function PricingPage() {
     '@graph': [
       {
         '@type': 'WebPage',
-        name: 'Clarivex kainodara — skaidri kainos',
+        name: 'Clarivex AI kainos - lanksti kreditų sistema be plano',
         url: canonicalUrl,
-        description: 'Skaidri Clarivex kainodara: AI modelių, vaizdų generavimo, failų siuntimo kainos. 1€ = 1000 kreditų. Jokių mėnesinių mokesčių.',
+        description: 'Clarivex AI kainos paremtos kreditų sistema be mėnesinių planų. Mokate tik už realiai naudojamus AI veiksmus.',
         inLanguage: 'lt-LT',
         isPartOf: { '@id': 'https://clarivex.ai/#website' },
       },
@@ -373,10 +373,10 @@ export default function PricingPage() {
   return (
     <>
       <Helmet>
-        <title>Clarivex AI kainodara ir kreditų sistema</title>
-        <meta name="description" content="Peržiūrėkite Clarivex AI kainodarą ir kreditų sistemą. Mokėkite tik už tai, ką naudojate: AI žinutes, vaizdus, el. paštą ir kitus veiksmus." />
+        <title>Clarivex AI kainos - lanksti kreditų sistema be plano</title>
+        <meta name="description" content="Clarivex AI kainos paremtos kreditų sistema be mėnesinių įsipareigojimų. Mokate tik už tai, ką realiai naudojate: AI žinutes, vaizdus ir el. paštą." />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Clarivex AI kainodara ir kreditų sistema" />
+        <meta property="og:title" content="Clarivex AI kainos - lanksti kreditų sistema be plano" />
         <meta property="og:description" content="Mokėkite tik už tai, ką naudojate: AI žinutes, vaizdus, el. paštą ir kitus Clarivex veiksmus be mėnesinio plano." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
@@ -388,7 +388,7 @@ export default function PricingPage() {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Clarivex AI kainodara ir kreditų sistema" />
+        <meta name="twitter:title" content="Clarivex AI kainos - lanksti kreditų sistema be plano" />
         <meta name="twitter:description" content="Skaidri Clarivex kainodara be mėnesinio plano: mokėkite tik už realiai naudojamas AI funkcijas." />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
@@ -412,10 +412,10 @@ export default function PricingPage() {
                 </div>
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                  <span className="text-white">Žinok kiek moki</span>
+                  <span className="text-white">Clarivex AI kainos</span>
                   <br />
                   <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                    už kiekvieną veiksmą
+                    ir kreditų sistema
                   </span>
                 </h1>
                 
@@ -425,6 +425,16 @@ export default function PricingPage() {
                   <br />
                   <span className="text-blue-400 font-semibold">1 € = 1 000 kreditų</span> — to paprastai pakanka
                   kelioms dešimtims AI žinučių ir keliems paveikslėliams.
+                </p>
+                <p className="text-sm text-gray-500 max-w-3xl mx-auto mb-8 leading-relaxed">
+                  Norite pirmiau suprasti, ką gaunate? Žiūrėkite{' '}
+                  <Link to="/features" className="text-blue-300 hover:text-white">funkcijas</Link>
+                  {' · '}
+                  <Link to="/kaip-veikia" className="text-blue-300 hover:text-white">kaip veikia</Link>
+                  {' · '}
+                  <Link to="/nauda" className="text-blue-300 hover:text-white">naudą</Link>
+                  {' · '}
+                  <Link to="/telegram" className="text-blue-300 hover:text-white">Telegram</Link>
                 </p>
                 
                 <div className="flex flex-wrap justify-center gap-3">

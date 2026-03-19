@@ -222,7 +222,9 @@ const HowItWorks = () => {
                 <p className="text-center text-xs text-gray-500">
                   <Link to="/kainos" className="text-blue-400 hover:text-blue-300">Peržiūrėti kainas</Link>
                   {' · '}
-                  <Link to="/features" className="text-blue-400 hover:text-blue-300">Visi funkcijos</Link>
+                  <Link to="/features" className="text-blue-400 hover:text-blue-300">Visos funkcijos</Link>
+                  {' · '}
+                  <Link to="/nauda" className="text-blue-400 hover:text-blue-300">Nauda verslui</Link>
                 </p>
               </div>
             </div>

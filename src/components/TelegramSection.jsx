@@ -281,6 +281,8 @@ const TelegramSection = () => {
                 Arba ieškokite <span className="text-[#0088cc]">@clarivex_notify_bot</span> Telegram programėlėje. Daugiau:{' '}
                 <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">kaip veikia</Link>
                 ,{' '}
+                <Link to="/features" className="text-blue-400 hover:text-blue-300">funkcijos</Link>
+                ,{' '}
                 <Link to="/kainos" className="text-blue-400 hover:text-blue-300">kainos</Link>
                 .
               </p>

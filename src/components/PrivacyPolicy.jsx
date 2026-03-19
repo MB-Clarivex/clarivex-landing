@@ -19,11 +19,11 @@ const PrivacyPolicy = () => {
   return (
     <>
       <Helmet>
-        <title>Privatumo politika — Clarivex</title>
-        <meta name="description" content="Clarivex privatumo politika. Sužinokite, kokius duomenis renkame, kaip juos naudojame ir kaip užtikriname jų saugumą." />
+        <title>Clarivex privatumo politika - kaip tvarkomi jūsų duomenys</title>
+        <meta name="description" content="Sužinokite, kokius duomenis renka Clarivex, kaip jie naudojami, saugomi ir kokias teises turite pagal BDAR." />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Privatumo politika — Clarivex" />
-        <meta property="og:description" content="Clarivex privatumo politika. Sužinokite, kokius duomenis renkame, kaip juos naudojame ir kaip užtikriname jų saugumą." />
+        <meta property="og:title" content="Clarivex privatumo politika - kaip tvarkomi jūsų duomenys" />
+        <meta property="og:description" content="Sužinokite, kokius duomenis renka Clarivex, kaip jie naudojami, saugomi ir kokias teises turite pagal BDAR." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -34,8 +34,8 @@ const PrivacyPolicy = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Privatumo politika — Clarivex" />
-        <meta name="twitter:description" content="Clarivex privatumo politika. Sužinokite, kokius duomenis renkame, kaip juos naudojame ir kaip užtikriname jų saugumą." />
+        <meta name="twitter:title" content="Clarivex privatumo politika - kaip tvarkomi jūsų duomenys" />
+        <meta name="twitter:description" content="Sužinokite, kokius duomenis renka Clarivex, kaip jie naudojami, saugomi ir kokias teises turite pagal BDAR." />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>

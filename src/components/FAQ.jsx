@@ -188,7 +188,12 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
 };
 
 const FAQ = () => {
-  const [openItems, setOpenItems] = useState({});
+  const [openItems, setOpenItems] = useState({
+    'general-0': true,
+    'general-1': true,
+    'pricing-0': true,
+    'pricing-1': true,
+  });
   const [activeCategory, setActiveCategory] = useState('general');
   const canonicalUrl = 'https://clarivex.ai/duk';
   const socialImage = 'https://clarivex.ai/og.svg';
@@ -220,11 +225,11 @@ const FAQ = () => {
   return (
     <>
       <Helmet>
-        <title>DUK — Dažnai užduodami klausimai — Clarivex</title>
-        <meta name="description" content="Raskite atsakymus į dažniausiai užduodamus klausimus apie Clarivex AI platformą, kainas, funkcijas ir daugiau." />
+        <title>Clarivex DUK - atsakymai apie funkcijas, kainas ir saugumą</title>
+        <meta name="description" content="Raskite atsakymus į dažniausiai užduodamus klausimus apie Clarivex AI funkcijas, kainas, saugumą, Telegram ir pagalbą." />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="DUK — Dažnai užduodami klausimai — Clarivex" />
-        <meta property="og:description" content="Raskite atsakymus į dažniausiai užduodamus klausimus apie Clarivex AI platformą, kainas, funkcijas ir daugiau." />
+        <meta property="og:title" content="Clarivex DUK - atsakymai apie funkcijas, kainas ir saugumą" />
+        <meta property="og:description" content="Raskite atsakymus į dažniausiai užduodamus klausimus apie Clarivex AI funkcijas, kainas, saugumą, Telegram ir pagalbą." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -235,8 +240,8 @@ const FAQ = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="DUK — Dažnai užduodami klausimai — Clarivex" />
-        <meta name="twitter:description" content="Raskite atsakymus į dažniausiai užduodamus klausimus apie Clarivex AI platformą, kainas, funkcijas ir daugiau." />
+        <meta name="twitter:title" content="Clarivex DUK - atsakymai apie funkcijas, kainas ir saugumą" />
+        <meta name="twitter:description" content="Raskite atsakymus į dažniausiai užduodamus klausimus apie Clarivex AI funkcijas, kainas, saugumą, Telegram ir pagalbą." />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
@@ -259,7 +264,19 @@ const FAQ = () => {
         <main className="max-w-6xl mx-auto px-4 py-12">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">Dažnai užduodami klausimai</h1>
-            <p className="text-gray-400 text-lg">Raskite atsakymus į populiariausius klausimus apie Clarivex</p>
+            <p className="text-gray-400 text-lg">
+              Raskite atsakymus apie Clarivex funkcijas, kainas, saugumą, Telegram ir kasdienį naudojimą.
+            </p>
+            <p className="text-sm text-gray-500 max-w-2xl mx-auto mt-4">
+              Jei norite greitos produkto apžvalgos, peržiūrėkite{' '}
+              <Link to="/features" className="text-blue-400 hover:text-blue-300">funkcijas</Link>
+              {' · '}
+              <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">kaip veikia</Link>
+              {' · '}
+              <Link to="/kainos" className="text-blue-400 hover:text-blue-300">kainas</Link>
+              {' · '}
+              <Link to="/telegram" className="text-blue-400 hover:text-blue-300">Telegram</Link>
+            </p>
           </div>
 
           <div className="flex flex-col lg:flex-row gap-8">
@@ -335,6 +352,12 @@ const FAQ = () => {
                 El. paštas info@clarivex.ai
               </a>
             </div>
+            <p className="text-sm text-gray-500 mt-6">
+              Taip pat galite pereiti į{' '}
+              <Link to="/nauda" className="text-blue-400 hover:text-blue-300">naudos puslapį</Link>
+              {' arba '}
+              <Link to="/statusas" className="text-blue-400 hover:text-blue-300">sistemos statusą</Link>.
+            </p>
           </div>
         </main>
 

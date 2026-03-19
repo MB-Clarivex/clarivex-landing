@@ -10,9 +10,9 @@ const HowItWorksPage = () => {
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Kaip veikia Clarivex — nuo idėjos iki rezultato per 10 sekundžių',
+    name: 'Kaip veikia Clarivex AI - nuo komandos iki rezultato',
     url: canonicalUrl,
-    description: 'Sužinokite, kaip Clarivex veikia: 4 paprasti žingsniai nuo užklausos iki rezultato. Balsu ar tekstu — AI apdoroja akimirksniu.',
+    description: 'Sužinokite, kaip veikia Clarivex AI: nuo užklausos lietuvių kalba iki paruošto rezultato social media, el. paštui ar priminimams.',
     inLanguage: 'lt-LT',
     isPartOf: { '@id': 'https://clarivex.ai/#website' },
   };
@@ -20,14 +20,14 @@ const HowItWorksPage = () => {
   return (
     <>
       <Helmet>
-        <title>Kaip veikia Clarivex AI</title>
+        <title>Kaip veikia Clarivex AI - integracija, kreditai ir veikimas</title>
         <meta
           name="description"
-          content="Sužinokite, kaip veikia Clarivex AI: nuo užklausos lietuvių kalba iki paruošto rezultato socialiniams tinklams, el. paštui ar kitam veiksmui."
+          content="Sužinokite, kaip veikia Clarivex AI: nuo registracijos ir kreditų iki darbo su el. paštu, social media ir kitomis integracijomis."
         />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Kaip veikia Clarivex AI" />
-        <meta property="og:description" content="Nuo užklausos lietuvių kalba iki paruošto rezultato socialiniams tinklams, el. paštui ar kitam workflow." />
+        <meta property="og:title" content="Kaip veikia Clarivex AI - integracija, kreditai ir veikimas" />
+        <meta property="og:description" content="Nuo registracijos ir kreditų iki paruošto rezultato social media, el. paštui ir kitoms kasdienėms užduotims." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:image" content={socialImage} />
@@ -35,7 +35,7 @@ const HowItWorksPage = () => {
         <meta property="og:site_name" content="Clarivex" />
         <meta property="og:locale" content="lt_LT" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kaip veikia Clarivex AI" />
+        <meta name="twitter:title" content="Kaip veikia Clarivex AI - integracija, kreditai ir veikimas" />
         <meta name="twitter:description" content="Sužinokite, kaip Clarivex AI paverčia užklausą lietuvių kalba į konkretų veiksmą ar paruoštą rezultatą." />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>

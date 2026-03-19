@@ -510,9 +510,9 @@ const FeaturesPage = () => {
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Clarivex galimybės — AI platforma',
+    name: 'Clarivex AI funkcijos ir integracijos',
     url: canonicalUrl,
-    description: 'Visos Clarivex galimybės: AI pokalbiai, socialinių tinklų valdymas, el. paštas, Telegram. Viskas vienoje platformoje.',
+    description: 'Clarivex AI funkcijos: el. paštas, social media, Telegram, dokumentai ir kitos automatizavimo galimybės vienoje vietoje.',
     inLanguage: 'lt-LT',
     isPartOf: { '@id': 'https://clarivex.ai/#website' },
   };
@@ -524,14 +524,14 @@ const FeaturesPage = () => {
   return (
     <>
       <Helmet>
-        <title>Clarivex AI funkcijos verslui</title>
+        <title>Clarivex AI funkcijos - el. paštas, social media, Telegram</title>
         <meta 
           name="description" 
-          content="Clarivex AI funkcijos verslui: socialinių tinklų valdymas, el. paštas, Telegram, AI pokalbiai ir kasdienio darbo automatizavimas." 
+          content="Atraskite Clarivex AI funkcijas: el. pašto automatizavimą, social media planavimą, Telegram integraciją ir AI įrankius kasdieniam darbui." 
         />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Clarivex AI funkcijos verslui" />
-        <meta property="og:description" content="AI funkcijos socialiniams tinklams, el. paštui, Telegram ir kasdieniam verslo automatizavimui vienoje platformoje." />
+        <meta property="og:title" content="Clarivex AI funkcijos - el. paštas, social media, Telegram" />
+        <meta property="og:description" content="AI funkcijos socialiniams tinklams, el. paštui, Telegram ir kasdieniam darbo automatizavimui vienoje platformoje." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -542,8 +542,8 @@ const FeaturesPage = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Clarivex AI funkcijos verslui" />
-        <meta name="twitter:description" content="AI funkcijos socialiniams tinklams, el. paštui, Telegram ir kasdieniam verslo automatizavimui." />
+        <meta name="twitter:title" content="Clarivex AI funkcijos - el. paštas, social media, Telegram" />
+        <meta name="twitter:description" content="AI funkcijos socialiniams tinklams, el. paštui, Telegram ir kasdieniam darbo automatizavimui." />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
@@ -570,15 +570,25 @@ const FeaturesPage = () => {
                 </div>
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                  <span className="text-white">Clarivex</span>{' '}
+                  <span className="text-white">Clarivex AI funkcijos</span>{' '}
                   <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
-                    galimybės
+                    ir integracijos
                   </span>
                 </h1>
                 
                 <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
-                  AI platforma, kuri sujungia pokalbius, socialinių tinklų valdymą, 
-                  el. paštą ir daugybę kitų įrankių į vieną galingą sprendimą.
+                  Vienoje vietoje rasite AI įrankius el. paštui, social media, Telegram, dokumentams
+                  ir kasdienėms užduotims, kurias reikia atlikti greičiau.
+                </p>
+                <p className="text-sm text-gray-500 max-w-3xl mx-auto mb-10 leading-relaxed">
+                  Daugiau apie darbo eigą skaitykite puslapiuose{' '}
+                  <Link to="/kaip-veikia" className="text-violet-300 hover:text-white">Kaip veikia</Link>
+                  {' · '}
+                  <Link to="/nauda" className="text-violet-300 hover:text-white">Nauda</Link>
+                  {' · '}
+                  <Link to="/telegram" className="text-violet-300 hover:text-white">Telegram</Link>
+                  {' · '}
+                  <Link to="/kainos" className="text-violet-300 hover:text-white">Kainos</Link>
                 </p>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
