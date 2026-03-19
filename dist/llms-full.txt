@@ -1,0 +1,98 @@
+# Clarivex full context
+
+Clarivex yra AI asistentų platforma lietuvių kalba, skirta darbo eigoms, o ne vien pokalbiams. Platforma apima socialinius tinklus, el. paštą, Telegram, priminimus, užrašus ir kitus veiksmus.
+
+## Important brand facts
+- Clarivex pozicionavimas: AI asistentų platforma lietuvių kalba.
+- Pagrindiniai use-case: socialinių tinklų valdymas, AI el. paštui, Telegram AI botas, balso komandos, automatizavimas smulkiam verslui.
+- Kainodara: kreditų sistema, daugiau informacijos /kainos.
+
+## Komerciniai landing puslapiai
+- AI asistentas lietuvių kalba verslui (https://clarivex.ai/ai-asistentas-lietuviu-kalba)
+  Description: AI asistentas lietuvių kalba padeda kurti turinį, atsakyti į laiškus, valdyti priminimus ir atlikti kasdienius verslo veiksmus vienoje vietoje.
+  - Veikia lietuviškai tekstu ir balsu.
+  - Vienoje vietoje sujungia el. paštą, socialinius tinklus ir priminimus.
+  - Tinka smulkiam verslui, freelanceriams ir komandoms.
+- AI socialinių tinklų valdymui ir publikavimui (https://clarivex.ai/ai-socialiniu-tinklu-valdymui)
+  Description: Clarivex padeda planuoti, generuoti ir publikuoti socialinių tinklų turinį su AI: nuo idėjos iki paruošto įrašo Instagram ir Facebook.
+  - AI padeda su idėjomis, tekstu ir vizualais.
+  - Galima planuoti ir publikuoti į Instagram bei Facebook.
+  - Tinka ir pavieniams verslams, ir kelių klientų agentūroms.
+- AI el. paštui, atsakymams ir laiškų rutinai (https://clarivex.ai/ai-el-pastui)
+  Description: AI el. paštui padeda greičiau ruošti atsakymus, tvarkyti korespondenciją ir sumažinti pasikartojančių laiškų rutiną lietuvių kalba.
+  - Padeda greičiau ruošti atsakymus ir follow-up laiškus.
+  - Tinka klientų aptarnavimui, pardavimams ir vidinei komunikacijai.
+  - Svarbiausi laiškai lieka žmogaus kontrolėje, o AI sutrumpina ruošimą.
+- AI verslui Lietuvoje: kur realiai atsiperka (https://clarivex.ai/ai-verslui-lietuvoje)
+  Description: AI verslui Lietuvoje labiausiai atsiperka ten, kur mažina rutiną: socialiniai tinklai, el. paštas, klientų aptarnavimas ir pasikartojančios operacijos.
+  - Padeda mažoms komandoms padaryti daugiau be papildomo etato.
+  - Naudinga ten, kur daug pasikartojančios komunikacijos.
+  - Svarbiausia vertinti ne hype, o sutaupytas valandas ir greitį.
+- Telegram AI botas lietuviškai (https://clarivex.ai/telegram-ai-botas)
+  Description: Telegram AI botas leidžia naudoti Clarivex telefone: diktuoti užduotis, kurti užrašus, gauti priminimus ir vykdyti kasdienius veiksmus balsu.
+  - Veikia telefone be papildomos programėlės.
+  - Tinka balso komandoms, užrašams ir priminimams.
+  - Padeda nepamesti idėjų ir veiksmų kelionėje ar tarp susitikimų.
+## Evergreen žinių bazė
+- Kas yra AI asistentas ir kuo jis skiriasi nuo chat įrankio (https://clarivex.ai/kas-yra-ai-asistentas)
+  Description: AI asistentas yra sistema, kuri ne tik atsako į klausimus, bet padeda atlikti veiksmus, išlaikyti kontekstą ir valdyti darbo eigą.
+  - AI asistentas orientuotas į veiksmą, ne tik į atsakymą.
+  - Jis naudingiausias, kai turi kontekstą ir darbo eigą.
+  - Verslui svarbiausia, kad jis taupytų laiką, o ne tik generuotų tekstą.
+- Ar AI supranta lietuviškai ir kada to neužtenka (https://clarivex.ai/ar-ai-supranta-lietuviskai)
+  Description: AI gali suprasti lietuviškai, bet verslui svarbu ne tik kalba, o ir kontekstas, tono kontrolė bei gebėjimas dirbti su realiomis užduotimis.
+  - Lietuvių kalbos palaikymas jau yra pakankamai geras kasdieniams darbams.
+  - Svarbiausias skirtumas atsiranda ne kalboje, o workflow kokybėje.
+  - Aiškios instrukcijos ir pavyzdžiai smarkiai pagerina rezultatą.
+- Kaip veikia balso komandos AI sistemoje (https://clarivex.ai/kaip-veikia-balso-komandos)
+  Description: Balso komandos AI sistemoje pirmiausia paverčiamos tekstu, tada interpretuojamos kaip intencija ir nukreipiamos į konkretų veiksmą ar atsakymą.
+  - Pirma AI iš balso padaro tekstą.
+  - Tuomet atpažįsta, ar tai priminimas, užrašas, klausimas ar kita užduotis.
+  - Galiausiai sistema grąžina atsakymą arba atlieka veiksmą.
+- AI asistentas ar chatbot: kuo skiriasi praktikoje (https://clarivex.ai/ai-asistentas-ar-chatbot)
+  Description: Chatbot dažniausiai atsako į klausimus, o AI asistentas padeda valdyti platesnį darbo kontekstą, prisimena informaciją ir gali inicijuoti veiksmus.
+  - Chatbot orientuotas į atsakymą viename dialoge.
+  - AI asistentas dažniau turi atmintį ir veiksmų logiką.
+  - Verslui AI asistentas paprastai duoda daugiau grąžos, jei procesai kartojasi.
+- Kaip saugiai prijungti el. paštą prie AI platformos (https://clarivex.ai/kaip-saugiai-prijungti-el-pasta-prie-ai)
+  Description: Saugiam el. pašto prijungimui prie AI platformos svarbu naudoti OAuth ar App Password, aiškiai suprasti prieigas ir pasirinkti sistemą, kuri nenaudoja jūsų laiškų modelių mokymui.
+  - Saugiausia naudoti OAuth ar App Password mechanizmus.
+  - Svarbu žinoti, kokios prieigos suteikiamos.
+  - Reikia rinktis sistemą, kuri aiškiai komunikuoja duomenų naudojimą.
+## Use-case ir palyginimai
+- Kaip AI padeda atsakyti į el. laiškus lietuviškai (https://clarivex.ai/kaip-ai-padeda-atsakyti-i-el-laiskus-lietuviskai)
+  Description: AI padeda lietuviškai atsakyti į el. laiškus greičiau, nuosekliau ir su mažiau rankinio perrašinėjimo, ypač kai daug pasikartojančių užklausų.
+  - AI greitina pirmo juodraščio ruošimą.
+  - Padeda išlaikyti toną ir struktūrą.
+  - Didžiausia vertė atsiranda pasikartojančių laiškų sraute.
+- Kaip suplanuoti Instagram postus su AI (https://clarivex.ai/kaip-suplanuoti-instagram-postus-su-ai)
+  Description: Instagram postų planavimas su AI leidžia greičiau sugeneruoti turinio temas, captions, vizualų kryptį ir suplanuoti publikavimo ritmą pagal kampaniją.
+  - AI padeda greitai surinkti temų backlogą.
+  - Galima vienu metu ruoštis kelioms savaitėms į priekį.
+  - Gerai veikia, kai turite aiškią auditoriją ir pasiūlymą.
+- Clarivex ar ChatGPT smulkiam verslui Lietuvoje (https://clarivex.ai/clarivex-ar-chatgpt-smulkiam-verslui)
+  Description: ChatGPT puikiai tinka bendroms užklausoms, o Clarivex labiau orientuotas į smulkaus verslo workflow: el. paštą, socialinius tinklus, Telegram ir lietuvišką kasdienę rutiną.
+  - ChatGPT stiprus kaip universalus AI pokalbių įrankis.
+  - Clarivex stiprus ten, kur reikia workflow ir veiksmų.
+  - Smulkiam verslui dažnai svarbiau ne modelis, o visos darbo eigos patogumas.
+- Geriausi AI įrankiai smulkiam verslui Lietuvoje (https://clarivex.ai/geriausi-ai-irankiai-smulkiam-verslui-lietuvoje)
+  Description: Geriausi AI įrankiai smulkiam verslui yra tie, kurie realiai trumpina laiką iki rezultato: turinio kūrimas, el. paštas, žinių kaupimas ir klientų komunikacija.
+  - Reikia rinktis pagal procesą, ne pagal trendą.
+  - Daugiausia vertės duoda komunikaciją ir rutiną trumpinantys įrankiai.
+  - Vienoje vietoje sujungti įrankiai dažnai laimi prieš atskirus fragmentus.
+- AI workflow socialiniams tinklams ir pardavimams (https://clarivex.ai/workflow-ai-socialiniams-tinklams-ir-pardavimams)
+  Description: Praktiškas AI workflow, kaip iš vienos idėjos pereiti į socialinių tinklų turinį, follow-up laišką ir pardaviminį veiksmą vienoje sistemoje.
+  - Vienas input gali maitinti kelis kanalus.
+  - Social media ir pardavimų veiksmai gali būti sujungti.
+  - Didžiausia vertė atsiranda iš mažiau rankinio dubliavimo.
+- AI workflow klientų aptarnavimui lietuviškai (https://clarivex.ai/workflow-ai-klientu-aptarnavimui-lietuviskai)
+  Description: AI klientų aptarnavimo workflow lietuviškai padeda greičiau paruošti atsakymus, išlaikyti toną ir nepamesti pasikartojančių užklausų istorijos.
+  - Trumpina laiką iki pirmo atsakymo.
+  - Padeda išlaikyti vienodesnį komunikacijos toną.
+  - Naudinga, kai daug pasikartojančių klausimų lietuviškai.
+## Brand ir reputacijos signalai
+- Clarivex partneriams ir žiniasklaidai (https://clarivex.ai/partneriams-ir-ziniasklaidai)
+  Description: Greita Clarivex brand informacija partneriams, katalogams, žiniasklaidai ir turinio kūrėjams: kaip apibūdinti produktą, į ką linkti ir kokias temas akcentuoti.
+  - Clarivex yra AI asistentų platforma lietuvių kalba.
+  - Pagrindinės temos: social media, el. paštas, Telegram, priminimai ir workflow.
+  - Nuoseklus brand aprašymas padeda tiek SEO, tiek AI sistemoms.

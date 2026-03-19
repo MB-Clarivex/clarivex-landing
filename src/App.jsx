@@ -24,41 +24,70 @@ import BenefitsPage from '@/components/BenefitsPage';
 import TelegramPage from '@/components/TelegramPage';
 import CookieConsent from '@/components/CookieConsent';
 import MetaPixel from '@/components/MetaPixel';
+import ResourcesHubPage from '@/components/ResourcesHubPage';
+import SeoResourcePage from '@/components/SeoResourcePage';
+import { contentPages, siteConfig } from '@/content/seoPages';
 import { Toaster } from '@/components/ui/toaster';
 
 // Landing page component
 function LandingPage() {
-  const canonicalUrl = 'https://clarivex.ai/';
-  const socialImage = 'https://clarivex.ai/og.svg';
+  const canonicalUrl = `${siteConfig.url}/`;
+  const socialImage = siteConfig.socialImage;
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://clarivex.ai/#organization",
-        "name": "Clarivex",
-        "url": "https://clarivex.ai/",
-        "logo": "https://clarivex.ai/logo.png"
+        "@id": `${siteConfig.url}/#organization`,
+        "name": siteConfig.name,
+        "url": `${siteConfig.url}/`,
+        "logo": siteConfig.logo,
+        "sameAs": siteConfig.sameAs,
+        "email": siteConfig.supportEmail
       },
       {
         "@type": "WebSite",
-        "@id": "https://clarivex.ai/#website",
-        "name": "Clarivex",
-        "url": "https://clarivex.ai/",
-        "inLanguage": "lt-LT",
+        "@id": `${siteConfig.url}/#website`,
+        "name": siteConfig.name,
+        "url": `${siteConfig.url}/`,
+        "inLanguage": siteConfig.language,
         "publisher": {
-          "@id": "https://clarivex.ai/#organization"
+          "@id": `${siteConfig.url}/#organization`
         }
       },
       {
         "@type": "WebPage",
-        "@id": "https://clarivex.ai/#webpage",
+        "@id": `${siteConfig.url}/#webpage`,
         "name": "Clarivex — AI asistentas, kuris supranta lietuviškai",
-        "url": "https://clarivex.ai/",
+        "url": `${siteConfig.url}/`,
         "description": "Pasakyk ką nori — Clarivex padarys. Socialiniai tinklai, el. paštas, priminimai, paveikslėliai — viena balso komanda ir viskas padaryta per sekundes.",
-        "inLanguage": "lt-LT",
+        "inLanguage": siteConfig.language,
         "isPartOf": {
-          "@id": "https://clarivex.ai/#website"
+          "@id": `${siteConfig.url}/#website`
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Clarivex",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "AI asistentų platforma lietuvių kalba socialiniams tinklams, el. paštui, Telegram, priminimams ir kasdieniam verslo automatizavimui.",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "1",
+          "url": `${siteConfig.url}/kainos`,
+          "description": "Clarivex kreditų sistema prasideda nuo 1 €."
+        },
+        "featureList": [
+          "AI asistentas lietuvių kalba",
+          "Socialinių tinklų turinio kūrimas ir publikavimas",
+          "AI el. paštui ir atsakymams",
+          "Telegram AI botas",
+          "Balso komandos ir priminimai"
+        ],
+        "provider": {
+          "@id": `${siteConfig.url}/#organization`
         }
       }
     ]
@@ -123,6 +152,11 @@ export const routes = [
   { path: '/kaip-veikia', element: <HowItWorksPage /> },
   { path: '/nauda', element: <BenefitsPage /> },
   { path: '/telegram', element: <TelegramPage /> },
+  { path: '/resursai', element: <ResourcesHubPage /> },
+  ...contentPages.map((page) => ({
+    path: page.path,
+    element: <SeoResourcePage page={page} />,
+  })),
 ];
 
 function App() {

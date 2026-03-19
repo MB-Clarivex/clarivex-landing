@@ -74,6 +74,14 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link 
+                  to="/resursai" 
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                >
+                  Resursai
+                </Link>
+              </li>
+              <li>
+                <Link 
                   to="/features" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
@@ -160,6 +168,14 @@ const Footer = () => {
                 >
                   Susisiekti
                 </a>
+              </li>
+              <li>
+                <Link 
+                  to="/partneriams-ir-ziniasklaidai" 
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                >
+                  Partneriams ir žiniasklaidai
+                </Link>
               </li>
             </ul>
           </div>

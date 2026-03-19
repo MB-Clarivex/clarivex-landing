@@ -107,6 +107,7 @@ const SeoContent = () => {
             <li><Link to="/nauda" className="text-blue-400 hover:text-blue-300">Privalumai verslui</Link></li>
             <li><Link to="/telegram" className="text-blue-400 hover:text-blue-300">Telegram integracija</Link></li>
             <li><Link to="/kainos" className="text-blue-400 hover:text-blue-300">Kainodara</Link></li>
+            <li><Link to="/resursai" className="text-blue-400 hover:text-blue-300">AI resursų centras</Link></li>
             <li><Link to="/duk" className="text-blue-400 hover:text-blue-300">DUK</Link></li>
           </ul>
         </div>
