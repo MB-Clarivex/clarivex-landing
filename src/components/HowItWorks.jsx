@@ -92,56 +92,46 @@ const HowItWorks = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Steps */}
-          <div className="space-y-6">
+          {/* Steps — išcentruota */}
+          <div className="space-y-10 max-w-xl mx-auto w-full">
             {steps.map((step, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15, duration: 0.6 }}
-                className="relative"
+                className="relative flex flex-col items-center text-center group"
               >
-                {/* Connector line */}
-                {index < steps.length - 1 && (
-                  <div className="absolute left-7 top-20 w-0.5 h-12 bg-gradient-to-b from-gray-600 to-transparent" />
-                )}
-                
-                <div className="flex gap-5 group">
-                  {/* Step number & icon */}
-                  <div className="relative flex-shrink-0">
-                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <step.icon className="w-7 h-7 text-white" />
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-gray-800 border-2 border-gray-600 flex items-center justify-center text-xs font-bold text-white">
-                      {index + 1}
-                    </div>
+                {/* Step number & icon */}
+                <div className="relative mb-4">
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <step.icon className="w-7 h-7 text-white" />
                   </div>
-                  
-                  {/* Content */}
-                  <div className="flex-1 pt-1">
-                    <h2 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
-                      {step.title}
-                    </h2>
-                    <p className="text-gray-400 mb-3 text-sm leading-relaxed">
-                      {step.description}
-                    </p>
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-800/50 border border-gray-700/50 rounded-lg text-xs text-gray-300">
-                      <span className="text-blue-400">→</span>
-                      {step.example}
-                    </div>
-                    {step.moreExamples && (
-                      <div className="flex flex-wrap gap-2 mt-2">
-                        {step.moreExamples.map((ex, i) => (
-                          <span key={i} className="px-2 py-1 bg-gray-800/30 rounded text-xs text-gray-400 border border-gray-700/50">
-                            {ex}
-                          </span>
-                        ))}
-                      </div>
-                    )}
+                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-gray-800 border-2 border-gray-600 flex items-center justify-center text-xs font-bold text-white">
+                    {index + 1}
                   </div>
                 </div>
+
+                <h2 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                  {step.title}
+                </h2>
+                <p className="text-gray-400 mb-3 text-sm leading-relaxed max-w-md">
+                  {step.description}
+                </p>
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-800/50 border border-gray-700/50 rounded-lg text-xs text-gray-300">
+                  <span className="text-blue-400">→</span>
+                  {step.example}
+                </div>
+                {step.moreExamples && (
+                  <div className="flex flex-wrap gap-2 mt-2 justify-center max-w-md">
+                    {step.moreExamples.map((ex, i) => (
+                      <span key={i} className="px-2 py-1 bg-gray-800/30 rounded text-xs text-gray-400 border border-gray-700/50">
+                        {ex}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>

@@ -9,8 +9,8 @@ const QuickLinks = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Kur pradėti?</h2>
         <p className="text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
           Jei norite greitai suprasti produktą, pradėkite nuo svarbiausių puslapių.{' '}
-          <Link to="/atsakiklis" className="text-blue-400 hover:text-blue-300 font-medium">AI atsakiklis Messenger ir Instagram</Link>{' '}
-          skirtas DM ir inbox;{' '}
+          <Link to="/atsakiklis" className="text-blue-400 hover:text-blue-300 font-medium">AI atsakiklis Messenger, DM ir komentarams</Link>{' '}
+          — inbox ir taisyklės;{' '}
           <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 font-medium">Kaip veikia Clarivex</Link>{' '}
           paaiškina eigą, o kiti puslapiai parodo funkcijas, naudą ir kainodarą.
         </p>
@@ -28,7 +28,7 @@ const QuickLinks = () => {
             Telegram integracija ir balso komandos
           </Link>
           <Link to="/atsakiklis" className="px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-300 hover:text-white hover:border-blue-500/50 transition-all">
-            AI atsakiklis Messenger ir Instagram DM
+            AI atsakiklis: DM, Messenger ir komentarai
           </Link>
           <Link to="/kainos" className="px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-300 hover:text-white hover:border-blue-500/50 transition-all">
             Kainodara ir kreditų sistema

@@ -10,10 +10,10 @@ const AtsakiklisPage = () => {
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'AI atsakiklis Messenger ir Instagram DM — Clarivex',
+    name: 'AI atsakiklis Messenger, Instagram DM ir komentarams — Clarivex',
     url: canonicalUrl,
     description:
-      'Išmanus Clarivex AI atsakiklis: Messenger ir Instagram DM, inbox vienoje vietoje, AI juodraščiai ir automatizacija lietuvių kalba. Be atskiro projekto diegimo.',
+      'Clarivex AI atsakiklis: Messenger, Instagram DM ir komentarai, skirtingos taisyklės žinutėms ir komentarams, darbo grafikas, 4 val. pertrauka po jūsų atsakymo, nemokama pagalba pirmam paleidimui.',
     inLanguage: 'lt-LT',
     isPartOf: { '@id': 'https://clarivex.ai/#website' },
   };
@@ -21,16 +21,16 @@ const AtsakiklisPage = () => {
   return (
     <>
       <Helmet>
-        <title>AI atsakiklis Messenger ir Instagram — Clarivex</title>
+        <title>AI atsakiklis Messenger, Instagram DM ir komentarams — Clarivex</title>
         <meta
           name="description"
-          content="Atsakykite į Messenger ir Instagram DM greičiau: vienas inbox, AI juodraščiai, taisyklės ir automatizacija lietuvių kalba. Clarivex — jau platformoje, su skaidria kreditų kaina."
+          content="DM, Messenger ir komentarai vienoje vietoje. Skirtingos taisyklės žinutėms ir komentarams, darbo valandos, po jūsų atsakymo AI 4 val. nebekiša į pokalbį. Nemokama pagalba pirmam paleidimui. Lietuviškai, kreditų sistema."
         />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="AI atsakiklis Messenger ir Instagram — Clarivex" />
+        <meta property="og:title" content="AI atsakiklis Messenger, DM ir komentarams — Clarivex" />
         <meta
           property="og:description"
-          content="DM ir komentarai vienoje vietoje, AI siūlomi atsakymai, auto-reply ir ne darbo valandų žinutės. Pradėkite per app.clarivex.ai."
+          content="Atsakykite į žinutes ir komentarus su AI: grafikas, atskiros taisyklės, 4 val. po žmogaus atsakymo. Pirmam paleidimui — nemokama pagalba."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
@@ -39,10 +39,10 @@ const AtsakiklisPage = () => {
         <meta property="og:site_name" content="Clarivex" />
         <meta property="og:locale" content="lt_LT" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI atsakiklis Messenger ir Instagram — Clarivex" />
+        <meta name="twitter:title" content="AI atsakiklis Messenger, DM ir komentarams — Clarivex" />
         <meta
           name="twitter:description"
-          content="Inbox + AI juodraščiai + automatizacija Meta kanaluose. Lietuviškai, su kreditų sistema."
+          content="DM, komentarai, darbo grafikas, skirtingos taisyklės, 4 val. po jūsų atsakymo. Nemokama pagalba pirmam paleidimui."
         />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>

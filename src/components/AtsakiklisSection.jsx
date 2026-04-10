@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  Clock,
   MessageCircle,
   Moon,
   Zap,
@@ -12,6 +11,10 @@ import {
   ChevronRight,
   CheckCircle2,
   Smartphone,
+  CalendarClock,
+  Timer,
+  ListFilter,
+  Headphones,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -24,56 +27,76 @@ const accentBg = 'bg-blue-500/10';
 const edgeItems = [
   {
     title: 'Jau platformoje',
-    body: 'DM ir komentarų inbox su AI — ne atskiras „chatbot projektas“ su mėnesiais planavimo.',
+    body: 'DM, Messenger ir komentarai vienoje vietoje su AI — ne atskiras „chatbot projektas“ su mėnesiais planavimo.',
   },
   {
     title: 'Meta integracija',
-    body: 'Prijungiate Instagram ir Facebook per oficialų Meta prisijungimą — veikiate savo paskyrose.',
+    body: 'Prijungiate Instagram ir Facebook per oficialų Meta prisijungimą — kiekviena paskyra valdoma atskirai.',
   },
   {
     title: 'Skaidri kaina',
     body: 'Kreditų sistema: mokate už realų naudojimą, be paslėpto mėnesinio plano už patį faktą.',
   },
   {
-    title: 'Lietuviškai',
-    body: 'AI atsakymai ir tonas pritaikomi jūsų verslui lietuvių kalba.',
+    title: 'Pirmas paleidimas',
+    body: 'Su pirmu atsakiklio paleidimu padedame nemokamai — kad greitai pasiektumėte veikiančią konfigūraciją.',
   },
 ];
 
 const benefits = [
   {
-    icon: Clock,
-    title: 'Greitesnis pirmas atsakymas',
+    icon: Inbox,
+    title: 'DM ir komentarai',
     description:
-      'AI siūlo juodraštį — jūs patvirtinate ar paredaguojate. Mažiau tuščios eilės klientams.',
+      'Atsakymai į tiesiogines žinutes (Messenger, Instagram DM) ir į komentarus po įrašais — viskas tame pačiame inbox.',
   },
   {
-    icon: Inbox,
-    title: 'Vienas inbox',
-    description: 'Facebook ir Instagram komentarai bei DM vienoje vietoje — nereikia šokinėti tarp programėlių.',
+    icon: ListFilter,
+    title: 'Skirtingos taisyklės žinutėms ir komentarams',
+    description:
+      'Kiekvienai paskyrai atskirai: įjungti ar išjungti automatiką DM ir komentaruose, atskiros auto-reply taisyklės tik žinutėms, tik komentarams ar visur.',
+  },
+  {
+    icon: CalendarClock,
+    title: 'Darbo valandos ir grafikas',
+    description:
+      'Nustatykite, kada AI gali atsakinėti automatiškai (pagal dienas ir intervalus, laiko juostą), ir ne darbo valandų žinutes — klientas žino, kada sulauks žmogaus.',
+  },
+  {
+    icon: Timer,
+    title: '4 val. po jūsų atsakymo',
+    description:
+      'Kai atsakote patys (per programėlę ar Meta), AI tam pokalbiui nebekiša nosies 4 valandas — lieka erdvė žmogui, vėliau automatiką galima vėl paleisti pagal taisykles.',
   },
   {
     icon: Sparkles,
-    title: 'AI juodraščiai',
-    description: 'Atsakymai pagal jūsų stilių ir kontekstą — ne šablonai be galvos.',
+    title: 'AI juodraščiai ir tonas',
+    description:
+      'Siūlomi atsakymai pagal jūsų stilių ir žinių bazę — ne tušti šablonai; galite patvirtinti ar paredaguoti prieš siunčiant.',
   },
   {
     icon: Zap,
-    title: 'Automatizacija',
+    title: 'Auto-reply ir intencijos',
     description:
-      'Auto-reply pagal raktažodžius, intent-based taisyklės, žinutės ne darbo metu — kur sukonfigūruosite.',
+      'Taisyklės pagal raktažodžius, intenciją, pirmą kontaktą, sentimentą; ribojimai per dieną ir „cooldown“ tarp atsakymų — kad išliktų natūralu.',
   },
   {
     icon: Moon,
-    title: '24/7 pasiekiamumas',
+    title: '24/7 kai jums tinka',
     description:
-      'Kai sukonfigūruojate automatizaciją ir AI, klientai gali gauti atsakymą bet kuriuo metu — jūs kontroliuojate taisykles.',
+      'Jei leidžiate automatiką už grafiko ribų ar su ne darbo valandų tekstu, klientas vis tiek gauna aiškų atsakymą — be „tylos“ iki rytojaus.',
+  },
+  {
+    icon: Headphones,
+    title: 'Pagalba pirmam paleidimui',
+    description:
+      'Nemokamai padedame su pirmu atsakiklio įjungimu ir pagrindiniais nustatymais, kad greitai pradėtumėte naudoti be spėliojimo.',
   },
   {
     icon: Shield,
-    title: 'Kontrolė pas jus',
+    title: 'Kontrolė ir leidimai',
     description:
-      'Leidimai per Meta; duomenys naudojami atsakymams ir funkcijoms, kaip aprašyta privatumo politikoje.',
+      'Integracija per Meta su jūsų suteiktais leidimais; duomenų naudojimas aprašytas privatumo politikoje.',
   },
 ];
 
@@ -90,8 +113,8 @@ const steps = [
   },
   {
     n: '3',
-    title: 'Valdykite inbox ir AI',
-    body: 'Atsakykite į DM ir komentarus su AI pagalba, nustatykite taisykles ir automatizaciją.',
+    title: 'Nustatykite taisykles ir paleiskite',
+    body: 'Atskirai DM ir komentarams, darbo grafikas, auto-reply — tada AI ir juodraščiai dirba pagal jūsų scenarijų. Pirmam kartui padedame nemokamai.',
   },
 ];
 
@@ -121,7 +144,7 @@ const AtsakiklisSection = () => {
             className={`inline-flex items-center gap-2 px-4 py-2 ${accentBg} border ${accentBorder} rounded-full ${accentText} text-sm font-medium mb-6`}
           >
             <MessageCircle className="w-4 h-4" />
-            Messenger ir Instagram DM
+            DM, Messenger ir komentarai
           </motion.div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -130,17 +153,18 @@ const AtsakiklisSection = () => {
             <span
               className={`bg-gradient-to-r ${accentFrom} ${accentTo} bg-clip-text text-transparent`}
             >
-              klientams visą parą
+              žinutėms ir komentarams
             </span>
           </h1>
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-4">
-            Clarivex AI padeda atsakyti į Messenger ir Instagram žinutes greičiau — su juodraščiais,
-            taisyklėmis ir automatizacija lietuvių kalba.
+            Clarivex AI padeda atsakyti į Messenger, Instagram DM ir komentarus po įrašais — greičiau,
+            su juodraščiais, taisyklėmis ir automatizacija lietuvių kalba.
           </p>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
-            Vienoje platformoje: inbox, AI siūlomi atsakymai ir nustatymai, kuriuos kontroliuojate jūs.
-            Tinka verslams, kurie jau naudoja Meta ir nori mažiau rankinio copy-paste.
+            Kiekvienai paskyrai atskirai: kada AI atsakinėja, skirtingos taisyklės žinutėms ir komentarams,
+            po jūsų atsakymo — 4 val. pertrauka automatikai tame pokalbyje. Pirmam paleidimui padedame
+            nemokamai.
           </p>
         </motion.div>
 
@@ -194,22 +218,28 @@ const AtsakiklisSection = () => {
                   </div>
                 </div>
                 <div className="p-4 space-y-3 min-h-[280px] bg-gray-950/80">
+                  <p className="text-[10px] text-gray-500 text-center uppercase tracking-wide">
+                    Komentaras po įrašu
+                  </p>
+                  <div className="flex justify-start">
+                    <div className="bg-gray-800 rounded-2xl rounded-bl-sm px-3 py-2 max-w-[88%] border border-gray-700/80">
+                      <p className="text-gray-200 text-sm">
+                        Ar ši prekė bus sandėlyje sekmadienį?
+                      </p>
+                      <p className="text-gray-500 text-[10px] mt-1">AI juodraštis · patvirtinti</p>
+                    </div>
+                  </div>
                   <div className="flex justify-end">
                     <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl rounded-br-sm px-3 py-2 max-w-[88%]">
-                      <p className="text-white text-sm">Sveiki! Kokia šiandien pristatymo kaina?</p>
+                      <p className="text-white text-sm">DM: domiuosi dydžiu M.</p>
                     </div>
                   </div>
                   <div className="flex justify-start">
                     <div className="bg-gray-800 rounded-2xl rounded-bl-sm px-3 py-2 max-w-[88%] border border-gray-700/80">
                       <p className="text-gray-200 text-sm">
-                        Labas! Siunčiame per 1–2 d. d. Kreditai nuo… — patvirtinkite, jei tinka.
+                        Dydis M yra — siunčiame per 1–2 d. d. Patvirtinkite, jei tinka.
                       </p>
-                      <p className="text-gray-500 text-[10px] mt-1">AI juodraštis · peržiūrėti</p>
-                    </div>
-                  </div>
-                  <div className="flex justify-end">
-                    <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl rounded-br-sm px-3 py-2 max-w-[88%]">
-                      <p className="text-white text-sm">Gerai, ačiū.</p>
+                      <p className="text-gray-500 text-[10px] mt-1">Automatika · darbo valandos</p>
                     </div>
                   </div>
                 </div>
@@ -268,17 +298,20 @@ const AtsakiklisSection = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
-            Kaip pradedate
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-4">
+            Kaip veikia
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <p className="text-center text-gray-500 text-sm max-w-2xl mx-auto mb-10">
+            Nuo paskyros prijungimo iki veikiančio atsakiklio — keliais aiškiais žingsniais.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {steps.map((s) => (
               <div
                 key={s.n}
-                className="relative rounded-2xl border border-gray-700/60 bg-gray-900/30 p-6 text-center md:text-left"
+                className="relative rounded-2xl border border-gray-700/60 bg-gray-900/30 p-6 text-center flex flex-col items-center"
               >
                 <div
-                  className={`inline-flex w-10 h-10 items-center justify-center rounded-full ${accentBg} ${accentText} font-bold mb-4`}
+                  className={`flex w-10 h-10 items-center justify-center rounded-full ${accentBg} ${accentText} font-bold mb-4`}
                 >
                   {s.n}
                 </div>

@@ -82,9 +82,9 @@ export const existingPageMetadata = [
   },
   {
     path: '/atsakiklis',
-    title: 'AI atsakiklis Messenger ir Instagram DM — Clarivex',
+    title: 'AI atsakiklis Messenger, Instagram DM ir komentarams — Clarivex',
     description:
-      'Messenger ir Instagram DM vienoje vietoje: AI juodraščiai, inbox, auto-reply ir taisyklės lietuvių kalba — be atskiro chatbot projekto.',
+      'Žinutės ir komentarai vienoje vietoje: skirtingos taisyklės DM ir komentarams, darbo grafikas, po jūsų atsakymo 4 val. be AI įsikišimo, nemokama pagalba pirmam paleidimui.',
     priority: '0.85',
     changefreq: 'weekly',
   },
