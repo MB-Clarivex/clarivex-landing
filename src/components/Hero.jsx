@@ -199,6 +199,10 @@ const Hero = () => {
             <Link to="/telegram" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
               Telegram
             </Link>
+            {' · '}
+            <Link to="/atsakiklis" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
+              Atsakiklis (DM)
+            </Link>
             .
           </motion.p>
 
@@ -295,6 +299,7 @@ const Hero = () => {
               <Link to="/kaip-veikia" className="text-gray-400 hover:text-white transition-colors">Kaip veikia</Link>
               <Link to="/kainos" className="text-gray-400 hover:text-white transition-colors">Kainos</Link>
               <Link to="/telegram" className="text-gray-400 hover:text-white transition-colors">Telegram</Link>
+              <Link to="/atsakiklis" className="text-gray-400 hover:text-white transition-colors">Atsakiklis</Link>
             </div>
           </motion.div>
         </motion.div>

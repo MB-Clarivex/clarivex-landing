@@ -9,6 +9,7 @@ Pagrindinės temos: AI asistentas lietuviškai, socialinių tinklų valdymas, AI
 - [Kaip veikia — Clarivex AI](/kaip-veikia): Kaip Clarivex paverčia užklausą veiksmu per kelias sekundes: nuo teksto ar balso iki paruošto rezultato.
 - [Privalumai ir nauda — Clarivex AI](/nauda): Kodėl Clarivex padeda sutaupyti laiką ir automatizuoti pasikartojančius darbus versle.
 - [Telegram integracija — Clarivex AI](/telegram): Clarivex Telegram botas su balso komandomis, priminimais, užrašais ir AI pagalba telefone.
+- [AI atsakiklis Messenger ir Instagram DM — Clarivex](/atsakiklis): Messenger ir Instagram DM vienoje vietoje: AI juodraščiai, inbox, auto-reply ir taisyklės lietuvių kalba — be atskiro chatbot projekto.
 - [Kainodara — Clarivex AI](/kainos): Skaidri Clarivex kainodara be mėnesinių planų: 1 € = 1000 kreditų ir mokate tik už naudojimą.
 - [DUK — Dažnai užduodami klausimai — Clarivex](/duk): Dažniausiai užduodami klausimai apie Clarivex, jo funkcijas, kainodarą, saugumą ir naudojimą.
 - [Sistemos statusas — Clarivex](/statusas): Realaus laiko Clarivex paslaugų būklė ir pagrindinių sistemų veikimo statusas.

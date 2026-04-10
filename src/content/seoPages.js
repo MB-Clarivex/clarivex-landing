@@ -81,6 +81,14 @@ export const existingPageMetadata = [
     changefreq: 'weekly',
   },
   {
+    path: '/atsakiklis',
+    title: 'AI atsakiklis Messenger ir Instagram DM — Clarivex',
+    description:
+      'Messenger ir Instagram DM vienoje vietoje: AI juodraščiai, inbox, auto-reply ir taisyklės lietuvių kalba — be atskiro chatbot projekto.',
+    priority: '0.85',
+    changefreq: 'weekly',
+  },
+  {
     path: '/kainos',
     title: 'Kainodara — Clarivex AI',
     description: 'Skaidri Clarivex kainodara be mėnesinių planų: 1 € = 1000 kreditų ir mokate tik už naudojimą.',

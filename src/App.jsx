@@ -26,8 +26,8 @@ function lazyPage(loader) {
 }
 
 const pageModules = isServer
-  ? import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,ResourcesHubPage,SeoResourcePage}.jsx', { eager: true })
-  : import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,ResourcesHubPage,SeoResourcePage}.jsx');
+  ? import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,AtsakiklisPage,ResourcesHubPage,SeoResourcePage}.jsx', { eager: true })
+  : import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,AtsakiklisPage,ResourcesHubPage,SeoResourcePage}.jsx');
 
 function createPageComponent(modulePath) {
   const moduleOrLoader = pageModules[modulePath];
@@ -53,6 +53,7 @@ const FeaturesPage = createPageComponent('./components/FeaturesPage.jsx');
 const HowItWorksPage = createPageComponent('./components/HowItWorksPage.jsx');
 const BenefitsPage = createPageComponent('./components/BenefitsPage.jsx');
 const TelegramPage = createPageComponent('./components/TelegramPage.jsx');
+const AtsakiklisPage = createPageComponent('./components/AtsakiklisPage.jsx');
 const ResourcesHubPage = createPageComponent('./components/ResourcesHubPage.jsx');
 const SeoResourcePage = createPageComponent('./components/SeoResourcePage.jsx');
 
@@ -181,6 +182,7 @@ export const routeDefinitions = [
   { path: '/kaip-veikia', component: HowItWorksPage },
   { path: '/nauda', component: BenefitsPage },
   { path: '/telegram', component: TelegramPage },
+  { path: '/atsakiklis', component: AtsakiklisPage },
   { path: '/resursai', component: ResourcesHubPage },
   ...contentPages.map((page) => ({
     path: page.path,

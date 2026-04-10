@@ -11,6 +11,7 @@ const navLinks = [
   { id: 'how-it-works', label: 'Kaip veikia', href: '/kaip-veikia' },
   { id: 'benefits', label: 'Nauda', href: '/nauda' },
   { id: 'telegram', label: 'Telegram', href: '/telegram' },
+  { id: 'atsakiklis', label: 'Atsakiklis', href: '/atsakiklis' },
   { id: 'pricing', label: 'Kainodara', href: '/kainos' },
   { id: 'pakviesk', label: 'Pakviesk draugą' },
   { id: 'cta', label: 'Kontaktai' },
