@@ -217,29 +217,51 @@ const AtsakiklisSection = () => {
                     <p className="text-gray-500 text-xs">Instagram · aktyvu</p>
                   </div>
                 </div>
-                <div className="p-4 space-y-3 min-h-[280px] bg-gray-950/80">
-                  <p className="text-[10px] text-gray-500 text-center uppercase tracking-wide">
-                    Komentaras po įrašu
-                  </p>
+                <div className="p-4 space-y-3.5 min-h-[300px] bg-gray-950/80">
+                  {/* 1 — klientas */}
                   <div className="flex justify-start">
-                    <div className="bg-gray-800 rounded-2xl rounded-bl-sm px-3 py-2 max-w-[88%] border border-gray-700/80">
-                      <p className="text-gray-200 text-sm">
-                        Ar ši prekė bus sandėlyje sekmadienį?
-                      </p>
-                      <p className="text-gray-500 text-[10px] mt-1">AI juodraštis · patvirtinti</p>
+                    <div className="max-w-[90%]">
+                      <div className="bg-gray-800 rounded-2xl rounded-bl-sm px-3 py-2 border border-gray-700/80">
+                        <p className="text-gray-200 text-sm">
+                          Ar ši prekė bus sandėlyje sekmadienį?
+                        </p>
+                      </div>
+                      <p className="text-gray-500 text-[10px] mt-1 pl-0.5">Klientas · komentaras</p>
                     </div>
                   </div>
+                  {/* 2 — AI juodraštis */}
                   <div className="flex justify-end">
-                    <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl rounded-br-sm px-3 py-2 max-w-[88%]">
-                      <p className="text-white text-sm">DM: domiuosi dydžiu M.</p>
+                    <div className="max-w-[90%]">
+                      <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl rounded-br-sm px-3 py-2">
+                        <p className="text-white text-sm">
+                          Sekmadienį sandėlis nedirba — išsiųsime pirmadienį. Ar tinka?
+                        </p>
+                      </div>
+                      <p className="text-gray-500 text-[10px] mt-1 pr-0.5 text-right">
+                        AI juodraštis · patvirtinti
+                      </p>
                     </div>
                   </div>
+                  {/* 3 — klientas */}
                   <div className="flex justify-start">
-                    <div className="bg-gray-800 rounded-2xl rounded-bl-sm px-3 py-2 max-w-[88%] border border-gray-700/80">
-                      <p className="text-gray-200 text-sm">
-                        Dydis M yra — siunčiame per 1–2 d. d. Patvirtinkite, jei tinka.
+                    <div className="max-w-[90%]">
+                      <div className="bg-gray-800 rounded-2xl rounded-bl-sm px-3 py-2 border border-gray-700/80">
+                        <p className="text-gray-200 text-sm">Gerai. O dydis M dar yra?</p>
+                      </div>
+                      <p className="text-gray-500 text-[10px] mt-1 pl-0.5">Klientas · DM</p>
+                    </div>
+                  </div>
+                  {/* 4 — AI (automatika / darbo laikas) */}
+                  <div className="flex justify-end">
+                    <div className="max-w-[90%]">
+                      <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl rounded-br-sm px-3 py-2">
+                        <p className="text-white text-sm">
+                          Taip, M turime. Siunčiame per 1–2 d. d.
+                        </p>
+                      </div>
+                      <p className="text-gray-500 text-[10px] mt-1 pr-0.5 text-right">
+                        AI · automatinis · darbo valandos
                       </p>
-                      <p className="text-gray-500 text-[10px] mt-1">Automatika · darbo valandos</p>
                     </div>
                   </div>
                 </div>
