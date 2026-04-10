@@ -8,7 +8,7 @@ const navLinks = [
   { id: 'home', label: 'Pradžia' },
   { id: 'features', label: 'Funkcijos', href: '/features' },
   { id: 'resources', label: 'Resursai', href: '/resursai' },
-  { id: 'how-it-works', label: 'Kaip veikia', href: '/kaip-veikia' },
+  { id: 'how-it-works', label: 'Kaip veikia', href: '/kaip-veikia', desktopNowrap: true },
   { id: 'benefits', label: 'Nauda', href: '/nauda' },
   { id: 'telegram', label: 'Telegram', href: '/telegram' },
   { id: 'atsakiklis', label: 'Atsakiklis', href: '/atsakiklis' },
@@ -97,7 +97,7 @@ const Header = () => {
                 >
                   <Link
                     to={link.href}
-                    className="px-4 py-2 text-gray-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-200 block"
+                    className={`px-4 py-2 text-gray-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-200 block text-center leading-tight${link.desktopNowrap ? ' lg:whitespace-nowrap' : ''}`}
                   >
                     {link.label}
                   </Link>
@@ -109,7 +109,7 @@ const Header = () => {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.3 + index * 0.05, duration: 0.3 }}
                   onClick={() => handleScrollTo(link.id)}
-                  className="px-4 py-2 text-gray-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-200"
+                  className="px-4 py-2 text-gray-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-200 text-center leading-tight"
                 >
                   {link.label}
                 </motion.button>
