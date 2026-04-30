@@ -2,17 +2,21 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import { siteConfig } from '@/content/seoPages';
+import { siteConfig, getPrimaryPageMeta } from '@/content/seoPages';
 
 const PrivacyPolicy = () => {
   const canonicalUrl = `${siteConfig.url}/privatumas`;
   const socialImage = siteConfig.socialImage;
+  const fm = getPrimaryPageMeta('/privatumas');
+  const pageDescription =
+    fm?.description ??
+    'Privatumo politika Clarivex AI: duomenų rinkimas, slapukai, BDAR teisės ir kontaktai duomenų klausimais.';
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Privatumo politika — Clarivex',
     url: canonicalUrl,
-    description: 'Clarivex privatumo politika ir informacija apie tai, kaip tvarkomi naudotojų duomenys.',
+    description: pageDescription,
     inLanguage: 'lt-LT',
     isPartOf: { '@id': `${siteConfig.url}/#website` },
   };
@@ -21,10 +25,10 @@ const PrivacyPolicy = () => {
     <>
       <Helmet>
         <title>Clarivex privatumo politika - kaip tvarkomi jūsų duomenys</title>
-        <meta name="description" content="Sužinokite, kokius duomenis renka Clarivex, kaip jie naudojami, saugomi ir kokias teises turite pagal BDAR." />
+        <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content="Clarivex privatumo politika - kaip tvarkomi jūsų duomenys" />
-        <meta property="og:description" content="Sužinokite, kokius duomenis renka Clarivex, kaip jie naudojami, saugomi ir kokias teises turite pagal BDAR." />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -36,7 +40,7 @@ const PrivacyPolicy = () => {
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Clarivex privatumo politika - kaip tvarkomi jūsų duomenys" />
-        <meta name="twitter:description" content="Sužinokite, kokius duomenis renka Clarivex, kaip jie naudojami, saugomi ir kokias teises turite pagal BDAR." />
+        <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>

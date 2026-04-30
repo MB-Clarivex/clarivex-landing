@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Trash2, Mail, CheckCircle, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { siteConfig } from '@/content/seoPages';
+import { siteConfig, getPrimaryPageMeta } from '@/content/seoPages';
 
 const DataDeletion = () => {
   const [email, setEmail] = useState('');
@@ -12,12 +12,16 @@ const DataDeletion = () => {
   const [error, setError] = useState('');
   const canonicalUrl = `${siteConfig.url}/duomenu-istrynimas`;
   const socialImage = siteConfig.socialImage;
+  const fm = getPrimaryPageMeta('/duomenu-istrynimas');
+  const pageDescription =
+    fm?.description ??
+    'Pateikite Clarivex duomenų ištrynimo prašymą internetu ir sužinokite apie BDAR ištrynimo eigą.';
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Duomenų ištrynimas — Clarivex',
     url: canonicalUrl,
-    description: 'Pateikite prašymą ištrinti savo asmens duomenis iš Clarivex sistemos ir susipažinkite su ištrynimo eiga.',
+    description: pageDescription,
     inLanguage: 'lt-LT',
     isPartOf: { '@id': `${siteConfig.url}/#website` },
   };
@@ -56,10 +60,10 @@ const DataDeletion = () => {
     <>
       <Helmet>
         <title>Clarivex duomenų ištrynimas - BDAR prašymas internetu</title>
-        <meta name="description" content="Pateikite Clarivex duomenų ištrynimo prašymą internetu ir sužinokite, kaip vyksta BDAR pagrindu atliekamas ištrynimo procesas." />
+        <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content="Clarivex duomenų ištrynimas - BDAR prašymas internetu" />
-        <meta property="og:description" content="Pateikite Clarivex duomenų ištrynimo prašymą internetu ir sužinokite, kaip vyksta BDAR pagrindu atliekamas ištrynimo procesas." />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -71,7 +75,7 @@ const DataDeletion = () => {
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Clarivex duomenų ištrynimas - BDAR prašymas internetu" />
-        <meta name="twitter:description" content="Pateikite Clarivex duomenų ištrynimo prašymą internetu ir sužinokite, kaip vyksta BDAR pagrindu atliekamas ištrynimo procesas." />
+        <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>

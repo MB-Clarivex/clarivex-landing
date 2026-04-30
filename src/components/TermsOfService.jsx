@@ -2,17 +2,21 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import { siteConfig } from '@/content/seoPages';
+import { siteConfig, getPrimaryPageMeta } from '@/content/seoPages';
 
 const TermsOfService = () => {
   const canonicalUrl = `${siteConfig.url}/salygos`;
   const socialImage = siteConfig.socialImage;
+  const fm = getPrimaryPageMeta('/salygos');
+  const pageDescription =
+    fm?.description ??
+    'Clarivex AI naudojimosi sąlygos: kreditų sistema, paskyros taisyklės ir platformos nuostatos.';
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Naudojimosi sąlygos — Clarivex',
     url: canonicalUrl,
-    description: 'Clarivex naudojimosi sąlygos ir pagrindinės taisyklės, taikomos platformos paslaugoms.',
+    description: pageDescription,
     inLanguage: 'lt-LT',
     isPartOf: { '@id': `${siteConfig.url}/#website` },
   };
@@ -21,10 +25,10 @@ const TermsOfService = () => {
     <>
       <Helmet>
         <title>Clarivex naudojimosi sąlygos - platformos taisyklės ir mokėjimai</title>
-        <meta name="description" content="Susipažinkite su Clarivex naudojimosi sąlygomis, kreditų sistema, paskyros taisyklėmis ir pagrindinėmis platformos nuostatomis." />
+        <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content="Clarivex naudojimosi sąlygos - platformos taisyklės ir mokėjimai" />
-        <meta property="og:description" content="Susipažinkite su Clarivex naudojimosi sąlygomis, kreditų sistema, paskyros taisyklėmis ir pagrindinėmis platformos nuostatomis." />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -36,7 +40,7 @@ const TermsOfService = () => {
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Clarivex naudojimosi sąlygos - platformos taisyklės ir mokėjimai" />
-        <meta name="twitter:description" content="Susipažinkite su Clarivex naudojimosi sąlygomis, kreditų sistema, paskyros taisyklėmis ir pagrindinėmis platformos nuostatomis." />
+        <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>

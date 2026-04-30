@@ -151,28 +151,32 @@ export const existingPageMetadata = [
   {
     path: '/privatumas',
     title: 'Privatumo politika — Clarivex',
-    description: 'Clarivex privatumo politika ir informacija apie duomenų tvarkymą.',
+    description:
+      'Privatumo politika Clarivex AI: duomenų rinkimas svetainėje ir paslaugose, slapukai, saugumas, BDAR teisės ir kaip kreiptis dėl prieigos ar ištrynimo.',
     priority: '0.3',
     changefreq: 'monthly',
   },
   {
     path: '/salygos',
     title: 'Naudojimosi sąlygos — Clarivex',
-    description: 'Clarivex naudojimosi sąlygos ir bendros platformos taisyklės.',
+    description:
+      'Clarivex AI naudojimosi sąlygos: paslaugų aprašymas, kreditų ir mokėjimų taisyklės, paskyros naudojimas, turinio politika, atsakomybė ir BDAR nuorodos.',
     priority: '0.3',
     changefreq: 'monthly',
   },
   {
     path: '/duomenu-istrynimas',
     title: 'Duomenų ištrynimas — Clarivex',
-    description: 'Informacija, kaip pateikti prašymą ištrinti Clarivex paskyros duomenis.',
+    description:
+      'Duomenų ištrynimas Clarivex AI: BDAR prašymo forma, nagrinėjimo eiga ir terminai, kas ištrinama ir kaip susisiekti su palaikymu dėl paskyros duomenų.',
     priority: '0.3',
     changefreq: 'monthly',
   },
   {
     path: resourceHubPath,
     title: 'AI resursai verslui — Clarivex',
-    description: 'Clarivex resursų centras: AI asistentas lietuviškai, social media automatizavimas, el. paštas, palyginimai ir workflow.',
+    description:
+      'Clarivex AI resursų centras: straipsniai apie AI asistentą lietuviškai, socialinių tinklų ir pašto automatizavimą bei workflow smulkiems verslams.',
     priority: '0.9',
     changefreq: 'weekly',
   },

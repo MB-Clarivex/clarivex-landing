@@ -10,6 +10,7 @@ import {
   resourceHubPath,
   siteConfig,
   SCHEMA_IDS,
+  getPrimaryPageMeta,
 } from '@/content/seoPages';
 
 const clusterCounts = Object.fromEntries(
@@ -28,6 +29,11 @@ const offsiteSignals = [
 
 const ResourcesHubPage = () => {
   const canonicalUrl = `${siteConfig.url}${resourceHubPath}`;
+  const fm = getPrimaryPageMeta(resourceHubPath);
+  const pageTitle = fm?.title ?? 'AI resursai verslui — Clarivex';
+  const pageDescription =
+    fm?.description ??
+    'Clarivex AI resursų centras: straipsniai apie AI asistentą lietuviškai, socialinių tinklų ir pašto automatizavimą bei workflow smulkiems verslams.';
   const structuredData = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -45,8 +51,7 @@ const ResourcesHubPage = () => {
         '@id': `${canonicalUrl}#webpage`,
         name: 'AI resursai verslui — Clarivex',
         url: canonicalUrl,
-        description:
-          'Clarivex resursų centras su komerciniais landing puslapiais, evergreen AI klausimais, workflow ir palyginimais smulkiam verslui.',
+        description: pageDescription,
         inLanguage: siteConfig.language,
       },
       {
@@ -66,18 +71,12 @@ const ResourcesHubPage = () => {
     <>
       <Helmet>
         <html lang="lt" />
-        <title>AI resursai verslui — Clarivex</title>
-        <meta
-          name="description"
-          content="Clarivex resursų centras: AI asistentas lietuviškai, social media automatizavimas, el. paštas, palyginimai ir workflow smulkiam verslui."
-        />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="AI resursai verslui — Clarivex" />
-        <meta
-          property="og:description"
-          content="Komerciniai landing puslapiai, žinių bazė, workflow ir palyginimai apie AI verslui Lietuvoje."
-        />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content={siteConfig.name} />
@@ -88,11 +87,8 @@ const ResourcesHubPage = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI resursai verslui — Clarivex" />
-        <meta
-          name="twitter:description"
-          content="Clarivex resursų centras su AI turiniu verslui, workflow ir palyginimais."
-        />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={siteConfig.socialImage} />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
