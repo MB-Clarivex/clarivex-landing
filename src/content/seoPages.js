@@ -78,80 +78,73 @@ export const clusterDefinitions = [
 export const existingPageMetadata = [
   {
     path: '/',
-    title: 'Clarivex AI – lietuviškas AI asistentas su lanksčia kreditų sistema',
+    title: 'Clarivex AI – asistentas verslui ir kreditai',
     description:
-      'Clarivex AI – patikimas lietuviškas AI asistentas verslui ir individualiems vartotojams. Automatizuokite el. paštą, tekstus ir kasdienes užduotis su lankščia kreditų sistema. Išbandykite Clarivex dabar.',
+      'Automatizuokite el. paštą, socialinius tinklus ir užduotis lietuviškai. Mokate tik už kreditus, be abonemento. Išbandykite nemokamai.',
     priority: '1.0',
     changefreq: 'weekly',
   },
   {
     path: '/features',
-    title: 'Clarivex AI funkcijos – el. paštas, socialiniai kanalai, balso komandos',
+    title: 'Clarivex AI funkcijos: paštas, social, balsas',
     description:
-      'Sužinokite, ką gali Clarivex AI: el. pašto automatizavimas, socialinių kanalų valdymas, balso komandos ir integracijos. Atraskite, kaip AI technologijos didina jūsų efektyvumą.',
+      'Viena platforma: AI paštas, Instagram ir Facebook, balso komandos, Telegram, dokumentai. Sužinokite galimybes ir integracijas.',
     priority: '0.9',
     changefreq: 'weekly',
   },
   {
     path: '/kaip-veikia',
-    title: 'Kaip veikia Clarivex AI – integracija, kreditai ir veikimo principas',
+    title: 'Kaip veikia Clarivex AI: žingsniai ir kreditai',
     description:
-      'Kaip veikia Clarivex AI: kreditai, el. paštas, socialiniai tinklai ir Telegram vienoje vietoje. Žingsniai lietuvių kalba. Peržiūrėkite eigą ir išbandykite.',
+      'Nuo užklausos iki rezultato: kreditai, el. paštas, socialiniai tinklai ir Telegram vienoje vietoje. Trumpa veikimo eiga lietuviškai.',
     priority: '0.9',
     changefreq: 'weekly',
   },
   {
     path: '/nauda',
-    title: 'Clarivex AI nauda – efektyvumas, automatizavimas ir laiko taupymas',
+    title: 'Clarivex AI nauda: mažiau rutinos, daugiau laiko',
     description:
-      'Clarivex AI nauda verslui: mažiau rutinos, greitesni atsakymai ir turinys lietuvių kalba. El. paštas ir socialiniai tinklai su kreditais. Sužinokite privalumus.',
+      'Greitesni atsakymai, turinys lietuvių kalba, mažiau šokinėjimo tarp įrankių. Sužinokite, kam Clarivex tinka verslui.',
     priority: '0.8',
     changefreq: 'weekly',
   },
   {
     path: '/telegram',
-    title: 'Clarivex Telegram AI botas – balso komandos ir priminimai lietuviškai',
+    title: 'Clarivex Telegram botas – balsas ir priminimai',
     description:
-      'Clarivex Telegram AI botas: balso komandos lietuvių kalba, tekstai, priminimai ir užduotys programėlėje. Valdykite AI telefone — susiekite ir pradėkite.',
+      'Valdykite AI telefone: balso komandos lietuviškai, užrašai, priminimai ir užduotys per Telegram. Greitas startas.',
     priority: '0.8',
     changefreq: 'weekly',
   },
   {
     path: '/atsakiklis',
-    title: 'Clarivex AI atsakiklis – DM, Messenger ir el. pašto juodraščiai',
+    title: 'Clarivex atsakiklis: DM, Messenger, paštas',
     description:
-      'Clarivex AI ruošia juodraščius Messenger ir Instagram DM lietuvių kalba. El. paštui naudokite tuos pačius AI įrankius Clarivex platformoje: mažiau rutinos ir nuosekli komunikacija.',
+      'AI juodraščiai Messenger ir Instagram DM lietuviškai. El. paštą tvarkykite toje pačioje Clarivex darbo aplinkoje.',
     priority: '0.85',
     changefreq: 'weekly',
   },
   {
     path: '/kainos',
-    title: 'Clarivex AI kainos – lanksti kreditų sistema be abonemento',
+    title: 'Clarivex AI kainos – kreditai be abonemento',
     description:
-      'Clarivex AI kainodara paremta lanksčia kreditų sistema: mokate tik už naudojimą, be mėnesinių planų. Sužinokite, kiek realiai kainuoja AI užduotys ir kaip optimizuoti sąnaudas.',
+      'Mokate tik už naudojimą: 1 € ≈ 1000 kreditų, jokių mėnesinių planų. Sužinokite tipinių veiksmų kainą ir kaip taupyti.',
     priority: '0.8',
     changefreq: 'weekly',
   },
   {
-    path: '/naudojimo-scenarijai',
-    title: 'Clarivex AI naudojimo scenarijai – verslas ir specialistai',
-    description:
-      'Tipiniai Clarivex AI naudojimo atvejai: mažos įmonės, agentūros ir freelanceriai. Automatizuokite el. paštą, socialinius tinklus ir balsą lietuvių kalba. Nuorodos į funkcijas ir kainodarą.',
-    priority: '0.75',
-    changefreq: 'weekly',
-  },
-  {
     path: '/duk',
-    title: 'DUK apie Clarivex AI – kreditai, lietuvių kalba ir saugumas',
+    title: 'Clarivex DUK – kreditai, kalba, saugumas',
     description:
-      'Atsakymai į dažniausius klausimus apie Clarivex AI: kreditų sistema, lietuvių kalba, integracijos ir saugumas. Peržiūrėkite visą DUK ir pradėkite automatizuoti užduotis.',
+      'Atsakymai apie Clarivex AI: kreditų sistema, lietuvių kalba, Instagram ir Facebook, Telegram, mokėjimai ir BDAR. Peržiūrėkite visą DUK.',
     priority: '0.7',
     changefreq: 'weekly',
   },
   {
     path: '/statusas',
-    title: 'Sistemos statusas — Clarivex',
-    description: 'Realaus laiko Clarivex paslaugų būklė ir pagrindinių sistemų veikimo statusas.',
+    title: 'Clarivex sistemos statusas',
+    description:
+      'Platformos, AI, socialinių tinklų publikavimo, el. pašto ir Telegram būklė. Statusas informacinio pobūdžio.',
     priority: '0.5',
     changefreq: 'daily',
   },
@@ -388,6 +381,70 @@ export const contentPages = [
       },
     ],
     relatedPaths: ['/nauda', '/geriausi-ai-irankiai-smulkiam-verslui-lietuvoje', '/clarivex-ar-chatgpt-smulkiam-verslui', '/resursai'],
+  },
+  {
+    path: '/naudojimo-scenarijai',
+    cluster: 'solutions',
+    type: 'solution',
+    title: 'AI naudojimo scenarijai verslui',
+    description:
+      'Tipiniai Clarivex AI naudojimo atvejai smulkioms įmonėms, agentūroms ir freelanceriams: paštas, socialiniai tinklai, balsas ir rutinos mažinimas lietuvių kalba.',
+    intro:
+      'Šis puslapis padeda greitai suprasti, kam Clarivex labiausiai tinka praktikoje. Vietoj abstrakčių pažadų čia surinkti tipiniai naudojimo scenarijai: nuo kasdienės komunikacijos iki turinio planavimo ir greito aptarnavimo.',
+    highlights: [
+      'Mažoms komandoms, kurioms trūksta laiko, bet ne ambicijų.',
+      'Agentūroms ir freelanceriams, dirbantiems su keliais klientais.',
+      'Verslams, kurie nori mažiau rutinos el. pašte ir socialiniuose tinkluose.',
+    ],
+    sections: [
+      {
+        title: 'Smulkus verslas ir komandos be atskiros rinkodaros tarnybos',
+        paragraphs: [
+          'Dažnas scenarijus: turite produktą ar paslaugą, bet kasdienė komunikacija suvalgo laiką. Clarivex padeda paruošti įrašų juodraščius, atsakymų gaires ir priminimus apie publikacijas.',
+          'Pradėti galima nuo vieno kanalo – pavyzdžiui Instagram – ir tik vėliau prijungti el. paštą ar Telegram.',
+        ],
+        bullets: [
+          'Socialinių tinklų įrašų ruošimas ir planavimas',
+          'Trumpi atsakymai klientams ir follow-up šablonus',
+          'Vidinės užduotys ir priminimai balsu',
+        ],
+      },
+      {
+        title: 'Agentūros ir freelanceriai',
+        paragraphs: [
+          'Kai dirbate su keliais klientais, svarbu greitai perjungti kontekstą ir neišsibarstyti tarp įrankių. Vienoje vietoje lengviau išlaikyti toną ir nepamesti rutininių veiksmų.',
+        ],
+        bullets: [
+          'Turinio juodraščiai pagal skirtingus prekės ženklus',
+          'El. laiškų ruošimas ir santraukos po susitikimų',
+          'Telefonu užfiksuotos idėjos ir užduotys per Telegram',
+        ],
+      },
+      {
+        title: 'Kaip pasirinkti pirmą žingsnį',
+        paragraphs: [
+          'Praktika rodo, kad geriausia pradeda nuo vienos aiškios savaitės užduoties: pvz., „trys įrašai ir vienas el. laiško šablonas“. Kai procesas veikia, plėsti paprasčiau nei bandyti viską iš karto.',
+        ],
+        bullets: [
+          'Peržiūrėkite funkcijas ir kainodarą',
+          'Pasirinkite vieną kanalą pilotui',
+          'Matuokite sutaupytą laiką, ne tik „kokybės pojūtį“',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Ar Clarivex tinka tik rinkodarai?',
+        answer:
+          'Ne. Dažnai didžiausią naudą duoda kryžminis naudojimas: rinkodara, klientų laiškai, vidinės užduotys ir greitos užrašų idėjos.',
+      },
+      {
+        question: 'Ar šie scenarijai galioja ir pradedantiesiems?',
+        answer:
+          'Taip. Clarivex galima pradėti nuo nemokamų kreditų ir vienos paprastos užduoties, o sudėtingesnius workflow įjungti vėliau.',
+      },
+    ],
+    relatedPaths: ['/features', '/kainos', '/ai-verslui-lietuvoje', '/resursai'],
   },
   {
     path: '/telegram-ai-botas',

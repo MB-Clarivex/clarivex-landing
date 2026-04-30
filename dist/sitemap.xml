@@ -43,12 +43,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.clarivex.ai/naudojimo-scenarijai</loc>
-    <lastmod>2026-03-19T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
     <loc>https://www.clarivex.ai/duk</loc>
     <lastmod>2026-03-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -104,6 +98,12 @@
   </url>
   <url>
     <loc>https://www.clarivex.ai/ai-verslui-lietuvoje</loc>
+    <lastmod>2026-03-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.clarivex.ai/naudojimo-scenarijai</loc>
     <lastmod>2026-03-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

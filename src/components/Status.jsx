@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, AlertCircle, XCircle, Activity, Globe, Bot, Mail, Calendar, Database } from 'lucide-react';
-import { siteConfig } from '@/content/seoPages';
+import { siteConfig, getPrimaryPageMeta } from '@/content/seoPages';
 
 const services = [
   {
@@ -81,12 +81,17 @@ const Status = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const canonicalUrl = `${siteConfig.url}/statusas`;
   const socialImage = siteConfig.socialImage;
+  const fm = getPrimaryPageMeta('/statusas');
+  const pageTitle = fm?.title ?? 'Clarivex sistemos statusas';
+  const pageDescription =
+    fm?.description ??
+    'Clarivex paslaugų būklė: platforma, AI, socialiniai tinklai, el. paštas ir Telegram.';
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Clarivex sistemos statusas - paslaugų veikimas realiu laiku',
+    name: pageTitle,
     url: canonicalUrl,
-    description: 'Patikrinkite Clarivex paslaugų būklę realiu laiku: platformos, AI, el. pašto, Telegram ir kitų integracijų veikimą.',
+    description: pageDescription,
     inLanguage: 'lt-LT',
     isPartOf: { '@id': `${siteConfig.url}/#website` },
   };
@@ -110,11 +115,11 @@ const Status = () => {
   return (
     <>
       <Helmet>
-        <title>Clarivex sistemos statusas - paslaugų veikimas realiu laiku</title>
-        <meta name="description" content="Patikrinkite Clarivex paslaugų būklę realiu laiku. Matykite platformos, AI, Telegram, el. pašto ir kitų sistemų veikimo statusą." />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Clarivex sistemos statusas - paslaugų veikimas realiu laiku" />
-        <meta property="og:description" content="Patikrinkite Clarivex paslaugų būklę realiu laiku. Matykite platformos, AI, Telegram, el. pašto ir kitų sistemų veikimo statusą." />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -125,8 +130,8 @@ const Status = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Clarivex sistemos statusas - paslaugų veikimas realiu laiku" />
-        <meta name="twitter:description" content="Patikrinkite Clarivex paslaugų būklę realiu laiku. Matykite platformos, AI, Telegram, el. pašto ir kitų sistemų veikimo statusą." />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
@@ -147,6 +152,24 @@ const Status = () => {
 
         {/* Content */}
         <main className="max-w-4xl mx-auto px-4 py-12">
+          <div className="mb-10 space-y-4 text-gray-300 leading-relaxed text-sm md:text-base">
+            <p>
+              Šiame puslapyje matote bendrą Clarivex paslaugų būklę: pagrindinę platformą, AI pokalbių sistemą,
+              socialinių tinklų publikavimą, el. pašto integraciją ir Telegram botą. Statusas rodomas informavimo tikslais,
+              kad greitai pastebėtumėte galimus sutrikimus arba patvirtintumėte, kad viskas veikia įprastai.
+            </p>
+            <p>
+              Rodomas rezultatas yra orientacinis. Praktikoje trumpalaikiai sutrikimai pasitaiko retai; jei problema kartojasi,
+              parašykite palaikymui per Telegram arba el. paštą ir pridėkite laiką bei veiksmą, kurį bandėte atlikti.
+            </p>
+            <p>
+              Jei ieškote produkto apžvalgos ar kainodaros, naudingi puslapiai:{' '}
+              <Link to="/features" className="text-blue-400 hover:text-blue-300">funkcijos</Link>,{' '}
+              <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">kaip veikia</Link> ir{' '}
+              <Link to="/kainos" className="text-blue-400 hover:text-blue-300">kainos</Link>.
+            </p>
+          </div>
+
           {/* Overall Status */}
           <div className={`rounded-2xl p-8 mb-8 ${overallStatus.bgColor} border ${overallStatus.borderColor}`}>
             <div className="flex items-center justify-between flex-wrap gap-4">

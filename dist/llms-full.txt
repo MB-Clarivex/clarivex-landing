@@ -28,6 +28,11 @@ Clarivex yra AI asistentų platforma lietuvių kalba, skirta darbo eigoms, o ne 
   - Padeda mažoms komandoms padaryti daugiau be papildomo etato.
   - Naudinga ten, kur daug pasikartojančios komunikacijos.
   - Svarbiausia vertinti ne hype, o sutaupytas valandas ir greitį.
+- AI naudojimo scenarijai verslui (https://www.clarivex.ai/naudojimo-scenarijai)
+  Description: Tipiniai Clarivex AI naudojimo atvejai smulkioms įmonėms, agentūroms ir freelanceriams: paštas, socialiniai tinklai, balsas ir rutinos mažinimas lietuvių kalba.
+  - Mažoms komandoms, kurioms trūksta laiko, bet ne ambicijų.
+  - Agentūroms ir freelanceriams, dirbantiems su keliais klientais.
+  - Verslams, kurie nori mažiau rutinos el. pašte ir socialiniuose tinkluose.
 - Telegram AI botas lietuviškai (https://www.clarivex.ai/telegram-ai-botas)
   Description: Telegram AI botas leidžia naudoti Clarivex telefone: diktuoti užduotis, kurti užrašus, gauti priminimus ir vykdyti kasdienius veiksmus balsu.
   - Veikia telefone be papildomos programėlės.
