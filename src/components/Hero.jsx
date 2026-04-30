@@ -155,10 +155,10 @@ const Hero = () => {
             transition={{ duration: 0 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
           >
-            <span className="text-white">Clarivex AI</span>
+            <span className="text-white">Pabuski su</span>
             <br />
             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              lietuviškai suprantantis asistentas verslui
+              paruoštais darbais.
             </span>
           </motion.h1>
 
@@ -168,8 +168,8 @@ const Hero = () => {
             transition={{ duration: 0 }}
             className="text-lg md:text-xl text-gray-300 max-w-xl mx-auto md:mx-0 leading-relaxed"
           >
-            Vienoje vietoje tvarkykite el. paštą, social media, priminimus ir Telegram darbo eigą.
-            Clarivex padeda greičiau atlikti pasikartojančius darbus lietuvių kalba.
+            Klientams jau atsakyta. Postai paskelbti pagal grafiką. Laiškai laukia su vienu
+            paspaudimu „Siųsti“. Tu nustoji rašyti nuo nulio — pradedi tik tikrinti.
           </motion.p>
           <motion.p
             initial={{ opacity: 1, y: 0 }}
@@ -177,8 +177,8 @@ const Hero = () => {
             transition={{ duration: 0 }}
             className="text-sm md:text-base text-gray-400 max-w-xl mx-auto md:mx-0 leading-relaxed"
           >
-            Pradėti paprasta: pasirenkate vieną procesą, pasakote ko reikia, o Clarivex paruošia
-            rezultatą per kelias sekundes. Moki tik už tai, ką naudoji.
+            Tau nereikia būti prie kompiuterio, kad verslas suktųsi — Clarivex dirba foniniame
+            režime lietuvių kalba, o tu gali užsiimti tik tuo, kas svarbu. Moki tik už tai, ką naudoji.
             {' '}
             <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
               Kaip veikia
