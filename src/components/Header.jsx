@@ -70,10 +70,7 @@ const Header = () => {
 
   return (
     <>
-      <motion.header
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 120, damping: 20, delay: 0.1 }}
+      <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
             ? 'bg-gray-950/95 backdrop-blur-xl shadow-lg shadow-black/20 py-3' 
@@ -82,12 +79,9 @@ const Header = () => {
       >
         <div className="container mx-auto max-w-7xl px-4 flex items-center justify-between">
           {/* Logo */}
-          <motion.div
+          <div
             onClick={() => handleScrollTo('home')}
             className="flex items-center gap-2 cursor-pointer group"
-            initial={{ x: -20, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
           >
             <div className="relative">
               <img
@@ -104,44 +98,34 @@ const Header = () => {
             <span className="text-xl md:text-2xl font-bold text-white group-hover:text-blue-300 transition-colors">
               Clarivex
             </span>
-          </motion.div>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-0.5">
-            {primaryNavLinks.map((link, index) =>
+            {primaryNavLinks.map((link) =>
               link.href ? (
-                <motion.div
-                  key={link.id}
-                  initial={{ y: -10, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.3 + index * 0.05, duration: 0.3 }}
-                >
+                <div key={link.id}>
                   <Link
                     to={link.href}
                     className={`px-3 py-2 text-gray-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-200 block text-center leading-tight${link.desktopNowrap ? ' lg:whitespace-nowrap' : ''}`}
                   >
                     {link.label}
                   </Link>
-                </motion.div>
+                </div>
               ) : (
-                <motion.button
+                <button
                   key={link.id}
-                  initial={{ y: -10, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.3 + index * 0.05, duration: 0.3 }}
+                  type="button"
                   onClick={() => handleScrollTo(link.id)}
                   className="px-3 py-2 text-gray-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-200 text-center leading-tight"
                 >
                   {link.label}
-                </motion.button>
+                </button>
               )
             )}
             <div className="relative">
-              <motion.button
+              <button
                 type="button"
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.3 + primaryNavLinks.length * 0.05, duration: 0.3 }}
                 aria-expanded={isMoreOpen}
                 aria-haspopup="true"
                 onClick={() => setIsMoreOpen((o) => !o)}
@@ -151,7 +135,7 @@ const Header = () => {
               >
                 Daugiau
                 <ChevronDown className={`w-4 h-4 opacity-70 transition-transform ${isMoreOpen ? 'rotate-180' : ''}`} />
-              </motion.button>
+              </button>
               {isMoreOpen && (
                 <>
                   <button
@@ -192,12 +176,7 @@ const Header = () => {
           </nav>
 
           {/* CTA Buttons */}
-          <motion.div
-            initial={{ x: 20, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            className="flex items-center gap-2 sm:gap-3"
-          >
+          <div className="flex items-center gap-2 sm:gap-3">
             {/* Prisijungti - ryškus mygtukas */}
             <Button
               onClick={handleLogin}
@@ -208,19 +187,24 @@ const Header = () => {
             
             {/* Mobile Menu Button */}
             <button
+              type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors"
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-primary-nav"
+              aria-label={isMobileMenuOpen ? 'Uždaryti meniu' : 'Atidaryti meniu'}
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-6 h-6" aria-hidden /> : <Menu className="w-6 h-6" aria-hidden />}
             </button>
-          </motion.div>
+          </div>
         </div>
-      </motion.header>
+      </header>
 
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
+            id="mobile-primary-nav"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -228,7 +212,7 @@ const Header = () => {
             className="fixed inset-x-0 top-16 z-40 lg:hidden"
           >
             <div className="bg-gray-950/98 backdrop-blur-xl border-b border-gray-800 shadow-xl">
-              <nav className="container mx-auto max-w-7xl px-4 py-4 flex flex-col gap-1">
+              <nav className="container mx-auto max-w-7xl px-4 py-4 flex flex-col gap-1" aria-label="Pagrindinė navigacija">
                 {navLinks.map((link, index) => (
                   link.href ? (
                     <motion.div

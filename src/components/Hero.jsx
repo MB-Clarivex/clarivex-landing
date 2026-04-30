@@ -139,15 +139,10 @@ const Hero = () => {
           transition={{ duration: 0 }}
           className="space-y-8 text-center md:text-left"
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-300 text-sm font-medium"
-          >
-            <Sparkles className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-300 text-sm font-medium">
+            <Sparkles className="w-4 h-4" aria-hidden />
             <span>🎁 Pradėk NEMOKAMAI — gauk iki 1 000 kreditų startui</span>
-          </motion.div>
+          </div>
 
           <motion.h1
             initial={{ opacity: 1, y: 0 }}
@@ -421,10 +416,10 @@ const Hero = () => {
                 href="https://t.me/clarivex_notify_bot"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
-                className="group flex-1 bg-gray-800/50 hover:bg-gray-800/70 border-2 border-gray-700 hover:border-[#0088cc] rounded-2xl p-4 transition-all duration-300 text-left"
+                className="group flex-1 bg-gray-800/50 hover:bg-gray-800/70 border-2 border-gray-700 hover:border-[#006699] rounded-2xl p-4 transition-all duration-300 text-left"
               >
                 <div className="flex items-center gap-2 mb-2">
-                  <Smartphone className="w-5 h-5 text-[#0088cc]" />
+                  <Smartphone className="w-5 h-5 text-[#38bdf8]" />
                   <span className="font-bold text-white">Telegram</span>
                   <span className="ml-auto text-green-400 font-bold text-sm">+250 kr.</span>
                 </div>
@@ -433,7 +428,7 @@ const Hero = () => {
                   {' '}<span className="text-green-400 font-semibold">+250 kreditų</span>{' '}
                   papildomai. Priminimai, pirkinių sąrašai, postai — vienu balso pranešimu.
                 </p>
-                <div className="text-center py-2 bg-[#0088cc] group-hover:bg-[#0077b5] rounded-lg text-white text-sm font-medium transition-colors">
+                <div className="text-center py-2 bg-[#006699] group-hover:bg-[#005580] rounded-lg text-white text-sm font-medium transition-colors">
                   Pradėti su Telegram →
                 </div>
               </a>

@@ -175,7 +175,7 @@ const CookieConsent = () => {
                 <div className="flex flex-wrap gap-3">
                   <button
                     onClick={handleSaveSettings}
-                    className="px-4 py-2 sm:px-5 sm:py-2.5 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg text-sm transition-colors"
+                    className="px-4 py-2 sm:px-5 sm:py-2.5 bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-lg text-sm transition-colors"
                   >
                     Išsaugoti pasirinkimą
                   </button>
@@ -220,7 +220,7 @@ const CookieConsent = () => {
                   </button>
                   <button
                     onClick={handleAcceptAll}
-                    className="px-4 py-2 sm:px-5 sm:py-2.5 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg text-sm transition-colors"
+                    className="px-4 py-2 sm:px-5 sm:py-2.5 bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-lg text-sm transition-colors"
                   >
                     Priimti visus
                   </button>
