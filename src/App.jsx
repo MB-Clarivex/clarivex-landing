@@ -26,8 +26,8 @@ function lazyPage(loader) {
 }
 
 const pageModules = isServer
-  ? import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,AtsakiklisPage,ResourcesHubPage,SeoResourcePage}.jsx', { eager: true })
-  : import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,AtsakiklisPage,ResourcesHubPage,SeoResourcePage}.jsx');
+  ? import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,AtsakiklisPage,NaudojimoScenarijaiPage,ResourcesHubPage,SeoResourcePage}.jsx', { eager: true })
+  : import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,AtsakiklisPage,NaudojimoScenarijaiPage,ResourcesHubPage,SeoResourcePage}.jsx');
 
 function createPageComponent(modulePath) {
   const moduleOrLoader = pageModules[modulePath];
@@ -54,6 +54,7 @@ const HowItWorksPage = createPageComponent('./components/HowItWorksPage.jsx');
 const BenefitsPage = createPageComponent('./components/BenefitsPage.jsx');
 const TelegramPage = createPageComponent('./components/TelegramPage.jsx');
 const AtsakiklisPage = createPageComponent('./components/AtsakiklisPage.jsx');
+const NaudojimoScenarijaiPage = createPageComponent('./components/NaudojimoScenarijaiPage.jsx');
 const ResourcesHubPage = createPageComponent('./components/ResourcesHubPage.jsx');
 const SeoResourcePage = createPageComponent('./components/SeoResourcePage.jsx');
 
@@ -189,6 +190,7 @@ export const routeDefinitions = [
   { path: '/nauda', component: BenefitsPage },
   { path: '/telegram', component: TelegramPage },
   { path: '/atsakiklis', component: AtsakiklisPage },
+  { path: '/naudojimo-scenarijai', component: NaudojimoScenarijaiPage },
   { path: '/resursai', component: ResourcesHubPage },
   ...contentPages.map((page) => ({
     path: page.path,

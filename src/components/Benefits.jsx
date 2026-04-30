@@ -110,8 +110,15 @@ const Benefits = () => {
           <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed mb-4">
             Tu lieki strategijai ir klientams. Kasdienės užduotys kainuoja vos kelis eurus.
           </p>
-          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed mb-4">
             Sutaupytas laikas — tai pinigai. Pradėk su nemokamais kreditais ir pamatyk, kiek darbo Clarivex gali perimti per savaitę.
+          </p>
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
+            Konkretūs paveikslai pagal auditoriją —{' '}
+            <Link to="/naudojimo-scenarijai" className="text-blue-400 hover:text-blue-300 font-medium">
+              Clarivex AI naudojimo scenarijai
+            </Link>
+            .
           </p>
         </motion.div>
 
@@ -146,7 +153,7 @@ const Benefits = () => {
                 </div>
                 
                 {/* Content */}
-                <h2 className="text-lg font-bold text-white mb-2">{benefit.title}</h2>
+                <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{benefit.description}</p>
               </div>
             </motion.div>
@@ -196,11 +203,11 @@ const Benefits = () => {
           </div>
           <p className="text-center text-sm text-gray-500 mt-8">
             <Link to="/features" className="text-blue-400 hover:text-blue-300 font-medium">
-              Funkcijos
+              Clarivex AI funkcijos
             </Link>
-            {' · '}
+            {' — kaip tai įgyvendinama praktiškai. '}
             <Link to="/kainos" className="text-blue-400 hover:text-blue-300 font-medium">
-              Kainos
+              Clarivex AI kainos ir kreditų sistema
             </Link>
             {' · '}
             <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 font-medium">
@@ -209,6 +216,10 @@ const Benefits = () => {
             {' · '}
             <Link to="/telegram" className="text-blue-400 hover:text-blue-300 font-medium">
               Telegram
+            </Link>
+            {' · '}
+            <Link to="/naudojimo-scenarijai" className="text-blue-400 hover:text-blue-300 font-medium">
+              Naudojimo scenarijai
             </Link>
             .
           </p>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ChevronDown, ChevronUp, CreditCard, Bot, Shield, Zap, HelpCircle, MessageCircle } from 'lucide-react';
-import { siteConfig } from '@/content/seoPages';
+import { siteConfig, getPrimaryPageMeta } from '@/content/seoPages';
 
 const faqCategories = [
   {
@@ -198,6 +198,11 @@ const FAQ = () => {
   const [activeCategory, setActiveCategory] = useState('general');
   const canonicalUrl = `${siteConfig.url}/duk`;
   const socialImage = siteConfig.socialImage;
+  const fm = getPrimaryPageMeta('/duk');
+  const pageTitle = fm?.title ?? 'DUK – Clarivex AI';
+  const pageDescription =
+    fm?.description ??
+    'Atsakymai į dažniausius klausimus apie Clarivex AI, kreditus ir integracijas.';
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -226,11 +231,11 @@ const FAQ = () => {
   return (
     <>
       <Helmet>
-        <title>Clarivex DUK - atsakymai apie funkcijas, kainas ir saugumą</title>
-        <meta name="description" content="Raskite atsakymus į dažniausiai užduodamus klausimus apie Clarivex AI funkcijas, kainas, saugumą, Telegram ir pagalbą." />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Clarivex DUK - atsakymai apie funkcijas, kainas ir saugumą" />
-        <meta property="og:description" content="Raskite atsakymus į dažniausiai užduodamus klausimus apie Clarivex AI funkcijas, kainas, saugumą, Telegram ir pagalbą." />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -241,8 +246,8 @@ const FAQ = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Clarivex DUK - atsakymai apie funkcijas, kainas ir saugumą" />
-        <meta name="twitter:description" content="Raskite atsakymus į dažniausiai užduodamus klausimus apie Clarivex AI funkcijas, kainas, saugumą, Telegram ir pagalbą." />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>

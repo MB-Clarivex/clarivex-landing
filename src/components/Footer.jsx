@@ -113,6 +113,14 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link
+                  to="/naudojimo-scenarijai"
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                >
+                  Naudojimo scenarijai
+                </Link>
+              </li>
+              <li>
                 <a 
                   href="/#pakviesk" 
                   className="text-gray-400 hover:text-emerald-400 transition-colors text-sm"

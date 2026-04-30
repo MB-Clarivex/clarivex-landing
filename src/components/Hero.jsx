@@ -155,10 +155,10 @@ const Hero = () => {
             transition={{ duration: 0 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
           >
-            <span className="text-white">Pabuski su</span>
+            <span className="text-white">Clarivex AI – lietuviškas AI asistentas</span>
             <br />
             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              paruoštais darbais.
+              jūsų kasdienėms užduotims
             </span>
           </motion.h1>
 
@@ -168,7 +168,11 @@ const Hero = () => {
             transition={{ duration: 0 }}
             className="text-lg md:text-xl text-gray-300 max-w-xl mx-auto md:mx-0 leading-relaxed"
           >
-            Klientams jau atsakyta. Postai išeina pagal suplanuotą grafiką.
+            Automatizuokite el. paštą, socialinius tinklus ir priminimus lietuvių kalba.{' '}
+            <Link to="/kainos" className="text-blue-300 hover:text-white underline-offset-2 hover:underline">
+              Lanksti kreditų sistema
+            </Link>
+            {' — mokate tik už tai, ką naudojate.'}
           </motion.p>
           <ul className="text-base md:text-lg text-gray-300 max-w-xl mx-auto md:mx-0 list-disc pl-5 space-y-2 marker:text-blue-400">
             <li>Laiškų juodraščiai laukia su vienu paspaudimu „Siųsti“.</li>
@@ -340,8 +344,18 @@ const Hero = () => {
             </p>
             <p className="text-sm md:text-base text-gray-400 leading-relaxed">
               El. paštas, socialiniai tinklai ir pasikartojančios užduotys lietuvių kalba.{' '}
-              <span className="text-gray-300">Mokate tik už tai, ką iš tikrųjų naudojate</span>
-              {' '}(per kreditus).
+              <Link to="/telegram" className="text-blue-300 hover:text-white underline-offset-2 hover:underline">
+                Telegram AI botas
+              </Link>
+              ,{' '}
+              <Link to="/atsakiklis" className="text-blue-300 hover:text-white underline-offset-2 hover:underline">
+                AI atsakiklis DM
+              </Link>
+              {' ir '}
+              <Link to="/kaip-veikia" className="text-blue-300 hover:text-white underline-offset-2 hover:underline">
+                kaip veikia Clarivex AI
+              </Link>
+              {' — viena integracija.'}
             </p>
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 mb-2.5">
@@ -353,8 +367,10 @@ const Hero = () => {
                   { to: '/kaip-veikia', label: 'Kaip veikia integracija' },
                   { to: '/kainos', label: 'Kainos ir kreditai' },
                   { to: '/nauda', label: 'Nauda verslui' },
+                  { to: '/naudojimo-scenarijai', label: 'Naudojimo scenarijai' },
                   { to: '/telegram', label: 'Telegram botas' },
                   { to: '/atsakiklis', label: 'Atsakiklis (DM)' },
+                  { to: '/duk', label: 'DUK' },
                 ].map(({ to, label }) => (
                   <Link
                     key={to}

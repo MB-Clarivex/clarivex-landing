@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { siteConfig } from '@/content/seoPages';
+import { siteConfig, getPrimaryPageMeta } from '@/content/seoPages';
 import { 
   Calculator, 
   Zap, 
@@ -344,14 +344,17 @@ export default function PricingPage() {
   const [showAllModels, setShowAllModels] = useState(false);
   const canonicalUrl = `${siteConfig.url}/kainos`;
   const socialImage = siteConfig.socialImage;
+  const fm = getPrimaryPageMeta('/kainos');
+  const pageTitle = fm?.title ?? 'Clarivex AI kainos';
   const pageDescription =
-    'Clarivex AI kainos – lanksti kreditų sistema be mėnesinių planų. Mokate tik už panaudotus kreditus ir aiškiai matote, kiek kainuoja kiekviena užduotis.';
+    fm?.description ??
+    'Clarivex AI kainodara paremta kreditų sistema: mokate tik už naudojimą.';
   const pageSchema = {
     '@context': 'https://schema.org',
     '@graph': [
       {
         '@type': 'WebPage',
-        name: 'Clarivex AI kainos - lanksti kreditų sistema be plano',
+        name: pageTitle,
         url: canonicalUrl,
         description: pageDescription,
         inLanguage: 'lt-LT',
@@ -376,10 +379,10 @@ export default function PricingPage() {
   return (
     <>
       <Helmet>
-        <title>Clarivex AI kainos ir kreditų sistema — be mėnesinio plano</title>
+        <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Clarivex AI kainos ir kreditų sistema — be mėnesinio plano" />
+        <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
@@ -391,7 +394,7 @@ export default function PricingPage() {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Clarivex AI kainos ir kreditų sistema" />
+        <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
