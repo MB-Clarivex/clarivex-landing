@@ -47,49 +47,49 @@ export const clusterDefinitions = [
 export const existingPageMetadata = [
   {
     path: '/',
-    title: 'Paruošti darbai verslui — Clarivex AI ir kreditų sistema',
+    title: 'Clarivex AI – lietuvių kalba suprantanti AI platforma',
     description:
-      'Clarivex AI – lietuviškai suprantantis asistentas verslui ir kūrėjams. Automatizuokite tekstus, el. laiškus ir kasdienes užduotis su lanksčia kreditų sistema.',
+      'Clarivex AI – lietuvių kalbą suprantanti platforma, padedanti automatizuoti el. laiškus, socialinius tinklus ir kasdienes užduotis. Sutaupykite laiko ir dirbkite efektyviau.',
     priority: '1.0',
     changefreq: 'weekly',
   },
   {
     path: '/features',
-    title: 'Clarivex AI funkcijos verslui — el. paštas, social media, automatizavimas',
+    title: 'Clarivex AI funkcijos – automatizavimas ir integracijos',
     description:
-      'Clarivex AI funkcijos: balso komandos, el. pašto automatizavimas, social media kalendorius ir daugiau. Viena AI platforma kasdienei skaitmeninei komunikacijai.',
+      'Sužinokite, ką gali Clarivex AI: socialinių tinklų turinys, el. pašto automatizavimas, balso komandos ir integracijos. Visos funkcijos vienoje platformoje.',
     priority: '0.9',
     changefreq: 'weekly',
   },
   {
     path: '/kaip-veikia',
-    title: 'Kaip veikia Clarivex AI integracijos ir kreditų sistema',
+    title: 'Kaip veikia Clarivex AI – automatizavimo pavyzdžiai',
     description:
-      'Sužinokite, kaip veikia Clarivex AI: integracija, kreditų sistema, užklausų apdorojimas ir veikimo greitis. Aiškus žingsnis po žingsnio paaiškinimas.',
+      'Pažiūrėkite, kaip veikia Clarivex AI: nuo pirmųjų žingsnių iki pažangių automatizavimų. Praktiniai pavyzdžiai ir realūs naudojimo scenarijai.',
     priority: '0.9',
     changefreq: 'weekly',
   },
   {
     path: '/nauda',
-    title: 'Clarivex AI nauda verslui — laiko taupymas ir automatizavimas',
+    title: 'Clarivex AI nauda verslui – laiko taupymas ir efektyvumas',
     description:
-      'Clarivex AI padeda taupyti laiką ir automatizuoti komunikaciją lietuvių kalba. Atraskite pagrindines naudas verslui ir individualiems vartotojams.',
+      'Clarivex AI padeda verslui ir kūrėjams sutaupyti laiką, sumažinti rutiną ir kurti kokybišką turinį lietuvių kalba. Sužinokite pagrindinius privalumus.',
     priority: '0.8',
     changefreq: 'weekly',
   },
   {
     path: '/telegram',
-    title: 'Telegram AI botas — balsas, priminimai ir kreditai',
+    title: 'Clarivex Telegram AI botas – balso komandos ir priminimai',
     description:
-      'Clarivex Telegram AI botas – balso komandos, priminimai ir greiti atsakymai lietuvių kalba. Integruokite AI į savo kasdienį bendravimą per Telegram.',
+      'Clarivex Telegram AI botas leidžia naudoti balso komandas lietuvių kalba, kurti tekstus ir gauti priminimus tiesiai Telegram programėlėje.',
     priority: '0.8',
     changefreq: 'weekly',
   },
   {
     path: '/atsakiklis',
-    title: 'AI atsakiklis Messenger, Instagram DM ir komentarams — Clarivex',
+    title: 'Clarivex AI atsakiklis – išmanūs atsakymai su AI',
     description:
-      'Clarivex AI atsakiklis – išmanūs atsakymai Messenger ir Instagram DM: juodraščiai, taisyklės ir automatizavimas lietuvių kalba. Mažiau rutinos.',
+      'Clarivex AI atsakiklis ruošia juodraščius Messenger ir Instagram DM: taisyklės, grafikas ir mažiau rutinos. El. paštui — tos pačios Clarivex galimybės.',
     priority: '0.85',
     changefreq: 'weekly',
   },
@@ -144,6 +144,11 @@ export const existingPageMetadata = [
     changefreq: 'weekly',
   },
 ];
+
+/** Primary marketing routes only (subset of existingPageMetadata). */
+export function getPrimaryPageMeta(path) {
+  return existingPageMetadata.find((p) => p.path === path) ?? null;
+}
 
 export const contentPages = [
   {

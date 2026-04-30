@@ -3,17 +3,20 @@ import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AtsakiklisSection from '@/components/AtsakiklisSection';
-import { siteConfig } from '@/content/seoPages';
+import { siteConfig, getPrimaryPageMeta } from '@/content/seoPages';
 
 const AtsakiklisPage = () => {
   const canonicalUrl = `${siteConfig.url}/atsakiklis`;
   const socialImage = siteConfig.socialImage;
+  const fm = getPrimaryPageMeta('/atsakiklis');
+  const pageTitle = fm?.title ?? 'Clarivex AI atsakiklis';
   const pageDescription =
-    'Clarivex AI atsakiklis – išmanūs atsakymai Messenger ir Instagram DM: juodraščiai, taisyklės ir automatizavimas lietuvių kalba. Mažiau rutinos.';
+    fm?.description ??
+    'Clarivex AI atsakiklis ruošia juodraščius Messenger ir Instagram DM lietuvių kalba.';
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'AI atsakiklis Messenger, Instagram DM ir komentarams — Clarivex',
+    name: pageTitle,
     url: canonicalUrl,
     description: pageDescription,
     inLanguage: 'lt-LT',
@@ -23,13 +26,10 @@ const AtsakiklisPage = () => {
   return (
     <>
       <Helmet>
-        <title>AI atsakiklis Messenger, Instagram DM ir komentarams — Clarivex</title>
-        <meta
-          name="description"
-          content={pageDescription}
-        />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="AI atsakiklis Messenger, DM ir komentarams — Clarivex" />
+        <meta property="og:title" content={pageTitle} />
         <meta
           property="og:description"
           content={pageDescription}
@@ -41,7 +41,7 @@ const AtsakiklisPage = () => {
         <meta property="og:site_name" content="Clarivex" />
         <meta property="og:locale" content="lt_LT" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI atsakiklis Messenger, DM ir komentarams — Clarivex" />
+        <meta name="twitter:title" content={pageTitle} />
         <meta
           name="twitter:description"
           content={pageDescription}

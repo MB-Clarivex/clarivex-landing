@@ -14,7 +14,7 @@ import QuickLinks from '@/components/QuickLinks';
 import Footer from '@/components/Footer';
 import CookieConsent from '@/components/CookieConsent';
 import MetaPixel from '@/components/MetaPixel';
-import { contentPages, siteConfig } from '@/content/seoPages';
+import { contentPages, siteConfig, getPrimaryPageMeta } from '@/content/seoPages';
 import { Toaster } from '@/components/ui/toaster';
 
 const isServer = import.meta.env.SSR;
@@ -61,8 +61,12 @@ const SeoResourcePage = createPageComponent('./components/SeoResourcePage.jsx');
 function LandingPage() {
   const canonicalUrl = `${siteConfig.url}/`;
   const socialImage = siteConfig.socialImage;
+  const homeMeta = getPrimaryPageMeta('/');
+  const landingTitle =
+    homeMeta?.title ?? 'Clarivex AI – lietuvių kalba suprantanti AI platforma';
   const landingDescription =
-    'Clarivex AI – lietuviškai suprantantis asistentas verslui ir kūrėjams. Automatizuokite tekstus, el. laiškus ir kasdienes užduotis su lanksčia kreditų sistema.';
+    homeMeta?.description ??
+    'Clarivex AI – lietuvių kalbą suprantanti platforma, padedanti automatizuoti el. laiškus, socialinius tinklus ir kasdienes užduotis. Sutaupykite laiko ir dirbkite efektyviau.';
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -88,7 +92,7 @@ function LandingPage() {
       {
         "@type": "WebPage",
         "@id": `${siteConfig.url}/#webpage`,
-        "name": "Paruošti darbai verslui — Clarivex AI ir kreditų sistema",
+        "name": landingTitle,
         "url": `${siteConfig.url}/`,
         "description": landingDescription,
         "inLanguage": siteConfig.language,
@@ -126,13 +130,13 @@ function LandingPage() {
   return (
     <>
       <Helmet>
-        <title>Paruošti darbai verslui — Clarivex AI ir kreditų sistema</title>
+        <title>{landingTitle}</title>
         <meta 
           name="description" 
           content={landingDescription} 
         />
         <meta name="keywords" content="AI asistentas, dirbtinis intelektas, socialiniai tinklai, automatizavimas, Lietuva, lietuviškai, Instagram, Facebook, el. paštas" />
-        <meta property="og:title" content="Paruošti darbai verslui — Clarivex AI ir kreditų sistema" />
+        <meta property="og:title" content={landingTitle} />
         <meta property="og:description" content={landingDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
@@ -144,7 +148,7 @@ function LandingPage() {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Clarivex AI verslui — paruošti darbai ir kreditų sistema" />
+        <meta name="twitter:title" content={landingTitle} />
         <meta name="twitter:description" content={landingDescription} />
         <meta name="twitter:image" content={socialImage} />
         <link rel="canonical" href={canonicalUrl} />

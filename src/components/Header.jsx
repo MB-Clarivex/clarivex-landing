@@ -90,14 +90,14 @@ const Header = () => {
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <div className="relative">
-              <img 
-                src="/logo.svg" 
-                alt="Clarivex" 
+              <img
+                src="/logo.svg"
+                alt="Clarivex"
                 width="40"
                 height="40"
                 decoding="async"
-                fetchpriority="high"
-                loading="eager"
+                fetchpriority={isHomePage ? 'high' : undefined}
+                loading={isHomePage ? 'eager' : 'lazy'}
                 className="w-10 h-10 object-contain"
               />
             </div>

@@ -3,17 +3,20 @@ import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import TelegramSection from '@/components/TelegramSection';
-import { siteConfig } from '@/content/seoPages';
+import { siteConfig, getPrimaryPageMeta } from '@/content/seoPages';
 
 const TelegramPage = () => {
   const canonicalUrl = `${siteConfig.url}/telegram`;
   const socialImage = siteConfig.socialImage;
+  const fm = getPrimaryPageMeta('/telegram');
+  const pageTitle = fm?.title ?? 'Clarivex Telegram AI botas';
   const pageDescription =
-    'Clarivex Telegram AI botas – balso komandos, priminimai ir greiti atsakymai lietuvių kalba. Integruokite AI į savo kasdienį bendravimą per Telegram.';
+    fm?.description ??
+    'Clarivex Telegram AI botas leidžia naudoti balso komandas lietuvių kalba ir gauti priminimus Telegram.';
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Clarivex Telegram AI botas - balso komandos ir priminimai',
+    name: pageTitle,
     url: canonicalUrl,
     description: pageDescription,
     inLanguage: 'lt-LT',
@@ -23,13 +26,10 @@ const TelegramPage = () => {
   return (
     <>
       <Helmet>
-        <title>Telegram AI botas — balsas, priminimai ir kreditai</title>
-        <meta
-          name="description"
-          content={pageDescription}
-        />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Telegram AI botas — balsas, priminimai ir kreditai" />
+        <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
@@ -38,7 +38,7 @@ const TelegramPage = () => {
         <meta property="og:site_name" content="Clarivex" />
         <meta property="og:locale" content="lt_LT" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Telegram AI botas — Clarivex" />
+        <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>

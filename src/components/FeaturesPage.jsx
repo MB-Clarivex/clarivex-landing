@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { siteConfig } from '@/content/seoPages';
+import { siteConfig, getPrimaryPageMeta } from '@/content/seoPages';
 import { 
   MessageSquare, 
   Bot, 
@@ -508,12 +508,15 @@ const FeaturesPage = () => {
   const [activeCategory, setActiveCategory] = useState(null);
   const canonicalUrl = `${siteConfig.url}/features`;
   const socialImage = siteConfig.socialImage;
+  const fm = getPrimaryPageMeta('/features');
+  const pageTitle = fm?.title ?? 'Clarivex AI funkcijos';
   const pageDescription =
-    'Clarivex AI funkcijos: balso komandos, el. pašto automatizavimas, social media kalendorius ir daugiau. Viena AI platforma kasdienei skaitmeninei komunikacijai.';
+    fm?.description ??
+    'Sužinokite, ką gali Clarivex AI: socialinių tinklų turinys, el. pašto automatizavimas, balso komandos ir integracijos.';
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Clarivex AI funkcijos verslui — automatizavimas ir integracijos',
+    name: pageTitle,
     url: canonicalUrl,
     description: pageDescription,
     inLanguage: 'lt-LT',
@@ -527,13 +530,10 @@ const FeaturesPage = () => {
   return (
     <>
       <Helmet>
-        <title>Clarivex AI funkcijos verslui — el. paštas, social media, automatizavimas</title>
-        <meta 
-          name="description" 
-          content={pageDescription} 
-        />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Clarivex AI funkcijos verslui — el. paštas, social media, automatizavimas" />
+        <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
@@ -545,7 +545,7 @@ const FeaturesPage = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Clarivex AI funkcijos verslui — automatizavimas" />
+        <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
@@ -575,53 +575,47 @@ const FeaturesPage = () => {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                   <span className="text-white">Clarivex AI funkcijos</span>{' '}
                   <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
-                    ir integracijos
+                    jūsų kasdienei komunikacijai
                   </span>
                 </h1>
-                
-                <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-6">
-                  Vienoje vietoje rasite AI įrankius el. paštui, social media, Telegram, dokumentams
-                  ir kasdienėms užduotims, kurias reikia atlikti greičiau.
+
+                <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-4">
+                  Vienoje vietoje – AI įrankiai el. paštui, socialiniams tinklams, Telegram ir dokumentams.
                 </p>
-                <p className="text-base text-gray-500 max-w-3xl mx-auto mb-8 leading-relaxed">
-                  Visos funkcijos apmokamos per{' '}
+                <p className="text-base text-gray-500 max-w-xl mx-auto mb-4">
+                  Apmoka{' '}
                   <Link to="/kainos" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
-                    lanksčią Clarivex kreditų sistemą
+                    Clarivex kreditų sistema
                   </Link>
-                  {' — daugiau apie '}
-                  <Link to="/kainos" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
-                    Clarivex AI kainas
-                  </Link>
-                  . Integracijos ir veikimo schema — puslapyje{' '}
-                  <Link to="/kaip-veikia" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
-                    Kaip veikia Clarivex AI
-                  </Link>
-                  . Verslo vertė —{' '}
-                  <Link to="/nauda" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
-                    Clarivex AI nauda verslui
-                  </Link>
-                  . Balsui telefone —{' '}
-                  <Link to="/telegram" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
-                    Telegram AI botas lietuvių kalba
-                  </Link>
-                  ; žinutėms ir komentarams socialiniuose tinkluose —{' '}
-                  <Link to="/atsakiklis" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
-                    AI atsakiklis Messenger ir Instagram DM
-                  </Link>
-                  .
+                  . Kur eiti toliau:
                 </p>
-                <p className="text-sm text-gray-500 max-w-3xl mx-auto mb-10 leading-relaxed">
-                  Daugiau apie darbo eigą skaitykite puslapiuose{' '}
-                  <Link to="/kaip-veikia" className="text-violet-300 hover:text-white">Kaip veikia</Link>
-                  {' · '}
-                  <Link to="/nauda" className="text-violet-300 hover:text-white">Nauda</Link>
-                  {' · '}
-                  <Link to="/telegram" className="text-violet-300 hover:text-white">Telegram</Link>
-                  {' · '}
-                  <Link to="/atsakiklis" className="text-violet-300 hover:text-white">Atsakiklis</Link>
-                  {' · '}
-                  <Link to="/kainos" className="text-violet-300 hover:text-white">Kainos</Link>
-                </p>
+                <ul className="text-left max-w-md mx-auto mb-10 space-y-2 text-gray-400 text-base list-disc pl-5 marker:text-violet-500">
+                  <li>
+                    <Link to="/kainos" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
+                      Kainos ir kreditai
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/kaip-veikia" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
+                      Kaip veikia Clarivex AI
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/nauda" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
+                      Nauda verslui
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/telegram" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
+                      Telegram AI botas
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/atsakiklis" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
+                      AI atsakiklis Messenger ir Instagram DM
+                    </Link>
+                  </li>
+                </ul>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
                   <Button
@@ -786,15 +780,30 @@ const FeaturesPage = () => {
                           </div>
                         )}
 
-                        {/* Capabilities */}
-                        <ul className="space-y-1.5">
-                          {feature.capabilities.map((cap) => (
-                            <li key={cap} className="flex items-start gap-2 text-sm text-gray-300">
-                              <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
-                              {cap}
-                            </li>
-                          ))}
-                        </ul>
+                        {feature.capabilities.length > 5 ? (
+                          <details className="mt-1 rounded-lg border border-gray-700/40 bg-gray-900/20 p-3 open:bg-gray-900/30">
+                            <summary className="cursor-pointer text-sm font-medium text-violet-300 hover:text-violet-200 list-none [&::-webkit-details-marker]:hidden flex items-center gap-2">
+                              Visos galimybės ({feature.capabilities.length})
+                            </summary>
+                            <ul className="space-y-1.5 mt-3 pt-3 border-t border-gray-700/40">
+                              {feature.capabilities.map((cap) => (
+                                <li key={cap} className="flex items-start gap-2 text-sm text-gray-300">
+                                  <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                                  {cap}
+                                </li>
+                              ))}
+                            </ul>
+                          </details>
+                        ) : (
+                          <ul className="space-y-1.5">
+                            {feature.capabilities.map((cap) => (
+                              <li key={cap} className="flex items-start gap-2 text-sm text-gray-300">
+                                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                                {cap}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </motion.div>
                     ))}
                   </div>

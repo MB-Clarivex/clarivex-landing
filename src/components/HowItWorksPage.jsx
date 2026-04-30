@@ -3,17 +3,20 @@ import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HowItWorks from '@/components/HowItWorks';
-import { siteConfig } from '@/content/seoPages';
+import { siteConfig, getPrimaryPageMeta } from '@/content/seoPages';
 
 const HowItWorksPage = () => {
   const canonicalUrl = `${siteConfig.url}/kaip-veikia`;
   const socialImage = siteConfig.socialImage;
+  const fm = getPrimaryPageMeta('/kaip-veikia');
+  const pageTitle = fm?.title ?? 'Kaip veikia Clarivex AI';
   const pageDescription =
-    'Sužinokite, kaip veikia Clarivex AI: integracija, kreditų sistema, užklausų apdorojimas ir veikimo greitis. Aiškus žingsnis po žingsnio paaiškinimas.';
+    fm?.description ??
+    'Pažiūrėkite, kaip veikia Clarivex AI: nuo pirmųjų žingsnių iki pažangių automatizavimų.';
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Kaip veikia Clarivex AI integracijos ir kreditų sistema',
+    name: pageTitle,
     url: canonicalUrl,
     description: pageDescription,
     inLanguage: 'lt-LT',
@@ -23,13 +26,10 @@ const HowItWorksPage = () => {
   return (
     <>
       <Helmet>
-        <title>Kaip veikia Clarivex AI integracijos ir kreditų sistema</title>
-        <meta
-          name="description"
-          content={pageDescription}
-        />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Kaip veikia Clarivex AI integracijos ir kreditų sistema" />
+        <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
@@ -38,7 +38,7 @@ const HowItWorksPage = () => {
         <meta property="og:site_name" content="Clarivex" />
         <meta property="og:locale" content="lt_LT" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kaip veikia Clarivex AI — integracijos ir kreditai" />
+        <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>

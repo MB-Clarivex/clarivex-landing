@@ -3,17 +3,20 @@ import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Benefits from '@/components/Benefits';
-import { siteConfig } from '@/content/seoPages';
+import { siteConfig, getPrimaryPageMeta } from '@/content/seoPages';
 
 const BenefitsPage = () => {
   const canonicalUrl = `${siteConfig.url}/nauda`;
   const socialImage = siteConfig.socialImage;
+  const fm = getPrimaryPageMeta('/nauda');
+  const pageTitle = fm?.title ?? 'Clarivex AI nauda verslui';
   const pageDescription =
-    'Clarivex AI padeda taupyti laiką ir automatizuoti komunikaciją lietuvių kalba. Atraskite pagrindines naudas verslui ir individualiems vartotojams.';
+    fm?.description ??
+    'Clarivex AI padeda verslui ir kūrėjams sutaupyti laiką ir sumažinti rutiną.';
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Clarivex AI nauda verslui — laiko taupymas ir automatizavimas',
+    name: pageTitle,
     url: canonicalUrl,
     description: pageDescription,
     inLanguage: 'lt-LT',
@@ -23,13 +26,10 @@ const BenefitsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Clarivex AI nauda verslui — laiko taupymas ir automatizavimas</title>
-        <meta
-          name="description"
-          content={pageDescription}
-        />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Clarivex AI nauda verslui — laiko taupymas ir automatizavimas" />
+        <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
@@ -38,7 +38,7 @@ const BenefitsPage = () => {
         <meta property="og:site_name" content="Clarivex" />
         <meta property="og:locale" content="lt_LT" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Clarivex AI nauda verslui — automatizavimas" />
+        <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
