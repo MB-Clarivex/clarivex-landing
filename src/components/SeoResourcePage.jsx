@@ -10,6 +10,8 @@ import {
   existingPageMetadata,
   resourceHubPath,
   siteConfig,
+  SCHEMA_IDS,
+  buildCreditStarterOffer,
 } from '@/content/seoPages';
 
 const linkMetadata = Object.fromEntries(
@@ -27,10 +29,10 @@ function buildStructuredData(page, cluster) {
 
   const graph = [
     {
-      '@context': 'https://schema.org',
       '@type': 'Organization',
-      '@id': `${siteConfig.url}/#organization`,
-      name: siteConfig.name,
+      '@id': SCHEMA_IDS.organization,
+      name: siteConfig.schemaBrandName,
+      description: siteConfig.organizationDescription,
       url: siteConfig.url,
       logo: siteConfig.logo,
       sameAs: siteConfig.sameAs,
@@ -38,11 +40,11 @@ function buildStructuredData(page, cluster) {
     },
     {
       '@type': 'WebSite',
-      '@id': `${siteConfig.url}/#website`,
-      name: siteConfig.name,
+      '@id': SCHEMA_IDS.website,
+      name: siteConfig.schemaBrandName,
       url: siteConfig.url,
       inLanguage: siteConfig.language,
-      publisher: { '@id': `${siteConfig.url}/#organization` },
+      publisher: { '@id': SCHEMA_IDS.organization },
     },
     {
       '@type': 'BreadcrumbList',
@@ -80,7 +82,7 @@ function buildStructuredData(page, cluster) {
       url: canonicalUrl,
       description: page.description,
       inLanguage: siteConfig.language,
-      isPartOf: { '@id': `${siteConfig.url}/#website` },
+      isPartOf: { '@id': SCHEMA_IDS.website },
       about: cluster.label,
       breadcrumb: { '@type': 'BreadcrumbList' },
       primaryImageOfPage: siteConfig.socialImage,
@@ -91,17 +93,16 @@ function buildStructuredData(page, cluster) {
   if (page.type === 'solution') {
     graph.push({
       '@type': 'SoftwareApplication',
-      name: `${siteConfig.name} ${page.title}`,
+      '@id': `${canonicalUrl}#softwareapplication`,
+      name: `${siteConfig.schemaBrandName} ${page.title}`,
+      url: `${siteConfig.url}/`,
       applicationCategory: 'BusinessApplication',
       operatingSystem: 'Web',
-      offers: {
-        '@type': 'Offer',
-        url: `${siteConfig.url}/kainos`,
-        priceCurrency: 'EUR',
-        price: '1',
-        description: 'Clarivex naudoja kreditų sistemą nuo 1 €.',
-      },
+      description: siteConfig.softwareApplicationDescription,
+      inLanguage: siteConfig.language,
+      offers: buildCreditStarterOffer(`${siteConfig.url}/kainos`),
       featureList: page.highlights,
+      publisher: { '@id': SCHEMA_IDS.organization },
     });
   } else {
     graph.push({
@@ -113,10 +114,10 @@ function buildStructuredData(page, cluster) {
       inLanguage: siteConfig.language,
       author: {
         '@type': 'Organization',
-        name: siteConfig.name,
+        name: siteConfig.schemaBrandName,
       },
       publisher: {
-        '@id': `${siteConfig.url}/#organization`,
+        '@id': SCHEMA_IDS.organization,
       },
       mainEntityOfPage: {
         '@id': `${canonicalUrl}#webpage`,

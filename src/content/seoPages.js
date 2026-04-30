@@ -2,6 +2,8 @@ const LAST_UPDATED = '2026-03-19';
 
 export const siteConfig = {
   name: 'Clarivex',
+  /** Vienodas prekės ženklas JSON-LD / Organization schemoje */
+  schemaBrandName: 'Clarivex AI',
   url: 'https://www.clarivex.ai',
   language: 'lt-LT',
   socialImage: 'https://www.clarivex.ai/og.svg',
@@ -13,7 +15,36 @@ export const siteConfig = {
     'https://www.facebook.com/Clarivex/',
     'https://t.me/clarivex_support_bot',
   ],
+  organizationDescription:
+    'Clarivex AI – lietuvių kalbą suprantantis AI asistentas, padedantis automatizuoti el. paštą, socialinių tinklų turinį, priminimus ir kitas kasdienes užduotis su lankščia kreditų sistema.',
+  softwareApplicationDescription:
+    'Clarivex AI – lietuviškai suprantantis AI asistentas verslui ir individualiems vartotojams. Automatizuoja el. pašto atsakymus, socialinių tinklų įrašus, priminimus ir kitas kasdienes užduotis naudojant lankščią kreditų sistemą be fiksuoto mėnesinio plano.',
 };
+
+/** Tas pats @id visuose puslapiuose – paieškos sistemos sujungia į vieną objektą */
+export const SCHEMA_IDS = {
+  organization: `${siteConfig.url}/#organization`,
+  website: `${siteConfig.url}/#website`,
+  softwareApplication: `${siteConfig.url}/#softwareapplication`,
+};
+
+/** Minimali „nuo 1 € už 1000 kr“ pasiūlymo struktūra (sutampa su DUK / kainos puslapiu) */
+export function buildCreditStarterOffer(offerUrl) {
+  return {
+    '@type': 'Offer',
+    url: offerUrl,
+    priceCurrency: 'EUR',
+    price: '1.00',
+    availability: 'https://schema.org/InStock',
+    description: 'Mokate tik už kreditus: nuo 1 € už 1000 kreditų (detalės puslapyje).',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      priceCurrency: 'EUR',
+      price: '1.00',
+      unitText: '1000 kreditų',
+    },
+  };
+}
 
 export const resourceHubPath = '/resursai';
 

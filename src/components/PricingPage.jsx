@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { siteConfig } from '@/content/seoPages';
+import { siteConfig, SCHEMA_IDS, buildCreditStarterOffer } from '@/content/seoPages';
 import { 
   Calculator, 
   Zap, 
@@ -355,20 +355,27 @@ export default function PricingPage() {
         url: canonicalUrl,
         description: pageDescription,
         inLanguage: 'lt-LT',
-        isPartOf: { '@id': `${siteConfig.url}/#website` },
+        isPartOf: { '@id': SCHEMA_IDS.website },
       },
       {
         '@type': 'SoftwareApplication',
-        name: 'Clarivex',
+        '@id': SCHEMA_IDS.softwareApplication,
+        name: siteConfig.schemaBrandName,
+        url: `${siteConfig.url}/`,
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
-        offers: {
-          '@type': 'Offer',
-          priceCurrency: 'EUR',
-          price: '1',
-          url: canonicalUrl,
-          description: 'Clarivex kreditų sistema prasideda nuo 1 €.',
-        },
+        description: siteConfig.softwareApplicationDescription,
+        inLanguage: siteConfig.language,
+        offers: buildCreditStarterOffer(canonicalUrl),
+        featureList: [
+          'AI asistentas lietuvių kalba',
+          'Socialinių tinklų turinio kūrimas ir publikavimas',
+          'AI el. paštui ir atsakymams',
+          'Telegram AI botas',
+          'Balso komandos ir priminimai',
+        ],
+        publisher: { '@id': SCHEMA_IDS.organization },
+        provider: { '@id': SCHEMA_IDS.organization },
       },
     ],
   };

@@ -9,6 +9,7 @@ import {
   contentPages,
   resourceHubPath,
   siteConfig,
+  SCHEMA_IDS,
 } from '@/content/seoPages';
 
 const clusterCounts = Object.fromEntries(
@@ -32,8 +33,9 @@ const ResourcesHubPage = () => {
     '@graph': [
       {
         '@type': 'Organization',
-        '@id': `${siteConfig.url}/#organization`,
-        name: siteConfig.name,
+        '@id': SCHEMA_IDS.organization,
+        name: siteConfig.schemaBrandName,
+        description: siteConfig.organizationDescription,
         url: siteConfig.url,
         logo: siteConfig.logo,
         sameAs: siteConfig.sameAs,

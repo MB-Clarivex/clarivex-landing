@@ -14,7 +14,13 @@ import QuickLinks from '@/components/QuickLinks';
 import Footer from '@/components/Footer';
 import CookieConsent from '@/components/CookieConsent';
 import MetaPixel from '@/components/MetaPixel';
-import { contentPages, siteConfig, getPrimaryPageMeta } from '@/content/seoPages';
+import {
+  contentPages,
+  siteConfig,
+  getPrimaryPageMeta,
+  SCHEMA_IDS,
+  buildCreditStarterOffer,
+} from '@/content/seoPages';
 import { Toaster } from '@/components/ui/toaster';
 
 const isServer = import.meta.env.SSR;
@@ -72,21 +78,22 @@ function LandingPage() {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": `${siteConfig.url}/#organization`,
-        "name": siteConfig.name,
+        "@id": SCHEMA_IDS.organization,
+        "name": siteConfig.schemaBrandName,
         "url": `${siteConfig.url}/`,
         "logo": siteConfig.logo,
+        "description": siteConfig.organizationDescription,
         "sameAs": siteConfig.sameAs,
         "email": siteConfig.supportEmail
       },
       {
         "@type": "WebSite",
-        "@id": `${siteConfig.url}/#website`,
-        "name": siteConfig.name,
+        "@id": SCHEMA_IDS.website,
+        "name": siteConfig.schemaBrandName,
         "url": `${siteConfig.url}/`,
         "inLanguage": siteConfig.language,
         "publisher": {
-          "@id": `${siteConfig.url}/#organization`
+          "@id": SCHEMA_IDS.organization
         }
       },
       {
@@ -97,22 +104,19 @@ function LandingPage() {
         "description": landingDescription,
         "inLanguage": siteConfig.language,
         "isPartOf": {
-          "@id": `${siteConfig.url}/#website`
+          "@id": SCHEMA_IDS.website
         }
       },
       {
         "@type": "SoftwareApplication",
-        "name": "Clarivex",
+        "@id": SCHEMA_IDS.softwareApplication,
+        "name": siteConfig.schemaBrandName,
+        "url": `${siteConfig.url}/`,
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
-        "description": "AI asistentų platforma lietuvių kalba socialiniams tinklams, el. paštui, Telegram, priminimams ir kasdieniam verslo automatizavimui.",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "EUR",
-          "price": "1",
-          "url": `${siteConfig.url}/kainos`,
-          "description": "Clarivex kreditų sistema prasideda nuo 1 €."
-        },
+        "description": siteConfig.softwareApplicationDescription,
+        "inLanguage": siteConfig.language,
+        "offers": buildCreditStarterOffer(`${siteConfig.url}/kainos`),
         "featureList": [
           "AI asistentas lietuvių kalba",
           "Socialinių tinklų turinio kūrimas ir publikavimas",
@@ -120,8 +124,11 @@ function LandingPage() {
           "Telegram AI botas",
           "Balso komandos ir priminimai"
         ],
+        "publisher": {
+          "@id": SCHEMA_IDS.organization
+        },
         "provider": {
-          "@id": `${siteConfig.url}/#organization`
+          "@id": SCHEMA_IDS.organization
         }
       }
     ]
