@@ -104,7 +104,7 @@ export const existingPageMetadata = [
     path: '/nauda',
     title: 'Clarivex AI nauda: mažiau rutinos, daugiau laiko',
     description:
-      'Greitesni atsakymai, turinys lietuvių kalba, mažiau šokinėjimo tarp įrankių. Sužinokite, kam Clarivex tinka verslui.',
+      'Greitesnė komunikacija ir mažiau rutinos: el. paštas, socialiniai tinklai lietuvių kalba vienoje Clarivex sistemoje. Sužinokite naudą smulkioms įmonėms.',
     priority: '0.8',
     changefreq: 'weekly',
   },
@@ -112,7 +112,7 @@ export const existingPageMetadata = [
     path: '/telegram',
     title: 'Clarivex Telegram botas – balsas ir priminimai',
     description:
-      'Valdykite AI telefone: balso komandos lietuviškai, užrašai, priminimai ir užduotys per Telegram. Greitas startas.',
+      'Telegram ir Clarivex: balso komandos lietuviškai, užrašai, priminimai ir trumpi tekstai telefone. Greitas būdas valdyti AI, kai esate kelyje ar užimtas darbas.',
     priority: '0.8',
     changefreq: 'weekly',
   },
@@ -120,7 +120,7 @@ export const existingPageMetadata = [
     path: '/atsakiklis',
     title: 'Clarivex atsakiklis: DM, Messenger, paštas',
     description:
-      'AI juodraščiai Messenger ir Instagram DM lietuviškai. El. paštą tvarkykite toje pačioje Clarivex darbo aplinkoje.',
+      'Messenger ir Instagram DM juodraščiai su Clarivex AI lietuvių kalba. El. paštą tvarkykite toje pačioje sistemoje — nuoseklus tonas ir mažiau rankinio rašymo.',
     priority: '0.85',
     changefreq: 'weekly',
   },
@@ -128,7 +128,7 @@ export const existingPageMetadata = [
     path: '/kainos',
     title: 'Clarivex AI kainos – kreditai be abonemento',
     description:
-      'Mokate tik už naudojimą: 1 € ≈ 1000 kreditų, jokių mėnesinių planų. Sužinokite tipinių veiksmų kainą ir kaip taupyti.',
+      'Clarivex kainos — kreditai be abonemento (apie 1 € už 1000 kr). Peržiūrėkite tipinių veiksmų sąnaudas ir patarimus, kaip mažinti išlaidas kasdienėje veikloje.',
     priority: '0.8',
     changefreq: 'weekly',
   },
@@ -144,7 +144,7 @@ export const existingPageMetadata = [
     path: '/statusas',
     title: 'Clarivex sistemos statusas',
     description:
-      'Platformos, AI, socialinių tinklų publikavimo, el. pašto ir Telegram būklė. Statusas informacinio pobūdžio.',
+      'Clarivex sistemos statusas: platforma, AI, socialinių tinklų publikavimas, el. paštas ir Telegram. Informacija orientacinė; incidentus praneškite palaikymui.',
     priority: '0.5',
     changefreq: 'daily',
   },
