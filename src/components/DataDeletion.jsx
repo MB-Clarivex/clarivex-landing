@@ -3,14 +3,15 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Trash2, Mail, CheckCircle, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { siteConfig } from '@/content/seoPages';
 
 const DataDeletion = () => {
   const [email, setEmail] = useState('');
   const [reason, setReason] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
-  const canonicalUrl = 'https://clarivex.ai/duomenu-istrynimas';
-  const socialImage = 'https://clarivex.ai/og.svg';
+  const canonicalUrl = `${siteConfig.url}/duomenu-istrynimas`;
+  const socialImage = siteConfig.socialImage;
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -18,7 +19,7 @@ const DataDeletion = () => {
     url: canonicalUrl,
     description: 'Pateikite prašymą ištrinti savo asmens duomenis iš Clarivex sistemos ir susipažinkite su ištrynimo eiga.',
     inLanguage: 'lt-LT',
-    isPartOf: { '@id': 'https://clarivex.ai/#website' },
+    isPartOf: { '@id': `${siteConfig.url}/#website` },
   };
 
   const handleSubmit = async (e) => {

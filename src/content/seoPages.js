@@ -2,10 +2,10 @@ const LAST_UPDATED = '2026-03-19';
 
 export const siteConfig = {
   name: 'Clarivex',
-  url: 'https://clarivex.ai',
+  url: 'https://www.clarivex.ai',
   language: 'lt-LT',
-  socialImage: 'https://clarivex.ai/og.svg',
-  logo: 'https://clarivex.ai/logo.svg',
+  socialImage: 'https://www.clarivex.ai/og.svg',
+  logo: 'https://www.clarivex.ai/logo.svg',
   supportEmail: 'info@clarivex.ai',
   appUrl: 'https://app.clarivex.ai/auth',
   sameAs: [
@@ -49,7 +49,7 @@ export const existingPageMetadata = [
     path: '/',
     title: 'Paruošti darbai verslui — Clarivex AI ir kreditų sistema',
     description:
-      'Klientams atsakyta, postai pagal grafiką, laiškai — vienas paspaudimas. AI asistentas verslui lietuvių kalba: integracijos, automatizavimas ir kreditų sistema.',
+      'Clarivex AI – lietuviškai suprantantis asistentas verslui ir kūrėjams. Automatizuokite tekstus, el. laiškus ir kasdienes užduotis su lanksčia kreditų sistema.',
     priority: '1.0',
     changefreq: 'weekly',
   },
@@ -57,7 +57,7 @@ export const existingPageMetadata = [
     path: '/features',
     title: 'Clarivex AI funkcijos verslui — el. paštas, social media, automatizavimas',
     description:
-      'Clarivex AI funkcijos: el. pašto ir socialinių tinklų automatizavimas, Telegram, dokumentai. Mokėjimas per kreditų sistemą.',
+      'Clarivex AI funkcijos: balso komandos, el. pašto automatizavimas, social media kalendorius ir daugiau. Viena AI platforma kasdienei skaitmeninei komunikacijai.',
     priority: '0.9',
     changefreq: 'weekly',
   },
@@ -65,7 +65,7 @@ export const existingPageMetadata = [
     path: '/kaip-veikia',
     title: 'Kaip veikia Clarivex AI integracijos ir kreditų sistema',
     description:
-      'Kaip veikia Clarivex AI integracija: kreditų sistema, el. paštas, socialiniai tinklai ir Telegram. Žingsniai nuo užklausos iki rezultato.',
+      'Sužinokite, kaip veikia Clarivex AI: integracija, kreditų sistema, užklausų apdorojimas ir veikimo greitis. Aiškus žingsnis po žingsnio paaiškinimas.',
     priority: '0.9',
     changefreq: 'weekly',
   },
@@ -73,7 +73,7 @@ export const existingPageMetadata = [
     path: '/nauda',
     title: 'Clarivex AI nauda verslui — laiko taupymas ir automatizavimas',
     description:
-      'Clarivex AI nauda verslui lietuvių kalba: mažiau rutinos, greitesnė komunikacija ir aiškūs workflow. Kam tinka ir kaip pradėti.',
+      'Clarivex AI padeda taupyti laiką ir automatizuoti komunikaciją lietuvių kalba. Atraskite pagrindines naudas verslui ir individualiems vartotojams.',
     priority: '0.8',
     changefreq: 'weekly',
   },
@@ -81,7 +81,7 @@ export const existingPageMetadata = [
     path: '/telegram',
     title: 'Telegram AI botas — balsas, priminimai ir kreditai',
     description:
-      'Clarivex Telegram botas: balso komandos lietuviškai, priminimai ir užduotys telefone. Ta pati kreditų sąskaita kaip naršyklėje.',
+      'Clarivex Telegram AI botas – balso komandos, priminimai ir greiti atsakymai lietuvių kalba. Integruokite AI į savo kasdienį bendravimą per Telegram.',
     priority: '0.8',
     changefreq: 'weekly',
   },
@@ -89,7 +89,7 @@ export const existingPageMetadata = [
     path: '/atsakiklis',
     title: 'AI atsakiklis Messenger, Instagram DM ir komentarams — Clarivex',
     description:
-      'Žinutės ir komentarai vienoje vietoje: skirtingos taisyklės DM ir komentarams, darbo grafikas, po jūsų atsakymo 4 val. be AI įsikišimo, nemokama pagalba pirmam paleidimui.',
+      'Clarivex AI atsakiklis – išmanūs atsakymai Messenger ir Instagram DM: juodraščiai, taisyklės ir automatizavimas lietuvių kalba. Mažiau rutinos.',
     priority: '0.85',
     changefreq: 'weekly',
   },
@@ -97,7 +97,7 @@ export const existingPageMetadata = [
     path: '/kainos',
     title: 'Clarivex AI kainos ir kreditų sistema — be mėnesinio plano',
     description:
-      'Clarivex AI kainos: skaidri kreditų sistema. Mokate tik už AI veiksmus — be privalomų mėnesinių planų.',
+      'Clarivex AI kainos – lanksti kreditų sistema be mėnesinių planų. Mokate tik už panaudotus kreditus ir aiškiai matote, kiek kainuoja kiekviena užduotis.',
     priority: '0.8',
     changefreq: 'weekly',
   },
@@ -907,10 +907,10 @@ export const contentPages = [
           'Jei minite Clarivex kataloge, straipsnyje ar socialiniuose tinkluose, naudinga nukreipti ne tik į pagrindinį puslapį, bet ir į teminius puslapius pagal konkretų use-case.',
         ],
         bullets: [
-          'Pagrindinis puslapis: https://clarivex.ai/',
-          'Resursų centras: https://clarivex.ai/resursai',
-          'Kainodara: https://clarivex.ai/kainos',
-          'Telegram: https://clarivex.ai/telegram',
+          `Pagrindinis puslapis: ${siteConfig.url}/`,
+          `Resursų centras: ${siteConfig.url}/resursai`,
+          `Kainodara: ${siteConfig.url}/kainos`,
+          `Telegram: ${siteConfig.url}/telegram`,
         ],
       },
     ],

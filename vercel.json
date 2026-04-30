@@ -2,8 +2,8 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.clarivex.ai" }],
-      "destination": "https://clarivex.ai/:path*",
+      "has": [{ "type": "host", "value": "clarivex.ai" }],
+      "destination": "https://www.clarivex.ai/:path*",
       "permanent": true
     }
   ],

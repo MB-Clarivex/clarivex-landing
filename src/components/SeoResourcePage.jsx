@@ -51,7 +51,7 @@ function buildStructuredData(page, cluster) {
           '@type': 'ListItem',
           position: 1,
           name: 'Pradžia',
-          item: siteConfig.url,
+          item: `${siteConfig.url}/`,
         },
         {
           '@type': 'ListItem',

@@ -11,18 +11,25 @@ const SeoContent = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Kaip Clarivex AI padeda verslui
             </h2>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-4">
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-3">
               Situacija: daug smulkių užduočių — el. paštas, įrašai, klientų žinutės.
             </p>
-            <p className="text-base text-gray-500 max-w-3xl mx-auto mb-4">
-              Sprendimas: AI pagalbininkas lietuvių kalba, kuris paruošia juodraščius, planą ir atsakymus.
+            <p className="text-base text-gray-500 max-w-3xl mx-auto mb-3">
+              Sprendimas: AI pagalbininkas lietuvių kalba paruošia juodraščius, planą ir atsakymus.
               Jūs renkatės toną ir patvirtinate veiksmą.
             </p>
+            <p className="text-base text-gray-500 max-w-3xl mx-auto mb-2">
+              Nauda Clarivex AI verslui:
+            </p>
+            <ul className="text-base text-gray-500 max-w-3xl mx-auto mb-4 list-disc pl-5 space-y-1 text-left">
+              <li>mažiau rankinio rašymo ir peržiūrų,</li>
+              <li>mažiau šokinėjimo tarp įrankių,</li>
+              <li>aiškesnė komunikacija komandoje ir su klientais.</li>
+            </ul>
             <p className="text-base text-gray-500 max-w-3xl mx-auto">
-              Nauda: mažiau rankinio rašymo ir šokinėjimo tarp įrankių.
-              {' '}
+              Plačiau apie{' '}
               <Link to="/nauda" className="text-blue-400 hover:text-blue-300">
-                Clarivex AI nauda verslui
+                Clarivex AI naudą verslui
               </Link>
               {' — praktiniai scenarijai ir pavyzdžiai.'}
             </p>

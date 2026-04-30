@@ -2,10 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import { siteConfig } from '@/content/seoPages';
 
 const PrivacyPolicy = () => {
-  const canonicalUrl = 'https://clarivex.ai/privatumas';
-  const socialImage = 'https://clarivex.ai/og.svg';
+  const canonicalUrl = `${siteConfig.url}/privatumas`;
+  const socialImage = siteConfig.socialImage;
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -13,7 +14,7 @@ const PrivacyPolicy = () => {
     url: canonicalUrl,
     description: 'Clarivex privatumo politika ir informacija apie tai, kaip tvarkomi naudotojų duomenys.',
     inLanguage: 'lt-LT',
-    isPartOf: { '@id': 'https://clarivex.ai/#website' },
+    isPartOf: { '@id': `${siteConfig.url}/#website` },
   };
 
   return (
@@ -80,7 +81,7 @@ const PrivacyPolicy = () => {
                 Jūsų asmens duomenų valdytojas yra:<br />
                 <strong className="text-white">MB „Clarivex"</strong><br />
                 El. paštas: <a href="mailto:info@clarivex.ai" className="text-blue-400 hover:text-blue-300">info@clarivex.ai</a><br />
-                Svetainė: <a href="https://clarivex.ai" className="text-blue-400 hover:text-blue-300">clarivex.ai</a>
+                Svetainė: <a href={siteConfig.url} className="text-blue-400 hover:text-blue-300">clarivex.ai</a>
               </p>
             </section>
 
@@ -271,7 +272,7 @@ const PrivacyPolicy = () => {
                   El. paštas: <a href="mailto:info@clarivex.ai" className="text-blue-400 hover:text-blue-300">info@clarivex.ai</a>
                 </p>
                 <p className="text-gray-300">
-                  Svetainė: <a href="https://clarivex.ai" className="text-blue-400 hover:text-blue-300">clarivex.ai</a>
+                  Svetainė: <a href={siteConfig.url} className="text-blue-400 hover:text-blue-300">clarivex.ai</a>
                 </p>
               </div>
               <p className="text-gray-300 leading-relaxed mt-4">

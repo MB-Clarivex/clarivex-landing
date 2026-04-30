@@ -2,10 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import { siteConfig } from '@/content/seoPages';
 
 const TermsOfService = () => {
-  const canonicalUrl = 'https://clarivex.ai/salygos';
-  const socialImage = 'https://clarivex.ai/og.svg';
+  const canonicalUrl = `${siteConfig.url}/salygos`;
+  const socialImage = siteConfig.socialImage;
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -13,7 +14,7 @@ const TermsOfService = () => {
     url: canonicalUrl,
     description: 'Clarivex naudojimosi sąlygos ir pagrindinės taisyklės, taikomos platformos paslaugoms.',
     inLanguage: 'lt-LT',
-    isPartOf: { '@id': 'https://clarivex.ai/#website' },
+    isPartOf: { '@id': `${siteConfig.url}/#website` },
   };
 
   return (
@@ -336,7 +337,7 @@ const TermsOfService = () => {
                   El. paštas: <a href="mailto:info@clarivex.ai" className="text-blue-400 hover:text-blue-300">info@clarivex.ai</a>
                 </p>
                 <p className="text-gray-300">
-                  Svetainė: <a href="https://clarivex.ai" className="text-blue-400 hover:text-blue-300">clarivex.ai</a>
+                  Svetainė: <a href={siteConfig.url} className="text-blue-400 hover:text-blue-300">clarivex.ai</a>
                 </p>
               </div>
             </section>

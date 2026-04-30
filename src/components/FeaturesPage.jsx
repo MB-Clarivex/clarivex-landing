@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { siteConfig } from '@/content/seoPages';
 import { 
   MessageSquare, 
   Bot, 
@@ -505,16 +506,18 @@ const STATS = [
 
 const FeaturesPage = () => {
   const [activeCategory, setActiveCategory] = useState(null);
-  const canonicalUrl = 'https://clarivex.ai/features';
-  const socialImage = 'https://clarivex.ai/og.svg';
+  const canonicalUrl = `${siteConfig.url}/features`;
+  const socialImage = siteConfig.socialImage;
+  const pageDescription =
+    'Clarivex AI funkcijos: balso komandos, el. pašto automatizavimas, social media kalendorius ir daugiau. Viena AI platforma kasdienei skaitmeninei komunikacijai.';
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Clarivex AI funkcijos verslui — automatizavimas ir integracijos',
     url: canonicalUrl,
-    description: 'Clarivex AI funkcijos: el. paštas, socialinių tinklų automatizavimas, Telegram, dokumentai ir kasdienės užduotys. Mokėjimas per kreditų sistemą.',
+    description: pageDescription,
     inLanguage: 'lt-LT',
-    isPartOf: { '@id': 'https://clarivex.ai/#website' },
+    isPartOf: { '@id': `${siteConfig.url}/#website` },
   };
 
   const handleLogin = () => {
@@ -527,11 +530,11 @@ const FeaturesPage = () => {
         <title>Clarivex AI funkcijos verslui — el. paštas, social media, automatizavimas</title>
         <meta 
           name="description" 
-          content="Clarivex AI funkcijos: el. pašto ir socialinių tinklų automatizavimas, Telegram, dokumentai ir AI įrankiai kasdieniam darbui. Mokėjimas per kreditų sistemą." 
+          content={pageDescription} 
         />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content="Clarivex AI funkcijos verslui — el. paštas, social media, automatizavimas" />
-        <meta property="og:description" content="Viena platforma: AI funkcijos el. paštui, Instagram ir Facebook, Telegram ir dokumentams. Lanksčiai — per Clarivex kreditų sistemą." />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -543,7 +546,7 @@ const FeaturesPage = () => {
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Clarivex AI funkcijos verslui — automatizavimas" />
-        <meta name="twitter:description" content="El. paštas, social media, Telegram ir dokumentai — AI funkcijos vienoje vietoje. Sužinokite kainas ir integracijas." />
+        <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>

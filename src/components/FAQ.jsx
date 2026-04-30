@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ChevronDown, ChevronUp, CreditCard, Bot, Shield, Zap, HelpCircle, MessageCircle } from 'lucide-react';
+import { siteConfig } from '@/content/seoPages';
 
 const faqCategories = [
   {
@@ -195,8 +196,8 @@ const FAQ = () => {
     'pricing-1': true,
   });
   const [activeCategory, setActiveCategory] = useState('general');
-  const canonicalUrl = 'https://clarivex.ai/duk';
-  const socialImage = 'https://clarivex.ai/og.svg';
+  const canonicalUrl = `${siteConfig.url}/duk`;
+  const socialImage = siteConfig.socialImage;
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

@@ -2,10 +2,12 @@
   RewriteEngine On
   RewriteBase /
 
-  # Use a single canonical host for SEO
-  RewriteCond %{HTTPS} !=on [OR]
-  RewriteCond %{HTTP_HOST} ^www\.clarivex\.ai$ [NC]
-  RewriteRule ^ https://clarivex.ai%{REQUEST_URI} [L,R=301]
+  # Vienas kanoninis host: https://www.clarivex.ai
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://www.clarivex.ai%{REQUEST_URI} [L,R=301]
+
+  RewriteCond %{HTTP_HOST} ^clarivex\.ai$ [NC]
+  RewriteRule ^ https://www.clarivex.ai%{REQUEST_URI} [L,R=301]
 
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d

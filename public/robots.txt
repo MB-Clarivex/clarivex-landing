@@ -16,4 +16,4 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-Sitemap: https://clarivex.ai/sitemap.xml
+Sitemap: https://www.clarivex.ai/sitemap.xml

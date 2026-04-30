@@ -336,9 +336,11 @@ const Hero = () => {
             className="max-w-3xl mx-auto md:mx-0 space-y-3"
           >
             <p className="text-sm md:text-base text-gray-400 leading-relaxed">
-              Rutina gali judėti ir be ekrano — Clarivex dirba fone. El. paštas, socialiniai tinklai ir
-              pasikartojančios užduotys lietuvių kalba;{' '}
-              <span className="text-gray-300">mokate tik už tai, ką iš tikrųjų naudojate</span>
+              Rutina gali judėti ir be ekrano — Clarivex dirba fone.
+            </p>
+            <p className="text-sm md:text-base text-gray-400 leading-relaxed">
+              El. paštas, socialiniai tinklai ir pasikartojančios užduotys lietuvių kalba.{' '}
+              <span className="text-gray-300">Mokate tik už tai, ką iš tikrųjų naudojate</span>
               {' '}(per kreditus).
             </p>
             <div>

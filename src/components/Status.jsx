@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, AlertCircle, XCircle, Activity, Globe, Bot, Mail, Calendar, Database } from 'lucide-react';
+import { siteConfig } from '@/content/seoPages';
 
 const services = [
   {
@@ -78,8 +79,8 @@ const recentIncidents = [
 
 const Status = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
-  const canonicalUrl = 'https://clarivex.ai/statusas';
-  const socialImage = 'https://clarivex.ai/og.svg';
+  const canonicalUrl = `${siteConfig.url}/statusas`;
+  const socialImage = siteConfig.socialImage;
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -87,7 +88,7 @@ const Status = () => {
     url: canonicalUrl,
     description: 'Patikrinkite Clarivex paslaugų būklę realiu laiku: platformos, AI, el. pašto, Telegram ir kitų integracijų veikimą.',
     inLanguage: 'lt-LT',
-    isPartOf: { '@id': 'https://clarivex.ai/#website' },
+    isPartOf: { '@id': `${siteConfig.url}/#website` },
   };
 
   useEffect(() => {

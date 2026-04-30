@@ -3,18 +3,21 @@ import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Benefits from '@/components/Benefits';
+import { siteConfig } from '@/content/seoPages';
 
 const BenefitsPage = () => {
-  const canonicalUrl = 'https://clarivex.ai/nauda';
-  const socialImage = 'https://clarivex.ai/og.svg';
+  const canonicalUrl = `${siteConfig.url}/nauda`;
+  const socialImage = siteConfig.socialImage;
+  const pageDescription =
+    'Clarivex AI padeda taupyti laiką ir automatizuoti komunikaciją lietuvių kalba. Atraskite pagrindines naudas verslui ir individualiems vartotojams.';
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Clarivex AI nauda verslui — laiko taupymas ir automatizavimas',
     url: canonicalUrl,
-    description: 'Nauda verslui lietuvių kalba: mažiau rutinos, greitesnė komunikacija, paruošti juodraščiai ir aiškūs kasdieniai workflow.',
+    description: pageDescription,
     inLanguage: 'lt-LT',
-    isPartOf: { '@id': 'https://clarivex.ai/#website' },
+    isPartOf: { '@id': `${siteConfig.url}/#website` },
   };
 
   return (
@@ -23,11 +26,11 @@ const BenefitsPage = () => {
         <title>Clarivex AI nauda verslui — laiko taupymas ir automatizavimas</title>
         <meta
           name="description"
-          content="Nauda verslui lietuvių kalba: mažiau rutinos, greitesnė komunikacija, paruošti juodraščiai. Sužinokite, kam tinka Clarivex."
+          content={pageDescription}
         />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content="Clarivex AI nauda verslui — laiko taupymas ir automatizavimas" />
-        <meta property="og:description" content="Mažiau rutinos ir daugiau rezultato: Clarivex sutrumpina kasdienę komunikaciją ir turinio darbus lietuvių kalba." />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:image" content={socialImage} />
@@ -36,7 +39,7 @@ const BenefitsPage = () => {
         <meta property="og:locale" content="lt_LT" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Clarivex AI nauda verslui — automatizavimas" />
-        <meta name="twitter:description" content="Laiko taupymas ir komunikacijos automatika: kam naudinga ir kokius darbus Clarivex perima už jus." />
+        <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>

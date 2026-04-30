@@ -61,6 +61,8 @@ const SeoResourcePage = createPageComponent('./components/SeoResourcePage.jsx');
 function LandingPage() {
   const canonicalUrl = `${siteConfig.url}/`;
   const socialImage = siteConfig.socialImage;
+  const landingDescription =
+    'Clarivex AI – lietuviškai suprantantis asistentas verslui ir kūrėjams. Automatizuokite tekstus, el. laiškus ir kasdienes užduotis su lanksčia kreditų sistema.';
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -88,7 +90,7 @@ function LandingPage() {
         "@id": `${siteConfig.url}/#webpage`,
         "name": "Paruošti darbai verslui — Clarivex AI ir kreditų sistema",
         "url": `${siteConfig.url}/`,
-        "description": "Klientams atsakyta, postai pagal grafiką, laiškai — vienas paspaudimas „Siųsti“. AI asistentas verslui lietuvių kalba su kreditų sistema ir integracijomis.",
+        "description": landingDescription,
         "inLanguage": siteConfig.language,
         "isPartOf": {
           "@id": `${siteConfig.url}/#website`
@@ -127,11 +129,11 @@ function LandingPage() {
         <title>Paruošti darbai verslui — Clarivex AI ir kreditų sistema</title>
         <meta 
           name="description" 
-          content="Klientams atsakyta, postai pagal grafiką, laiškai — vienas paspaudimas „Siųsti“. AI asistentas verslui lietuvių kalba: integracijos, automatizavimas ir mokėjimas tik už naudojimą." 
+          content={landingDescription} 
         />
         <meta name="keywords" content="AI asistentas, dirbtinis intelektas, socialiniai tinklai, automatizavimas, Lietuva, lietuviškai, Instagram, Facebook, el. paštas" />
         <meta property="og:title" content="Paruošti darbai verslui — Clarivex AI ir kreditų sistema" />
-        <meta property="og:description" content="AI asistentas verslui lietuvių kalba su kreditų sistema. El. paštas, social media, Telegram — foniniame režime, mokate tik už tai, ką naudojate." />
+        <meta property="og:description" content={landingDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -143,7 +145,7 @@ function LandingPage() {
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Clarivex AI verslui — paruošti darbai ir kreditų sistema" />
-        <meta name="twitter:description" content="Integracijos, automatizavimas ir kreditų sistema: klientų žinutės, postai ir laiškų juodraščiai lietuvių kalba." />
+        <meta name="twitter:description" content={landingDescription} />
         <meta name="twitter:image" content={socialImage} />
         <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>

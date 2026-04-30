@@ -3,18 +3,21 @@ import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HowItWorks from '@/components/HowItWorks';
+import { siteConfig } from '@/content/seoPages';
 
 const HowItWorksPage = () => {
-  const canonicalUrl = 'https://clarivex.ai/kaip-veikia';
-  const socialImage = 'https://clarivex.ai/og.svg';
+  const canonicalUrl = `${siteConfig.url}/kaip-veikia`;
+  const socialImage = siteConfig.socialImage;
+  const pageDescription =
+    'Sužinokite, kaip veikia Clarivex AI: integracija, kreditų sistema, užklausų apdorojimas ir veikimo greitis. Aiškus žingsnis po žingsnio paaiškinimas.';
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Kaip veikia Clarivex AI integracijos ir kreditų sistema',
     url: canonicalUrl,
-    description: 'Integracija ir kreditų sistema: nuo užklausos lietuvių kalba iki paruošto rezultato el. paštui, socialiniams tinklams ir Telegram.',
+    description: pageDescription,
     inLanguage: 'lt-LT',
-    isPartOf: { '@id': 'https://clarivex.ai/#website' },
+    isPartOf: { '@id': `${siteConfig.url}/#website` },
   };
 
   return (
@@ -23,11 +26,11 @@ const HowItWorksPage = () => {
         <title>Kaip veikia Clarivex AI integracijos ir kreditų sistema</title>
         <meta
           name="description"
-          content="Kaip veikia Clarivex AI integracija: kreditų sistema, el. paštas, socialiniai tinklai ir Telegram. Žingsniai nuo užklausos iki rezultato."
+          content={pageDescription}
         />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content="Kaip veikia Clarivex AI integracijos ir kreditų sistema" />
-        <meta property="og:description" content="Kreditų sistema, integracijos ir žingsniai nuo užklausos iki paruošto rezultato social media, el. paštui ir Telegram." />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:image" content={socialImage} />
@@ -36,7 +39,7 @@ const HowItWorksPage = () => {
         <meta property="og:locale" content="lt_LT" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Kaip veikia Clarivex AI — integracijos ir kreditai" />
-        <meta name="twitter:description" content="Kreditai, el. paštas, socialiniai tinklai ir Telegram: kaip Clarivex AI paverčia užklausą konkrečiu veiksmu." />
+        <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
