@@ -144,7 +144,7 @@ const TermsOfService = () => {
               <h3 className="text-xl font-medium text-white mt-6 mb-3">5.2. Mokėjimai</h3>
               <p className="text-gray-300 leading-relaxed">
                 Mokėjimai apdorojami per Stripe. Pirkdami kreditus, sutinkate su Stripe 
-                <a href="https://stripe.com/legal" className="text-blue-400 hover:text-blue-300 mx-1" target="_blank" rel="noopener noreferrer">
+                <a href="https://stripe.com/legal" className="text-blue-400 hover:text-blue-300 mx-1" target="_blank" rel="nofollow noopener noreferrer">
                   naudojimosi sąlygomis
                 </a>.
               </p>

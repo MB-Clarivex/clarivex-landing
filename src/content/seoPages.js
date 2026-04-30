@@ -47,8 +47,9 @@ export const clusterDefinitions = [
 export const existingPageMetadata = [
   {
     path: '/',
-    title: 'Clarivex — AI asistentas, kuris supranta lietuviškai',
-    description: 'AI asistentas lietuvių kalba socialiniams tinklams, el. paštui, priminimams ir kasdieniam automatizavimui.',
+    title: 'Pabuski su paruoštais darbais — Clarivex AI',
+    description:
+      'Klientams atsakyta, postai pagal grafiką, laiškai laukia vieno paspaudimo. AI foniniame režime lietuvių kalba — funkcijos, kainos ir Telegram.',
     priority: '1.0',
     changefreq: 'weekly',
   },
@@ -61,22 +62,25 @@ export const existingPageMetadata = [
   },
   {
     path: '/kaip-veikia',
-    title: 'Kaip veikia — Clarivex AI',
-    description: 'Kaip Clarivex paverčia užklausą veiksmu per kelias sekundes: nuo teksto ar balso iki paruošto rezultato.',
+    title: 'Kaip veikia Clarivex AI — kreditai ir integracijos',
+    description:
+      'Kaip Clarivex AI paverčia užklausą veiksmu: kreditų sistema, el. paštas, socialiniai tinklai ir Telegram. Aiškūs žingsniai nuo komandos iki rezultato.',
     priority: '0.9',
     changefreq: 'weekly',
   },
   {
     path: '/nauda',
-    title: 'Privalumai ir nauda — Clarivex AI',
-    description: 'Kodėl Clarivex padeda sutaupyti laiką ir automatizuoti pasikartojančius darbus versle.',
+    title: 'Nauda verslui — laikas ir automatika su Clarivex AI',
+    description:
+      'Mažiau rutinos: greitesnė komunikacija, paruošti juodraščiai ir aiškūs workflow lietuvių kalba. Kam naudingas Clarivex.',
     priority: '0.8',
     changefreq: 'weekly',
   },
   {
     path: '/telegram',
-    title: 'Telegram integracija — Clarivex AI',
-    description: 'Clarivex Telegram botas su balso komandomis, priminimais, užrašais ir AI pagalba telefone.',
+    title: 'Telegram AI botas — balsas, priminimai ir kreditai',
+    description:
+      'Clarivex Telegram botas: balso komandos lietuviškai, priminimai ir užduotys telefone. Ta pati kreditų sąskaita kaip naršyklėje.',
     priority: '0.8',
     changefreq: 'weekly',
   },

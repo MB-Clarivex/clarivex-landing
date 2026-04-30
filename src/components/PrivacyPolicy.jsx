@@ -170,7 +170,7 @@ const PrivacyPolicy = () => {
                   href="https://developers.google.com/terms/api-services-user-data-policy" 
                   className="text-blue-400 hover:text-blue-300" 
                   target="_blank" 
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer"
                 >
                   Google API Services User Data Policy
                 </a>, 
@@ -276,7 +276,7 @@ const PrivacyPolicy = () => {
               </div>
               <p className="text-gray-300 leading-relaxed mt-4">
                 Taip pat turite teisę pateikti skundą Valstybinei duomenų apsaugos inspekcijai 
-                (<a href="https://vdai.lrv.lt" className="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">vdai.lrv.lt</a>), 
+                (<a href="https://vdai.lrv.lt" className="text-blue-400 hover:text-blue-300" target="_blank" rel="nofollow noopener noreferrer">vdai.lrv.lt</a>), 
                 jei manote, kad jūsų duomenų apsaugos teisės buvo pažeistos.
               </p>
             </section>

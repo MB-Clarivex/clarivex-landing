@@ -20,14 +20,14 @@ const HowItWorksPage = () => {
   return (
     <>
       <Helmet>
-        <title>Kaip veikia Clarivex AI - integracija, kreditai ir veikimas</title>
+        <title>Kaip veikia Clarivex AI — kreditai ir integracijos</title>
         <meta
           name="description"
-          content="Sužinokite, kaip veikia Clarivex AI: nuo registracijos ir kreditų iki darbo su el. paštu, social media ir kitomis integracijomis."
+          content="Kaip Clarivex AI paverčia užklausą veiksmu: kreditų sistema, el. paštas, socialiniai tinklai ir Telegram. Aiškūs žingsniai nuo komandos iki rezultato."
         />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Kaip veikia Clarivex AI - integracija, kreditai ir veikimas" />
-        <meta property="og:description" content="Nuo registracijos ir kreditų iki paruošto rezultato social media, el. paštui ir kitoms kasdienėms užduotims." />
+        <meta property="og:title" content="Kaip veikia Clarivex AI — kreditai ir integracijos" />
+        <meta property="og:description" content="Kreditų sistema, integracijos ir žingsniai nuo užklausos iki paruošto rezultato social media, el. paštui ir Telegram." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:image" content={socialImage} />
@@ -35,8 +35,8 @@ const HowItWorksPage = () => {
         <meta property="og:site_name" content="Clarivex" />
         <meta property="og:locale" content="lt_LT" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kaip veikia Clarivex AI - integracija, kreditai ir veikimas" />
-        <meta name="twitter:description" content="Sužinokite, kaip Clarivex AI paverčia užklausą lietuvių kalba į konkretų veiksmą ar paruoštą rezultatą." />
+        <meta name="twitter:title" content="Kaip veikia Clarivex AI — kreditai ir integracijos" />
+        <meta name="twitter:description" content="Kreditai, el. paštas, socialiniai tinklai ir Telegram: kaip Clarivex AI paverčia užklausą konkrečiu veiksmu." />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>

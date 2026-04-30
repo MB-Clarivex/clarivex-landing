@@ -161,10 +161,25 @@ const AtsakiklisSection = () => {
             Clarivex AI padeda atsakyti į Messenger, Instagram DM ir komentarus po įrašais — greičiau,
             su juodraščiais, taisyklėmis ir automatizacija lietuvių kalba.
           </p>
-          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed mb-4">
             Kiekvienai paskyrai atskirai: kada AI atsakinėja, skirtingos taisyklės žinutėms ir komentarams,
             po jūsų atsakymo — 4 val. pertrauka automatikai tame pokalbyje. Pirmam paleidimui padedame
             nemokamai.
+          </p>
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
+            Susiję puslapiai:{' '}
+            <Link to="/features" className="text-blue-400 hover:text-blue-300">
+              funkcijos
+            </Link>
+            ,{' '}
+            <Link to="/kainos" className="text-blue-400 hover:text-blue-300">
+              kreditų sistema
+            </Link>
+            ,{' '}
+            <Link to="/nauda" className="text-blue-400 hover:text-blue-300">
+              nauda verslui
+            </Link>
+            .
           </p>
         </motion.div>
 

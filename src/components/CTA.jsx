@@ -163,7 +163,7 @@ const CTA = () => {
             <a 
               href="https://t.me/clarivex_support_bot" 
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-500/40 rounded-lg text-blue-300 hover:border-blue-400 hover:text-white transition-all"
             >
               <MessageCircle className="w-4 h-4" />

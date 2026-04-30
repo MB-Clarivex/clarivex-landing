@@ -588,6 +588,8 @@ const FeaturesPage = () => {
                   {' · '}
                   <Link to="/telegram" className="text-violet-300 hover:text-white">Telegram</Link>
                   {' · '}
+                  <Link to="/atsakiklis" className="text-violet-300 hover:text-white">Atsakiklis</Link>
+                  {' · '}
                   <Link to="/kainos" className="text-violet-300 hover:text-white">Kainos</Link>
                 </p>
 

@@ -101,16 +101,17 @@ const Benefits = () => {
             </span>
           </h1>
           
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-4">
             Tau — daugiau laiko, mažiau rutinos.
+          </p>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-6">
             Clarivex perima tai, ką šiandien darai ranka: postus, atsakymus, priminimus, paveikslėlius.
-            Tu lieki strategijai ir klientams, o visos tos kasdienės užduotys kainuoja vos kelis eurus.
+          </p>
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed mb-4">
+            Tu lieki strategijai ir klientams. Kasdienės užduotys kainuoja vos kelis eurus.
           </p>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
-            Sutaupytas laikas — tai tavo pinigai.
-            Nesvarbu, ar savo valandą vertini 10€, ar 50€ — 10 val. per savaitę virsta šimtais eurų.
-            Pradėk su nemokamais kreditais ir per pirmą savaitę pamatyk,
-            kiek darbo Clarivex gali perimti už tave.
+            Sutaupytas laikas — tai pinigai. Pradėk su nemokamais kreditais ir pamatyk, kiek darbo Clarivex gali perimti per savaitę.
           </p>
         </motion.div>
 
@@ -151,6 +152,67 @@ const Benefits = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-24"
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Nauda pagal auditoriją
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto text-sm">
+              Tas pats įrankis — skirtingas laimėjimas priklausomai nuo jūsų rolės.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="rounded-2xl border border-gray-700/50 bg-gray-800/30 p-6">
+              <h3 className="text-lg font-bold text-white mb-3">Verslui</h3>
+              <ul className="space-y-2 text-sm text-gray-300 list-disc pl-5">
+                <li>Mažiau laiko el. paštui ir socialiniams tinklams.</li>
+                <li>Greitesnis atsakymas klientams ir aiškesnė komunikacija.</li>
+                <li>Vienas įrankis vietoj kelių atskirų paslaugų.</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-gray-700/50 bg-gray-800/30 p-6">
+              <h3 className="text-lg font-bold text-white mb-3">Individualiems profesionalams</h3>
+              <ul className="space-y-2 text-sm text-gray-300 list-disc pl-5">
+                <li>Juodraščiai ir priminimai be „copy-paste“ maratono.</li>
+                <li>Telefone — balsu per Telegram, kai nėra prie kompiuterio.</li>
+                <li>Mokate tik už tai, ką tikrai paleidote.</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-gray-700/50 bg-gray-800/30 p-6">
+              <h3 className="text-lg font-bold text-white mb-3">Agentūroms ir kūrėjams</h3>
+              <ul className="space-y-2 text-sm text-gray-300 list-disc pl-5">
+                <li>Greitesnis turinio paruošimas keliems kanalams.</li>
+                <li>Lengviau išlaikyti vienodą toną ir terminologiją.</li>
+                <li>Mažiau rankinio darbo klientų projektuose.</li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-center text-sm text-gray-500 mt-8">
+            <Link to="/features" className="text-blue-400 hover:text-blue-300 font-medium">
+              Funkcijos
+            </Link>
+            {' · '}
+            <Link to="/kainos" className="text-blue-400 hover:text-blue-300 font-medium">
+              Kainos
+            </Link>
+            {' · '}
+            <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 font-medium">
+              Kaip veikia
+            </Link>
+            {' · '}
+            <Link to="/telegram" className="text-blue-400 hover:text-blue-300 font-medium">
+              Telegram
+            </Link>
+            .
+          </p>
+        </motion.div>
 
         {/* Tavo tipinė diena */}
         <motion.div
@@ -257,6 +319,7 @@ const Benefits = () => {
             </p>
             <a
               href="https://app.clarivex.ai/auth"
+              rel="nofollow noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-medium rounded-xl transition-all"
             >
               Išbandyti nemokamai

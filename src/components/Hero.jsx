@@ -168,17 +168,51 @@ const Hero = () => {
             transition={{ duration: 0 }}
             className="text-lg md:text-xl text-gray-300 max-w-xl mx-auto md:mx-0 leading-relaxed"
           >
-            Klientams jau atsakyta. Postai paskelbti pagal grafiką. Laiškai laukia su vienu
-            paspaudimu „Siųsti“. Tu nustoji rašyti nuo nulio — pradedi tik tikrinti.
+            Klientams jau atsakyta. Postai išeina pagal suplanuotą grafiką.
           </motion.p>
+          <ul className="text-base md:text-lg text-gray-300 max-w-xl mx-auto md:mx-0 list-disc pl-5 space-y-2 marker:text-blue-400">
+            <li>Laiškų juodraščiai laukia su vienu paspaudimu „Siųsti“.</li>
+            <li>Tu nustoji rašyti nuo nulio — tikrinimas užtrunka kelias minutes.</li>
+            <li>Fone veikia lietuvių kalba: užduotis padiktavai arba parašei.</li>
+          </ul>
           <motion.p
             initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 }}
             className="text-sm md:text-base text-gray-400 max-w-xl mx-auto md:mx-0 leading-relaxed"
           >
-            Tau nereikia būti prie kompiuterio, kad verslas suktųsi — Clarivex dirba foniniame
-            režime lietuvių kalba, o tu gali užsiimti tik tuo, kas svarbu. Moki tik už tai, ką naudoji.
+            <Link to="/features" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
+              Clarivex funkcijos ir integracijos
+            </Link>
+            {' '}jungia el. paštą, socialinius tinklus ir Telegram.
+            {' '}
+            <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
+              Kaip veikia Clarivex AI
+            </Link>
+            {' '}— nuo užklausos iki rezultato.
+            {' '}
+            <Link to="/kainos" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
+              Lanksti kreditų sistema
+            </Link>
+            {' '}be privalomų planų.
+            {' '}
+            <Link to="/telegram" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
+              Telegram AI botas
+            </Link>
+            {' '}telefone,{' '}
+            <Link to="/atsakiklis" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
+              AI atsakiklis DM ir komentarams
+            </Link>
+            {' '}— kai klientai rašo ne darbo metu.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 }}
+            className="text-sm text-gray-500 max-w-xl mx-auto md:mx-0 leading-relaxed"
+          >
+            Tau nereikia būti prie kompiuterio, kad rutina judėtų — Clarivex dirba foniniame režime.
+            Moki tik už tai, ką naudoji.
             {' '}
             <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
               Kaip veikia
@@ -260,7 +294,7 @@ const Hero = () => {
               <a
                 href="https://t.me/clarivex_notify_bot"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="group flex-1 bg-gray-800/50 hover:bg-gray-800/70 border-2 border-gray-700 hover:border-[#0088cc] rounded-2xl p-4 transition-all duration-300 text-left"
               >
                 <div className="flex items-center gap-2 mb-2">
@@ -290,6 +324,7 @@ const Hero = () => {
             <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm">
               <a
                 href="https://app.clarivex.ai/"
+                rel="nofollow noopener noreferrer"
                 className="text-blue-400 hover:text-blue-300 font-medium transition-colors flex items-center gap-1"
               >
                 Jau turite paskyrą? Prisijungti

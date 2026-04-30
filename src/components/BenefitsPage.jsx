@@ -20,14 +20,14 @@ const BenefitsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Clarivex AI nauda - laiko taupymas ir komunikacijos automatizavimas</title>
+        <title>Nauda verslui — laikas ir automatika su Clarivex AI</title>
         <meta
           name="description"
-          content="Clarivex AI padeda sutaupyti laiką, automatizuoti pasikartojančias užduotis ir išlaikyti nuoseklią komunikaciją lietuvių kalba."
+          content="Mažiau rutinos: greitesnė komunikacija, paruošti juodraščiai ir aiškūs workflow lietuvių kalba. Sužinokite, kam Clarivex naudingas verslui ir kūrėjams."
         />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Clarivex AI nauda - laiko taupymas ir komunikacijos automatizavimas" />
-        <meta property="og:description" content="Mažiau rutinos, greitesnė komunikacija ir aiškesni workflow su Clarivex AI." />
+        <meta property="og:title" content="Nauda verslui — laikas ir automatika su Clarivex AI" />
+        <meta property="og:description" content="Mažiau rutinos ir daugiau rezultato: Clarivex sutrumpina kasdienę komunikaciją ir turinio darbus lietuvių kalba." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:image" content={socialImage} />
@@ -35,8 +35,8 @@ const BenefitsPage = () => {
         <meta property="og:site_name" content="Clarivex" />
         <meta property="og:locale" content="lt_LT" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Clarivex AI nauda - laiko taupymas ir komunikacijos automatizavimas" />
-        <meta name="twitter:description" content="Mažiau rutinos ir daugiau rezultato: sužinokite, kaip Clarivex AI padeda verslui kasdienėse užduotyse." />
+        <meta name="twitter:title" content="Nauda verslui — Clarivex AI" />
+        <meta name="twitter:description" content="Laiko taupymas ir komunikacijos automatika: kam naudinga ir kokius darbus Clarivex perima už jus." />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>

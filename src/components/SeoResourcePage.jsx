@@ -279,6 +279,7 @@ const SeoResourcePage = ({ page }) => {
                     <div className="mt-5 space-y-3">
                       <a
                         href={siteConfig.appUrl}
+                        rel="nofollow noopener noreferrer"
                         className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-3 font-medium text-white transition-colors hover:bg-blue-500"
                       >
                         Pradėti nemokamai

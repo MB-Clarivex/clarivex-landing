@@ -92,15 +92,19 @@ const TelegramSection = () => {
             </span>
           </h1>
           
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-            Nori valdyti Clarivex balsu? Susiek Telegram ir naudok AI asistentą bet kur, bet kada —
-            tiesiai iš telefono.
-            Už susiejimą gauni <span className="text-[#0088cc] font-semibold">+250 kreditų</span>,
-            o užbaigęs profilį — iš viso iki
-            {' '}<span className="text-[#0088cc] font-semibold">1 000 kreditų</span> startui.
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-4">
+            Nori valdyti Clarivex balsu? Susiek Telegram ir naudok AI bet kur — tiesiai iš telefono.
+          </p>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-6">
+            Už susiejimą gauni <span className="text-[#0088cc] font-semibold">+250 kreditų</span>.
+            Užbaigęs profilį — iš viso iki{' '}
+            <span className="text-[#0088cc] font-semibold">1 000 kreditų</span> startui.
+          </p>
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed mb-4">
+            Diktuokite žinutes, kurkite pirkinių sąrašus balsu ir gaukite priminimus per Telegram.
           </p>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
-            Clarivex Telegram botas leidžia naudoti AI asistentą tiesiog iš mobilaus telefono. Diktuokite žinutes, kurkite pirkinių sąrašus balsu, gaukite priminimus ir valdykite savo Clarivex paskyrą — visa tai per pažįstamą Telegram programėlę. Idealu užimtiems žmonėms, kurie nori produktyvumo be papildomų programų.
+            Viskas per pažįstamą programėlę — be naujų dieginių. Puiku užimtiems žmonėms.
           </p>
         </motion.div>
 
@@ -335,6 +339,64 @@ const TelegramSection = () => {
               </div>
             </div>
           </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-12 max-w-4xl mx-auto space-y-12 border-t border-gray-800 pt-16 px-2"
+        >
+          <article>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Balso komandos lietuvių kalba
+            </h2>
+            <p className="text-gray-400 leading-relaxed mb-4">
+              Pasakykite natūraliai — sistema supranta kontekstą lietuviškai ir angliškai. Tinka trumpoms užduotims kelyje ir ilgesniems paaiškinimams biure.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-gray-300 text-sm">
+              <li>Pavyzdžiai: „Primink rytoj 9:00“, „Pridėk pieno į sąrašą“, „Turiu idėją postui“.</li>
+              <li>Tas pats veikia naršyklėje — Telegram tik patogesnis telefone.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Priminimai ir kasdienės užduotys
+            </h2>
+            <p className="text-gray-400 leading-relaxed mb-4">
+              Priminimai ateina laiku. Užrašai ir pirkinių sąrašai išlieka sinchronizuoti su jūsų Clarivex paskyra.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-gray-300 text-sm">
+              <li>Mažos užduotys užbaigiamos greičiau nei atidarius kelias programėles.</li>
+              <li>Idėjas vėliau galite paversti socialinio tinklo įrašu platformoje.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Kaip susieti Telegram su Clarivex kreditų sistema
+            </h2>
+            <p className="text-gray-400 leading-relaxed mb-4">
+              Telegram naudoja tą pačią kreditų sąskaitą kaip ir naršyklės aplikacija. Kiekviena AI užduotis telefone sunaudoja kreditus pagal tą pačią logiką.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-gray-300 text-sm">
+              <li>Papildymas vyksta per Clarivex — žr.{' '}
+                <Link to="/kainos" className="text-[#0088cc] hover:text-cyan-300">
+                  kainodara ir kreditai
+                </Link>
+                .
+              </li>
+              <li>Nauji vartotojai gauna startinių kreditų — užtenka keliasdešimčiai užduočių.</li>
+              <li>Platesnis veikimo aprašymas —{' '}
+                <Link to="/kaip-veikia" className="text-[#0088cc] hover:text-cyan-300">
+                  kaip veikia Clarivex AI
+                </Link>
+                .
+              </li>
+            </ul>
+          </article>
         </motion.div>
       </div>
     </section>

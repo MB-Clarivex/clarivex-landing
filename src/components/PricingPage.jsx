@@ -813,6 +813,7 @@ export default function PricingPage() {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a
                       href="https://app.clarivex.ai"
+                      rel="nofollow noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all"
                     >
                       Pradėti nemokamai

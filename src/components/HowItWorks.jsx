@@ -83,11 +83,14 @@ const HowItWorks = () => {
             </span>
           </h1>
           
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-            Jokių sudėtingų nustatymų. Jokio mokymosi. Tiesiog pasakyk ką nori — ir Clarivex tai padarys.
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-6">
+            Jokių sudėtingų nustatymų. Jokio mokymosi. Pasakyk ką nori — Clarivex tai padarys.
+          </p>
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed mb-4">
+            Clarivex yra AI asistentas lietuvių verslui. Jis padeda su Instagram ir Facebook turiniu, el. laiškais ir priminimais.
           </p>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
-            Clarivex yra AI asistentas, sukurtas lietuvių verslui. Nesvarbu ar kuriate Instagram postus, rašote el. laiškus ar planuojate turinį — platforma supranta lietuvišką kalbą ir atlieka užduotis per kelias sekundes. Tausodami laiką, galite susitelkti į strategiją ir klientų aptarnavimą.
+            Platforma supranta lietuvių kalbą ir paverčia užklausą veiksmu per kelias sekundes. Jūs susitelkiate į klientus ir augimą — rutiną paliekate AI.
           </p>
         </motion.div>
 
@@ -220,6 +223,97 @@ const HowItWorks = () => {
             </div>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-20 max-w-4xl mx-auto space-y-14 border-t border-gray-800/80 pt-16 px-2"
+        >
+          <article>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Kaip veikia Clarivex AI kreditų sistema?
+            </h2>
+            <p className="text-gray-400 leading-relaxed mb-4">
+              Kreditai yra vidinė valiuta AI veiksmams. Papildote sąskaitą eurais ir naudojate tik tada, kai platforma realiai atlieka darbą.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-gray-300">
+              <li>
+                <span className="font-semibold text-white">1 € = 1 000 kreditų</span>
+                {' '}
+                — aiškus santykis be paslėptų mokesčių.
+              </li>
+              <li>Kiekvienas veiksmas (pokalbis, juodraštis, vaizdas, integracija) sunaudoja skirtingą kiekį.</li>
+              <li>Nepanaudoti kreditai nesibaigia — galite kaupti ramiai.</li>
+              <li>Mėnesinio plano nėra: mokate už tai, ką iš tikrųjų paleidote.</li>
+            </ul>
+            <p className="mt-4 text-sm text-gray-500">
+              Daugiau skaičių ir pavyzdžių —{' '}
+              <Link to="/kainos" className="text-blue-400 hover:text-blue-300">
+                Clarivex kainos
+              </Link>
+              .
+            </p>
+          </article>
+
+          <article>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Integracijos: el. paštas, Telegram, socialiniai tinklai
+            </h2>
+            <p className="text-gray-400 leading-relaxed mb-4">
+              Clarivex sujungia kanalus, kuriais ir taip dirbate kasdien. Viena užklausa gali virsti keliais konkretiais veiksmais.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-gray-300">
+              <li>
+                <span className="font-semibold text-white">El. paštas:</span>
+                {' '}
+                juodraščiai ir taisyklės — išsiuntimą paprastai patvirtinate patys.
+              </li>
+              <li>
+                <span className="font-semibold text-white">Instagram ir Facebook:</span>
+                {' '}
+                postų planavimas ir publikavimas iš vienos vietos.
+              </li>
+              <li>
+                <span className="font-semibold text-white">Telegram:</span>
+                {' '}
+                priminimai, balsas ir greitos užduotys telefone.
+              </li>
+            </ul>
+            <p className="mt-4 text-sm text-gray-500">
+              Telegram scenarijai —{' '}
+              <Link to="/telegram" className="text-blue-400 hover:text-blue-300">
+                Telegram integracija
+              </Link>
+              . DM automatiką —{' '}
+              <Link to="/atsakiklis" className="text-blue-400 hover:text-blue-300">
+                Atsakiklis
+              </Link>
+              .
+            </p>
+          </article>
+
+          <article>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Veikimo greitis ir patikimumas
+            </h2>
+            <p className="text-gray-400 leading-relaxed mb-4">
+              Tipinė užklausa apdorojama per kelias sekundes. Stabilumas priklauso nuo AI tiekėjų ir integracijų.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-gray-300">
+              <li>Jei vienas modelis nepasiekiamas, sistema gali pereiti prie atsarginio varianto.</li>
+              <li>Sunkesni vaizdai užtrunka ilgiau nei trumpas teksto juodraštis.</li>
+              <li>
+                Esant incidentams, sekite{' '}
+                <Link to="/statusas" className="text-blue-400 hover:text-blue-300">
+                  sistemos statusą
+                </Link>
+                .
+              </li>
+            </ul>
+          </article>
+        </motion.div>
       </div>
     </section>
   );

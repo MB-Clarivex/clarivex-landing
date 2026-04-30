@@ -90,14 +90,19 @@ const SeoContent = () => {
               <li>Aiškūs veiksmai nuo užklausos iki publikavimo</li>
             </ul>
             <p className="mt-3">
-              Plačiau skaitykite puslapiuose{' '}
+              DM ir komentarų automatika —{' '}
+              <Link to="/atsakiklis" className="text-blue-400 hover:text-blue-300">
+                AI atsakiklis
+              </Link>
+              . Integracijos plačiau —{' '}
               <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">
                 Kaip veikia
               </Link>
               {' ir '}
               <Link to="/telegram" className="text-blue-400 hover:text-blue-300">
                 Telegram integracija
-              </Link>.
+              </Link>
+              .
             </p>
           </div>
         </div>
@@ -188,6 +193,7 @@ const SeoContent = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <a
               href="https://app.clarivex.ai/auth"
+              rel="nofollow noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all"
             >
               Išbandyti Clarivex
@@ -204,7 +210,7 @@ const SeoContent = () => {
             <li><Link to="/features" className="text-blue-400 hover:text-blue-300">Funkcijos ir galimybės</Link></li>
             <li><Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">Kaip veikia</Link></li>
             <li><Link to="/nauda" className="text-blue-400 hover:text-blue-300">Privalumai verslui</Link></li>
-            <li><Link to="/telegram" className="text-blue-400 hover:text-blue-300">Telegram integracija</Link></li>
+            <li><Link to="/atsakiklis" className="text-blue-400 hover:text-blue-300">AI atsakiklis (DM)</Link></li>
             <li><Link to="/kainos" className="text-blue-400 hover:text-blue-300">Kainodara</Link></li>
             <li><Link to="/resursai" className="text-blue-400 hover:text-blue-300">AI resursų centras</Link></li>
             <li><Link to="/duk" className="text-blue-400 hover:text-blue-300">DUK</Link></li>

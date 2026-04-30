@@ -52,7 +52,7 @@ const Footer = () => {
               <a 
                 href="https://www.instagram.com/clarivex_ai/" 
                 target="_blank" 
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400 hover:text-pink-400 hover:border-pink-400/50 transition-all"
               >
                 <Instagram className="w-5 h-5" />
@@ -60,7 +60,7 @@ const Footer = () => {
               <a 
                 href="https://www.facebook.com/Clarivex/" 
                 target="_blank" 
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400 hover:text-blue-400 hover:border-blue-400/50 transition-all"
               >
                 <Facebook className="w-5 h-5" />
@@ -123,6 +123,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="https://app.clarivex.ai/" 
+                  rel="nofollow noopener noreferrer"
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Prisijungti
@@ -163,7 +164,7 @@ const Footer = () => {
                 <a 
                   href="https://t.me/clarivex_support_bot" 
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer"
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Susisiekti
@@ -188,7 +189,7 @@ const Footer = () => {
                 <a 
                   href="https://t.me/clarivex_support_bot" 
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer"
                   className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
                 >
                   <div className="w-9 h-9 rounded-lg bg-gray-800 border border-gray-700 flex items-center justify-center group-hover:border-blue-500/50 transition-all">
