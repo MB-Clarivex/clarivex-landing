@@ -131,7 +131,7 @@ const Hero = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       </div>
       
-      <div className="container mx-auto max-w-7xl relative z-10 grid md:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto max-w-7xl relative z-10 grid md:grid-cols-2 gap-12 items-start">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 1, x: 0 }}
@@ -312,7 +312,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="relative hidden md:flex justify-center items-center"
+          className="relative hidden md:flex md:justify-center md:items-start md:self-start"
         >
           {enableInteractiveDemo && showDemo ? (
             <div className="relative w-full max-w-md">
