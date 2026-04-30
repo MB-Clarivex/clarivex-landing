@@ -12,7 +12,7 @@ const TelegramPage = () => {
   const pageTitle = fm?.title ?? 'Clarivex Telegram AI botas';
   const pageDescription =
     fm?.description ??
-    'Clarivex Telegram AI botas leidžia naudoti balso komandas lietuvių kalba ir gauti priminimus Telegram.';
+    'Clarivex Telegram AI botas: balso komandos lietuvių kalba, tekstai, priminimai ir užduotys programėlėje. Valdykite AI telefone — susiekite ir pradėkite.';
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',

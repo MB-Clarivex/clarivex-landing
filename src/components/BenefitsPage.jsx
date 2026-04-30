@@ -12,7 +12,7 @@ const BenefitsPage = () => {
   const pageTitle = fm?.title ?? 'Clarivex AI nauda verslui';
   const pageDescription =
     fm?.description ??
-    'Clarivex AI padeda verslui ir kūrėjams sutaupyti laiką ir sumažinti rutiną.';
+    'Clarivex AI nauda verslui: mažiau rutinos, greitesni atsakymai ir turinys lietuvių kalba. El. paštas ir socialiniai tinklai su kreditais. Sužinokite privalumus.';
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',

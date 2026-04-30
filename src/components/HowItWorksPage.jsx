@@ -12,7 +12,7 @@ const HowItWorksPage = () => {
   const pageTitle = fm?.title ?? 'Kaip veikia Clarivex AI';
   const pageDescription =
     fm?.description ??
-    'Pažiūrėkite, kaip veikia Clarivex AI: nuo pirmųjų žingsnių iki pažangių automatizavimų.';
+    'Kaip veikia Clarivex AI: kreditai, el. paštas, socialiniai tinklai ir Telegram vienoje vietoje. Žingsniai lietuvių kalba. Peržiūrėkite eigą ir išbandykite.';
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
