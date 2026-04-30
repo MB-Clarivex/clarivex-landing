@@ -91,8 +91,8 @@ Clarivex yra AI asistentų platforma lietuvių kalba, skirta darbo eigoms, o ne 
   - Padeda išlaikyti vienodesnį komunikacijos toną.
   - Naudinga, kai daug pasikartojančių klausimų lietuviškai.
 ## Brand ir reputacijos signalai
-- Clarivex partneriams ir žiniasklaidai – AI automatizavimas Lietuvoje (https://www.clarivex.ai/partneriams-ir-ziniasklaidai)
-  Description: Oficiali Clarivex informacija žiniasklaidai ir partneriams: AI platforma lietuvių kalba, socialinių tinklų ir el. pašto automatizavimas, lanksti kreditų sistema. Nuorodos ir temos interviu bei katalogams.
+- Clarivex partneriams ir žiniasklaidai (https://www.clarivex.ai/partneriams-ir-ziniasklaidai)
+  Description: Greita Clarivex brand informacija partneriams, katalogams, žiniasklaidai ir turinio kūrėjams: kaip apibūdinti produktą, į ką linkti ir kokias temas akcentuoti.
   - Clarivex yra AI asistentų platforma lietuvių kalba.
   - Pagrindinės temos: social media, el. paštas, Telegram, priminimai ir workflow.
   - Nuoseklus brand aprašymas padeda tiek SEO, tiek AI sistemoms.

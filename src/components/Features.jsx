@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Mic, 
@@ -162,32 +161,17 @@ const Features = () => {
           </motion.div>
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-white">Pagrindinės AI funkcijų grupės</span>
+            <span className="text-white">Viskas ko reikia,</span>
             <br />
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Clarivex vienoje vietoje
+              vienoje platformoje
             </span>
           </h2>
-
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-6">
-            Trumpai: ką galite automatizuoti su Clarivex AI ir{' '}
-            <Link to="/kainos" className="text-blue-400 hover:text-blue-300 underline-offset-2 hover:underline">
-              kreditų sistema
-            </Link>
-            .
+          
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            Nuo postų kūrimo iki el. pašto valdymo — Clarivex automatizuoja 
+            kasdienines užduotis, kad tu galėtum fokusuotis į tai, kas svarbu.
           </p>
-          <ul className="max-w-xl mx-auto text-left list-disc pl-5 space-y-2 text-gray-400 mb-6 marker:text-blue-400">
-            <li>El. pašto automatizavimas ir laiškų juodraščiai</li>
-            <li>Socialinių tinklų turinys ir kalendorius</li>
-            <li>Balso komandos ir Telegram integracija</li>
-            <li>Tekstų kūrimas ir vertimas lietuvių kalba</li>
-            <li>Paveikslėliai, dokumentai ir vidiniai užrašai</li>
-            <li>Pilnas sąrašas — puslapis{' '}
-              <Link to="/features" className="text-blue-400 hover:text-blue-300">
-                Clarivex AI funkcijos
-              </Link>
-            </li>
-          </ul>
         </motion.div>
 
         {/* Features Grid */}

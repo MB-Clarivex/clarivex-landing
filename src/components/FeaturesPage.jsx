@@ -575,7 +575,7 @@ const FeaturesPage = () => {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                   <span className="text-white">Clarivex AI funkcijos</span>{' '}
                   <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
-                    el. paštui, kanalams ir balsui
+                    jūsų kasdienei komunikacijai
                   </span>
                 </h1>
 
@@ -611,13 +611,8 @@ const FeaturesPage = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/naudojimo-scenarijai" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
-                      Naudojimo scenarijai verslui
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/duk" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
-                      DUK apie Clarivex AI
+                    <Link to="/atsakiklis" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
+                      AI atsakiklis Messenger ir Instagram DM
                     </Link>
                   </li>
                 </ul>
@@ -658,46 +653,6 @@ const FeaturesPage = () => {
                   ))}
                 </div>
               </motion.div>
-            </div>
-          </section>
-
-          <section
-            className="py-14 px-4 bg-gray-950 border-b border-gray-800/50"
-            aria-labelledby="features-groups-overview"
-          >
-            <div className="container mx-auto max-w-6xl">
-              <h2
-                id="features-groups-overview"
-                className="text-2xl md:text-3xl font-bold text-white text-center mb-4"
-              >
-                Pagrindinės AI funkcijų grupės
-              </h2>
-              <p className="text-gray-400 text-center max-w-2xl mx-auto mb-6 text-sm md:text-base leading-relaxed">
-                Apžvalga prieš detales žemiau: AI automatizavimas, integracijos ir{' '}
-                <Link to="/kainos" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
-                  kreditų sistema
-                </Link>
-                .
-              </p>
-              <ul className="max-w-2xl mx-auto grid sm:grid-cols-2 gap-x-8 gap-y-2 text-gray-300 text-sm list-disc pl-5 marker:text-violet-400">
-                <li>El. pašto automatizavimas</li>
-                <li>Socialinių kanalų turinys</li>
-                <li>Balso komandos ir Telegram</li>
-                <li>Tekstai ir vertimas lietuvių kalba</li>
-                <li>Integracijos ir darbo eigos</li>
-                <li>Saugumas ir kontrolė</li>
-              </ul>
-              <p className="text-center text-sm text-gray-500 mt-6">
-                Žinutėms socialiniuose tinkluose —{' '}
-                <Link to="/atsakiklis" className="text-violet-300 hover:text-white">
-                  Clarivex AI atsakiklis
-                </Link>
-                . Balsui —{' '}
-                <Link to="/telegram" className="text-violet-300 hover:text-white">
-                  Telegram AI botas
-                </Link>
-                .
-              </p>
             </div>
           </section>
 

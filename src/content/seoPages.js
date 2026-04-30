@@ -47,73 +47,64 @@ export const clusterDefinitions = [
 export const existingPageMetadata = [
   {
     path: '/',
-    title: 'Clarivex AI – lietuviškas AI asistentas su lanksčia kreditų sistema',
+    title: 'Clarivex AI – lietuvių kalba suprantanti AI platforma',
     description:
-      'Clarivex AI – patikimas lietuviškas AI asistentas verslui ir individualiems vartotojams. Automatizuokite el. paštą, tekstus ir kasdienes užduotis su lankščia kreditų sistema. Išbandykite Clarivex dabar.',
+      'Clarivex AI – lietuvių kalbą suprantanti platforma, padedanti automatizuoti el. laiškus, socialinius tinklus ir kasdienes užduotis. Sutaupykite laiko ir dirbkite efektyviau.',
     priority: '1.0',
     changefreq: 'weekly',
   },
   {
     path: '/features',
-    title: 'Clarivex AI funkcijos – el. paštas, socialiniai kanalai, balso komandos',
+    title: 'Clarivex AI funkcijos – automatizavimas ir integracijos',
     description:
-      'Sužinokite, ką gali Clarivex AI: el. pašto automatizavimas, socialinių kanalų valdymas, balso komandos ir integracijos. Atraskite, kaip AI technologijos didina jūsų efektyvumą.',
+      'Sužinokite, ką gali Clarivex AI: socialinių tinklų turinys, el. pašto automatizavimas, balso komandos ir integracijos. Visos funkcijos vienoje platformoje.',
     priority: '0.9',
     changefreq: 'weekly',
   },
   {
     path: '/kaip-veikia',
-    title: 'Kaip veikia Clarivex AI – integracija, kreditai ir veikimo principas',
+    title: 'Kaip veikia Clarivex AI – automatizavimo pavyzdžiai',
     description:
-      'Clarivex AI veikia paprastai: registruokitės, papildykite kreditus ir integruokite AI į savo kasdienius procesus. Sužinokite, kaip automatizuoti užduotis lietuvių kalba žingsnis po žingsnio.',
+      'Pažiūrėkite, kaip veikia Clarivex AI: nuo pirmųjų žingsnių iki pažangių automatizavimų. Praktiniai pavyzdžiai ir realūs naudojimo scenarijai.',
     priority: '0.9',
     changefreq: 'weekly',
   },
   {
     path: '/nauda',
-    title: 'Clarivex AI nauda – efektyvumas, automatizavimas ir laiko taupymas',
+    title: 'Clarivex AI nauda verslui – laiko taupymas ir efektyvumas',
     description:
-      'Clarivex AI padeda sutaupyti laiką ir padidinti efektyvumą: automatizuokite atsakymus, tekstus ir kasdienes užduotis lietuvių kalba. Peržiūrėkite pagrindines Clarivex naudas verslui ir individualiems vartotojams.',
+      'Clarivex AI padeda verslui ir kūrėjams sutaupyti laiką, sumažinti rutiną ir kurti kokybišką turinį lietuvių kalba. Sužinokite pagrindinius privalumus.',
     priority: '0.8',
     changefreq: 'weekly',
   },
   {
     path: '/telegram',
-    title: 'Clarivex Telegram AI botas – balso komandos ir priminimai lietuviškai',
+    title: 'Clarivex Telegram AI botas – balso komandos ir priminimai',
     description:
-      'Clarivex Telegram AI botas leidžia kurti tekstus, priminimus ir užduotis balsu lietuvių kalba. Sujunkite patogumą, veikimo greitį ir AI technologijas savo Telegram aplinkoje.',
+      'Clarivex Telegram AI botas leidžia naudoti balso komandas lietuvių kalba, kurti tekstus ir gauti priminimus tiesiai Telegram programėlėje.',
     priority: '0.8',
     changefreq: 'weekly',
   },
   {
     path: '/atsakiklis',
-    title: 'Clarivex AI atsakiklis – DM, Messenger ir el. pašto juodraščiai',
+    title: 'Clarivex AI atsakiklis – išmanūs atsakymai su AI',
     description:
-      'Clarivex AI ruošia juodraščius Messenger ir Instagram DM lietuvių kalba. El. paštui naudokite tuos pačius AI įrankius Clarivex platformoje: mažiau rutinos ir nuosekli komunikacija.',
+      'Clarivex AI atsakiklis ruošia juodraščius Messenger ir Instagram DM: taisyklės, grafikas ir mažiau rutinos. El. paštui — tos pačios Clarivex galimybės.',
     priority: '0.85',
     changefreq: 'weekly',
   },
   {
     path: '/kainos',
-    title: 'Clarivex AI kainos – lanksti kreditų sistema be abonemento',
+    title: 'Clarivex AI kainos ir kreditų sistema — be mėnesinio plano',
     description:
-      'Clarivex AI kainodara paremta lanksčia kreditų sistema: mokate tik už naudojimą, be mėnesinių planų. Sužinokite, kiek realiai kainuoja AI užduotys ir kaip optimizuoti sąnaudas.',
+      'Clarivex AI kainos – lanksti kreditų sistema be mėnesinių planų. Mokate tik už panaudotus kreditus ir aiškiai matote, kiek kainuoja kiekviena užduotis.',
     priority: '0.8',
     changefreq: 'weekly',
   },
   {
-    path: '/naudojimo-scenarijai',
-    title: 'Clarivex AI naudojimo scenarijai – verslas ir specialistai',
-    description:
-      'Tipiniai Clarivex AI naudojimo atvejai: mažos įmonės, agentūros ir freelanceriai. Automatizuokite el. paštą, socialinius tinklus ir balsą lietuvių kalba. Nuorodos į funkcijas ir kainodarą.',
-    priority: '0.75',
-    changefreq: 'weekly',
-  },
-  {
     path: '/duk',
-    title: 'DUK apie Clarivex AI – kreditai, lietuvių kalba ir saugumas',
-    description:
-      'Atsakymai į dažniausius klausimus apie Clarivex AI: kreditų sistema, lietuvių kalba, integracijos ir saugumas. Peržiūrėkite visą DUK ir pradėkite automatizuoti užduotis.',
+    title: 'DUK — Dažnai užduodami klausimai — Clarivex',
+    description: 'Dažniausiai užduodami klausimai apie Clarivex, jo funkcijas, kainodarą, saugumą ir naudojimą.',
     priority: '0.7',
     changefreq: 'weekly',
   },
@@ -887,9 +878,8 @@ export const contentPages = [
     path: '/partneriams-ir-ziniasklaidai',
     cluster: 'authority',
     type: 'authority',
-    title: 'Clarivex partneriams ir žiniasklaidai – AI automatizavimas Lietuvoje',
-    description:
-      'Oficiali Clarivex informacija žiniasklaidai ir partneriams: AI platforma lietuvių kalba, socialinių tinklų ir el. pašto automatizavimas, lanksti kreditų sistema. Nuorodos ir temos interviu bei katalogams.',
+    title: 'Clarivex partneriams ir žiniasklaidai',
+    description: 'Greita Clarivex brand informacija partneriams, katalogams, žiniasklaidai ir turinio kūrėjams: kaip apibūdinti produktą, į ką linkti ir kokias temas akcentuoti.',
     intro: 'Jei rašote apie Clarivex, dedate mus į AI įrankių katalogą, ruošiat interviu ar partnerystės puslapį, svarbu naudoti nuoseklų produkto aprašymą. Šis puslapis padeda greitai suprasti, ką Clarivex daro ir kokius signalus verta išlaikyti nuoseklius internete.',
     highlights: [
       'Clarivex yra AI asistentų platforma lietuvių kalba.',

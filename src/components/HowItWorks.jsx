@@ -95,19 +95,8 @@ const HowItWorks = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Steps — išcentruota */}
           <div className="space-y-10 max-w-xl mx-auto w-full">
-            <div className="text-center lg:text-left">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                AI automatizavimas žingsnis po žingsnio
-              </h2>
-              <p className="text-gray-500 text-sm leading-relaxed max-w-md mx-auto lg:mx-0">
-                Integracija su kanalais, kuriuos jau naudojate.{' '}
-                <Link to="/kainos" className="text-blue-400 hover:text-blue-300">
-                  Kreditų sistema
-                </Link>
-                {' '}— mokate tik už paleistas užduotis.
-              </p>
-            </div>
             {steps.map((step, index) => (
               <motion.div
                 key={index}
@@ -127,9 +116,9 @@ const HowItWorks = () => {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                <h2 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
                   {step.title}
-                </h3>
+                </h2>
                 <p className="text-gray-400 mb-3 text-sm leading-relaxed max-w-md">
                   {step.description}
                 </p>
@@ -151,11 +140,7 @@ const HowItWorks = () => {
           </div>
 
           {/* Demo Preview */}
-          <div className="relative">
-            <h2 className="text-xl md:text-2xl font-bold text-white mb-6 text-center lg:text-left">
-              Interaktyvus Clarivex AI pavyzdys
-            </h2>
-            <motion.div
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -233,13 +218,10 @@ const HowItWorks = () => {
                   <Link to="/features" className="text-blue-400 hover:text-blue-300">Visos funkcijos</Link>
                   {' · '}
                   <Link to="/nauda" className="text-blue-400 hover:text-blue-300">Nauda verslui</Link>
-                  {' · '}
-                  <Link to="/naudojimo-scenarijai" className="text-blue-400 hover:text-blue-300">Scenarijai</Link>
                 </p>
               </div>
             </div>
           </motion.div>
-          </div>
         </div>
 
         <motion.div
