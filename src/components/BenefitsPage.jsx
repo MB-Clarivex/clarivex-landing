@@ -10,9 +10,9 @@ const BenefitsPage = () => {
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Clarivex AI nauda - laiko taupymas ir automatizavimas',
+    name: 'Clarivex AI nauda verslui — laiko taupymas ir automatizavimas',
     url: canonicalUrl,
-    description: 'Sužinokite, kokią naudą Clarivex AI suteikia verslui: mažiau rutinos, greitesnė komunikacija ir aiškesnis kasdienis darbas.',
+    description: 'Nauda verslui lietuvių kalba: mažiau rutinos, greitesnė komunikacija, paruošti juodraščiai ir aiškūs kasdieniai workflow.',
     inLanguage: 'lt-LT',
     isPartOf: { '@id': 'https://clarivex.ai/#website' },
   };
@@ -20,13 +20,13 @@ const BenefitsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Nauda verslui — laikas ir automatika su Clarivex AI</title>
+        <title>Clarivex AI nauda verslui — laiko taupymas ir automatizavimas</title>
         <meta
           name="description"
-          content="Mažiau rutinos: greitesnė komunikacija, paruošti juodraščiai ir aiškūs workflow lietuvių kalba. Sužinokite, kam Clarivex naudingas verslui ir kūrėjams."
+          content="Nauda verslui lietuvių kalba: mažiau rutinos, greitesnė komunikacija, paruošti juodraščiai. Sužinokite, kam tinka Clarivex."
         />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Nauda verslui — laikas ir automatika su Clarivex AI" />
+        <meta property="og:title" content="Clarivex AI nauda verslui — laiko taupymas ir automatizavimas" />
         <meta property="og:description" content="Mažiau rutinos ir daugiau rezultato: Clarivex sutrumpina kasdienę komunikaciją ir turinio darbus lietuvių kalba." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
@@ -35,7 +35,7 @@ const BenefitsPage = () => {
         <meta property="og:site_name" content="Clarivex" />
         <meta property="og:locale" content="lt_LT" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Nauda verslui — Clarivex AI" />
+        <meta name="twitter:title" content="Clarivex AI nauda verslui — automatizavimas" />
         <meta name="twitter:description" content="Laiko taupymas ir komunikacijos automatika: kam naudinga ir kokius darbus Clarivex perima už jus." />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>

@@ -269,13 +269,22 @@ const Benefits = () => {
             </p>
           </div>
 
-          <p className="text-gray-400 text-sm mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-400 text-sm mb-6 max-w-3xl mx-auto leading-relaxed">
+            Šią naudą kuria konkrečios{' '}
+            <Link to="/features" className="text-blue-400 hover:text-blue-300 font-medium">
+              Clarivex AI funkcijos
+            </Link>
+            {' — el. paštas, socialinių tinklų kalendorius, Telegram ir daugiau. '}
+            <Link to="/kainos" className="text-blue-400 hover:text-blue-300 font-medium">
+              Mokėjimas tik už naudojimą
+            </Link>
+            {' per kreditų sistemą. '}
             Ieškote konkretesnių pavyzdžių?{' '}
-            <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 font-medium">Kaip veikia</Link>
+            <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 font-medium">Kaip veikia Clarivex AI</Link>
             ,{' '}
-            <Link to="/kainos" className="text-blue-400 hover:text-blue-300 font-medium">kainodara</Link>
+            <Link to="/telegram" className="text-blue-400 hover:text-blue-300 font-medium">Telegram AI botas</Link>
             {' ir '}
-            <Link to="/telegram" className="text-blue-400 hover:text-blue-300 font-medium">Telegram integracija</Link>
+            <Link to="/atsakiklis" className="text-blue-400 hover:text-blue-300 font-medium">AI atsakiklis DM</Link>
             .
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

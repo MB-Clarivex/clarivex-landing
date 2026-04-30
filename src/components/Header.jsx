@@ -77,6 +77,7 @@ const Header = () => {
                 height="40"
                 decoding="async"
                 fetchpriority="high"
+                loading="eager"
                 className="w-10 h-10 object-contain"
               />
             </div>

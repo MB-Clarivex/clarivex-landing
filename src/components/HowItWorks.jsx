@@ -255,6 +255,17 @@ const HowItWorks = () => {
               </Link>
               .
             </p>
+            <p className="mt-4 text-sm text-gray-500">
+              Pilną įrankių sąrašą rasite puslapyje{' '}
+              <Link to="/features" className="text-blue-400 hover:text-blue-300">
+                Clarivex AI funkcijos verslui
+              </Link>
+              . Kaip tai veikia rezultatuose —{' '}
+              <Link to="/nauda" className="text-blue-400 hover:text-blue-300">
+                Clarivex AI nauda verslui
+              </Link>
+              .
+            </p>
           </article>
 
           <article>

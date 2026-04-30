@@ -373,10 +373,10 @@ export default function PricingPage() {
   return (
     <>
       <Helmet>
-        <title>Clarivex AI kainos - lanksti kreditų sistema be plano</title>
-        <meta name="description" content="Clarivex AI kainos paremtos kreditų sistema be mėnesinių įsipareigojimų. Mokate tik už tai, ką realiai naudojate: AI žinutes, vaizdus ir el. paštą." />
+        <title>Clarivex AI kainos ir kreditų sistema — be mėnesinio plano</title>
+        <meta name="description" content="Clarivex AI kainos: skaidri kreditų sistema be mėnesinių planų. Mokate tik už AI veiksmus — žinutes, vaizdus, el. paštą ir integracijas." />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Clarivex AI kainos - lanksti kreditų sistema be plano" />
+        <meta property="og:title" content="Clarivex AI kainos ir kreditų sistema — be mėnesinio plano" />
         <meta property="og:description" content="Mokėkite tik už tai, ką naudojate: AI žinutes, vaizdus, el. paštą ir kitus Clarivex veiksmus be mėnesinio plano." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
@@ -388,7 +388,7 @@ export default function PricingPage() {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Clarivex AI kainos - lanksti kreditų sistema be plano" />
+        <meta name="twitter:title" content="Clarivex AI kainos ir kreditų sistema" />
         <meta name="twitter:description" content="Skaidri Clarivex kainodara be mėnesinio plano: mokėkite tik už realiai naudojamas AI funkcijas." />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>

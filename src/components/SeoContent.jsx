@@ -6,103 +6,98 @@ const SeoContent = () => {
     <section id="apie-clarivex" className="py-20 px-4 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950" />
       <div className="container mx-auto max-w-4xl relative z-10">
-        <div className="space-y-10 text-gray-300 leading-relaxed">
+        <div className="space-y-12 text-gray-300 leading-relaxed">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Clarivex AI - kas tai?
+              Kaip Clarivex AI padeda verslui
             </h2>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              Clarivex yra AI asistentas lietuvių kalba, skirtas verslui ir kūrėjams. Jis sujungia
-              el. paštą, social media, priminimus ir Telegram į vieną aiškią darbo eigą.
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-4">
+              Situacija: daug smulkių užduočių — el. paštas, įrašai, klientų žinutės.
+            </p>
+            <p className="text-base text-gray-500 max-w-3xl mx-auto mb-4">
+              Sprendimas: AI pagalbininkas lietuvių kalba, kuris paruošia juodraščius, planą ir atsakymus.
+              Jūs renkatės toną ir patvirtinate veiksmą.
+            </p>
+            <p className="text-base text-gray-500 max-w-3xl mx-auto">
+              Nauda: mažiau rankinio rašymo ir šokinėjimo tarp įrankių.
+              {' '}
+              <Link to="/nauda" className="text-blue-400 hover:text-blue-300">
+                Clarivex AI nauda verslui
+              </Link>
+              {' — praktiniai scenarijai ir pavyzdžiai.'}
             </p>
           </div>
 
           <div>
             <h2 className="text-2xl font-semibold text-white mb-3">Pagrindinės funkcijos</h2>
-            <p>
-              Sistema padeda atlikti pasikartojančius darbus greičiau. Vietoje kelių atskirų įrankių
-              gaunate vieną vietą kasdieniam turiniui, komunikacijai ir AI užduotims.
+            <p className="mb-3">
+              Viena vieta kasdieniam turiniui, komunikacijai ir AI užduotims — be atskirų prenumeratų už kiekvieną kanalą.
             </p>
-            <ul className="mt-4 space-y-2 list-disc pl-5">
+            <ul className="space-y-2 list-disc pl-5">
               <li>El. laiškų juodraščiai, atsakymai ir darbo taisyklės</li>
-              <li>Socialinių tinklų postų kūrimas, planavimas ir publikavimas</li>
+              <li>Socialinių tinklų įrašų kūrimas, planavimas ir publikavimas</li>
               <li>Priminimai, užrašai, idėjos ir balso komandos</li>
               <li>Paveikslėlių generavimas ir dokumentų analizė</li>
             </ul>
-            <p className="mt-3">
-              Visą funkcijų sąrašą rasite puslapyje{' '}
+            <p className="mt-4">
+              Peržiūrėkite visas{' '}
               <Link to="/features" className="text-blue-400 hover:text-blue-300">
-                Funkcijos
-              </Link>.
+                Clarivex AI funkcijas verslui
+              </Link>
+              {' — automatizuokite el. paštą, social media ir pasikartojančius darbus.'}
             </p>
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-white mb-3">Nauda verslui ir kūrėjams</h2>
-            <p>
-              Didžiausia vertė atsiranda tada, kai AI sutrumpina mažus darbus, kurie kartojasi kasdien.
-              Mažiau rankinio darbo, mažiau perrašinėjimo ir daugiau laiko svarbiems sprendimams.
+            <h2 className="text-2xl font-semibold text-white mb-3">Kreditų sistema ir kainodara</h2>
+            <p className="mb-3">
+              Nėra privalomo mėnesinio plano. Papildote kreditus, kai reikia — galite pradėti nuo nedidelio testo.
             </p>
-            <ul className="mt-4 space-y-2 list-disc pl-5">
-              <li>Greitesnė komunikacija su klientais ir komanda</li>
-              <li>Aiškesnis turinio planavimas be papildomo chaoso</li>
-              <li>Mažesnis poreikis šokinėti tarp kelių sistemų</li>
-              <li>Daugiau rezultato net su maža komanda</li>
-            </ul>
-            <p className="mt-3">
-              Praktinius panaudojimo atvejus aprašome puslapyje{' '}
-              <Link to="/nauda" className="text-blue-400 hover:text-blue-300">
-                Nauda verslui
-              </Link>.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-semibold text-white mb-3">Kaip veikia kreditų sistema</h2>
-            <p>
-              Clarivex neturi privalomo mėnesinio plano. Papildote kreditus tada, kai reikia, todėl
-              galite pradėti nuo mažo testo ir išmatuoti realią naudą.
-            </p>
-            <ul className="mt-4 space-y-2 list-disc pl-5">
+            <ul className="space-y-2 list-disc pl-5">
               <li>1 € = 1 000 kreditų</li>
               <li>Nauji vartotojai gauna kreditų startui</li>
               <li>Nepanaudoti kreditai nesibaigia</li>
               <li>Mokate tik už realiai atliktus AI veiksmus</li>
             </ul>
-            <p className="mt-3">
-              Detalesnį paaiškinimą rasite puslapyje{' '}
+            <p className="mt-4">
+              Peržiūrėkite{' '}
               <Link to="/kainos" className="text-blue-400 hover:text-blue-300">
-                Kainos ir kreditų sistema
-              </Link>.
+                Clarivex AI kainas
+              </Link>
+              {' ir '}
+              <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">
+                kaip veikia kreditų sistema
+              </Link>
+              {' platformoje — mokate tik už realų naudojimą.'}
             </p>
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold text-white mb-3">Integracijos ir darbo eiga</h2>
-            <p>
-              Clarivex supranta lietuvių kalbą ir padeda pereiti nuo komandos iki rezultato per kelias
-              sekundes. Galite dirbti naršyklėje arba telefone.
+            <h2 className="text-2xl font-semibold text-white mb-3">Integracijos ir diegimas</h2>
+            <p className="mb-3">
+              Clarivex supranta lietuvių kalbą ir padeda pereiti nuo komandos iki rezultato per kelias sekundes.
+              Dirbkite naršyklėje arba telefone.
             </p>
-            <ul className="mt-4 space-y-2 list-disc pl-5">
+            <ul className="space-y-2 list-disc pl-5">
               <li>Telegram balso komandos ir priminimai</li>
               <li>Social media integracijos su Instagram ir Facebook</li>
               <li>El. pašto darbo eiga vienoje vietoje</li>
               <li>Aiškūs veiksmai nuo užklausos iki publikavimo</li>
             </ul>
-            <p className="mt-3">
-              DM ir komentarų automatika —{' '}
-              <Link to="/atsakiklis" className="text-blue-400 hover:text-blue-300">
-                AI atsakiklis
-              </Link>
-              . Integracijos plačiau —{' '}
-              <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">
-                Kaip veikia
-              </Link>
-              {' ir '}
+            <p className="mt-4">
+              Išbandykite{' '}
               <Link to="/telegram" className="text-blue-400 hover:text-blue-300">
-                Telegram integracija
+                Telegram AI botą lietuvių kalba
               </Link>
-              .
+              {' (balsas, priminimai). DM ir komentarams — '}
+              <Link to="/atsakiklis" className="text-blue-400 hover:text-blue-300">
+                AI atsakiklis Messenger ir Instagram
+              </Link>
+              .{' '}
+              <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">
+                Kaip veikia Clarivex AI integracija
+              </Link>
+              {' — nuo registracijos iki pirmo rezultato.'}
             </p>
           </div>
         </div>
@@ -156,7 +151,7 @@ const SeoContent = () => {
         </div>
 
         <div className="mt-12">
-          <h3 className="text-2xl font-semibold text-white mb-4">Dažniausiai užduodami klausimai</h3>
+          <h2 className="text-2xl font-semibold text-white mb-3">Dažniausiai užduodami klausimai</h2>
           <div className="space-y-4 text-gray-300">
             <div>
               <p className="font-semibold text-white">Ar Clarivex veikia lietuviškai?</p>
@@ -207,7 +202,8 @@ const SeoContent = () => {
           </div>
           <h3 className="text-xl font-semibold text-white mb-4">Naudingos nuorodos</h3>
           <ul className="space-y-2 text-gray-300 max-w-md mx-auto text-left">
-            <li><Link to="/features" className="text-blue-400 hover:text-blue-300">Funkcijos ir galimybės</Link></li>
+            <li><Link to="/features" className="text-blue-400 hover:text-blue-300">Clarivex AI funkcijos verslui</Link></li>
+            <li><Link to="/telegram" className="text-blue-400 hover:text-blue-300">Telegram AI botas lietuvių kalba</Link></li>
             <li><Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">Kaip veikia</Link></li>
             <li><Link to="/nauda" className="text-blue-400 hover:text-blue-300">Privalumai verslui</Link></li>
             <li><Link to="/atsakiklis" className="text-blue-400 hover:text-blue-300">AI atsakiklis (DM)</Link></li>

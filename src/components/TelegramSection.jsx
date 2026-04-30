@@ -398,6 +398,27 @@ const TelegramSection = () => {
             </ul>
           </article>
         </motion.div>
+
+        <div className="mt-14 max-w-3xl mx-auto text-center text-sm text-gray-400 space-y-3 px-2">
+          <p>
+            Norėdami pradėti — peržiūrėkite{' '}
+            <Link to="/kainos" className="text-[#0088cc] hover:text-cyan-300 font-medium">
+              Clarivex AI kainas ir kreditų sistemą
+            </Link>
+            .
+          </p>
+          <p>
+            Tai viena iš{' '}
+            <Link to="/features" className="text-[#0088cc] hover:text-cyan-300 font-medium">
+              Clarivex AI funkcijų
+            </Link>
+            {' — visą sąrašą rasite funkcijų puslapyje. Techninė pusė — '}
+            <Link to="/kaip-veikia" className="text-[#0088cc] hover:text-cyan-300 font-medium">
+              kaip veikia Clarivex AI
+            </Link>
+            .
+          </p>
+        </div>
       </div>
     </section>
   );

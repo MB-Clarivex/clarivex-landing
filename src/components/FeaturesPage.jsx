@@ -510,9 +510,9 @@ const FeaturesPage = () => {
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Clarivex AI funkcijos ir integracijos',
+    name: 'Clarivex AI funkcijos verslui — automatizavimas ir integracijos',
     url: canonicalUrl,
-    description: 'Clarivex AI funkcijos: el. paštas, social media, Telegram, dokumentai ir kitos automatizavimo galimybės vienoje vietoje.',
+    description: 'Clarivex AI funkcijos: el. paštas, socialinių tinklų automatizavimas, Telegram, dokumentai ir kasdienės užduotys. Mokėjimas per kreditų sistemą.',
     inLanguage: 'lt-LT',
     isPartOf: { '@id': 'https://clarivex.ai/#website' },
   };
@@ -524,14 +524,14 @@ const FeaturesPage = () => {
   return (
     <>
       <Helmet>
-        <title>Clarivex AI funkcijos - el. paštas, social media, Telegram</title>
+        <title>Clarivex AI funkcijos verslui — el. paštas, social media, automatizavimas</title>
         <meta 
           name="description" 
-          content="Atraskite Clarivex AI funkcijas: el. pašto automatizavimą, social media planavimą, Telegram integraciją ir AI įrankius kasdieniam darbui." 
+          content="Clarivex AI funkcijos: el. pašto ir socialinių tinklų automatizavimas, Telegram, dokumentai ir AI įrankiai kasdieniam darbui. Mokėjimas per kreditų sistemą." 
         />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Clarivex AI funkcijos - el. paštas, social media, Telegram" />
-        <meta property="og:description" content="AI funkcijos socialiniams tinklams, el. paštui, Telegram ir kasdieniam darbo automatizavimui vienoje platformoje." />
+        <meta property="og:title" content="Clarivex AI funkcijos verslui — el. paštas, social media, automatizavimas" />
+        <meta property="og:description" content="Viena platforma: AI funkcijos el. paštui, Instagram ir Facebook, Telegram ir dokumentams. Lanksčiai — per Clarivex kreditų sistemą." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Clarivex" />
@@ -542,8 +542,8 @@ const FeaturesPage = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Clarivex AI funkcijos - el. paštas, social media, Telegram" />
-        <meta name="twitter:description" content="AI funkcijos socialiniams tinklams, el. paštui, Telegram ir kasdieniam darbo automatizavimui." />
+        <meta name="twitter:title" content="Clarivex AI funkcijos verslui — automatizavimas" />
+        <meta name="twitter:description" content="El. paštas, social media, Telegram ir dokumentai — AI funkcijos vienoje vietoje. Sužinokite kainas ir integracijas." />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
@@ -576,9 +576,36 @@ const FeaturesPage = () => {
                   </span>
                 </h1>
                 
-                <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
+                <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-6">
                   Vienoje vietoje rasite AI įrankius el. paštui, social media, Telegram, dokumentams
                   ir kasdienėms užduotims, kurias reikia atlikti greičiau.
+                </p>
+                <p className="text-base text-gray-500 max-w-3xl mx-auto mb-8 leading-relaxed">
+                  Visos funkcijos apmokamos per{' '}
+                  <Link to="/kainos" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
+                    lanksčią Clarivex kreditų sistemą
+                  </Link>
+                  {' — daugiau apie '}
+                  <Link to="/kainos" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
+                    Clarivex AI kainas
+                  </Link>
+                  . Integracijos ir veikimo schema — puslapyje{' '}
+                  <Link to="/kaip-veikia" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
+                    Kaip veikia Clarivex AI
+                  </Link>
+                  . Verslo vertė —{' '}
+                  <Link to="/nauda" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
+                    Clarivex AI nauda verslui
+                  </Link>
+                  . Balsui telefone —{' '}
+                  <Link to="/telegram" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
+                    Telegram AI botas lietuvių kalba
+                  </Link>
+                  ; žinutėms ir komentarams socialiniuose tinkluose —{' '}
+                  <Link to="/atsakiklis" className="text-violet-300 hover:text-white underline-offset-2 hover:underline">
+                    AI atsakiklis Messenger ir Instagram DM
+                  </Link>
+                  .
                 </p>
                 <p className="text-sm text-gray-500 max-w-3xl mx-auto mb-10 leading-relaxed">
                   Daugiau apie darbo eigą skaitykite puslapiuose{' '}

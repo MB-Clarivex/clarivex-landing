@@ -181,29 +181,40 @@ const Hero = () => {
             transition={{ duration: 0 }}
             className="text-sm md:text-base text-gray-400 max-w-xl mx-auto md:mx-0 leading-relaxed"
           >
+            Peržiūrėkite visas{' '}
             <Link to="/features" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
-              Clarivex funkcijos ir integracijos
+              Clarivex AI funkcijas verslui
             </Link>
-            {' '}jungia el. paštą, socialinius tinklus ir Telegram.
             {' '}
+            — automatizuokite el. paštą, social media ir pasikartojančias užduotis lietuvių kalba.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 }}
+            className="text-sm md:text-base text-gray-400 max-w-xl mx-auto md:mx-0 leading-relaxed"
+          >
+            Sužinokite,{' '}
             <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
-              Kaip veikia Clarivex AI
+              kaip veikia Clarivex AI integracija
             </Link>
-            {' '}— nuo užklausos iki rezultato.
-            {' '}
+            {' ir '}
             <Link to="/kainos" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
-              Lanksti kreditų sistema
+              Clarivex AI kainas bei lanksčią kreditų sistemą
             </Link>
-            {' '}be privalomų planų.
-            {' '}
+            .{' '}
+            <Link to="/nauda" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
+              Clarivex AI nauda verslui
+            </Link>
+            {' — mažiau rankinio darbo. '}
             <Link to="/telegram" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
-              Telegram AI botas
+              Telegram AI botas lietuvių kalba
             </Link>
-            {' '}telefone,{' '}
+            {' (balsas, priminimai). '}
             <Link to="/atsakiklis" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
-              AI atsakiklis DM ir komentarams
+              AI atsakiklis Messenger ir Instagram DM
             </Link>
-            {' '}— kai klientai rašo ne darbo metu.
+            {' — kai klientai rašo ne darbo metu.'}
           </motion.p>
           <motion.p
             initial={{ opacity: 1, y: 0 }}

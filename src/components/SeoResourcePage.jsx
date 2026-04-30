@@ -205,6 +205,24 @@ const SeoResourcePage = ({ page }) => {
                 {page.intro}
               </p>
 
+              {page.path === '/partneriams-ir-ziniasklaidai' ? (
+                <p className="mt-5 max-w-3xl text-base leading-relaxed text-gray-400">
+                  Daugiau apie{' '}
+                  <Link to="/nauda" className="text-blue-400 hover:text-blue-300">
+                    Clarivex AI naudą verslui
+                  </Link>
+                  {' ir '}
+                  <Link to="/features" className="text-blue-400 hover:text-blue-300">
+                    Clarivex AI funkcijas bei integracijas
+                  </Link>
+                  .{' '}
+                  <Link to="/kainos" className="text-blue-400 hover:text-blue-300">
+                    Kreditų sistema ir kainodara
+                  </Link>
+                  {' — skaidri ir be privalomų planų.'}
+                </p>
+              ) : null}
+
               <div className="mt-8 grid gap-4 md:grid-cols-3">
                 {page.highlights.map((item) => (
                   <div

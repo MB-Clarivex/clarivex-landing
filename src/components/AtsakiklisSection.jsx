@@ -167,13 +167,17 @@ const AtsakiklisSection = () => {
             nemokamai.
           </p>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
-            Susiję puslapiai:{' '}
+            El. laiškų juodraščius ir platesnę platformą —{' '}
             <Link to="/features" className="text-blue-400 hover:text-blue-300">
-              funkcijos
+              Clarivex AI funkcijos verslui
             </Link>
-            ,{' '}
+            ; techninę eigą —{' '}
+            <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">
+              kaip veikia Clarivex AI
+            </Link>
+            .{' '}
             <Link to="/kainos" className="text-blue-400 hover:text-blue-300">
-              kreditų sistema
+              Kainos ir kreditų sistema
             </Link>
             ,{' '}
             <Link to="/nauda" className="text-blue-400 hover:text-blue-300">

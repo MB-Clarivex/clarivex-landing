@@ -47,32 +47,33 @@ export const clusterDefinitions = [
 export const existingPageMetadata = [
   {
     path: '/',
-    title: 'Pabuski su paruoštais darbais — Clarivex AI',
+    title: 'Paruošti darbai verslui — Clarivex AI ir kreditų sistema',
     description:
-      'Klientams atsakyta, postai pagal grafiką, laiškai laukia vieno paspaudimo. AI foniniame režime lietuvių kalba — funkcijos, kainos ir Telegram.',
+      'Klientams atsakyta, postai pagal grafiką, laiškai — vienas paspaudimas. AI asistentas verslui lietuvių kalba: integracijos, automatizavimas ir kreditų sistema.',
     priority: '1.0',
     changefreq: 'weekly',
   },
   {
     path: '/features',
-    title: 'Galimybės — Clarivex AI Platforma',
-    description: 'Visos Clarivex galimybės: AI pokalbiai, socialinių tinklų valdymas, el. paštas, Telegram ir kiti įrankiai.',
+    title: 'Clarivex AI funkcijos verslui — el. paštas, social media, automatizavimas',
+    description:
+      'Clarivex AI funkcijos: el. pašto ir socialinių tinklų automatizavimas, Telegram, dokumentai. Mokėjimas per kreditų sistemą.',
     priority: '0.9',
     changefreq: 'weekly',
   },
   {
     path: '/kaip-veikia',
-    title: 'Kaip veikia Clarivex AI — kreditai ir integracijos',
+    title: 'Kaip veikia Clarivex AI integracijos ir kreditų sistema',
     description:
-      'Kaip Clarivex AI paverčia užklausą veiksmu: kreditų sistema, el. paštas, socialiniai tinklai ir Telegram. Aiškūs žingsniai nuo komandos iki rezultato.',
+      'Kaip veikia Clarivex AI integracija: kreditų sistema, el. paštas, socialiniai tinklai ir Telegram. Žingsniai nuo užklausos iki rezultato.',
     priority: '0.9',
     changefreq: 'weekly',
   },
   {
     path: '/nauda',
-    title: 'Nauda verslui — laikas ir automatika su Clarivex AI',
+    title: 'Clarivex AI nauda verslui — laiko taupymas ir automatizavimas',
     description:
-      'Mažiau rutinos: greitesnė komunikacija, paruošti juodraščiai ir aiškūs workflow lietuvių kalba. Kam naudingas Clarivex.',
+      'Clarivex AI nauda verslui lietuvių kalba: mažiau rutinos, greitesnė komunikacija ir aiškūs workflow. Kam tinka ir kaip pradėti.',
     priority: '0.8',
     changefreq: 'weekly',
   },
@@ -94,8 +95,9 @@ export const existingPageMetadata = [
   },
   {
     path: '/kainos',
-    title: 'Kainodara — Clarivex AI',
-    description: 'Skaidri Clarivex kainodara be mėnesinių planų: 1 € = 1000 kreditų ir mokate tik už naudojimą.',
+    title: 'Clarivex AI kainos ir kreditų sistema — be mėnesinio plano',
+    description:
+      'Clarivex AI kainos: skaidri kreditų sistema. Mokate tik už AI veiksmus — be privalomų mėnesinių planų.',
     priority: '0.8',
     changefreq: 'weekly',
   },

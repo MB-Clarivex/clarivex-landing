@@ -4,13 +4,13 @@ Clarivex yra AI asistentų platforma lietuvių kalba, skirta smulkiam verslui, k
 Pagrindinės temos: AI asistentas lietuviškai, socialinių tinklų valdymas, AI el. paštui, Telegram, balso komandos ir workflow automatizavimas.
 
 ## Core Pages
-- [Clarivex — AI asistentas, kuris supranta lietuviškai](/): AI asistentas lietuvių kalba socialiniams tinklams, el. paštui, priminimams ir kasdieniam automatizavimui.
-- [Galimybės — Clarivex AI Platforma](/features): Visos Clarivex galimybės: AI pokalbiai, socialinių tinklų valdymas, el. paštas, Telegram ir kiti įrankiai.
-- [Kaip veikia — Clarivex AI](/kaip-veikia): Kaip Clarivex paverčia užklausą veiksmu per kelias sekundes: nuo teksto ar balso iki paruošto rezultato.
-- [Privalumai ir nauda — Clarivex AI](/nauda): Kodėl Clarivex padeda sutaupyti laiką ir automatizuoti pasikartojančius darbus versle.
-- [Telegram integracija — Clarivex AI](/telegram): Clarivex Telegram botas su balso komandomis, priminimais, užrašais ir AI pagalba telefone.
+- [Paruošti darbai verslui — Clarivex AI ir kreditų sistema](/): Klientams atsakyta, postai pagal grafiką, laiškai — vienas paspaudimas. AI asistentas verslui lietuvių kalba: integracijos, automatizavimas ir kreditų sistema.
+- [Clarivex AI funkcijos verslui — el. paštas, social media, automatizavimas](/features): Clarivex AI funkcijos: el. pašto ir socialinių tinklų automatizavimas, Telegram, dokumentai. Mokėjimas per kreditų sistemą.
+- [Kaip veikia Clarivex AI integracijos ir kreditų sistema](/kaip-veikia): Kaip veikia Clarivex AI integracija: kreditų sistema, el. paštas, socialiniai tinklai ir Telegram. Žingsniai nuo užklausos iki rezultato.
+- [Clarivex AI nauda verslui — laiko taupymas ir automatizavimas](/nauda): Clarivex AI nauda verslui lietuvių kalba: mažiau rutinos, greitesnė komunikacija ir aiškūs workflow. Kam tinka ir kaip pradėti.
+- [Telegram AI botas — balsas, priminimai ir kreditai](/telegram): Clarivex Telegram botas: balso komandos lietuviškai, priminimai ir užduotys telefone. Ta pati kreditų sąskaita kaip naršyklėje.
 - [AI atsakiklis Messenger, Instagram DM ir komentarams — Clarivex](/atsakiklis): Žinutės ir komentarai vienoje vietoje: skirtingos taisyklės DM ir komentarams, darbo grafikas, po jūsų atsakymo 4 val. be AI įsikišimo, nemokama pagalba pirmam paleidimui.
-- [Kainodara — Clarivex AI](/kainos): Skaidri Clarivex kainodara be mėnesinių planų: 1 € = 1000 kreditų ir mokate tik už naudojimą.
+- [Clarivex AI kainos ir kreditų sistema — be mėnesinio plano](/kainos): Clarivex AI kainos: skaidri kreditų sistema. Mokate tik už AI veiksmus — be privalomų mėnesinių planų.
 - [DUK — Dažnai užduodami klausimai — Clarivex](/duk): Dažniausiai užduodami klausimai apie Clarivex, jo funkcijas, kainodarą, saugumą ir naudojimą.
 - [Sistemos statusas — Clarivex](/statusas): Realaus laiko Clarivex paslaugų būklė ir pagrindinių sistemų veikimo statusas.
 
