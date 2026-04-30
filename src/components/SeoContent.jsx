@@ -7,19 +7,27 @@ const SeoContent = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950" />
       <div className="container mx-auto max-w-4xl relative z-10">
         <div className="space-y-12 text-gray-300 leading-relaxed">
-          <div className="text-center">
+          <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Kam skirtas Clarivex AI?
+            </h2>
+            <p className="text-lg text-gray-400 mb-3">
+              Smulkiam verslui ir komandoms, kurioms nuolat kaupiasi el. paštas, socialinių tinklų įrašai ir klientų žinutės.
+            </p>
+            <p className="text-base text-gray-500 mb-6">
+              Clarivex sutrumpina kelią nuo idėjos iki paruošto juodraščio — lietuvių kalba, viename įrankyje.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Kaip Clarivex AI padeda verslui
             </h2>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-3">
-              Situacija: daug smulkių užduočių — el. paštas, įrašai, klientų žinutės.
-            </p>
             <p className="text-base text-gray-500 max-w-3xl mx-auto mb-3">
-              Sprendimas: AI pagalbininkas lietuvių kalba paruošia juodraščius, planą ir atsakymus.
-              Jūs renkatės toną ir patvirtinate veiksmą.
+              AI paruošia planą, tekstą ir atsakymų gaires. Jūs pasirenkate toną ir patvirtinate veiksmą.
             </p>
-            <p className="text-base text-gray-500 max-w-3xl mx-auto mb-2">
-              Nauda Clarivex AI verslui:
+            <p className="text-base text-gray-500 max-w-3xl mx-auto mb-2 font-medium text-gray-400">
+              Pagrindinė nauda:
             </p>
             <ul className="text-base text-gray-500 max-w-3xl mx-auto mb-4 list-disc pl-5 space-y-1 text-left">
               <li>mažiau rankinio rašymo ir peržiūrų,</li>
@@ -27,11 +35,11 @@ const SeoContent = () => {
               <li>aiškesnė komunikacija komandoje ir su klientais.</li>
             </ul>
             <p className="text-base text-gray-500 max-w-3xl mx-auto">
-              Plačiau apie{' '}
+              Plačiau —{' '}
               <Link to="/nauda" className="text-blue-400 hover:text-blue-300">
-                Clarivex AI naudą verslui
+                Clarivex AI nauda verslui
               </Link>
-              {' — praktiniai scenarijai ir pavyzdžiai.'}
+              {' (scenarijai ir pavyzdžiai).'}
             </p>
           </div>
 
@@ -159,32 +167,29 @@ const SeoContent = () => {
 
         <div className="mt-12">
           <h2 className="text-2xl font-semibold text-white mb-3">Dažniausiai užduodami klausimai</h2>
-          <div className="space-y-4 text-gray-300">
+          <div className="space-y-6 text-gray-300">
             <div>
-              <p className="font-semibold text-white">Ar Clarivex veikia lietuviškai?</p>
-              <p>
-                Taip, Clarivex puikiai supranta lietuvių kalbą ir gali vykdyti tiek tekstines,
-                tiek balso komandas.
+              <h3 className="text-lg font-semibold text-white mb-2">Ar Clarivex veikia lietuviškai?</h3>
+              <p className="text-sm md:text-base">
+                Taip — tekstui ir balso komandoms. Tinka kasdienėms užduotims ir komunikacijai su klientais.
               </p>
             </div>
             <div>
-              <p className="font-semibold text-white">Kaip veikia kreditų sistema?</p>
-              <p>
-                1€ = 1000 kreditų. Kreditai naudojami AI veiksmams, o nepanaudoti kreditai
-                niekada nesibaigia.
+              <h3 className="text-lg font-semibold text-white mb-2">Kaip veikia kreditų sistema?</h3>
+              <p className="text-sm md:text-base">
+                1 € ≈ 1 000 kreditų. Kreditai sunaudojami AI veiksmams; nepanaudoti nesibaigia pagal dabartinę politiką.
               </p>
             </div>
             <div>
-              <p className="font-semibold text-white">Ar reikia kortelės registracijai?</p>
-              <p>
-                Ne. Registracija nemokama, o nauji vartotojai gauna iki 1000 kreditų dovanų.
+              <h3 className="text-lg font-semibold text-white mb-2">Ar reikia kortelės registracijai?</h3>
+              <p className="text-sm md:text-base">
+                Ne. Galite pradėti nemokamai; nauji vartotojai gauna startinių kreditų paketą.
               </p>
             </div>
             <div>
-              <p className="font-semibold text-white">Ar mano duomenys saugūs?</p>
-              <p>
-                Duomenys šifruojami ir saugomi ES serveriuose. Socialiniai tinklai jungiami per
-                OAuth, o el. paštui naudojamas IMAP arba App Password principas.
+              <h3 className="text-lg font-semibold text-white mb-2">Ar mano duomenys saugūs?</h3>
+              <p className="text-sm md:text-base">
+                Duomenys šifruojami; socialiniai tinklai jungiami per OAuth. El. paštui naudojamas saugus prisijungimas (pvz. IMAP / programų slaptažodžiai).
               </p>
             </div>
           </div>

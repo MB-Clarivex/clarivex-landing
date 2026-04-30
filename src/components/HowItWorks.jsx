@@ -86,13 +86,36 @@ const HowItWorks = () => {
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-6">
             Jokių sudėtingų nustatymų. Jokio mokymosi. Pasakyk ką nori — Clarivex tai padarys.
           </p>
-          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed mb-4">
-            Clarivex yra AI asistentas lietuvių verslui. Jis padeda su Instagram ir Facebook turiniu, el. laiškais ir priminimais.
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed mb-3">
+            Clarivex yra AI asistentas lietuvių verslui: Instagram ir Facebook turinys, el. laiškai, priminimai.
           </p>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
-            Platforma supranta lietuvių kalbą ir paverčia užklausą veiksmu per kelias sekundes. Jūs susitelkiate į klientus ir augimą — rutiną paliekate AI.
+            Užklausa dažnai virsta veiksmu per kelias sekundes. Jūs — strategija ir klientai; rutiną paliekate AI.
           </p>
         </motion.div>
+
+        <div className="max-w-3xl mx-auto mb-16 px-2">
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-6">
+            Nuo paskyros iki pirmo rezultato
+          </h2>
+          <ol className="list-decimal pl-5 md:pl-6 space-y-4 text-gray-300 text-sm md:text-base">
+            <li>
+              <span className="font-semibold text-white">Registracija.</span>{' '}
+              Sukurkite paskyrą app.clarivex.ai — startinių kreditų paketas leidžia išbandyti be įsipareigojimų.
+            </li>
+            <li>
+              <span className="font-semibold text-white">Kreditai ir integracijos.</span>{' '}
+              Pasipildykite kreditus, kai reikia; prijunkite kanalus (pvz. paštą ar socialinius tinklus), jei norite publikuoti ar dirbti su inbox.
+            </li>
+            <li>
+              <span className="font-semibold text-white">Užduoties vykdymas.</span>{' '}
+              Parašykite ar pasakykite užduotį — AI paruoš juodraštį ar planą, jūs peržiūrite ir patvirtinate.
+            </li>
+          </ol>
+          <p className="text-center text-xs text-gray-500 mt-6">
+            Techninė eiga žemiau — keturi bendri žingsniai nuo užklausos iki rezultato.
+          </p>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Steps — išcentruota */}

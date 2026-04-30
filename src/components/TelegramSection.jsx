@@ -100,13 +100,39 @@ const TelegramSection = () => {
             Užbaigęs profilį — iš viso iki{' '}
             <span className="text-[#0088cc] font-semibold">1 000 kreditų</span> startui.
           </p>
-          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed mb-4">
-            Diktuokite žinutes, kurkite pirkinių sąrašus balsu ir gaukite priminimus per Telegram.
+          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed mb-3">
+            Diktuokite žinutes, kurkite pirkinių sąrašus balsu ir gaukite priminimus Telegram.
           </p>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
-            Viskas per pažįstamą programėlę — be naujų dieginių. Puiku užimtiems žmonėms.
+            Viena pažįstama programėlė — be naujų dieginių. Tinka užimtiems žmonėms kelyje ir biure.
           </p>
         </motion.div>
+
+        <div className="max-w-3xl mx-auto mb-14 px-2">
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-6">
+            Kaip pradėti naudotis Telegram botu
+          </h2>
+          <ol className="list-decimal pl-5 md:pl-6 space-y-3 text-gray-300 text-sm md:text-base mb-4">
+            <li>
+              Prisijunkite prie Clarivex naršyklėje ir paleiskite Telegram susiejimą iš nustatymų ar onboarding eigos.
+            </li>
+            <li>
+              Telegram programėlėje atidarykite botą{' '}
+              <span className="text-[#0088cc] font-mono text-sm">@clarivex_notify_bot</span>
+              {' '}ir patvirtinkite susiejimą.
+            </li>
+            <li>
+              Išbandykite pirmąją komandą tekstu ar balsu — pvz. priminimą ar užrašą (žr. pavyzdžius žemiau).
+            </li>
+          </ol>
+          <p className="text-center text-xs text-gray-500">
+            Detaliau apie kreditus ir integracijas —{' '}
+            <Link to="/kaip-veikia" className="text-[#0088cc] hover:text-cyan-300">
+              kaip veikia Clarivex
+            </Link>
+            .
+          </p>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Phone mockup */}
@@ -247,24 +273,47 @@ const TelegramSection = () => {
             >
               <div className="flex items-center gap-2 mb-4">
                 <Keyboard className="w-5 h-5 text-[#0088cc]" />
-                <h3 className="font-semibold text-white">Raktazodžiai — pasakyk ir Clarivex supras</h3>
+                <h2 className="text-lg md:text-xl font-bold text-white">
+                  Dažnos frazės — pasakykite ar parašykite
+                </h2>
               </div>
-              <p className="text-xs text-gray-400 mb-3">
-                Šios frazės veikia <strong className="text-gray-300">visur</strong> — naršyklėje (app.clarivex.ai) ir Telegram.
+              <p className="text-xs text-gray-400 mb-4">
+                Veikia{' '}
+                <strong className="text-gray-300">naršyklėje</strong> (app.clarivex.ai) ir{' '}
+                <strong className="text-gray-300">Telegram</strong>.
               </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
-                <div><span className="text-[#0088cc]">Primink</span> — priminimas laiku</div>
-                <div><span className="text-[#0088cc]">Atsimink</span> — įsiminti apie save</div>
-                <div><span className="text-[#0088cc]">Užsirašyk</span> — paprastas užrašas</div>
-                <div><span className="text-[#0088cc]">Pirkinių sąrašas</span> — pridėk į sąrašą</div>
-                <div><span className="text-[#0088cc]">Sukurk postą</span> — social media</div>
-                <div><span className="text-[#0088cc]">Turiu idėją</span> — išsaugoti idėją</div>
-                <div><span className="text-[#0088cc]">Sugeneruok paveikslėlį</span> — AI vaizdas</div>
-                <div><span className="text-[#0088cc]">Papildyk X užrašą</span> — pridėti info</div>
-              </div>
-              <p className="text-xs text-gray-500 mt-3">
-                Balsu ir tekstu, bet kur — naršyklėje ar Telegram. Pilnesnis sąrašas —{' '}
-                <Link to="/duk" className="text-[#0088cc] hover:text-cyan-300">DUK</Link>.
+              <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-sm text-gray-300 list-none p-0 m-0">
+                <li>
+                  <span className="text-[#0088cc] font-medium">Primink</span> — priminimas laiku
+                </li>
+                <li>
+                  <span className="text-[#0088cc] font-medium">Atsimink</span> — įsiminti apie save
+                </li>
+                <li>
+                  <span className="text-[#0088cc] font-medium">Užsirašyk</span> — paprastas užrašas
+                </li>
+                <li>
+                  <span className="text-[#0088cc] font-medium">Pirkinių sąrašas</span> — pridėti prekes
+                </li>
+                <li>
+                  <span className="text-[#0088cc] font-medium">Sukurk postą</span> — socialiniams tinklams
+                </li>
+                <li>
+                  <span className="text-[#0088cc] font-medium">Turiu idėją</span> — išsaugoti idėją
+                </li>
+                <li>
+                  <span className="text-[#0088cc] font-medium">Sugeneruok paveikslėlį</span> — AI vaizdas
+                </li>
+                <li>
+                  <span className="text-[#0088cc] font-medium">Papildyk … užrašą</span> — pridėti tekstą
+                </li>
+              </ul>
+              <p className="text-xs text-gray-500 mt-4">
+                Platesnis sąrašas —{' '}
+                <Link to="/duk" className="text-[#0088cc] hover:text-cyan-300">
+                  DUK
+                </Link>
+                .
               </p>
             </motion.div>
 
@@ -316,9 +365,11 @@ const TelegramSection = () => {
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold text-white">Iki 1 000 kreditų startui</h2>
-                  <p className="text-gray-400">
-                    Registracija + profilio užbaigimas + Telegram = maksimalus startas.
-                    Kreditai leidžia išbandyti visas AI funkcijas be rizikos ir įsipareigojimų.
+                  <p className="text-gray-400 mb-2">
+                    Registracija, užbaigtas profilis ir Telegram susiejimas — maksimalus startinių kreditų paketas.
+                  </p>
+                  <p className="text-gray-500 text-sm">
+                    Kreditai leidžia išbandyti AI funkcijas be įsipareigojimų; detaliau žr. kainų puslapį.
                   </p>
                 </div>
               </div>

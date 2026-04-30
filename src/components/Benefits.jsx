@@ -101,17 +101,16 @@ const Benefits = () => {
             </span>
           </h1>
           
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-4">
-            Tau — daugiau laiko, mažiau rutinos.
-          </p>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-6">
-            Clarivex perima tai, ką šiandien darai ranka: postus, atsakymus, priminimus, paveikslėlius.
-          </p>
-          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed mb-4">
-            Tu lieki strategijai ir klientams. Kasdienės užduotys kainuoja vos kelis eurus.
-          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-white max-w-2xl mx-auto mb-4">
+            Trumpai: ką gaunate
+          </h2>
+          <ul className="text-gray-400 max-w-xl mx-auto text-base space-y-2 list-disc pl-5 text-left mb-6">
+            <li>Daugiau laiko strategijai ir klientams — mažiau rutinos postams ir paštui.</li>
+            <li>Viename įrankyje: juodraščiai, priminimai, vizualai — mažiau šokinėjimo tarp paslaugų.</li>
+            <li>Mokate už realų naudojimą (kreditai); galite pradėti nuo nemokamo paketo.</li>
+          </ul>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
-            Sutaupytas laikas — tai pinigai. Pradėk su nemokamais kreditais ir pamatyk, kiek darbo Clarivex gali perimti per savaitę.
+            Išbandykite savaitę ir pamatuokite, kiek užduočių Clarivex gali perimti jūsų vietoje.
           </p>
         </motion.div>
 
@@ -274,24 +273,37 @@ const Benefits = () => {
             </p>
           </div>
 
-          <p className="text-gray-400 text-sm mb-6 max-w-3xl mx-auto leading-relaxed">
-            Šią naudą kuria konkrečios{' '}
-            <Link to="/features" className="text-blue-400 hover:text-blue-300 font-medium">
-              Clarivex AI funkcijos
-            </Link>
-            {' — el. paštas, socialinių tinklų kalendorius, Telegram ir daugiau. '}
-            <Link to="/kainos" className="text-blue-400 hover:text-blue-300 font-medium">
-              Mokėjimas tik už naudojimą
-            </Link>
-            {' per kreditų sistemą. '}
-            Ieškote konkretesnių pavyzdžių?{' '}
-            <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 font-medium">Kaip veikia Clarivex AI</Link>
-            ,{' '}
-            <Link to="/telegram" className="text-blue-400 hover:text-blue-300 font-medium">Telegram AI botas</Link>
-            {' ir '}
-            <Link to="/atsakiklis" className="text-blue-400 hover:text-blue-300 font-medium">AI atsakiklis DM</Link>
-            .
-          </p>
+          <ul className="text-gray-400 text-sm mb-8 max-w-2xl mx-auto space-y-2 list-disc pl-5 leading-relaxed">
+            <li>
+              Funkcijos:{' '}
+              <Link to="/features" className="text-blue-400 hover:text-blue-300 font-medium">
+                el. paštas, socialinių tinklų kalendorius, Telegram
+              </Link>
+              {' ir kt.'}
+            </li>
+            <li>
+              Kainodara:{' '}
+              <Link to="/kainos" className="text-blue-400 hover:text-blue-300 font-medium">
+                mokėjimas už naudojimą (kreditai)
+              </Link>
+              .
+            </li>
+            <li>
+              Daugiau pavyzdžių:{' '}
+              <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 font-medium">
+                kaip veikia
+              </Link>
+              ,{' '}
+              <Link to="/telegram" className="text-blue-400 hover:text-blue-300 font-medium">
+                Telegram botas
+              </Link>
+              ,{' '}
+              <Link to="/atsakiklis" className="text-blue-400 hover:text-blue-300 font-medium">
+                DM atsakiklis
+              </Link>
+              .
+            </li>
+          </ul>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
               <motion.div

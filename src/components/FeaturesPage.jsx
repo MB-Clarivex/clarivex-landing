@@ -504,6 +504,37 @@ const STATS = [
   { value: '24/7', label: 'AI pagalba' },
 ];
 
+/** Skaitomumui: teminės H2 sritys, po jomis kategorijos (H3) ir funkcijos (H4). */
+const FEATURE_SECTION_GROUPS = [
+  {
+    slug: 'ai-ir-zinios',
+    heading: 'AI modeliai, asistentai ir žinių bazė',
+    intro:
+      'Pokalbiai su keliais modeliais, individualūs asistentai, orchestratorius bei ilgalaikė atmintis ir RAG turiniui.',
+    categoryIds: ['ai', 'smegenys'],
+  },
+  {
+    slug: 'turinys-komunikacija',
+    heading: 'Socialiniai tinklai, tinklaraštis ir el. paštas',
+    intro:
+      'Postų kūrimas ir planavimas, inbox su DM, tinklaraščio straipsniai ir išmanus paštas vienoje sistemoje.',
+    categoryIds: ['social', 'blog', 'mail'],
+  },
+  {
+    slug: 'telefonas-media',
+    heading: 'Telegram, balsas, vizualai ir įrankiai',
+    intro:
+      'Valdymas telefone per Telegram, diktuotos užduotys, paveikslėliai, vertimai ir papildomi įrankiai.',
+    categoryIds: ['telegram', 'voice', 'visual', 'tools'],
+  },
+  {
+    slug: 'kainos-pagalba',
+    heading: 'Kreditai, mokėjimai ir klientų aptarnavimas',
+    intro: 'Lanksti kreditų sistema bei įrankiai klientų aptarnavimui su AI.',
+    categoryIds: ['billing', 'support'],
+  },
+];
+
 const FeaturesPage = () => {
   const [activeCategory, setActiveCategory] = useState(null);
   const canonicalUrl = `${siteConfig.url}/features`;
@@ -706,108 +737,139 @@ const FeaturesPage = () => {
           {/* Features Content */}
           <div className="py-16 px-4">
             <div className="container mx-auto max-w-6xl">
-              {FEATURE_CATEGORIES.map((category, catIndex) => (
-                <motion.section
-                  key={category.id}
-                  id={category.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5 }}
-                  className="mb-20 scroll-mt-32"
+              <p className="text-center text-gray-400 text-sm mb-12 max-w-2xl mx-auto leading-relaxed">
+                Funkcijos sugrupuotos pagal sritis. Viršuje — greitas šuolis į konkretų bloką.
+              </p>
+              {FEATURE_SECTION_GROUPS.map((group) => (
+                <section
+                  key={group.slug}
+                  aria-labelledby={`feat-group-${group.slug}`}
+                  className="mb-24 last:mb-6"
                 >
-                  {/* Category Header */}
-                  <div className="flex items-start gap-4 mb-8">
-                    <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center shadow-lg`}>
-                      <category.icon className="w-7 h-7 text-white" />
-                    </div>
-                    <div>
-                      <h2 className="text-2xl md:text-3xl font-bold text-white mb-1">
-                        {category.title}
-                      </h2>
-                      <p className="text-gray-400">{category.description}</p>
-                    </div>
-                  </div>
+                  <h2
+                    id={`feat-group-${group.slug}`}
+                    className="text-2xl md:text-3xl font-bold text-white mb-3 scroll-mt-36"
+                  >
+                    {group.heading}
+                  </h2>
+                  <p className="text-gray-400 mb-12 max-w-3xl leading-relaxed">{group.intro}</p>
 
-                  {/* Features Grid */}
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-                    {category.features.map((feature, index) => (
-                      <motion.div
-                        key={feature.name}
-                        initial={{ opacity: 0, y: 20 }}
+                  {group.categoryIds.map((catId) => {
+                    const category = FEATURE_CATEGORIES.find((c) => c.id === catId);
+                    if (!category) return null;
+                    return (
+                      <motion.section
+                        key={category.id}
+                        id={category.id}
+                        initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1, duration: 0.4 }}
-                        whileHover={{ y: -4 }}
-                        className="group relative bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-xl p-5 hover:border-gray-600 transition-all"
+                        viewport={{ once: true, margin: '-100px' }}
+                        transition={{ duration: 0.5 }}
+                        className="mb-20 scroll-mt-32 last:mb-0"
                       >
-                        {/* Badges */}
-                        {feature.isNew && (
-                          <div className="absolute -top-2 right-4 px-2 py-0.5 bg-gradient-to-r from-emerald-500 to-green-500 text-white text-xs font-bold rounded-full">
-                            Nauja
-                          </div>
-                        )}
-                        {feature.isBeta && (
-                          <div className="absolute -top-2 right-4 px-2 py-0.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold rounded-full">
-                            Beta
-                          </div>
-                        )}
-
-                        {/* Icon & Title */}
-                        <div className="flex items-start gap-3 mb-3">
-                          <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                            <feature.icon className="w-5 h-5 text-white" />
+                        <div className="flex items-start gap-4 mb-8">
+                          <div
+                            className={`w-14 h-14 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center shadow-lg`}
+                          >
+                            <category.icon className="w-7 h-7 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-lg font-semibold text-white group-hover:text-violet-300 transition-colors">
-                              {feature.name}
+                            <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">
+                              {category.title}
                             </h3>
+                            <p className="text-gray-400">{category.description}</p>
                           </div>
                         </div>
 
-                        <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-                          {feature.description}
-                        </p>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                          {category.features.map((feature, index) => (
+                            <motion.div
+                              key={feature.name}
+                              initial={{ opacity: 0, y: 20 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              viewport={{ once: true }}
+                              transition={{ delay: index * 0.1, duration: 0.4 }}
+                              whileHover={{ y: -4 }}
+                              className="group relative bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-xl p-5 hover:border-gray-600 transition-all"
+                            >
+                              {feature.isNew && (
+                                <div className="absolute -top-2 right-4 px-2 py-0.5 bg-gradient-to-r from-emerald-500 to-green-500 text-white text-xs font-bold rounded-full">
+                                  Nauja
+                                </div>
+                              )}
+                              {feature.isBeta && (
+                                <div className="absolute -top-2 right-4 px-2 py-0.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold rounded-full">
+                                  Beta
+                                </div>
+                              )}
 
-                        {/* Platforms */}
-                        {feature.platforms && (
-                          <div className="flex flex-wrap gap-2 mb-4">
-                            {feature.platforms.map((p) => (
-                              <span key={p} className="px-2 py-1 bg-blue-500/10 text-blue-400 text-xs font-medium rounded">
-                                {p}
-                              </span>
-                            ))}
-                          </div>
-                        )}
+                              <div className="flex items-start gap-3 mb-3">
+                                <div
+                                  className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center group-hover:scale-110 transition-transform`}
+                                >
+                                  <feature.icon className="w-5 h-5 text-white" />
+                                </div>
+                                <div>
+                                  <h4 className="text-lg font-semibold text-white group-hover:text-violet-300 transition-colors">
+                                    {feature.name}
+                                  </h4>
+                                </div>
+                              </div>
 
-                        {feature.capabilities.length > 5 ? (
-                          <details className="mt-1 rounded-lg border border-gray-700/40 bg-gray-900/20 p-3 open:bg-gray-900/30">
-                            <summary className="cursor-pointer text-sm font-medium text-violet-300 hover:text-violet-200 list-none [&::-webkit-details-marker]:hidden flex items-center gap-2">
-                              Visos galimybės ({feature.capabilities.length})
-                            </summary>
-                            <ul className="space-y-1.5 mt-3 pt-3 border-t border-gray-700/40">
-                              {feature.capabilities.map((cap) => (
-                                <li key={cap} className="flex items-start gap-2 text-sm text-gray-300">
-                                  <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
-                                  {cap}
-                                </li>
-                              ))}
-                            </ul>
-                          </details>
-                        ) : (
-                          <ul className="space-y-1.5">
-                            {feature.capabilities.map((cap) => (
-                              <li key={cap} className="flex items-start gap-2 text-sm text-gray-300">
-                                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
-                                {cap}
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </motion.div>
-                    ))}
-                  </div>
-                </motion.section>
+                              <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                                {feature.description}
+                              </p>
+
+                              {feature.platforms && (
+                                <div className="flex flex-wrap gap-2 mb-4">
+                                  {feature.platforms.map((p) => (
+                                    <span
+                                      key={p}
+                                      className="px-2 py-1 bg-blue-500/10 text-blue-400 text-xs font-medium rounded"
+                                    >
+                                      {p}
+                                    </span>
+                                  ))}
+                                </div>
+                              )}
+
+                              {feature.capabilities.length > 5 ? (
+                                <details className="mt-1 rounded-lg border border-gray-700/40 bg-gray-900/20 p-3 open:bg-gray-900/30">
+                                  <summary className="cursor-pointer text-sm font-medium text-violet-300 hover:text-violet-200 list-none [&::-webkit-details-marker]:hidden flex items-center gap-2">
+                                    Visos galimybės ({feature.capabilities.length})
+                                  </summary>
+                                  <ul className="space-y-1.5 mt-3 pt-3 border-t border-gray-700/40">
+                                    {feature.capabilities.map((cap) => (
+                                      <li
+                                        key={cap}
+                                        className="flex items-start gap-2 text-sm text-gray-300"
+                                      >
+                                        <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                                        {cap}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </details>
+                              ) : (
+                                <ul className="space-y-1.5">
+                                  {feature.capabilities.map((cap) => (
+                                    <li
+                                      key={cap}
+                                      className="flex items-start gap-2 text-sm text-gray-300"
+                                    >
+                                      <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                                      {cap}
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </motion.div>
+                          ))}
+                        </div>
+                      </motion.section>
+                    );
+                  })}
+                </section>
               ))}
             </div>
           </div>
