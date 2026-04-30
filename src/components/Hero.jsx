@@ -175,81 +175,43 @@ const Hero = () => {
             <li>Tu nustoji rašyti nuo nulio — tikrinimas užtrunka kelias minutes.</li>
             <li>Fone veikia lietuvių kalba: užduotis padiktavai arba parašei.</li>
           </ul>
-          <motion.p
-            initial={{ opacity: 1, y: 0 }}
+
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 }}
-            className="text-sm md:text-base text-gray-400 max-w-xl mx-auto md:mx-0 leading-relaxed"
+            transition={{ delay: 0.15, duration: 0.45 }}
+            className="max-w-xl mx-auto md:mx-0 space-y-3 pt-1"
           >
-            Peržiūrėkite visas{' '}
-            <Link to="/features" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
-              Clarivex AI funkcijas verslui
-            </Link>
-            {' '}
-            — automatizuokite el. paštą, social media ir pasikartojančias užduotis lietuvių kalba.
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 1, y: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 }}
-            className="text-sm md:text-base text-gray-400 max-w-xl mx-auto md:mx-0 leading-relaxed"
-          >
-            Sužinokite,{' '}
-            <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
-              kaip veikia Clarivex AI integracija
-            </Link>
-            {' ir '}
-            <Link to="/kainos" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
-              Clarivex AI kainas bei lanksčią kreditų sistemą
-            </Link>
-            .{' '}
-            <Link to="/nauda" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
-              Clarivex AI nauda verslui
-            </Link>
-            {' — mažiau rankinio darbo. '}
-            <Link to="/telegram" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
-              Telegram AI botas lietuvių kalba
-            </Link>
-            {' (balsas, priminimai). '}
-            <Link to="/atsakiklis" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
-              AI atsakiklis Messenger ir Instagram DM
-            </Link>
-            {' — kai klientai rašo ne darbo metu.'}
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 1, y: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 }}
-            className="text-sm text-gray-500 max-w-xl mx-auto md:mx-0 leading-relaxed"
-          >
-            Tau nereikia būti prie kompiuterio, kad rutina judėtų — Clarivex dirba foniniame režime.
-            Moki tik už tai, ką naudoji.
-            {' '}
-            <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
-              Kaip veikia
-            </Link>
-            {' · '}
-            <Link to="/features" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
-              Funkcijos
-            </Link>
-            {' · '}
-            <Link to="/nauda" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
-              Nauda
-            </Link>
-            {' · '}
-            <Link to="/kainos" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
-              Kainos
-            </Link>
-            {' · '}
-            <Link to="/telegram" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
-              Telegram
-            </Link>
-            {' · '}
-            <Link to="/atsakiklis" className="text-blue-400 hover:text-blue-300 underline decoration-blue-500/50">
-              Atsakiklis (DM)
-            </Link>
-            .
-          </motion.p>
+            <p className="text-sm md:text-base text-gray-400 leading-relaxed">
+              Rutina gali judėti ir be ekrano — Clarivex dirba fone. El. paštas, socialiniai tinklai ir
+              pasikartojančios užduotys lietuvių kalba;{' '}
+              <span className="text-gray-300">mokate tik už tai, ką iš tikrųjų naudojate</span>
+              {' '}(per kreditus).
+            </p>
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 mb-2.5">
+                Sužinokite daugiau
+              </p>
+              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                {[
+                  { to: '/features', label: 'Funkcijos verslui' },
+                  { to: '/kaip-veikia', label: 'Kaip veikia integracija' },
+                  { to: '/kainos', label: 'Kainos ir kreditai' },
+                  { to: '/nauda', label: 'Nauda verslui' },
+                  { to: '/telegram', label: 'Telegram botas' },
+                  { to: '/atsakiklis', label: 'Atsakiklis (DM)' },
+                ].map(({ to, label }) => (
+                  <Link
+                    key={to}
+                    to={to}
+                    className="inline-flex items-center rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-xs md:text-sm font-medium text-gray-300 no-underline transition-colors hover:border-blue-500/35 hover:bg-blue-500/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500/60"
+                  >
+                    {label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </motion.div>
 
           {/* Pricing Stats */}
           <motion.div
@@ -331,7 +293,7 @@ const Hero = () => {
               startui. Telegram — papildomi kreditai ir balso funkcijos.
             </p>
             
-            {/* Login + quick links */}
+            {/* Login */}
             <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm">
               <a
                 href="https://app.clarivex.ai/"
@@ -341,11 +303,6 @@ const Hero = () => {
                 Jau turite paskyrą? Prisijungti
                 <ArrowRight className="w-3 h-3" />
               </a>
-              <span className="text-gray-600 hidden sm:inline">|</span>
-              <Link to="/kaip-veikia" className="text-gray-400 hover:text-white transition-colors">Kaip veikia</Link>
-              <Link to="/kainos" className="text-gray-400 hover:text-white transition-colors">Kainos</Link>
-              <Link to="/telegram" className="text-gray-400 hover:text-white transition-colors">Telegram</Link>
-              <Link to="/atsakiklis" className="text-gray-400 hover:text-white transition-colors">Atsakiklis</Link>
             </div>
           </motion.div>
         </motion.div>

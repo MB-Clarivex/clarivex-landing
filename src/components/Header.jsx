@@ -2,24 +2,31 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
-const navLinks = [
+/** Desktop: pagrindinė juosta + „Daugiau“ (mažiau vizualinio triukšmo). Mobilus: visos nuorodos sąraše. */
+const primaryNavLinks = [
   { id: 'home', label: 'Pradžia' },
   { id: 'features', label: 'Funkcijos', href: '/features' },
-  { id: 'resources', label: 'Resursai', href: '/resursai' },
   { id: 'how-it-works', label: 'Kaip veikia', href: '/kaip-veikia', desktopNowrap: true },
   { id: 'benefits', label: 'Nauda', href: '/nauda' },
   { id: 'telegram', label: 'Telegram', href: '/telegram' },
   { id: 'atsakiklis', label: 'Atsakiklis', href: '/atsakiklis' },
   { id: 'pricing', label: 'Kainodara', href: '/kainos' },
+];
+
+const moreNavLinks = [
+  { id: 'resources', label: 'Resursai', href: '/resursai' },
   { id: 'pakviesk', label: 'Pakviesk draugą' },
   { id: 'cta', label: 'Kontaktai' },
 ];
 
+const navLinks = [...primaryNavLinks, ...moreNavLinks];
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMoreOpen, setIsMoreOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
@@ -30,6 +37,19 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    setIsMoreOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (!isMoreOpen) return undefined;
+    const onKey = (e) => {
+      if (e.key === 'Escape') setIsMoreOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isMoreOpen]);
 
   const handleScrollTo = (id) => {
     // Jei ne pagrindiniame puslapyje, grįžti į pagrindinį
@@ -87,8 +107,8 @@ const Header = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link, index) => (
+          <nav className="hidden lg:flex items-center gap-0.5">
+            {primaryNavLinks.map((link, index) =>
               link.href ? (
                 <motion.div
                   key={link.id}
@@ -98,7 +118,7 @@ const Header = () => {
                 >
                   <Link
                     to={link.href}
-                    className={`px-4 py-2 text-gray-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-200 block text-center leading-tight${link.desktopNowrap ? ' lg:whitespace-nowrap' : ''}`}
+                    className={`px-3 py-2 text-gray-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-200 block text-center leading-tight${link.desktopNowrap ? ' lg:whitespace-nowrap' : ''}`}
                   >
                     {link.label}
                   </Link>
@@ -110,12 +130,65 @@ const Header = () => {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.3 + index * 0.05, duration: 0.3 }}
                   onClick={() => handleScrollTo(link.id)}
-                  className="px-4 py-2 text-gray-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-200 text-center leading-tight"
+                  className="px-3 py-2 text-gray-400 hover:text-white text-sm font-medium rounded-lg hover:bg-white/5 transition-all duration-200 text-center leading-tight"
                 >
                   {link.label}
                 </motion.button>
               )
-            ))}
+            )}
+            <div className="relative">
+              <motion.button
+                type="button"
+                initial={{ y: -10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.3 + primaryNavLinks.length * 0.05, duration: 0.3 }}
+                aria-expanded={isMoreOpen}
+                aria-haspopup="true"
+                onClick={() => setIsMoreOpen((o) => !o)}
+                className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 leading-tight ${
+                  isMoreOpen ? 'text-white bg-white/10' : 'text-gray-400 hover:text-white hover:bg-white/5'
+                }`}
+              >
+                Daugiau
+                <ChevronDown className={`w-4 h-4 opacity-70 transition-transform ${isMoreOpen ? 'rotate-180' : ''}`} />
+              </motion.button>
+              {isMoreOpen && (
+                <>
+                  <button
+                    type="button"
+                    aria-label="Uždaryti meniu"
+                    className="fixed inset-0 z-40 cursor-default bg-transparent"
+                    onClick={() => setIsMoreOpen(false)}
+                  />
+                  <div className="absolute right-0 top-full z-50 mt-1 min-w-[13rem] rounded-xl border border-gray-800 bg-gray-950/98 py-1 shadow-xl shadow-black/40 backdrop-blur-xl">
+                    {moreNavLinks.map((link) =>
+                      link.href ? (
+                        <Link
+                          key={link.id}
+                          to={link.href}
+                          onClick={() => setIsMoreOpen(false)}
+                          className="block px-4 py-2.5 text-left text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+                        >
+                          {link.label}
+                        </Link>
+                      ) : (
+                        <button
+                          key={link.id}
+                          type="button"
+                          onClick={() => {
+                            handleScrollTo(link.id);
+                            setIsMoreOpen(false);
+                          }}
+                          className="w-full px-4 py-2.5 text-left text-sm text-gray-300 hover:bg-white/5 hover:text-white"
+                        >
+                          {link.label}
+                        </button>
+                      )
+                    )}
+                  </div>
+                </>
+              )}
+            </div>
           </nav>
 
           {/* CTA Buttons */}
