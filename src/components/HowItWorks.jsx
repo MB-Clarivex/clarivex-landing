@@ -76,10 +76,10 @@ const HowItWorks = () => {
           </motion.div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-white">Nuo idėjos iki rezultato</span>
+            <span className="text-white">Kaip veikia Clarivex AI</span>
             <br />
             <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
-              per 10 sekundžių
+              nuo užklausos iki rezultato
             </span>
           </h1>
           
@@ -97,6 +97,9 @@ const HowItWorks = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Steps — išcentruota */}
           <div className="space-y-10 max-w-xl mx-auto w-full">
+            <h2 className="text-2xl md:text-3xl font-bold text-white text-center lg:text-left">
+              AI automatizavimas keturiais žingsniais
+            </h2>
             {steps.map((step, index) => (
               <motion.div
                 key={index}
@@ -116,9 +119,9 @@ const HowItWorks = () => {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
                   {step.title}
-                </h2>
+                </h3>
                 <p className="text-gray-400 mb-3 text-sm leading-relaxed max-w-md">
                   {step.description}
                 </p>
@@ -140,7 +143,11 @@ const HowItWorks = () => {
           </div>
 
           {/* Demo Preview */}
-          <motion.div
+          <div>
+            <h2 className="text-xl md:text-2xl font-bold text-white mb-6 text-center lg:text-left">
+              Pavyzdys: nuo balso komandos iki rezultato
+            </h2>
+            <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -222,6 +229,7 @@ const HowItWorks = () => {
               </div>
             </div>
           </motion.div>
+          </div>
         </div>
 
         <motion.div

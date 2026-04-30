@@ -94,10 +94,10 @@ const Benefits = () => {
           </motion.div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-white">Mažiau darbo,</span>
+            <span className="text-white">Clarivex AI nauda verslui</span>
             <br />
             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              daugiau rezultatų
+              mažiau rutinos, daugiau laiko
             </span>
           </h1>
           
@@ -116,7 +116,11 @@ const Benefits = () => {
         </motion.div>
 
         {/* Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+        <div className="mb-24">
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
+            Pagrindinės Clarivex AI naudos
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
@@ -146,11 +150,12 @@ const Benefits = () => {
                 </div>
                 
                 {/* Content */}
-                <h2 className="text-lg font-bold text-white mb-2">{benefit.title}</h2>
+                <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{benefit.description}</p>
               </div>
             </motion.div>
           ))}
+        </div>
         </div>
 
         <motion.div

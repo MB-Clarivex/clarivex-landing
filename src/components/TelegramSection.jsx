@@ -85,10 +85,10 @@ const TelegramSection = () => {
           </motion.div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-white">AI asistentas</span>
+            <span className="text-white">Clarivex Telegram AI botas</span>
             <br />
             <span className="bg-gradient-to-r from-[#0088cc] to-cyan-400 bg-clip-text text-transparent">
-              tavo kišenėje
+              balsas, priminimai ir užduotys telefone
             </span>
           </h1>
           
@@ -211,6 +211,9 @@ const TelegramSection = () => {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
+            <h2 className="text-xl md:text-2xl font-bold text-white">
+              Ką galite daryti per Telegram su Clarivex AI
+            </h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {telegramFeatures.map((feature, index) => (
                 <motion.div
@@ -226,7 +229,7 @@ const TelegramSection = () => {
                       <feature.icon className="w-5 h-5 text-[#0088cc]" />
                     </div>
                     <div>
-                      <h2 className="text-white font-medium mb-1">{feature.title}</h2>
+                      <h3 className="text-white font-medium mb-1">{feature.title}</h3>
                       <p className="text-gray-400 text-sm">{feature.description}</p>
                     </div>
                   </div>
