@@ -131,8 +131,8 @@ const Hero = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       </div>
       
-      <div className="container mx-auto max-w-7xl relative z-10 grid md:grid-cols-2 gap-12 items-start">
-        {/* Left Content */}
+      <div className="container mx-auto max-w-7xl relative z-10 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 md:gap-y-12 items-start">
+        {/* Left: virš fold — sutampa aukštyje su demo */}
         <motion.div
           initial={{ opacity: 1, x: 0 }}
           animate={{ opacity: 1, x: 0 }}
@@ -175,136 +175,6 @@ const Hero = () => {
             <li>Tu nustoji rašyti nuo nulio — tikrinimas užtrunka kelias minutes.</li>
             <li>Fone veikia lietuvių kalba: užduotis padiktavai arba parašei.</li>
           </ul>
-
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15, duration: 0.45 }}
-            className="max-w-xl mx-auto md:mx-0 space-y-3 pt-1"
-          >
-            <p className="text-sm md:text-base text-gray-400 leading-relaxed">
-              Rutina gali judėti ir be ekrano — Clarivex dirba fone. El. paštas, socialiniai tinklai ir
-              pasikartojančios užduotys lietuvių kalba;{' '}
-              <span className="text-gray-300">mokate tik už tai, ką iš tikrųjų naudojate</span>
-              {' '}(per kreditus).
-            </p>
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 mb-2.5">
-                Sužinokite daugiau
-              </p>
-              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {[
-                  { to: '/features', label: 'Funkcijos verslui' },
-                  { to: '/kaip-veikia', label: 'Kaip veikia integracija' },
-                  { to: '/kainos', label: 'Kainos ir kreditai' },
-                  { to: '/nauda', label: 'Nauda verslui' },
-                  { to: '/telegram', label: 'Telegram botas' },
-                  { to: '/atsakiklis', label: 'Atsakiklis (DM)' },
-                ].map(({ to, label }) => (
-                  <Link
-                    key={to}
-                    to={to}
-                    className="inline-flex items-center rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-xs md:text-sm font-medium text-gray-300 no-underline transition-colors hover:border-blue-500/35 hover:bg-blue-500/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500/60"
-                  >
-                    {label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Pricing Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.45, duration: 0.8 }}
-            className="flex flex-wrap justify-center md:justify-start gap-4 py-4"
-          >
-            <div className="text-center px-4 py-3 bg-green-500/10 border border-green-500/30 rounded-xl">
-              <p className="text-2xl font-bold text-green-400">€0</p>
-              <p className="text-xs text-green-300/80">Pradžia</p>
-              <p className="text-xs text-gray-500">+250 kreditų</p>
-            </div>
-            <div className="text-center px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl">
-              <p className="text-2xl font-bold text-white">nuo €1</p>
-              <p className="text-xs text-gray-400">Pavedimas</p>
-              <p className="text-xs text-emerald-400">Be mokesčių</p>
-            </div>
-            <div className="text-center px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl">
-              <p className="text-2xl font-bold text-white">nuo €5</p>
-              <p className="text-xs text-gray-400">Kortelė</p>
-              <p className="text-xs text-blue-400">Momentinis</p>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="space-y-5 pt-4"
-          >
-            {/* Registration Options */}
-            <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto md:mx-0">
-              <button
-                onClick={handleEmailRegister}
-                className="group flex-1 bg-gradient-to-br from-blue-600/20 to-purple-600/20 hover:from-blue-600/30 hover:to-purple-600/30 border-2 border-blue-500/50 hover:border-blue-500 rounded-2xl p-4 transition-all duration-300 text-left"
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  <Mail className="w-5 h-5 text-blue-400" />
-                  <span className="font-bold text-white">Pradėti nemokamai</span>
-                  <span className="ml-auto text-green-400 font-bold text-sm">iki 1 000</span>
-                </div>
-                <p className="text-xs text-gray-400 mb-3">
-                  Registracija per ~30 sek. Užbaigęs profilį gauni iki
-                  {' '}<span className="text-green-400 font-semibold">1 000 kreditų</span>{' '}
-                  startui — pakanka kelioms dešimtims AI užduočių.
-                </p>
-                <div className="text-center py-2 bg-blue-600 group-hover:bg-blue-500 rounded-lg text-white text-sm font-medium transition-colors">
-                  Registruotis →
-                </div>
-              </button>
-
-              <a
-                href="https://t.me/clarivex_notify_bot"
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-                className="group flex-1 bg-gray-800/50 hover:bg-gray-800/70 border-2 border-gray-700 hover:border-[#0088cc] rounded-2xl p-4 transition-all duration-300 text-left"
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  <Smartphone className="w-5 h-5 text-[#0088cc]" />
-                  <span className="font-bold text-white">Telegram</span>
-                  <span className="ml-auto text-green-400 font-bold text-sm">+250 kr.</span>
-                </div>
-                <p className="text-xs text-gray-400 mb-3">
-                  Valdyk Clarivex balsu iš telefono. Susiek Telegram ir gauk
-                  {' '}<span className="text-green-400 font-semibold">+250 kreditų</span>{' '}
-                  papildomai. Priminimai, pirkinių sąrašai, postai — vienu balso pranešimu.
-                </p>
-                <div className="text-center py-2 bg-[#0088cc] group-hover:bg-[#0077b5] rounded-lg text-white text-sm font-medium transition-colors">
-                  Pradėti su Telegram →
-                </div>
-              </a>
-            </div>
-
-            {/* Info text */}
-            <p className="text-center md:text-left text-xs text-gray-500">
-              💡 Registracija + profilio užbaigimas = iki
-              {' '}<span className="text-green-400 font-semibold">1 000 kreditų</span>{' '}
-              startui. Telegram — papildomi kreditai ir balso funkcijos.
-            </p>
-            
-            {/* Login */}
-            <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm">
-              <a
-                href="https://app.clarivex.ai/"
-                rel="nofollow noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 font-medium transition-colors flex items-center gap-1"
-              >
-                Jau turite paskyrą? Prisijungti
-                <ArrowRight className="w-3 h-3" />
-              </a>
-            </div>
-          </motion.div>
         </motion.div>
 
         {/* Right Content - Voice Command Demo */}
@@ -457,6 +327,134 @@ const Hero = () => {
             </div>
           )}
         </motion.div>
+
+        <div className="md:col-span-2 space-y-8 pt-4 md:pt-6 border-t border-white/[0.06] text-center md:text-left">
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15, duration: 0.45 }}
+            className="max-w-3xl mx-auto md:mx-0 space-y-3"
+          >
+            <p className="text-sm md:text-base text-gray-400 leading-relaxed">
+              Rutina gali judėti ir be ekrano — Clarivex dirba fone. El. paštas, socialiniai tinklai ir
+              pasikartojančios užduotys lietuvių kalba;{' '}
+              <span className="text-gray-300">mokate tik už tai, ką iš tikrųjų naudojate</span>
+              {' '}(per kreditus).
+            </p>
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 mb-2.5">
+                Sužinokite daugiau
+              </p>
+              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                {[
+                  { to: '/features', label: 'Funkcijos verslui' },
+                  { to: '/kaip-veikia', label: 'Kaip veikia integracija' },
+                  { to: '/kainos', label: 'Kainos ir kreditai' },
+                  { to: '/nauda', label: 'Nauda verslui' },
+                  { to: '/telegram', label: 'Telegram botas' },
+                  { to: '/atsakiklis', label: 'Atsakiklis (DM)' },
+                ].map(({ to, label }) => (
+                  <Link
+                    key={to}
+                    to={to}
+                    className="inline-flex items-center rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-xs md:text-sm font-medium text-gray-300 no-underline transition-colors hover:border-blue-500/35 hover:bg-blue-500/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500/60"
+                  >
+                    {label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.45, duration: 0.8 }}
+            className="flex flex-wrap justify-center md:justify-start gap-4 py-1"
+          >
+            <div className="text-center px-4 py-3 bg-green-500/10 border border-green-500/30 rounded-xl">
+              <p className="text-2xl font-bold text-green-400">€0</p>
+              <p className="text-xs text-green-300/80">Pradžia</p>
+              <p className="text-xs text-gray-500">+250 kreditų</p>
+            </div>
+            <div className="text-center px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl">
+              <p className="text-2xl font-bold text-white">nuo €1</p>
+              <p className="text-xs text-gray-400">Pavedimas</p>
+              <p className="text-xs text-emerald-400">Be mokesčių</p>
+            </div>
+            <div className="text-center px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl">
+              <p className="text-2xl font-bold text-white">nuo €5</p>
+              <p className="text-xs text-gray-400">Kortelė</p>
+              <p className="text-xs text-blue-400">Momentinis</p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="space-y-5 pt-2 max-w-4xl mx-auto md:mx-0"
+          >
+            <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto md:max-w-none">
+              <button
+                onClick={handleEmailRegister}
+                className="group flex-1 bg-gradient-to-br from-blue-600/20 to-purple-600/20 hover:from-blue-600/30 hover:to-purple-600/30 border-2 border-blue-500/50 hover:border-blue-500 rounded-2xl p-4 transition-all duration-300 text-left"
+              >
+                <div className="flex items-center gap-2 mb-2">
+                  <Mail className="w-5 h-5 text-blue-400" />
+                  <span className="font-bold text-white">Pradėti nemokamai</span>
+                  <span className="ml-auto text-green-400 font-bold text-sm">iki 1 000</span>
+                </div>
+                <p className="text-xs text-gray-400 mb-3">
+                  Registracija per ~30 sek. Užbaigęs profilį gauni iki
+                  {' '}<span className="text-green-400 font-semibold">1 000 kreditų</span>{' '}
+                  startui — pakanka kelioms dešimtims AI užduočių.
+                </p>
+                <div className="text-center py-2 bg-blue-600 group-hover:bg-blue-500 rounded-lg text-white text-sm font-medium transition-colors">
+                  Registruotis →
+                </div>
+              </button>
+
+              <a
+                href="https://t.me/clarivex_notify_bot"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="group flex-1 bg-gray-800/50 hover:bg-gray-800/70 border-2 border-gray-700 hover:border-[#0088cc] rounded-2xl p-4 transition-all duration-300 text-left"
+              >
+                <div className="flex items-center gap-2 mb-2">
+                  <Smartphone className="w-5 h-5 text-[#0088cc]" />
+                  <span className="font-bold text-white">Telegram</span>
+                  <span className="ml-auto text-green-400 font-bold text-sm">+250 kr.</span>
+                </div>
+                <p className="text-xs text-gray-400 mb-3">
+                  Valdyk Clarivex balsu iš telefono. Susiek Telegram ir gauk
+                  {' '}<span className="text-green-400 font-semibold">+250 kreditų</span>{' '}
+                  papildomai. Priminimai, pirkinių sąrašai, postai — vienu balso pranešimu.
+                </p>
+                <div className="text-center py-2 bg-[#0088cc] group-hover:bg-[#0077b5] rounded-lg text-white text-sm font-medium transition-colors">
+                  Pradėti su Telegram →
+                </div>
+              </a>
+            </div>
+
+            <p className="text-center md:text-left text-xs text-gray-500">
+              💡 Registracija + profilio užbaigimas = iki
+              {' '}<span className="text-green-400 font-semibold">1 000 kreditų</span>{' '}
+              startui. Telegram — papildomi kreditai ir balso funkcijos.
+            </p>
+
+            <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm">
+              <a
+                href="https://app.clarivex.ai/"
+                rel="nofollow noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300 font-medium transition-colors flex items-center gap-1"
+              >
+                Jau turite paskyrą? Prisijungti
+                <ArrowRight className="w-3 h-3" />
+              </a>
+            </div>
+          </motion.div>
+        </div>
       </div>
 
       {/* Scroll indicator */}
