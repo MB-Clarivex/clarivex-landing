@@ -167,8 +167,64 @@ const Status = () => {
               <Link to="/features" className="text-blue-400 hover:text-blue-300">funkcijos</Link>,{' '}
               <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">kaip veikia</Link> ir{' '}
               <Link to="/kainos" className="text-blue-400 hover:text-blue-300">kainos</Link>.
+              Dažni klausimai apie integracijas ir saugumą —{' '}
+              <Link to="/duk" className="text-blue-400 hover:text-blue-300">DUK skyriuje</Link>.
             </p>
           </div>
+
+          <section
+            aria-labelledby="status-reiksme-heading"
+            className="mb-10 rounded-2xl border border-gray-800 bg-gray-900/40 px-6 py-8 text-gray-300 leading-relaxed text-sm md:text-base"
+          >
+            <h2 id="status-reiksme-heading" className="text-xl font-semibold text-white mb-4">
+              Ką reiškia būsenos
+            </h2>
+            <ul className="list-disc pl-5 space-y-3 mb-4">
+              <li>
+                <strong className="text-white">Veikia</strong> — komponentas laikomas sveiku pagal vidinę stebėseną;
+                tai nereiškia, kad išorinis tiekėjas (pvz., Meta ar jūsų paštas) negali laikinai sutrikti atskirai nuo
+                Clarivex.
+              </li>
+              <li>
+                <strong className="text-white">Sulėtėjęs</strong> — pastebimas našumo ar klaidų šuolis; funkcijos gali
+                veikti, bet su didesniu laukimu ar pakartotiniais bandymais. Verta palaukti kelias minutes ir bandyti dar
+                kartą.
+              </li>
+              <li>
+                <strong className="text-white">Neveikia</strong> — kritinis sutrikimas arba plačiai juntamas gedimas;
+                sekite atnaujinimus arba rašykite palaikymui, jei incidentas lieka ilgiau nei trumpą laiką.
+              </li>
+            </ul>
+            <p className="text-gray-400 text-sm">
+              Šis puslapis neįsipareigoja konkretaus SLA lygio sutartyje — jis skirtas skaidrumui ir greitai orientacijai.
+              Verslo kritinėms užduotims visada palikite žmogaus patvirtinimą prieš siuntimą ar masinį publikavimą.
+            </p>
+          </section>
+
+          <section
+            aria-labelledby="status-isores-heading"
+            className="mb-10 rounded-2xl border border-gray-800 bg-gray-900/40 px-6 py-8 text-gray-300 leading-relaxed text-sm md:text-base"
+          >
+            <h2 id="status-isores-heading" className="text-xl font-semibold text-white mb-4">
+              Išorinės priklausomybės ir „kur ieškoti klaidos“
+            </h2>
+            <p className="mb-4">
+              Clarivex naudoja trečiųjų šalių API ir tiekėjus: pvz., Meta (Instagram / Facebook), el. pašto tiekėją pagal
+              jūsų nustatymus, mokėjimo apdorojimą ir infrastruktūros paslaugas. Jei Clarivex statusas žalias, bet
+              nepavyksta publikuoti į Instagram, verta patikrinti ar Meta paskyroje neįvyko sesijos pasibaigimas ar
+              laikinas API limitas — tokius pranešimus dažnai matote Clarivex kalendoriuje ar klaidos tekste.
+            </p>
+            <p className="mb-4">
+              El. pašto atveju sutrikimai kartais susiję su App slaptažodžio galiojimu, dviejų veiksnių politika ar
+              tiekėjo filtrais. Tokiais atvejais pagalba greičiau diagnozuoja problemą, jei nurodote ne tik „neveikia“,
+              bet ir approximate laiką, klaidos kodą ir ar problema kartojasi keliose žinutėse.
+            </p>
+            <p className="text-gray-400 text-sm">
+              Jei įtariate saugumo incidentą (įtartina veikla paskyroje), nedelsdami keiskite slaptažodžius pas tiekėją ir
+              praneškite mums per oficialius kontaktus — žr.{' '}
+              <Link to="/duk" className="text-blue-400 hover:text-blue-300">DUK saugumo skyrių</Link>.
+            </p>
+          </section>
 
           {/* Overall Status */}
           <div className={`rounded-2xl p-8 mb-8 ${overallStatus.bgColor} border ${overallStatus.borderColor}`}>
@@ -275,7 +331,7 @@ const Status = () => {
           </div>
 
           {/* Contact for issues */}
-          <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/20 rounded-2xl p-8 text-center">
+          <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/20 rounded-2xl p-8 text-center mb-10">
             <h3 className="text-xl font-semibold mb-2">Turite problemų?</h3>
             <p className="text-gray-400 mb-6">
               Rašykite per Telegram – atsakome per 1–2 valandas
@@ -297,6 +353,33 @@ const Status = () => {
               </a>
             </div>
           </div>
+
+          <section
+            aria-labelledby="status-pranesimas-heading"
+            className="rounded-2xl border border-gray-800 bg-gray-900/40 px-6 py-8 text-gray-300 leading-relaxed text-sm md:text-base"
+          >
+            <h2 id="status-pranesimas-heading" className="text-xl font-semibold text-white mb-4">
+              Kaip efektyviai pranešti apie gedimą
+            </h2>
+            <ol className="list-decimal pl-5 space-y-3 mb-4">
+              <li>
+                Patikrinkite šį puslapį ir trumpai pakartokite veiksmą — ar klaida kartojasi po kelių minučių ir kitoje
+                naršyklėje ar įrenginyje.
+              </li>
+              <li>
+                Užfiksuokite laiką (su laiko juosta), tikslų veiksmą („bandžiau publikuoti postą į X paskyrą“) ir klaidos
+                tekstą arba ekrano kopiją.
+              </li>
+              <li>
+                Parašykite į Telegram palaikymą viena žinute; jei incidentas liečia mokėjimus ar sąskaitą, galite kopijuoti
+                ir info@clarivex.ai su ta pačia informacija.
+              </li>
+            </ol>
+            <p className="text-gray-400 text-sm">
+              Jei problema susijusi su turinio politika (Meta atmeta įrašą), pirmiausia patikrinkite platformos taisykles ir
+              Clarivex klaidos pranešimą — tai dažnai greitesnis kelias nei bendras „Meta down“ scenarijus.
+            </p>
+          </section>
         </main>
 
         {/* Footer */}

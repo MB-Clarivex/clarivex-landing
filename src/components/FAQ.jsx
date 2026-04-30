@@ -26,6 +26,14 @@ const faqCategories = [
         q: 'Ar galiu naudotis Clarivex mobiliajame telefone?',
         a: 'Taip! Clarivex veikia bet kurioje naršyklėje, taip pat turime Telegram botą, kuris leidžia valdyti platformą tiesiogiai iš Telegram programėlės – idealiai tinka mobiliajam naudojimui.'
       },
+      {
+        q: 'Ar galiu išbandyti Clarivex be mokėjimo kortelės?',
+        a: 'Taip. Registracija yra nemokama, o nauji vartotojai gauna startinių kreditų paketą, kad galėtų realiai išbandyti pagrindines funkcijas. Kortelė reikalinga tik tada, kai nuspręsite papildyti kreditus ar naudotis mokamomis paslaugomis pagal savo poreikį.'
+      },
+      {
+        q: 'Kuo Clarivex skiriasi nuo bendro pokalbių su ChatGPT?',
+        a: 'Bendras pokalbių langas dažniausiai baigiasi tekstu. Clarivex papildomai orientuotas į darbo eigą: galite susieti el. paštą, socialinių tinklų paskyras, Telegram ir naudoti AI kartu su priminimais, juodraščiais bei publikavimu. Tai reiškia mažiau kopijuojamo teksto tarp įrankių ir greitesnį kelią nuo idėjos iki veiksmo.'
+      },
     ]
   },
   {
@@ -56,6 +64,10 @@ const faqCategories = [
       {
         q: 'Ar grąžinate pinigus?',
         a: 'Kreditai nėra grąžinami, išskyrus atvejus, kai paslauga neveikė dėl mūsų kaltės. Jei susidūrėte su problema, susisiekite su mumis per 14 dienų – visada stengiamės rasti sprendimą.'
+      },
+      {
+        q: 'Ar galima papildyti kreditus pavedimu?',
+        a: 'Taip. Clarivex palaiko pavedimu pagrįstą papildymą pagal nurodymus platformoje (billing skiltyje). Pavedimo sumai galioja tie patys bonusų principai kaip ir kortelei; kreditai įskaitomi po mokėjimo patvirtinimo. Jei turite klausimų dėl sąskaitų ar įmonės rekvizitų, parašykite palaikymui.'
       },
     ]
   },
@@ -160,6 +172,10 @@ const faqCategories = [
       {
         q: 'Radau klaidą, kur pranešti?',
         a: 'Ačiū, kad padedame tobulėti! Parašykite per Telegram @clarivex_support_bot su kuo detalesniu aprašymu – ką darėte, kas nutiko, kokį klaidos pranešimą matėte. Arba el. paštu info@clarivex.ai.'
+      },
+      {
+        q: 'Kada rašyti į palaikymą, o kada tikrinti sistemos statusą?',
+        a: 'Statuso puslapis skirtas greitai pamatyti bendrą Clarivex komponentų būklę (platforma, AI, socialiniai tinklai, paštas, Telegram). Jei ten viskas žalia, bet jūsų veiksmas vis tiek nepavyksta, dažniausiai verta rašyti į palaikymą su konkrečia užduotimi ir klaidos tekstu — taip greičiau atsekame individualų atvejį. Jei sutrikimas masinis, statuso puslapyje paprastai pasirodo aktualizuota informacija ar incidentas.'
       },
     ]
   },
@@ -268,7 +284,7 @@ const FAQ = () => {
 
         {/* Content */}
         <main className="max-w-6xl mx-auto px-4 py-12">
-          <div className="text-center mb-12">
+          <div className="text-center mb-10">
             <h1 className="text-4xl font-bold mb-4">Dažnai užduodami klausimai</h1>
             <p className="text-gray-400 text-lg">
               Raskite atsakymus apie Clarivex funkcijas, kainas, saugumą, Telegram ir kasdienį naudojimą.
@@ -284,6 +300,48 @@ const FAQ = () => {
               <Link to="/telegram" className="text-blue-400 hover:text-blue-300">Telegram</Link>
             </p>
           </div>
+
+          <section
+            id="duk-kaip-naudotis"
+            aria-labelledby="duk-intro-heading"
+            className="max-w-3xl mx-auto mb-14 rounded-2xl border border-gray-800 bg-gray-900/40 px-6 py-8 text-left text-gray-300 leading-relaxed"
+          >
+            <h2 id="duk-intro-heading" className="text-xl font-semibold text-white mb-4">
+              Kaip naudotis šiuo žinynu
+            </h2>
+            <p className="mb-4">
+              Čia surinkti atsakymai į dažniausius praktinius klausimus: nuo registracijos ir kreditų iki Instagram bei
+              Facebook prijungimo, AI modelių pasirinkimo ir duomenų saugumo. Clarivex sujungia pokalbį su veiksmais —
+              galite ne tik gauti teksto atsakymą, bet ir paruošti laiško juodraštį, suplanuoti įrašą socialiniuose
+              tinkluose ar užfiksuoti priminimą balsu arba per Telegram.
+            </p>
+            <p className="mb-4">
+              Dirbant lietuvių kalba svarbu aiškiai pasakyti kontekstą: kam skirtas tekstas, kokį toną norite ir ar
+              rezultatas bus viešas (pvz., postas). Tuomet AI mažiau spėlioja ir greičiau pateikia naudingą juodraštį,
+              kurį vis tiek verta peržiūrinti prieš siunčiant klientui ar publikuojant.
+            </p>
+            <p className="mb-4">
+              Jei sutrikimas „bendras“ (pvz., nepavyksta prisijungti ar neįsikelia puslapis), patikrinkite{' '}
+              <Link to="/statusas" className="text-blue-400 hover:text-blue-300">
+                sistemos statusą
+              </Link>
+              . Jei statusas normalus, bet klaida kartojasi tik jūsų paskyroje ar konkrečiai užduočiai, parašykite{' '}
+              <a
+                href="https://t.me/clarivex_support_bot"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300"
+              >
+                Telegram palaikymui
+              </a>{' '}
+              ir pridėkite laiką, veiksmą bei klaidos tekstą — taip greičiau atkuriame tikslų scenarijų.
+            </p>
+            <p className="text-sm text-gray-500">
+              Žemiau pasirinkite temą iš sąrašo kairėje ir atskleiskite klausimus. Visi čia rodomi klausimai ir atsakymai
+              atitinka struktūrizuotus duomenis paieškos sistemoms (JSON-LD), kad rezultatai būtų nuoseklūs su tuo, ką
+              matote puslapyje.
+            </p>
+          </section>
 
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Categories Sidebar */}
