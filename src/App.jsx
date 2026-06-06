@@ -15,6 +15,7 @@ import Footer from '@/components/Footer';
 import CookieConsent from '@/components/CookieConsent';
 import MetaPixel from '@/components/MetaPixel';
 import { contentPages, siteConfig } from '@/content/seoPages';
+import { getBlogPosts } from '@/content/blogPosts';
 import { Toaster } from '@/components/ui/toaster';
 
 const isServer = import.meta.env.SSR;
@@ -26,8 +27,8 @@ function lazyPage(loader) {
 }
 
 const pageModules = isServer
-  ? import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,ResourcesHubPage,SeoResourcePage}.jsx', { eager: true })
-  : import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,ResourcesHubPage,SeoResourcePage}.jsx');
+  ? import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,ResourcesHubPage,SeoResourcePage,BlogIndexPage,BlogPostPage}.jsx', { eager: true })
+  : import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,ResourcesHubPage,SeoResourcePage,BlogIndexPage,BlogPostPage}.jsx');
 
 function createPageComponent(modulePath) {
   const moduleOrLoader = pageModules[modulePath];
@@ -55,6 +56,11 @@ const BenefitsPage = createPageComponent('./components/BenefitsPage.jsx');
 const TelegramPage = createPageComponent('./components/TelegramPage.jsx');
 const ResourcesHubPage = createPageComponent('./components/ResourcesHubPage.jsx');
 const SeoResourcePage = createPageComponent('./components/SeoResourcePage.jsx');
+const BlogIndexPage = createPageComponent('./components/BlogIndexPage.jsx');
+const BlogPostPage = createPageComponent('./components/BlogPostPage.jsx');
+
+const blogPostsLt = getBlogPosts('lt');
+const blogPostsEn = getBlogPosts('en');
 
 // Landing page component
 function LandingPage() {
@@ -182,6 +188,18 @@ export const routeDefinitions = [
   { path: '/nauda', component: BenefitsPage },
   { path: '/telegram', component: TelegramPage },
   { path: '/resursai', component: ResourcesHubPage },
+  { path: '/blog', component: BlogIndexPage, props: { language: 'lt' } },
+  { path: '/en/blog', component: BlogIndexPage, props: { language: 'en' } },
+  ...blogPostsLt.map((post) => ({
+    path: `/blog/${post.slug}`,
+    component: BlogPostPage,
+    props: { post, language: 'lt' },
+  })),
+  ...blogPostsEn.map((post) => ({
+    path: `/en/blog/${post.slug}`,
+    component: BlogPostPage,
+    props: { post, language: 'en' },
+  })),
   ...contentPages.map((page) => ({
     path: page.path,
     component: SeoResourcePage,

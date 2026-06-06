@@ -7,6 +7,7 @@ import { Menu, X } from 'lucide-react';
 const navLinks = [
   { id: 'home', label: 'Pradžia' },
   { id: 'features', label: 'Funkcijos', href: '/features' },
+  { id: 'blog', label: 'Blogas', href: '/blog' },
   { id: 'resources', label: 'Resursai', href: '/resursai' },
   { id: 'how-it-works', label: 'Kaip veikia', href: '/kaip-veikia' },
   { id: 'benefits', label: 'Nauda', href: '/nauda' },
