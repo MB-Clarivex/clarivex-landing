@@ -16,6 +16,7 @@ const primaryNavLinks = [
 ];
 
 const moreNavLinks = [
+  { id: 'blog', label: 'Blogas', href: '/blog' },
   { id: 'resources', label: 'Resursai', href: '/resursai' },
   { id: 'pakviesk', label: 'Pakviesk draugą' },
   { id: 'cta', label: 'Kontaktai' },

@@ -21,6 +21,7 @@ import {
   SCHEMA_IDS,
   buildCreditStarterOffer,
 } from '@/content/seoPages';
+import { getBlogPosts } from '@/content/blogPosts';
 import { Toaster } from '@/components/ui/toaster';
 
 const isServer = import.meta.env.SSR;
@@ -32,8 +33,8 @@ function lazyPage(loader) {
 }
 
 const pageModules = isServer
-  ? import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,AtsakiklisPage,ResourcesHubPage,SeoResourcePage}.jsx', { eager: true })
-  : import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,AtsakiklisPage,ResourcesHubPage,SeoResourcePage}.jsx');
+  ? import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,AtsakiklisPage,ResourcesHubPage,SeoResourcePage,BlogIndexPage,BlogPostPage}.jsx', { eager: true })
+  : import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,AtsakiklisPage,ResourcesHubPage,SeoResourcePage,BlogIndexPage,BlogPostPage}.jsx');
 
 function createPageComponent(modulePath) {
   const moduleOrLoader = pageModules[modulePath];
@@ -62,6 +63,11 @@ const TelegramPage = createPageComponent('./components/TelegramPage.jsx');
 const AtsakiklisPage = createPageComponent('./components/AtsakiklisPage.jsx');
 const ResourcesHubPage = createPageComponent('./components/ResourcesHubPage.jsx');
 const SeoResourcePage = createPageComponent('./components/SeoResourcePage.jsx');
+const BlogIndexPage = createPageComponent('./components/BlogIndexPage.jsx');
+const BlogPostPage = createPageComponent('./components/BlogPostPage.jsx');
+
+const blogPostsLt = getBlogPosts('lt');
+const blogPostsEn = getBlogPosts('en');
 
 // Landing page component
 function LandingPage() {
@@ -197,6 +203,18 @@ export const routeDefinitions = [
   { path: '/telegram', component: TelegramPage },
   { path: '/atsakiklis', component: AtsakiklisPage },
   { path: '/resursai', component: ResourcesHubPage },
+  { path: '/blog', component: BlogIndexPage, props: { language: 'lt' } },
+  { path: '/en/blog', component: BlogIndexPage, props: { language: 'en' } },
+  ...blogPostsLt.map((post) => ({
+    path: `/blog/${post.slug}`,
+    component: BlogPostPage,
+    props: { post, language: 'lt' },
+  })),
+  ...blogPostsEn.map((post) => ({
+    path: `/en/blog/${post.slug}`,
+    component: BlogPostPage,
+    props: { post, language: 'en' },
+  })),
   ...contentPages.map((page) => ({
     path: page.path,
     component: SeoResourcePage,
