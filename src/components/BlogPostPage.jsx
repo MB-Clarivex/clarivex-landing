@@ -3,7 +3,10 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { siteConfig, SCHEMA_IDS } from '@/content/seoPages';
+import { siteConfig } from '@/content/seoPages';
+
+const organizationId = `${siteConfig.url}/#organization`;
+const websiteId = `${siteConfig.url}/#website`;
 import {
   getBlogIndexPath,
   getBlogPostPath,
@@ -36,8 +39,8 @@ function buildStructuredData(post, canonicalUrl, language) {
     '@graph': [
       {
         '@type': 'Organization',
-        '@id': SCHEMA_IDS.organization,
-        name: siteConfig.schemaBrandName,
+        '@id': organizationId,
+        name: siteConfig.name,
         url: siteConfig.url,
         logo: siteConfig.logo,
       },
@@ -74,10 +77,10 @@ function buildStructuredData(post, canonicalUrl, language) {
         image: post.imageUrl ? [post.imageUrl] : [siteConfig.socialImage],
         author: {
           '@type': 'Organization',
-          name: siteConfig.schemaBrandName,
+          name: siteConfig.name,
         },
         publisher: {
-          '@id': SCHEMA_IDS.organization,
+          '@id': organizationId,
         },
         mainEntityOfPage: {
           '@type': 'WebPage',
@@ -111,6 +114,15 @@ function BlogPostPage({ post, language = 'lt' }) {
   const relatedPosts = getBlogPosts(language)
     .filter((item) => item.slug !== post.slug)
     .slice(0, 3);
+
+  const publishedDate = post.publishedAt || post.createdAt;
+  const formattedDate = publishedDate
+    ? new Date(publishedDate).toLocaleDateString(language === 'en' ? 'en-GB' : 'lt-LT', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      })
+    : null;
 
   return (
     <>
@@ -165,7 +177,15 @@ function BlogPostPage({ post, language = 'lt' }) {
                 </h1>
 
                 {post.summary ? (
-                  <p className="mt-6 text-lg leading-relaxed text-gray-300">{post.summary}</p>
+                  <p className="mt-6 text-xl leading-relaxed text-gray-300 max-w-3xl">
+                    {post.summary}
+                  </p>
+                ) : null}
+
+                {formattedDate ? (
+                  <p className="mt-5 text-sm text-gray-500">
+                    {language === 'en' ? 'Published' : 'Paskelbta'}: {formattedDate}
+                  </p>
                 ) : null}
 
                 {post.imageUrl ? (
@@ -179,11 +199,13 @@ function BlogPostPage({ post, language = 'lt' }) {
             </section>
 
             <section className="px-4 py-14">
-              <div className="container mx-auto max-w-4xl">
-                <div
-                  className="prose prose-invert prose-lg max-w-none prose-headings:text-white prose-p:text-gray-300 prose-a:text-blue-400 prose-strong:text-white prose-li:text-gray-300"
-                  dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-                />
+              <div className="container mx-auto max-w-3xl">
+                <article className="rounded-3xl border border-gray-800 bg-gray-900/40 p-7 md:p-10">
+                  <div
+                    className="blog-article"
+                    dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+                  />
+                </article>
 
                 <div className="mt-12 pt-8 border-t border-gray-800">
                   <Link

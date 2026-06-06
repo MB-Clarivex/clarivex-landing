@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { siteConfig, SCHEMA_IDS } from '@/content/seoPages';
+import { siteConfig } from '@/content/seoPages';
+
+const organizationId = `${siteConfig.url}/#organization`;
+const websiteId = `${siteConfig.url}/#website`;
 import {
   getBlogIndexPath,
   getBlogPostPath,
@@ -54,17 +57,17 @@ function BlogIndexPage({ language = 'lt' }) {
     '@graph': [
       {
         '@type': 'Organization',
-        '@id': SCHEMA_IDS.organization,
-        name: siteConfig.schemaBrandName,
+        '@id': organizationId,
+        name: siteConfig.name,
         url: siteConfig.url,
         logo: siteConfig.logo,
       },
       {
         '@type': 'WebSite',
-        '@id': SCHEMA_IDS.website,
-        name: siteConfig.schemaBrandName,
+        '@id': websiteId,
+        name: siteConfig.name,
         url: siteConfig.url,
-        publisher: { '@id': SCHEMA_IDS.organization },
+        publisher: { '@id': organizationId },
       },
       {
         '@type': 'CollectionPage',
@@ -73,7 +76,7 @@ function BlogIndexPage({ language = 'lt' }) {
         url: canonicalUrl,
         description: t.description,
         inLanguage: t.lang,
-        isPartOf: { '@id': SCHEMA_IDS.website },
+        isPartOf: { '@id': websiteId },
       },
     ],
   };
