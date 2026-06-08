@@ -155,11 +155,11 @@ const PrivacyPolicy = () => {
                 Jūsų duomenis galime dalintis su šiomis trečiosiomis šalimis:
               </p>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
-                <li><strong className="text-white">OpenAI:</strong> AI modelių veikimui (GPT, GPT Image, DALL-E, Whisper)</li>
+                <li><strong className="text-white">OpenAI:</strong> AI modelių veikimui (GPT, GPT Image 2, Whisper)</li>
                 <li><strong className="text-white">Stripe:</strong> mokėjimų apdorojimui</li>
                 <li><strong className="text-white">Cloudflare:</strong> turinio pristatymui ir apsaugai</li>
                 <li><strong className="text-white">Meta (Facebook/Instagram):</strong> socialinių tinklų integracijai (su jūsų leidimu)</li>
-                <li><strong className="text-white">Google:</strong> Gmail integracijai (su jūsų leidimu)</li>
+                <li><strong className="text-white">Google:</strong> Gmail integracijai ir Gemini paveikslėlių generavimui (su jūsų leidimu)</li>
               </ul>
               <p className="text-gray-300 leading-relaxed mt-4">
                 Neparduodame ir nenuomojame jūsų asmens duomenų trečiosioms šalims rinkodaros tikslais.

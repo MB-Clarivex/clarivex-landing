@@ -47,7 +47,7 @@ const faqCategories = [
       },
       {
         q: 'Ką galiu padaryti su 1 000 kreditų?',
-        a: 'Su 1 000 kreditų (~1 €) gali: parašyti ~100 AI žinučių su GPT-4.1 mini arba ~30 su GPT-5.1, sugeneruoti ~8 paveikslėlių (Nano Banana 2, pro kokybė), transkribuoti ~80 min. balso arba atlikti ~50 web paieškų. Net nedidelė suma leidžia labai daug išbandyti. Patarimas: naudojant GPT-4.1 mini modelį kreditai trunka kelis kartus ilgiau, o kokybė kasdienėms užduotims — puiki.'
+        a: 'Su 1 000 kreditų (~1 €) gali: parašyti ~100 AI žinučių su GPT-5.4 nano arba ~50 su GPT-5.4 mini, sugeneruoti ~4 paveikslėlius (Nano Banana 2, pro kokybė), transkribuoti ~80 min. balso arba atlikti ~50 web paieškų. Net nedidelė suma leidžia labai daug išbandyti. Patarimas: naudojant GPT-5.4 nano modelį kreditai trunka ilgiau, o GPT-5.4 mini duoda puikų balansą kasdienėms užduotims.'
       },
       {
         q: 'Ar kreditai baigiasi?',
@@ -78,11 +78,11 @@ const faqCategories = [
     questions: [
       {
         q: 'Kokie AI modeliai naudojami?',
-        a: 'Naudojame OpenAI modelius tekstui (GPT-5.2, GPT-5.1, GPT-4.1 mini); Nano Banana 2 (Gemini) paveikslėliams – pro kokybė, puikiai rašo tekstą; OpenAI fallback (GPT Image, DALL-E); Whisper balso transkripcijai. Galite patys pasirinkti modelį kiekviename pokalbyje!'
+        a: 'Naudojame OpenAI modelius tekstui (GPT-5.5, GPT-5.4, GPT-5.4 mini, GPT-5.2, GPT-5.1 ir kt.); Nano Banana 2 (Gemini) paveikslėliams – pro kokybė, puikiai rašo tekstą; OpenAI fallback (GPT Image 2); Whisper balso transkripcijai. Galite patys pasirinkti modelį kiekviename pokalbyje!'
       },
       {
         q: 'Kurį AI modelį pasirinkti?',
-        a: 'GPT-4.1 mini (numatytasis) — idealus kasdienėms užduotims: paprasti pokalbiai, el. laiškai, receptai, patarimai, vertimai. Greitas ir ekonomiškas. GPT-5.1 — sudėtingesniems darbams: ilgų dokumentų analizė, failų su paveikslėliais analizė, programavimas. GPT-5.2 — maksimali kokybė: mokslinė analizė, sudėtingas loginis mąstymas. Patarimas: pradėkite nuo mini — jei rezultatas netenkina, perjunkite į 5.1 ar 5.2.'
+        a: 'GPT-5.4 mini (numatytasis) — idealus kasdienėms užduotims: paprasti pokalbiai, el. laiškai, receptai, patarimai, vertimai. Greitas ir stiprus. GPT-5.4 nano — dar ekonomiškesnis variantas paprastiems klausimams. GPT-5.4 / GPT-5.5 — sudėtingesniems darbams: ilgų dokumentų analizė, programavimas, maksimali kokybė. Patarimas: pradėkite nuo 5.4 mini — jei rezultatas netenkina, perjunkite į 5.4 ar 5.5.'
       },
       {
         q: 'Ar AI prisimena mano ankstesnius pokalbius?',
@@ -90,7 +90,7 @@ const faqCategories = [
       },
       {
         q: 'Ar galiu generuoti paveikslėlius?',
-        a: 'Taip! Naudojame Nano Banana 2 (Gemini) – pro kokybė, 2K rezoliucija, puikiai rašo tekstą ant paveikslėlių (lietuviškai ir anglų). Tiesiog aprašykite, ko norite. OpenAI (GPT Image, DALL-E) – fallback, kai Gemini neprieinamas.'
+        a: 'Taip! Naudojame Nano Banana 2 (Gemini) – pro kokybė, 2K rezoliucija, puikiai rašo tekstą ant paveikslėlių (lietuviškai ir anglų). Tiesiog aprašykite, ko norite. GPT Image 2 – fallback, kai Gemini neprieinamas.'
       },
       {
         q: 'Kaip veikia balso komandos?',

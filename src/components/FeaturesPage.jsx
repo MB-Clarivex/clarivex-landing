@@ -56,7 +56,7 @@ const FEATURE_CATEGORIES = [
       {
         name: 'AI Pokalbiai',
         icon: MessageSquare,
-        description: 'Pokalbiai su GPT-5.1, GPT-5.2, GPT-4.1 mini ir kt.',
+        description: 'Pokalbiai su GPT-5.4 mini, GPT-5.4, GPT-5.5, GPT-5.1/5.2 ir kt.',
         capabilities: [
           'Kelių AI modelių pasirinkimas',
           'Failų įkėlimas ir analizė',
@@ -377,7 +377,7 @@ const FEATURE_CATEGORIES = [
         icon: Sparkles,
         description: 'AI sukuria unikalius paveikslėlius',
         capabilities: [
-          'GPT Image 1.5 ir DALL-E 3 generavimas',
+          'Nano Banana 2 (Gemini) + GPT Image 2 fallback',
           'Dydžio pasirinkimas',
           'Social media formatai',
         ],

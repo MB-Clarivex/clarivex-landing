@@ -63,7 +63,7 @@ const features = [
   {
     icon: Image,
     title: 'Paveikslėlių Generavimas',
-    description: 'Nano Banana 2 (Gemini) – pro kokybė, greitas, puikiai rašo tekstą ant paveikslėlių. 2K rezoliucija. OpenAI fallback.',
+    description: 'Nano Banana 2 (Gemini) – pro kokybė, greitas, puikiai rašo tekstą ant paveikslėlių. 2K rezoliucija. GPT Image 2 fallback.',
     gradient: 'from-orange-500 to-red-500',
     badge: null,
     stats: '2K',

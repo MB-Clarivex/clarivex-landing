@@ -35,13 +35,45 @@ import {
 // ============================================================================
 
 const AI_MODELS = [
+  // GPT-5.4 / 5.5 serija
+  {
+    name: 'GPT-5.5',
+    inPrice: 12.27,
+    outPrice: 73.59,
+    tier: 'premium',
+    badge: '🚀 Naujausias',
+    description: 'Naujausias flagmanas – sudėtingiausiam profesionaliam darbui',
+  },
+  {
+    name: 'GPT-5.4',
+    inPrice: 6.13,
+    outPrice: 36.8,
+    tier: 'premium',
+    badge: '🏆 Flagmanas',
+    description: 'Agentai, kodas, ilgas kontekstas',
+  },
+  {
+    name: 'GPT-5.4-mini',
+    inPrice: 1.84,
+    outPrice: 11.04,
+    tier: 'recommended',
+    badge: '⭐ Rekomenduojamas',
+    description: 'Numatytasis – greitas, stiprus kasdieniam naudojimui',
+  },
+  {
+    name: 'GPT-5.4-nano',
+    inPrice: 0.49,
+    outPrice: 3.07,
+    tier: 'economy',
+    badge: '💰 Pigiausias',
+    description: 'Ekonomiškiausias variantas paprastiems klausimams',
+  },
   // GPT-5 serija
   { 
     name: 'GPT-5.2', 
     inPrice: 4.29, 
     outPrice: 34.34, 
     tier: 'premium',
-    badge: '🚀 Naujausias',
     description: 'Galingiausias modelis sudėtingiausioms užduotims',
   },
   { 
@@ -49,8 +81,7 @@ const AI_MODELS = [
     inPrice: 3.07, 
     outPrice: 24.53, 
     tier: 'recommended',
-    badge: '⭐ Rekomenduojamas',
-    description: 'Geriausias kainos ir kokybės balansas kasdieniam naudojimui',
+    description: 'Geras kainos ir kokybės balansas',
   },
   { 
     name: 'GPT-5-mini', 
@@ -59,14 +90,6 @@ const AI_MODELS = [
     tier: 'economy',
     badge: '⚡ Greitas',
     description: 'Greitas ir ekonomiškas paprastoms užduotims',
-  },
-  { 
-    name: 'GPT-5-nano', 
-    inPrice: 0.12, 
-    outPrice: 0.98, 
-    tier: 'economy',
-    badge: '💰 Pigiausias',
-    description: 'Ekonomiškiausias variantas paprastiems klausimams',
   },
   // GPT-4.1 serija
   { 
@@ -111,14 +134,14 @@ const AI_MODELS = [
 const OTHER_SERVICES = [
   {
     name: 'Nano Banana 2 (Gemini)',
-    price: '~125 kr',
+    price: '~250 kr',
     unit: 'paveikslėlis',
     icon: Image,
     description: 'Pagrindinis – pro kokybė, 2K, puikiai rašo tekstą',
   },
   {
-    name: 'GPT Image 1.5 / DALL-E 3',
-    price: '35–196 kr',
+    name: 'GPT Image 2',
+    price: '~12–520 kr',
     unit: 'paveikslėlis',
     icon: Image,
     description: 'Fallback – kai Gemini neprieinamas',
@@ -502,7 +525,7 @@ export default function PricingPage() {
                   { name: 'Posto tekstas', credits: '~5-15 kr', note: 'AI generavimas' },
                   { name: 'Publikavimas', credits: '15 kr', note: 'IG / FB / Blog' },
                   { name: 'DM atsakymas', credits: '~2-10 kr', note: 'Inbox AI' },
-                  { name: 'Paveikslėlis', credits: '~125 kr', note: 'Nano Banana 2' },
+                  { name: 'Paveikslėlis', credits: '~250 kr', note: 'Nano Banana 2' },
                   { name: 'El. laiškas', credits: '~5-12 kr', note: 'atsakymas + siuntimas' },
                   { name: 'Balso komanda', credits: '~10-25 kr', note: 'Whisper + AI' },
                   { name: 'Web paieška', credits: '~25 kr', note: 'SerpApi' },
