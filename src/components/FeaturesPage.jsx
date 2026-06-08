@@ -377,7 +377,7 @@ const FEATURE_CATEGORIES = [
         icon: Sparkles,
         description: 'AI sukuria unikalius paveikslėlius',
         capabilities: [
-          'Nano Banana 2 (Gemini) + GPT Image 2 fallback',
+          'GPT Image 2 generavimas + Gemini fallback',
           'Dydžio pasirinkimas',
           'Social media formatai',
         ],

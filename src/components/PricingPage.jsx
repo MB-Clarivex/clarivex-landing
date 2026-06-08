@@ -133,18 +133,18 @@ const AI_MODELS = [
 
 const OTHER_SERVICES = [
   {
-    name: 'Nano Banana 2 (Gemini)',
-    price: '~250 kr',
-    unit: 'paveikslėlis',
-    icon: Image,
-    description: 'Pagrindinis – pro kokybė, 2K, puikiai rašo tekstą',
-  },
-  {
     name: 'GPT Image 2',
     price: '~12–520 kr',
     unit: 'paveikslėlis',
     icon: Image,
-    description: 'Fallback – kai Gemini neprieinamas',
+    description: 'Pagrindinis – kaina priklauso nuo kokybės, dydžio ir prompto',
+  },
+  {
+    name: 'Nano Banana 2 (Gemini)',
+    price: '~250 kr',
+    unit: 'paveikslėlis',
+    icon: Image,
+    description: 'Fallback – kai GPT Image 2 techniškai nepavyksta',
   },
   {
     name: 'Balso transkripcija (Whisper)',
@@ -525,7 +525,7 @@ export default function PricingPage() {
                   { name: 'Posto tekstas', credits: '~5-15 kr', note: 'AI generavimas' },
                   { name: 'Publikavimas', credits: '15 kr', note: 'IG / FB / Blog' },
                   { name: 'DM atsakymas', credits: '~2-10 kr', note: 'Inbox AI' },
-                  { name: 'Paveikslėlis', credits: '~250 kr', note: 'Nano Banana 2' },
+                  { name: 'Paveikslėlis', credits: '~15–130 kr', note: 'GPT Image 2 (tipinė)' },
                   { name: 'El. laiškas', credits: '~5-12 kr', note: 'atsakymas + siuntimas' },
                   { name: 'Balso komanda', credits: '~10-25 kr', note: 'Whisper + AI' },
                   { name: 'Web paieška', credits: '~25 kr', note: 'SerpApi' },

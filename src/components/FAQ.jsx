@@ -47,7 +47,7 @@ const faqCategories = [
       },
       {
         q: 'Ką galiu padaryti su 1 000 kreditų?',
-        a: 'Su 1 000 kreditų (~1 €) gali: parašyti ~100 AI žinučių su GPT-5.4 nano arba ~50 su GPT-5.4 mini, sugeneruoti ~4 paveikslėlius (Nano Banana 2, pro kokybė), transkribuoti ~80 min. balso arba atlikti ~50 web paieškų. Net nedidelė suma leidžia labai daug išbandyti. Patarimas: naudojant GPT-5.4 nano modelį kreditai trunka ilgiau, o GPT-5.4 mini duoda puikų balansą kasdienėms užduotims.'
+        a: 'Su 1 000 kreditų (~1 €) gali: parašyti ~100 AI žinučių su GPT-5.4 nano arba ~50 su GPT-5.4 mini, sugeneruoti kelis–dešimt paveikslėlių (GPT Image 2 – priklauso nuo kokybės ir dydžio, dažniausiai ~15–130 kr), transkribuoti ~80 min. balso arba atlikti ~50 web paieškų. Net nedidelė suma leidžia labai daug išbandyti. Patarimas: naudojant GPT-5.4 nano modelį kreditai trunka ilgiau, o GPT-5.4 mini duoda puikų balansą kasdienėms užduotims.'
       },
       {
         q: 'Ar kreditai baigiasi?',
@@ -78,7 +78,7 @@ const faqCategories = [
     questions: [
       {
         q: 'Kokie AI modeliai naudojami?',
-        a: 'Naudojame OpenAI modelius tekstui (GPT-5.5, GPT-5.4, GPT-5.4 mini, GPT-5.2, GPT-5.1 ir kt.); Nano Banana 2 (Gemini) paveikslėliams – pro kokybė, puikiai rašo tekstą; OpenAI fallback (GPT Image 2); Whisper balso transkripcijai. Galite patys pasirinkti modelį kiekviename pokalbyje!'
+        a: 'Naudojame OpenAI modelius tekstui (GPT-5.5, GPT-5.4, GPT-5.4 mini, GPT-5.2, GPT-5.1 ir kt.); GPT Image 2 paveikslėliams (kaina priklauso nuo kokybės ir dydžio); Nano Banana 2 (Gemini) – fallback; Whisper balso transkripcijai. Galite patys pasirinkti tekstinį modelį kiekviename pokalbyje!'
       },
       {
         q: 'Kurį AI modelį pasirinkti?',
@@ -90,7 +90,7 @@ const faqCategories = [
       },
       {
         q: 'Ar galiu generuoti paveikslėlius?',
-        a: 'Taip! Naudojame Nano Banana 2 (Gemini) – pro kokybė, 2K rezoliucija, puikiai rašo tekstą ant paveikslėlių (lietuviškai ir anglų). Tiesiog aprašykite, ko norite. GPT Image 2 – fallback, kai Gemini neprieinamas.'
+        a: 'Taip! Pagrindinis kelias – GPT Image 2 (kaina priklauso nuo kokybės, dydžio ir prompto, dažniausiai ~15–130 kr). Puikiai rašo tekstą ant paveikslėlių (lietuviškai ir anglų). Jei GPT Image 2 techniškai nepavyksta – naudojame Nano Banana 2 (Gemini) fallback (~250 kr).'
       },
       {
         q: 'Kaip veikia balso komandos?',
