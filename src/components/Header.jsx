@@ -73,9 +73,9 @@ const Header = () => {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-gray-950/95 backdrop-blur-xl shadow-lg shadow-black/20 py-3' 
-            : 'bg-transparent py-5'
+          isScrolled
+            ? 'bg-[#070a14]/80 backdrop-blur-xl border-b border-white/[0.08] py-3'
+            : 'bg-transparent border-b border-transparent py-5'
         }`}
       >
         <div className="container mx-auto max-w-7xl px-4 flex items-center justify-between">
@@ -96,7 +96,7 @@ const Header = () => {
                 className="w-10 h-10 object-contain"
               />
             </div>
-            <span className="text-xl md:text-2xl font-bold text-white group-hover:text-blue-300 transition-colors">
+            <span className="text-xl md:text-2xl font-bold tracking-tight text-white group-hover:text-blue-300 transition-colors">
               Clarivex
             </span>
           </div>
@@ -181,7 +181,7 @@ const Header = () => {
             {/* Prisijungti - ryškus mygtukas */}
             <Button
               onClick={handleLogin}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-5 sm:px-6 py-2 sm:py-2.5 text-sm font-medium rounded-xl shadow-lg hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300"
+              className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white px-5 sm:px-6 py-2 sm:py-2.5 text-sm font-semibold rounded-xl shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30 transition-all duration-300"
             >
               Prisijungti
             </Button>
@@ -246,7 +246,7 @@ const Header = () => {
                 <div className="border-t border-gray-800 my-2" />
                 <Button
                   onClick={handleLogin}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-xl"
+                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-semibold py-3 rounded-xl"
                 >
                   Pradėti nemokamai
                 </Button>

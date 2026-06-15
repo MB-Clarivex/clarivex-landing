@@ -6,29 +6,29 @@ import { ArrowRight, Sparkles, Mic, Calendar, Image, Mail, Clock, Zap, Smartphon
 
 const voiceCommands = [
   {
-    voice: '🎤 "Sukurk postą apie mūsų naują kolekciją"',
-    result: "✨ Postas sukurtas!",
+    voice: '„Sukurk postą apie mūsų naują kolekciją"',
+    result: "Postas sukurtas",
     detail: "Instagram + Facebook • Carousel su 4 nuotraukomis",
     time: "3.2s",
     icon: Calendar
   },
   {
-    voice: '🎤 "Primink rytoj 9:00 paskambinti klientui"',
-    result: "⏰ Priminimas nustatytas!",
+    voice: '„Primink rytoj 9:00 paskambinti klientui"',
+    result: "Priminimas nustatytas",
     detail: "Rytoj 09:00 • Telegram pranešimas",
     time: "1.8s",
     icon: Clock
   },
   {
-    voice: '🎤 "Sugeneruok paveikslėlį žiemos išpardavimui"',
-    result: "🎨 Paveikslėlis sukurtas!",
+    voice: '„Sugeneruok paveikslėlį žiemos išpardavimui"',
+    result: "Paveikslėlis sukurtas",
     detail: "1792×1024 HD • Išsaugotas į galeriją",
     time: "8.4s",
     icon: Image
   },
   {
-    voice: '🎤 "Atsakyk į paskutinį el. laišką"',
-    result: "📧 Juodraštis paruoštas!",
+    voice: '„Atsakyk į paskutinį el. laišką"',
+    result: "Juodraštis paruoštas",
     detail: "Profesionalus atsakymas • 1 paspaudimas siųsti",
     time: "2.1s",
     icon: Mail
@@ -124,11 +124,10 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden px-4 py-20 mt-16">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950" />
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+      {/* Soft accent glow (page already provides the base) */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/3 w-[28rem] h-[28rem] bg-cyan-500/[0.07] rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-[26rem] h-[26rem] bg-indigo-500/[0.06] rounded-full blur-3xl" />
       </div>
       
       <div className="container mx-auto max-w-7xl relative z-10 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 md:gap-y-12 items-start">
@@ -139,22 +138,20 @@ const Hero = () => {
           transition={{ duration: 0 }}
           className="space-y-8 text-center md:text-left"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-300 text-sm font-medium">
-            <Sparkles className="w-4 h-4" aria-hidden />
-            <span>🎁 Pradėk NEMOKAMAI — gauk iki 1 000 kreditų startui</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/[0.04] border border-white/10 rounded-full text-slate-300 text-sm font-medium">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            <span>Pradžia nemokama — iki 1 000 kreditų startui</span>
           </div>
 
           <motion.h1
             initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
+            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05]"
           >
             <span className="text-white">Pabuski su</span>
             <br />
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              paruoštais darbais.
-            </span>
+            <span className="cvx-accent-text">paruoštais darbais.</span>
           </motion.h1>
 
           <motion.p
@@ -182,14 +179,14 @@ const Hero = () => {
           {enableInteractiveDemo && showDemo ? (
             <div className="relative w-full max-w-md">
               {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-2xl" />
-              
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/15 to-cyan-500/15 rounded-3xl blur-2xl" />
+
               {/* Main card */}
-              <div className="relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl shadow-2xl overflow-hidden">
+              <div className="relative bg-[#0b1020]/80 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl overflow-hidden">
                 {/* Header */}
-                <div className="flex items-center justify-between p-5 border-b border-gray-700/50 bg-gray-800/50">
+                <div className="flex items-center justify-between p-5 border-b border-white/[0.08] bg-white/[0.03]">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center">
                       <Zap className="w-5 h-5 text-white" />
                     </div>
                     <div>
@@ -369,20 +366,20 @@ const Hero = () => {
             transition={{ delay: 0.45, duration: 0.8 }}
             className="flex flex-wrap justify-center md:justify-start gap-4 py-1"
           >
-            <div className="text-center px-4 py-3 bg-green-500/10 border border-green-500/30 rounded-xl">
-              <p className="text-2xl font-bold text-green-400">€0</p>
-              <p className="text-xs text-green-300/80">Pradžia</p>
-              <p className="text-xs text-gray-500">+250 kreditų</p>
+            <div className="text-center px-4 py-3 rounded-xl bg-emerald-500/[0.07] border border-emerald-500/25">
+              <p className="text-2xl font-bold text-emerald-400">€0</p>
+              <p className="text-xs text-emerald-300/80">Pradžia</p>
+              <p className="text-xs text-slate-500">+250 kreditų</p>
             </div>
-            <div className="text-center px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl">
+            <div className="cvx-surface text-center px-4 py-3">
               <p className="text-2xl font-bold text-white">nuo €1</p>
-              <p className="text-xs text-gray-400">Pavedimas</p>
+              <p className="text-xs text-slate-400">Pavedimas</p>
               <p className="text-xs text-emerald-400">Be mokesčių</p>
             </div>
-            <div className="text-center px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl">
+            <div className="cvx-surface text-center px-4 py-3">
               <p className="text-2xl font-bold text-white">nuo €5</p>
-              <p className="text-xs text-gray-400">Kortelė</p>
-              <p className="text-xs text-blue-400">Momentinis</p>
+              <p className="text-xs text-slate-400">Kortelė</p>
+              <p className="text-xs text-cyan-400">Momentinis</p>
             </div>
           </motion.div>
 
@@ -395,19 +392,19 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto md:max-w-none">
               <button
                 onClick={handleEmailRegister}
-                className="group flex-1 bg-gradient-to-br from-blue-600/20 to-purple-600/20 hover:from-blue-600/30 hover:to-purple-600/30 border-2 border-blue-500/50 hover:border-blue-500 rounded-2xl p-4 transition-all duration-300 text-left"
+                className="group flex-1 bg-gradient-to-br from-blue-600/15 to-cyan-500/15 hover:from-blue-600/25 hover:to-cyan-500/25 border border-cyan-500/40 hover:border-cyan-400/70 rounded-2xl p-4 transition-all duration-300 text-left"
               >
                 <div className="flex items-center gap-2 mb-2">
-                  <Mail className="w-5 h-5 text-blue-400" />
+                  <Mail className="w-5 h-5 text-cyan-400" />
                   <span className="font-bold text-white">Pradėti nemokamai</span>
-                  <span className="ml-auto text-green-400 font-bold text-sm">iki 1 000</span>
+                  <span className="ml-auto text-emerald-400 font-bold text-sm">iki 1 000</span>
                 </div>
-                <p className="text-xs text-gray-400 mb-3">
+                <p className="text-xs text-slate-400 mb-3">
                   Registracija per ~30 sek. Užbaigęs profilį gauni iki
-                  {' '}<span className="text-green-400 font-semibold">1 000 kreditų</span>{' '}
+                  {' '}<span className="text-emerald-400 font-semibold">1 000 kreditų</span>{' '}
                   startui — pakanka kelioms dešimtims AI užduočių.
                 </p>
-                <div className="text-center py-2 bg-blue-600 group-hover:bg-blue-500 rounded-lg text-white text-sm font-medium transition-colors">
+                <div className="text-center py-2 bg-gradient-to-r from-blue-600 to-cyan-500 group-hover:from-blue-500 group-hover:to-cyan-400 rounded-lg text-white text-sm font-semibold transition-colors">
                   Registruotis →
                 </div>
               </button>
@@ -416,14 +413,14 @@ const Hero = () => {
                 href="https://t.me/clarivex_notify_bot"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
-                className="group flex-1 bg-gray-800/50 hover:bg-gray-800/70 border-2 border-gray-700 hover:border-[#006699] rounded-2xl p-4 transition-all duration-300 text-left"
+                className="group flex-1 cvx-surface hover:border-[#38bdf8]/50 p-4 text-left"
               >
                 <div className="flex items-center gap-2 mb-2">
                   <Smartphone className="w-5 h-5 text-[#38bdf8]" />
                   <span className="font-bold text-white">Telegram</span>
-                  <span className="ml-auto text-green-400 font-bold text-sm">+250 kr.</span>
+                  <span className="ml-auto text-emerald-400 font-bold text-sm">+250 kr.</span>
                 </div>
-                <p className="text-xs text-gray-400 mb-3">
+                <p className="text-xs text-slate-400 mb-3">
                   Valdyk Clarivex balsu iš telefono. Susiek Telegram ir gauk
                   {' '}<span className="text-green-400 font-semibold">+250 kreditų</span>{' '}
                   papildomai. Priminimai, pirkinių sąrašai, postai — vienu balso pranešimu.
@@ -434,9 +431,9 @@ const Hero = () => {
               </a>
             </div>
 
-            <p className="text-center md:text-left text-xs text-gray-500">
-              💡 Registracija + profilio užbaigimas = iki
-              {' '}<span className="text-green-400 font-semibold">1 000 kreditų</span>{' '}
+            <p className="text-center md:text-left text-xs text-slate-500">
+              Registracija + profilio užbaigimas = iki
+              {' '}<span className="text-emerald-400 font-semibold">1 000 kreditų</span>{' '}
               startui. Telegram — papildomi kreditai ir balso funkcijos.
             </p>
 

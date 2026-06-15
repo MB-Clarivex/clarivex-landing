@@ -9,11 +9,10 @@ const ReferralSection = () => {
   };
 
   return (
-    <section id="pakviesk" className="cvx-content-visibility py-24 px-4 relative overflow-hidden">
+    <section id="pakviesk" className="cvx-content-visibility cvx-hairline py-24 px-4 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950" />
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/[0.06] rounded-full blur-3xl" />
 
       <div className="container mx-auto max-w-5xl relative z-10">
         {/* Header */}
@@ -28,18 +27,18 @@ const ReferralSection = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full text-emerald-400 text-sm font-medium mb-6"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-emerald-500/[0.08] border border-emerald-500/25 rounded-full text-emerald-300 text-xs font-semibold uppercase tracking-wide mb-6"
           >
-            <Share2 className="w-4 h-4" />
+            <Share2 className="w-3.5 h-3.5" />
             Pakviesk draugą
           </motion.div>
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 leading-[1.08]">
             <span className="text-white">Abu gaunate po </span>
             <span className="bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">10% bonus</span>
           </h2>
 
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
             Pasiūlyk Clarivex draugui — jis registruojasi per tavo nuorodą ir papildo bent €10. 
             Tu ir tavo draugas gaunate po 10% papildomų kreditų. Vienkartinis bonusas už pirmą papildymą.
           </p>
@@ -57,7 +56,7 @@ const ReferralSection = () => {
           className="grid md:grid-cols-2 gap-8 mb-14"
         >
           {/* Referrer (Tu) */}
-          <div className="relative bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-emerald-500/40 transition-all duration-300">
+          <div className="cvx-surface relative p-8 hover:!border-emerald-500/40 transition-all duration-300">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-green-500/20 border border-emerald-500/30 flex items-center justify-center">
                 <Users className="w-6 h-6 text-emerald-400" />
@@ -88,7 +87,7 @@ const ReferralSection = () => {
           </div>
 
           {/* Referred (Draugas) */}
-          <div className="relative bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-emerald-500/40 transition-all duration-300">
+          <div className="cvx-surface relative p-8 hover:!border-emerald-500/40 transition-all duration-300">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-green-500/20 border border-emerald-500/30 flex items-center justify-center">
                 <Gift className="w-6 h-6 text-emerald-400" />

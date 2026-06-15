@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles, Zap, Mail, MessageCircle, Smartphone } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Mail, MessageCircle, Smartphone, Coins, Globe, ShieldCheck } from 'lucide-react';
 
 const CTA = () => {
   const handleTelegramRegister = () => {
@@ -17,14 +17,11 @@ const CTA = () => {
   };
 
   return (
-    <section id="cta" className="cvx-content-visibility py-24 px-4 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950" />
-      
-      {/* Animated gradient orbs */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px]">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+    <section id="cta" className="cvx-content-visibility cvx-hairline py-24 px-4 relative overflow-hidden">
+      {/* Soft accent glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none">
+        <div className="absolute inset-0 bg-cyan-500/[0.07] rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-indigo-500/[0.05] rounded-full blur-3xl" />
       </div>
       
       <div className="container mx-auto max-w-4xl relative z-10">
@@ -40,23 +37,23 @@ const CTA = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full text-blue-300 text-sm font-medium mb-8"
+            className="cvx-eyebrow mb-8"
           >
-            <Sparkles className="w-4 h-4" />
+            <Sparkles className="w-3.5 h-3.5" />
             Pradėk šiandien — nemokamai
           </motion.div>
 
           {/* Main heading */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.08]">
             <span className="text-white">Pasiruošęs turėti</span>
             <br />
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="cvx-accent-text">
               AI asistentą, kuris niekada nemiega?
             </span>
           </h2>
 
           {/* Description */}
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
             Prisijunk prie šimtų verslų, kurie jau automatizavo savo 
             kasdienius darbus su Clarivex. 250 kr. nemokamai, iki 1000 kr. užbaigus profilį.
           </p>
@@ -67,7 +64,7 @@ const CTA = () => {
               <Button
                 size="lg"
                 onClick={handleEmailRegister}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-10 py-7 text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 group"
+                className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-semibold px-10 py-7 text-lg rounded-2xl shadow-xl shadow-cyan-500/20 hover:shadow-cyan-500/30 transition-all duration-300 group"
               >
                 <Zap className="w-5 h-5 mr-2" />
                 Pradėti nemokamai
@@ -115,39 +112,40 @@ const CTA = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="mt-20 grid md:grid-cols-2 gap-6"
+          className="mt-20 grid md:grid-cols-2 gap-6 text-left"
         >
-          <div className="bg-gray-800/30 border border-gray-700/50 rounded-2xl p-6">
-            <h3 className="font-bold text-white mb-2">🤔 Kaip veikia kreditai?</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              1€ = 1000 kreditų. Kreditai naudojami AI veiksmams: pokalbiai, postai, 
-              paveikslėliai. Nenaudoti kreditai lieka ir niekada nesibaigia.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800/30 border border-gray-700/50 rounded-2xl p-6">
-            <h3 className="font-bold text-white mb-2">🌍 Ar veikia lietuviškai?</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Taip! Clarivex puikiai supranta lietuvių kalbą — ir balsu, ir tekstu. 
-              Taip pat palaiko 100+ kitų kalbų.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800/30 border border-gray-700/50 rounded-2xl p-6">
-            <h3 className="font-bold text-white mb-2">📱 Ar galiu naudoti telefone?</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Taip! Web aplikacija veikia visuose įrenginiuose. Taip pat turime 
-              Telegram botą — valdyk viską tiesiog iš messenger'io.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800/30 border border-gray-700/50 rounded-2xl p-6">
-            <h3 className="font-bold text-white mb-2">🔒 Ar mano duomenys saugūs?</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Absoliučiai. Visi duomenys šifruojami ir saugomi Europos serveriuose. 
-              Niekada neparduodame ir nesidalijame jūsų informacija.
-            </p>
-          </div>
+          {[
+            {
+              icon: Coins,
+              q: 'Kaip veikia kreditai?',
+              a: '1€ = 1000 kreditų. Kreditai naudojami AI veiksmams: pokalbiai, postai, paveikslėliai. Nenaudoti kreditai lieka ir niekada nesibaigia.',
+            },
+            {
+              icon: Globe,
+              q: 'Ar veikia lietuviškai?',
+              a: 'Taip — Clarivex puikiai supranta lietuvių kalbą ir balsu, ir tekstu. Taip pat palaiko 100+ kitų kalbų.',
+            },
+            {
+              icon: Smartphone,
+              q: 'Ar galiu naudoti telefone?',
+              a: 'Taip. Web aplikacija veikia visuose įrenginiuose. Taip pat turime Telegram botą — valdyk viską tiesiog iš messenger’io.',
+            },
+            {
+              icon: ShieldCheck,
+              q: 'Ar mano duomenys saugūs?',
+              a: 'Visi duomenys šifruojami ir saugomi Europos serveriuose. Niekada neparduodame ir nesidalijame jūsų informacija.',
+            },
+          ].map(({ icon: Icon, q, a }) => (
+            <div key={q} className="cvx-surface p-6">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-white/[0.04] border border-white/10 text-cyan-400">
+                  <Icon className="w-4 h-4" />
+                </span>
+                <h3 className="font-semibold text-white">{q}</h3>
+              </div>
+              <p className="text-slate-400 text-sm leading-relaxed">{a}</p>
+            </div>
+          ))}
         </motion.div>
 
         {/* Contact info */}

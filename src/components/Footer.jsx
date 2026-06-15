@@ -15,11 +15,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="cvx-content-visibility bg-gray-950 border-t border-gray-800 relative overflow-hidden">
+    <footer className="cvx-content-visibility cvx-hairline relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0">
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/[0.04] rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-500/[0.04] rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto max-w-7xl px-4 py-16 relative z-10">
@@ -39,7 +39,7 @@ const Footer = () => {
                 decoding="async"
                 className="w-10 h-10 object-contain"
               />
-              <span className="text-xl font-bold text-white">Clarivex</span>
+              <span className="text-xl font-bold tracking-tight text-white">Clarivex</span>
             </div>
             
             <p className="text-gray-400 text-sm leading-relaxed mb-6">

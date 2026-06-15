@@ -168,7 +168,7 @@ function LandingPage() {
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       
-      <div className="min-h-screen bg-gray-950 text-white antialiased">
+      <div className="cvx-page min-h-screen text-white antialiased">
         <Header />
         <main>
           <Hero />

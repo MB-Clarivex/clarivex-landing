@@ -136,10 +136,8 @@ const integrations = [
 
 const Features = () => {
   return (
-    <section id="features" className="cvx-content-visibility py-24 px-4 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950" />
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+    <section id="features" className="cvx-content-visibility cvx-hairline py-24 px-4 relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
       
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Header */}
@@ -154,21 +152,19 @@ const Features = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6"
+            className="cvx-eyebrow mb-6"
           >
-            <Sparkles className="w-4 h-4" />
+            <Sparkles className="w-3.5 h-3.5" />
             Galimybės
           </motion.div>
-          
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.08]">
             <span className="text-white">Viskas ko reikia,</span>
             <br />
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              vienoje platformoje
-            </span>
+            <span className="cvx-accent-text">vienoje platformoje</span>
           </h2>
-          
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
             Nuo postų kūrimo iki el. pašto valdymo — Clarivex automatizuoja 
             kasdienines užduotis, kad tu galėtum fokusuotis į tai, kas svarbu.
           </p>
@@ -179,44 +175,41 @@ const Features = () => {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
-              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              transition={{ delay: index * 0.04, duration: 0.45, ease: 'easeOut' }}
+              whileHover={{ y: -4, transition: { duration: 0.25 } }}
               className="group relative"
             >
-              {/* Hover glow */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} rounded-2xl blur-xl opacity-0 group-hover:opacity-20 transition-all duration-500`} />
-              
-              <div className="relative bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600 transition-all duration-300 h-full">
+              <div className="cvx-surface cvx-surface-hover relative p-6 h-full">
                 {/* Badge */}
                 {feature.badge && (
-                  <div className="absolute -top-3 right-4 px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold rounded-full shadow-lg">
+                  <div className="absolute -top-3 right-4 px-3 py-1 bg-white/[0.06] border border-white/15 text-cyan-300 text-xs font-semibold rounded-full backdrop-blur">
                     {feature.badge}
                   </div>
                 )}
-                
+
                 {/* Icon */}
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                  <feature.icon className="w-7 h-7 text-white" />
+                <div className="w-12 h-12 rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-center mb-5 text-cyan-400 group-hover:text-cyan-300 group-hover:border-cyan-500/30 transition-colors duration-300">
+                  <feature.icon className="w-6 h-6" />
                 </div>
-                
+
                 {/* Content */}
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
+                <h3 className="text-lg font-semibold mb-2.5 text-white">
                   {feature.title}
                 </h3>
-                
-                <p className="text-gray-400 leading-relaxed mb-4 text-sm">
+
+                <p className="text-slate-400 leading-relaxed mb-4 text-sm">
                   {feature.description}
                 </p>
-                
+
                 {/* Stats */}
-                <div className="flex items-center gap-2 pt-4 border-t border-gray-700/50">
-                  <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <div className="flex items-baseline gap-2 pt-4 border-t border-white/[0.06]">
+                  <span className="text-2xl font-bold text-white tracking-tight">
                     {feature.stats}
                   </span>
-                  <span className="text-xs text-gray-500">{feature.statsLabel}</span>
+                  <span className="text-xs text-slate-500">{feature.statsLabel}</span>
                 </div>
               </div>
             </motion.div>
@@ -231,21 +224,20 @@ const Features = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <p className="text-gray-400 mb-8 text-lg">Integruojasi su įrankiais, kuriuos jau naudoji</p>
-          
-          <div className="flex flex-wrap justify-center gap-4">
+          <p className="text-slate-400 mb-8 text-lg">Integruojasi su įrankiais, kuriuos jau naudoji</p>
+
+          <div className="flex flex-wrap justify-center gap-3">
             {integrations.map((integration, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.92 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.05, duration: 0.4 }}
-                whileHover={{ scale: 1.05, y: -2 }}
-                className="flex items-center gap-3 px-5 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl hover:border-gray-600 transition-all cursor-pointer"
+                transition={{ delay: index * 0.04, duration: 0.35 }}
+                className="cvx-surface cvx-surface-hover flex items-center gap-3 px-5 py-3"
               >
                 <integration.icon className={`w-5 h-5 ${integration.color}`} />
-                <span className="text-gray-300 font-medium">{integration.name}</span>
+                <span className="text-slate-300 font-medium">{integration.name}</span>
               </motion.div>
             ))}
           </div>

@@ -21,22 +21,21 @@ const handlePavedimu = () => {
 
 const PapildymoSection = () => {
   return (
-    <section id="papildymas" className="cvx-content-visibility py-24 px-4 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950" />
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+    <section id="papildymas" className="cvx-content-visibility cvx-hairline py-24 px-4 relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
 
       <div className="container mx-auto max-w-5xl relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
             Ką gaunate papildę?
           </h2>
-          <p className="text-gray-400 max-w-xl mx-auto">
+          <p className="text-slate-400 max-w-xl mx-auto">
             1€ = 1000 kreditų. Didesnėms sumoms — bonus kreditai. Spustelėjus pildytis, 
             būsite nukreipti į prisijungimą, po to galėsite papildyti.
           </p>
@@ -52,34 +51,32 @@ const PapildymoSection = () => {
           {PACKAGES.map((pkg, i) => (
             <div
               key={pkg.price}
-              className={`relative rounded-2xl border p-6 flex flex-col ${
-                pkg.popular
-                  ? 'border-blue-500/50 bg-blue-500/5 ring-1 ring-blue-500/30'
-                  : 'border-gray-700/50 bg-gray-800/30'
+              className={`cvx-surface relative p-6 flex flex-col ${
+                pkg.popular ? '!border-cyan-500/40 ring-1 ring-cyan-500/20 bg-cyan-500/[0.04]' : ''
               }`}
             >
               {pkg.popular && (
-                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-blue-600 text-white text-xs font-medium rounded-full">
-                  ⭐ Populiariausias
+                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-xs font-semibold rounded-full">
+                  Populiariausias
                 </span>
               )}
               <div className="text-center mb-4">
-                <div className="text-3xl font-bold text-white">€{pkg.price}</div>
-                <div className="text-lg font-semibold text-blue-400 mt-1">
+                <div className="text-3xl font-bold text-white tracking-tight">€{pkg.price}</div>
+                <div className="text-lg font-semibold text-cyan-400 mt-1">
                   {pkg.credits.toLocaleString('lt-LT')} kr.
                 </div>
                 {pkg.bonus > 0 && (
-                  <span className="inline-block mt-2 px-2 py-0.5 bg-green-500/20 text-green-400 text-xs rounded-full">
+                  <span className="inline-block mt-2 px-2 py-0.5 bg-emerald-500/15 text-emerald-400 text-xs rounded-full">
                     +{pkg.bonus}% bonus
                   </span>
                 )}
               </div>
               <Button
                 onClick={() => handlePapildyti(`credits_${pkg.price}`)}
-                className={`mt-auto w-full ${
+                className={`mt-auto w-full font-semibold ${
                   pkg.popular
-                    ? 'bg-blue-600 hover:bg-blue-500'
-                    : 'bg-gray-700 hover:bg-gray-600'
+                    ? 'bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400'
+                    : 'bg-white/[0.06] hover:bg-white/[0.1] border border-white/10'
                 } text-white`}
               >
                 Papildyti
