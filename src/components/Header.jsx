@@ -6,7 +6,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 
 /** Desktop: pagrindinė juosta + „Daugiau“ (mažiau vizualinio triukšmo). Mobilus: visos nuorodos sąraše. */
 const primaryNavLinks = [
-  { id: 'home', label: 'Pradžia' },
+  { id: 'home', label: 'Pradžia', href: '/' },
   { id: 'features', label: 'Funkcijos', href: '/features' },
   { id: 'how-it-works', label: 'Kaip veikia', href: '/kaip-veikia', desktopNowrap: true },
   { id: 'benefits', label: 'Nauda', href: '/nauda' },
@@ -80,8 +80,8 @@ const Header = () => {
       >
         <div className="container mx-auto max-w-7xl px-4 flex items-center justify-between">
           {/* Logo */}
-          <div
-            onClick={() => handleScrollTo('home')}
+          <Link
+            to="/"
             className="flex items-center gap-2 cursor-pointer group"
           >
             <div className="relative">
@@ -91,15 +91,14 @@ const Header = () => {
                 width="40"
                 height="40"
                 decoding="async"
-                fetchpriority={isHomePage ? 'high' : undefined}
-                loading={isHomePage ? 'eager' : 'lazy'}
+                loading="lazy"
                 className="w-10 h-10 object-contain"
               />
             </div>
             <span className="text-xl md:text-2xl font-bold tracking-tight text-white group-hover:text-blue-300 transition-colors">
               Clarivex
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-0.5">

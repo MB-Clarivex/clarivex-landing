@@ -11,7 +11,6 @@ export const siteConfig = {
   supportEmail: 'info@clarivex.ai',
   appUrl: 'https://app.clarivex.ai/auth',
   sameAs: [
-    'https://www.instagram.com/clarivex_ai/',
     'https://www.facebook.com/Clarivex/',
     'https://t.me/clarivex_support_bot',
   ],
@@ -118,9 +117,9 @@ export const existingPageMetadata = [
   },
   {
     path: '/atsakiklis',
-    title: 'Clarivex atsakiklis: DM, Messenger, paštas',
+    title: 'Clarivex atsakiklis: DM ir Messenger 24/7',
     description:
-      'Messenger ir Instagram DM juodraščiai su Clarivex AI lietuvių kalba. El. paštą tvarkykite toje pačioje sistemoje — nuoseklus tonas ir mažiau rankinio rašymo.',
+      'Nepraraskite klientų dėl vėluojančių atsakymų. Clarivex automatiškai atsako į Messenger, Instagram DM ir komentarus lietuviškai — net kai ilsitės.',
     priority: '0.85',
     changefreq: 'weekly',
   },
@@ -142,9 +141,9 @@ export const existingPageMetadata = [
   },
   {
     path: '/statusas',
-    title: 'Clarivex sistemos statusas',
+    title: 'Clarivex statusas: ar visos sistemos veikia?',
     description:
-      'Clarivex sistemos statusas: platforma, AI, socialinių tinklų publikavimas, el. paštas ir Telegram. Informacija orientacinė; incidentus praneškite palaikymui.',
+      'Clarivex sistemos statusas realiu laiku: platforma, AI, socialinių tinklų publikavimas, el. paštas ir Telegram. Incidentus praneškite palaikymui.',
     priority: '0.5',
     changefreq: 'daily',
   },

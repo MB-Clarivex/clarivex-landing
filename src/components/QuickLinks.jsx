@@ -41,6 +41,9 @@ const QuickLinks = () => {
           <Link to="/duk" className="cvx-surface cvx-surface-hover px-4 py-2 text-slate-300 hover:text-white">
             DUK
           </Link>
+          <Link to="/statusas" className="cvx-surface cvx-surface-hover px-4 py-2 text-slate-300 hover:text-white">
+            Sistemos statusas
+          </Link>
         </div>
       </div>
     </section>

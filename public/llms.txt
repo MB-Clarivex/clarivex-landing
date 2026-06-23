@@ -9,10 +9,10 @@ Pagrindinės temos: AI asistentas lietuviškai, socialinių tinklų valdymas, AI
 - [Kaip veikia Clarivex AI: žingsniai ir kreditai](/kaip-veikia): Nuo užklausos iki rezultato: kreditai, el. paštas, socialiniai tinklai ir Telegram vienoje vietoje. Trumpa veikimo eiga lietuviškai.
 - [Clarivex AI nauda: mažiau rutinos, daugiau laiko](/nauda): Greitesnė komunikacija ir mažiau rutinos: el. paštas, socialiniai tinklai lietuvių kalba vienoje Clarivex sistemoje. Sužinokite naudą smulkioms įmonėms.
 - [Clarivex Telegram botas – balsas ir priminimai](/telegram): Telegram ir Clarivex: balso komandos lietuviškai, užrašai, priminimai ir trumpi tekstai telefone. Greitas būdas valdyti AI, kai esate kelyje ar užimtas darbas.
-- [Clarivex atsakiklis: DM, Messenger, paštas](/atsakiklis): Messenger ir Instagram DM juodraščiai su Clarivex AI lietuvių kalba. El. paštą tvarkykite toje pačioje sistemoje — nuoseklus tonas ir mažiau rankinio rašymo.
+- [Clarivex atsakiklis: DM ir Messenger 24/7](/atsakiklis): Nepraraskite klientų dėl vėluojančių atsakymų. Clarivex automatiškai atsako į Messenger, Instagram DM ir komentarus lietuviškai — net kai ilsitės.
 - [Clarivex AI kainos – kreditai be abonemento](/kainos): Clarivex kainos — kreditai be abonemento (apie 1 € už 1000 kr). Peržiūrėkite tipinių veiksmų sąnaudas ir patarimus, kaip mažinti išlaidas kasdienėje veikloje.
 - [Clarivex DUK – kreditai, kalba, saugumas](/duk): Atsakymai apie Clarivex AI: kreditų sistema, lietuvių kalba, Instagram ir Facebook, Telegram, mokėjimai ir BDAR. Peržiūrėkite visą DUK.
-- [Clarivex sistemos statusas](/statusas): Clarivex sistemos statusas: platforma, AI, socialinių tinklų publikavimas, el. paštas ir Telegram. Informacija orientacinė; incidentus praneškite palaikymui.
+- [Clarivex statusas: ar visos sistemos veikia?](/statusas): Clarivex sistemos statusas realiu laiku: platforma, AI, socialinių tinklų publikavimas, el. paštas ir Telegram. Incidentus praneškite palaikymui.
 
 ## Komerciniai landing puslapiai
 - [AI asistentas lietuvių kalba verslui](/ai-asistentas-lietuviu-kalba): AI asistentas lietuvių kalba padeda kurti turinį, atsakyti į laiškus, valdyti priminimus ir atlikti kasdienius verslo veiksmus vienoje vietoje.
