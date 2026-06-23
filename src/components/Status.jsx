@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
+import SeoInternalLinks from '@/components/SeoInternalLinks';
+import { seoHref } from '@/lib/seoLinks';
 import { ArrowLeft, CheckCircle, AlertCircle, XCircle, Activity, Globe, Bot, Mail, Calendar, Database } from 'lucide-react';
 import { siteConfig, getPrimaryPageMeta } from '@/content/seoPages';
 
@@ -140,13 +141,13 @@ const Status = () => {
         {/* Header */}
         <header className="border-b border-gray-800 bg-gray-950/80 backdrop-blur-sm sticky top-0 z-50">
           <div className="max-w-4xl mx-auto px-4 py-4">
-            <Link 
-              to="/" 
+            <a 
+              href={seoHref('/')}
               className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               Grįžti į pradžią
-            </Link>
+            </a>
           </div>
         </header>
 
@@ -164,11 +165,11 @@ const Status = () => {
             </p>
             <p>
               Jei ieškote produkto apžvalgos ar kainodaros, naudingi puslapiai:{' '}
-              <Link to="/features" className="text-blue-400 hover:text-blue-300">funkcijos</Link>,{' '}
-              <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">kaip veikia</Link> ir{' '}
-              <Link to="/kainos" className="text-blue-400 hover:text-blue-300">kainos</Link>.
+              <a href={seoHref('/features')} className="text-blue-400 hover:text-blue-300">funkcijos</a>,{' '}
+              <a href={seoHref('/kaip-veikia')} className="text-blue-400 hover:text-blue-300">kaip veikia</a> ir{' '}
+              <a href={seoHref('/kainos')} className="text-blue-400 hover:text-blue-300">kainos</a>.
               Dažni klausimai apie integracijas ir saugumą —{' '}
-              <Link to="/duk" className="text-blue-400 hover:text-blue-300">DUK skyriuje</Link>.
+              <a href={seoHref('/duk')} className="text-blue-400 hover:text-blue-300">DUK skyriuje</a>.
             </p>
           </div>
 
@@ -222,7 +223,7 @@ const Status = () => {
             <p className="text-gray-400 text-sm">
               Jei įtariate saugumo incidentą (įtartina veikla paskyroje), nedelsdami keiskite slaptažodžius pas tiekėją ir
               praneškite mums per oficialius kontaktus — žr.{' '}
-              <Link to="/duk" className="text-blue-400 hover:text-blue-300">DUK saugumo skyrių</Link>.
+              <a href={seoHref('/duk')} className="text-blue-400 hover:text-blue-300">DUK saugumo skyrių</a>.
             </p>
           </section>
 
@@ -242,11 +243,11 @@ const Status = () => {
                   </p>
                   <p className="text-sm text-gray-500 mt-3">
                     Susipažinti su produktu galite čia:{' '}
-                    <Link to="/features" className="text-blue-400 hover:text-blue-300">funkcijos</Link>
+                    <a href={seoHref('/features')} className="text-blue-400 hover:text-blue-300">funkcijos</a>
                     {' · '}
-                    <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">kaip veikia</Link>
+                    <a href={seoHref('/kaip-veikia')} className="text-blue-400 hover:text-blue-300">kaip veikia</a>
                     {' · '}
-                    <Link to="/kainos" className="text-blue-400 hover:text-blue-300">kainos</Link>
+                    <a href={seoHref('/kainos')} className="text-blue-400 hover:text-blue-300">kainos</a>
                   </p>
                 </div>
               </div>
@@ -385,14 +386,7 @@ const Status = () => {
         {/* Footer */}
         <footer className="border-t border-gray-800 py-8 mt-12">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <nav className="flex flex-wrap justify-center gap-6 text-sm mb-4">
-              <Link to="/" className="text-gray-400 hover:text-white transition-colors">Pradžia</Link>
-              <Link to="/kaip-veikia" className="text-gray-400 hover:text-white transition-colors">Kaip veikia</Link>
-              <Link to="/kainos" className="text-gray-400 hover:text-white transition-colors">Kainodara</Link>
-              <Link to="/features" className="text-gray-400 hover:text-white transition-colors">Funkcijos</Link>
-              <Link to="/duk" className="text-gray-400 hover:text-white transition-colors">DUK</Link>
-              <Link to="/telegram" className="text-gray-400 hover:text-white transition-colors">Telegram</Link>
-            </nav>
+            <SeoInternalLinks />
             <p className="text-gray-500 text-sm">© 2026 Clarivex. Visos teisės saugomos.</p>
           </div>
         </footer>

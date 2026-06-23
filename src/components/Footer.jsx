@@ -1,8 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { OPEN_SETTINGS_EVENT } from '@/lib/cookieConsent';
+import { seoHref } from '@/lib/seoLinks';
 import { motion } from 'framer-motion';
 import { Mail, MessageCircle, Instagram, Facebook } from 'lucide-react';
+
+function FooterLink({ to, children, className }) {
+  return (
+    <a href={seoHref(to)} className={className}>
+      {children}
+    </a>
+  );
+}
 
 const Footer = () => {
   const handleScrollTo = (id) => {
@@ -73,64 +81,64 @@ const Footer = () => {
             <p className="font-semibold text-white mb-5">Platforma</p>
             <ul className="space-y-3">
               <li>
-                <Link 
+                <FooterLink 
                   to="/blog" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Blogas
-                </Link>
+                </FooterLink>
               </li>
               <li>
-                <Link 
+                <FooterLink 
                   to="/resursai" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Resursai
-                </Link>
+                </FooterLink>
               </li>
               <li>
-                <Link 
+                <FooterLink 
                   to="/features" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Funkcijos
-                </Link>
+                </FooterLink>
               </li>
               <li>
-                <Link 
+                <FooterLink 
                   to="/kaip-veikia" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Kaip veikia
-                </Link>
+                </FooterLink>
               </li>
               <li>
-                <Link 
+                <FooterLink 
                   to="/kainos" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Kainodara
-                </Link>
+                </FooterLink>
               </li>
               <li>
-                <Link 
+                <FooterLink 
                   to="/nauda" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Nauda
-                </Link>
+                </FooterLink>
               </li>
               <li>
-                <Link 
+                <FooterLink 
                   to="/atsakiklis" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Atsakiklis
-                </Link>
+                </FooterLink>
               </li>
               <li>
                 <a 
-                  href="/#pakviesk" 
+                  href={seoHref('/#pakviesk')} 
                   className="text-gray-400 hover:text-emerald-400 transition-colors text-sm"
                 >
                   Pakviesk draugą
@@ -153,28 +161,28 @@ const Footer = () => {
             <p className="font-semibold text-white mb-5">Pagalba</p>
             <ul className="space-y-3">
               <li>
-                <Link 
+                <FooterLink 
                   to="/duk" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   DUK
-                </Link>
+                </FooterLink>
               </li>
               <li>
-                <Link 
+                <FooterLink 
                   to="/statusas" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Sistemos statusas
-                </Link>
+                </FooterLink>
               </li>
               <li>
-                <Link 
+                <FooterLink 
                   to="/telegram" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Telegram integracija
-                </Link>
+                </FooterLink>
               </li>
               <li>
                 <a 
@@ -187,12 +195,12 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <Link 
+                <FooterLink 
                   to="/partneriams-ir-ziniasklaidai" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
                   Partneriams ir žiniasklaidai
-                </Link>
+                </FooterLink>
               </li>
             </ul>
           </div>
@@ -243,15 +251,15 @@ const Footer = () => {
             >
               Slapukų nustatymai
             </button>
-            <Link to="/privatumas" className="text-gray-500 hover:text-gray-300 transition-colors">
+            <FooterLink to="/privatumas" className="text-gray-500 hover:text-gray-300 transition-colors">
               Privatumo politika
-            </Link>
-            <Link to="/salygos" className="text-gray-500 hover:text-gray-300 transition-colors">
+            </FooterLink>
+            <FooterLink to="/salygos" className="text-gray-500 hover:text-gray-300 transition-colors">
               Naudojimosi sąlygos
-            </Link>
-            <Link to="/duomenu-istrynimas" className="text-gray-500 hover:text-gray-300 transition-colors">
+            </FooterLink>
+            <FooterLink to="/duomenu-istrynimas" className="text-gray-500 hover:text-gray-300 transition-colors">
               Duomenų ištrynimas
-            </Link>
+            </FooterLink>
           </div>
         </div>
       </div>

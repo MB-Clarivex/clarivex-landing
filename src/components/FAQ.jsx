@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
 import { ArrowLeft, ChevronDown, ChevronUp, CreditCard, Bot, Shield, Zap, HelpCircle, MessageCircle } from 'lucide-react';
+import SeoInternalLinks from '@/components/SeoInternalLinks';
+import { seoHref } from '@/lib/seoLinks';
 import { siteConfig, getPrimaryPageMeta } from '@/content/seoPages';
 
 const faqCategories = [
@@ -272,13 +273,13 @@ const FAQ = () => {
         {/* Header */}
         <header className="border-b border-gray-800 bg-gray-950/80 backdrop-blur-sm sticky top-0 z-50">
           <div className="max-w-6xl mx-auto px-4 py-4">
-            <Link 
-              to="/" 
+            <a 
+              href={seoHref('/')}
               className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               Grįžti į pradžią
-            </Link>
+            </a>
           </div>
         </header>
 
@@ -291,13 +292,13 @@ const FAQ = () => {
             </p>
             <p className="text-sm text-gray-500 max-w-2xl mx-auto mt-4">
               Jei norite greitos produkto apžvalgos, peržiūrėkite{' '}
-              <Link to="/features" className="text-blue-400 hover:text-blue-300">funkcijas</Link>
+              <a href={seoHref('/features')} className="text-blue-400 hover:text-blue-300">funkcijas</a>
               {' · '}
-              <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">kaip veikia</Link>
+              <a href={seoHref('/kaip-veikia')} className="text-blue-400 hover:text-blue-300">kaip veikia</a>
               {' · '}
-              <Link to="/kainos" className="text-blue-400 hover:text-blue-300">kainas</Link>
+              <a href={seoHref('/kainos')} className="text-blue-400 hover:text-blue-300">kainas</a>
               {' · '}
-              <Link to="/telegram" className="text-blue-400 hover:text-blue-300">Telegram</Link>
+              <a href={seoHref('/telegram')} className="text-blue-400 hover:text-blue-300">Telegram</a>
             </p>
           </div>
 
@@ -322,9 +323,9 @@ const FAQ = () => {
             </p>
             <p className="mb-4">
               Jei sutrikimas „bendras“ (pvz., nepavyksta prisijungti ar neįsikelia puslapis), patikrinkite{' '}
-              <Link to="/statusas" className="text-blue-400 hover:text-blue-300">
+              <a href={seoHref('/statusas')} className="text-blue-400 hover:text-blue-300">
                 sistemos statusą
-              </Link>
+              </a>
               . Jei statusas normalus, bet klaida kartojasi tik jūsų paskyroje ar konkrečiai užduočiai, parašykite{' '}
               <a
                 href="https://t.me/clarivex_support_bot"
@@ -418,17 +419,18 @@ const FAQ = () => {
             </div>
             <p className="text-sm text-gray-500 mt-6">
               Taip pat galite pereiti į{' '}
-              <Link to="/nauda" className="text-blue-400 hover:text-blue-300">naudos puslapį</Link>
+              <a href={seoHref('/nauda')} className="text-blue-400 hover:text-blue-300">naudos puslapį</a>
               {' arba '}
-              <Link to="/statusas" className="text-blue-400 hover:text-blue-300">sistemos statusą</Link>.
+              <a href={seoHref('/statusas')} className="text-blue-400 hover:text-blue-300">sistemos statusą</a>.
             </p>
           </div>
         </main>
 
         {/* Footer */}
         <footer className="border-t border-gray-800 py-8 mt-12">
-          <div className="max-w-6xl mx-auto px-4 text-center text-gray-500">
-            <p>© 2026 Clarivex. Visos teisės saugomos.</p>
+          <div className="max-w-6xl mx-auto px-4 text-center">
+            <SeoInternalLinks />
+            <p className="text-gray-500 text-sm">© 2026 Clarivex. Visos teisės saugomos.</p>
           </div>
         </footer>
       </div>

@@ -12,8 +12,9 @@ import {
   AlertTriangle,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
-const INFOGRAPHIC_SRC = '/atsakiklis-problema-sprendimas.png';
+import AtsakiklisInfographic, {
+  AtsakiklisInfographicLightbox,
+} from '@/components/AtsakiklisInfographic';
 
 const problemExamples = [
   {
@@ -116,11 +117,7 @@ function InfographicLightbox({ open, onClose }) {
         className="relative z-[10000] max-h-[92vh] w-full max-w-[min(96vw,1100px)] flex items-center justify-center"
         onClick={(e) => e.stopPropagation()}
       >
-        <img
-          src={INFOGRAPHIC_SRC}
-          alt="Nepraraskite klientų dėl vėluojančių atsakymų — problema ir Clarivex sprendimas"
-          className="max-h-[92vh] w-full h-auto rounded-xl shadow-2xl object-contain"
-        />
+        <AtsakiklisInfographicLightbox className="max-h-[92vh] w-full h-auto rounded-xl shadow-2xl object-contain" />
       </div>
     </div>,
     document.body,
@@ -150,14 +147,7 @@ const AtsakiklisProblemSection = ({ onStart }) => {
             className="group relative w-full max-w-5xl mx-auto block rounded-xl overflow-hidden border border-gray-700/60 hover:border-blue-500/40 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 shadow-2xl shadow-black/30"
             aria-label="Atidaryti infografiką per visą ekraną"
           >
-            <img
-              src={INFOGRAPHIC_SRC}
-              alt="Infografikas: nepraraskite klientų dėl vėluojančių atsakymų — problema ir Clarivex sprendimas"
-              className="w-full h-auto"
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-            />
+            <AtsakiklisInfographic className="w-full h-auto" loading="lazy" />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
               <span className="opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 px-4 py-2 rounded-full bg-black/60 text-white text-sm font-medium">
                 <ZoomIn className="w-4 h-4" />
