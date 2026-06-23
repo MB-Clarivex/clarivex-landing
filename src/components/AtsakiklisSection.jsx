@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  MessageCircle,
   Moon,
   Zap,
   Shield,
@@ -10,13 +9,13 @@ import {
   Sparkles,
   ChevronRight,
   CheckCircle2,
-  Smartphone,
   CalendarClock,
   Timer,
   ListFilter,
   Headphones,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import AtsakiklisProblemSection from '@/components/AtsakiklisProblemSection';
 
 const accentFrom = 'from-blue-500';
 const accentTo = 'to-purple-500';
@@ -143,23 +142,23 @@ const AtsakiklisSection = () => {
             viewport={{ once: true }}
             className={`inline-flex items-center gap-2 px-4 py-2 ${accentBg} border ${accentBorder} rounded-full ${accentText} text-sm font-medium mb-6`}
           >
-            <MessageCircle className="w-4 h-4" />
-            DM, Messenger ir komentarai
+            <Moon className="w-4 h-4" />
+            Dirba 24/7
           </motion.div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-white">Išmanus atsakiklis</span>
+            <span className="text-white">Nepraraskite klientų</span>
             <br />
             <span
               className={`bg-gradient-to-r ${accentFrom} ${accentTo} bg-clip-text text-transparent`}
             >
-              žinutėms ir komentarams
+              dėl vėluojančių atsakymų
             </span>
           </h1>
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-4">
-            Clarivex AI padeda atsakyti į Messenger, Instagram DM ir komentarus po įrašais — greičiau,
-            su juodraščiais, taisyklėmis ir automatizacija lietuvių kalba.
+            Jūsų verslui — automatinis atsakymas per kelias sekundes, net kai ilsitės. Messenger,
+            Instagram DM ir komentarai lietuvių kalba.
           </p>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed mb-4">
             Kiekvienai paskyrai atskirai: kada AI atsakinėja, skirtingos taisyklės žinutėms ir komentarams,
@@ -187,6 +186,8 @@ const AtsakiklisSection = () => {
           </p>
         </motion.div>
 
+        <AtsakiklisProblemSection onStart={handleStart} />
+
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -213,125 +214,44 @@ const AtsakiklisSection = () => {
           </div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start mb-20">
-          <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative mx-auto w-full max-w-[320px]"
-          >
-            <div className="relative bg-gray-900 rounded-[3rem] p-3 border-4 border-gray-800 shadow-2xl shadow-purple-500/15">
-              <div className="bg-gray-950 rounded-[2.5rem] overflow-hidden">
-                <div className="bg-gray-900 px-5 py-2.5 flex justify-between items-center text-xs text-gray-400">
-                  <span>9:41</span>
-                  <Smartphone className="w-3.5 h-3.5 opacity-60" />
-                </div>
-                <div className="px-4 py-3 flex items-center gap-3 border-b border-gray-800">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-sm font-bold">
-                    C
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">
+            Kuo tai naudinga
+          </h2>
+          <p className="text-gray-400 text-sm text-center mb-8 max-w-2xl mx-auto">
+            Funkcijos, kurias rasite Clarivex Inbox ir Automatizacijos skyriuose.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {benefits.map((b, index) => (
+              <motion.div
+                key={b.title}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05, duration: 0.35 }}
+                className="group p-4 bg-gray-800/30 border border-gray-700/50 rounded-xl hover:border-blue-500/40 transition-all"
+              >
+                <div className="flex items-start gap-3">
+                  <div
+                    className={`w-9 h-9 rounded-lg ${accentBg} border ${accentBorder} flex items-center justify-center shrink-0`}
+                  >
+                    <b.icon className={`w-4 h-4 ${accentText}`} />
                   </div>
                   <div>
-                    <p className="text-white text-sm font-medium">Jūsų prekės ženklas</p>
-                    <p className="text-gray-500 text-xs">Instagram · aktyvu</p>
+                    <h3 className="text-white font-medium text-sm mb-1">{b.title}</h3>
+                    <p className="text-gray-400 text-xs leading-relaxed">{b.description}</p>
                   </div>
                 </div>
-                <div className="p-4 space-y-3.5 min-h-[300px] bg-gray-950/80">
-                  {/* 1 — klientas */}
-                  <div className="flex justify-start">
-                    <div className="max-w-[90%]">
-                      <div className="bg-gray-800 rounded-2xl rounded-bl-sm px-3 py-2 border border-gray-700/80">
-                        <p className="text-gray-200 text-sm">
-                          Ar ši prekė bus sandėlyje sekmadienį?
-                        </p>
-                      </div>
-                      <p className="text-gray-500 text-[10px] mt-1 pl-0.5">Klientas · komentaras</p>
-                    </div>
-                  </div>
-                  {/* 2 — AI juodraštis */}
-                  <div className="flex justify-end">
-                    <div className="max-w-[90%]">
-                      <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl rounded-br-sm px-3 py-2">
-                        <p className="text-white text-sm">
-                          Sekmadienį sandėlis nedirba — išsiųsime pirmadienį. Ar tinka?
-                        </p>
-                      </div>
-                      <p className="text-gray-500 text-[10px] mt-1 pr-0.5 text-right">
-                        AI juodraštis · patvirtinti
-                      </p>
-                    </div>
-                  </div>
-                  {/* 3 — klientas */}
-                  <div className="flex justify-start">
-                    <div className="max-w-[90%]">
-                      <div className="bg-gray-800 rounded-2xl rounded-bl-sm px-3 py-2 border border-gray-700/80">
-                        <p className="text-gray-200 text-sm">Gerai. O dydis M dar yra?</p>
-                      </div>
-                      <p className="text-gray-500 text-[10px] mt-1 pl-0.5">Klientas · DM</p>
-                    </div>
-                  </div>
-                  {/* 4 — AI (automatika / darbo laikas) */}
-                  <div className="flex justify-end">
-                    <div className="max-w-[90%]">
-                      <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl rounded-br-sm px-3 py-2">
-                        <p className="text-white text-sm">
-                          Taip, M turime. Siunčiame per 1–2 d. d.
-                        </p>
-                      </div>
-                      <p className="text-gray-500 text-[10px] mt-1 pr-0.5 text-right">
-                        AI · automatinis · darbo valandos
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-gray-900 px-3 py-2.5 flex items-center gap-2">
-                  <div className="flex-1 bg-gray-800 rounded-full px-3 py-2 text-gray-500 text-sm">
-                    Žinutė…
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="absolute -top-3 -right-3 w-16 h-16 bg-purple-500/20 rounded-full blur-xl" />
-            <div className="absolute -bottom-3 -left-3 w-20 h-20 bg-blue-500/20 rounded-full blur-xl" />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-4"
-          >
-            <h2 className="text-2xl font-bold text-white mb-2">Kuo tai naudinga</h2>
-            <p className="text-gray-400 text-sm mb-4">
-              Funkcijos, kurias rasite Clarivex Inbox ir Automatizacijos skyriuose.
-            </p>
-            <div className="grid sm:grid-cols-2 gap-3">
-              {benefits.map((b, index) => (
-                <motion.div
-                  key={b.title}
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05, duration: 0.35 }}
-                  className="group p-4 bg-gray-800/30 border border-gray-700/50 rounded-xl hover:border-blue-500/40 transition-all"
-                >
-                  <div className="flex items-start gap-3">
-                    <div
-                      className={`w-9 h-9 rounded-lg ${accentBg} border ${accentBorder} flex items-center justify-center shrink-0`}
-                    >
-                      <b.icon className={`w-4 h-4 ${accentText}`} />
-                    </div>
-                    <div>
-                      <h3 className="text-white font-medium text-sm mb-1">{b.title}</h3>
-                      <p className="text-gray-400 text-xs leading-relaxed">{b.description}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
