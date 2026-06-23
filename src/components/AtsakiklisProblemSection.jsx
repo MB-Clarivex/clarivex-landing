@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { motion } from 'framer-motion';
 import {
   Clock,
@@ -74,6 +75,12 @@ function ChatBubble({ align, label, time, children, variant = 'customer' }) {
 }
 
 function InfographicLightbox({ open, onClose }) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   useEffect(() => {
     if (!open) return undefined;
     const onKey = (e) => {
@@ -87,11 +94,11 @@ function InfographicLightbox({ open, onClose }) {
     };
   }, [open, onClose]);
 
-  if (!open) return null;
+  if (!open || !mounted) return null;
 
-  return (
+  return createPortal(
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm"
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6 bg-black/90"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
@@ -100,18 +107,23 @@ function InfographicLightbox({ open, onClose }) {
       <button
         type="button"
         onClick={onClose}
-        className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+        className="absolute top-4 right-4 z-[10001] p-2 rounded-full bg-white/15 hover:bg-white/25 text-white transition-colors"
         aria-label="Uždaryti"
       >
         <X className="w-5 h-5" />
       </button>
-      <img
-        src={INFOGRAPHIC_SRC}
-        alt="Nepraraskite klientų dėl vėluojančių atsakymų — problema ir Clarivex sprendimas"
-        className="max-h-[92vh] max-w-full w-auto rounded-xl shadow-2xl object-contain"
+      <div
+        className="relative z-[10000] max-h-[92vh] w-full max-w-[min(96vw,1100px)] flex items-center justify-center"
         onClick={(e) => e.stopPropagation()}
-      />
-    </div>
+      >
+        <img
+          src={INFOGRAPHIC_SRC}
+          alt="Nepraraskite klientų dėl vėluojančių atsakymų — problema ir Clarivex sprendimas"
+          className="max-h-[92vh] w-full h-auto rounded-xl shadow-2xl object-contain"
+        />
+      </div>
+    </div>,
+    document.body,
   );
 }
 
@@ -122,12 +134,58 @@ const AtsakiklisProblemSection = ({ onStart }) => {
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
         className="mb-16"
       >
+        {/* Infografikas — pirmas po hero, kad sutaptų su reklama */}
+        <div className="mb-10 md:mb-14">
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxOpen(true);
+            }}
+            className="group relative w-full max-w-5xl mx-auto block rounded-xl overflow-hidden border border-gray-700/60 hover:border-blue-500/40 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 shadow-2xl shadow-black/30"
+            aria-label="Atidaryti infografiką per visą ekraną"
+          >
+            <img
+              src={INFOGRAPHIC_SRC}
+              alt="Infografikas: nepraraskite klientų dėl vėluojančių atsakymų — problema ir Clarivex sprendimas"
+              className="w-full h-auto"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+            />
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+              <span className="opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 px-4 py-2 rounded-full bg-black/60 text-white text-sm font-medium">
+                <ZoomIn className="w-4 h-4" />
+                Peržiūrėti didesniu
+              </span>
+            </div>
+          </button>
+          <p className="text-center text-gray-500 text-xs mt-3">
+            Paspauskite paveikslėlį — didesniam vaizdui
+          </p>
+        </div>
+
+        <div className="text-center mb-8">
+          <Button
+            onClick={onStart}
+            className="w-full sm:w-auto px-8 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-medium rounded-xl shadow-lg shadow-purple-500/25"
+          >
+            Pradėti nemokamai
+          </Button>
+          <p className="text-gray-500 text-xs mt-3">
+            Pirmam atsakiklio paleidimui padedame nemokamai
+          </p>
+        </div>
+
+        <p className="text-center text-gray-500 text-sm mb-8">
+          Slinkite žemyn — daugiau apie problemą ir sprendimą
+        </p>
+
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-start mb-10">
           {/* Problema */}
           <div className="rounded-2xl border border-red-500/25 bg-red-950/20 p-6 md:p-7">
@@ -227,33 +285,6 @@ const AtsakiklisProblemSection = ({ onStart }) => {
           </div>
         </div>
 
-        {/* Pilnas infografikas */}
-        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 md:p-6 mb-8">
-          <p className="text-center text-gray-400 text-sm mb-4">
-            Visą infografiką galite peržiūrėti detaliau — paspauskite ant paveikslėlio
-          </p>
-          <button
-            type="button"
-            onClick={() => setLightboxOpen(true)}
-            className="group relative w-full max-w-4xl mx-auto block rounded-xl overflow-hidden border border-gray-700/60 hover:border-blue-500/40 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
-            aria-label="Atidaryti infografiką per visą ekraną"
-          >
-            <img
-              src={INFOGRAPHIC_SRC}
-              alt="Infografikas: nepraraskite klientų dėl vėluojančių atsakymų — problema ir Clarivex sprendimas"
-              className="w-full h-auto"
-              loading="lazy"
-              decoding="async"
-            />
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors flex items-center justify-center">
-              <span className="opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 px-4 py-2 rounded-full bg-black/60 text-white text-sm font-medium">
-                <ZoomIn className="w-4 h-4" />
-                Peržiūrėti didesniu
-              </span>
-            </div>
-          </button>
-        </div>
-
         {/* Greitos naudos */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
           {quickFeatures.map(({ icon: Icon, label, sub }) => (
@@ -268,17 +299,6 @@ const AtsakiklisProblemSection = ({ onStart }) => {
           ))}
         </div>
 
-        <div className="text-center">
-          <Button
-            onClick={onStart}
-            className="w-full sm:w-auto px-8 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-medium rounded-xl shadow-lg shadow-purple-500/25"
-          >
-            Pradėti nemokamai
-          </Button>
-          <p className="text-gray-500 text-xs mt-3">
-            Pirmam atsakiklio paleidimui padedame nemokamai
-          </p>
-        </div>
       </motion.div>
 
       <InfographicLightbox open={lightboxOpen} onClose={closeLightbox} />

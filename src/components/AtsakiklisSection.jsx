@@ -134,7 +134,7 @@ const AtsakiklisSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          className="text-center mb-6 md:mb-8"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -156,33 +156,8 @@ const AtsakiklisSection = () => {
             </span>
           </h1>
 
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-4">
-            Jūsų verslui — automatinis atsakymas per kelias sekundes, net kai ilsitės. Messenger,
-            Instagram DM ir komentarai lietuvių kalba.
-          </p>
-          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed mb-4">
-            Kiekvienai paskyrai atskirai: kada AI atsakinėja, skirtingos taisyklės žinutėms ir komentarams,
-            po jūsų atsakymo — 4 val. pertrauka automatikai tame pokalbyje. Pirmam paleidimui padedame
-            nemokamai.
-          </p>
-          <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
-            El. laiškų juodraščius ir platesnę platformą —{' '}
-            <Link to="/features" className="text-blue-400 hover:text-blue-300">
-              Clarivex AI funkcijos verslui
-            </Link>
-            ; techninę eigą —{' '}
-            <Link to="/kaip-veikia" className="text-blue-400 hover:text-blue-300">
-              kaip veikia Clarivex AI
-            </Link>
-            .{' '}
-            <Link to="/kainos" className="text-blue-400 hover:text-blue-300">
-              Kainos ir kreditų sistema
-            </Link>
-            ,{' '}
-            <Link to="/nauda" className="text-blue-400 hover:text-blue-300">
-              nauda verslui
-            </Link>
-            .
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            Jūsų verslui — automatinis atsakymas per kelias sekundes, net kai ilsitės.
           </p>
         </motion.div>
 
