@@ -193,6 +193,9 @@ function BlogPostPage({ post, language = 'lt' }) {
                     src={post.imageUrl}
                     alt={post.featuredImageAlt || post.title}
                     className="mt-10 w-full rounded-3xl border border-gray-800 object-cover max-h-[480px]"
+                    loading="lazy"
+                    width="1200"
+                    height="630"
                   />
                 ) : null}
               </div>

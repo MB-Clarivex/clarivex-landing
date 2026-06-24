@@ -502,7 +502,7 @@ export const contentPages = [
     path: '/kas-yra-ai-asistentas',
     cluster: 'knowledge',
     type: 'guide',
-    title: 'Kas yra AI asistentas ir kuo jis skiriasi nuo chat įrankio',
+    title: 'Kas yra AI asistentas ir kuo skiriasi nuo chat įrankio',
     description: 'AI asistentas yra sistema, kuri ne tik atsako į klausimus, bet padeda atlikti veiksmus, išlaikyti kontekstą ir valdyti darbo eigą.',
     intro: 'AI asistentas yra daugiau nei pokalbių langas. Jis supranta užklausą, prisimena kontekstą ir, geriausiu atveju, padeda pereiti nuo atsakymo prie realaus veiksmo: laiško, užrašo, priminimo ar publikacijos.',
     highlights: [
@@ -671,8 +671,8 @@ export const contentPages = [
     path: '/kaip-saugiai-prijungti-el-pasta-prie-ai',
     cluster: 'knowledge',
     type: 'guide',
-    title: 'Kaip saugiai prijungti el. paštą prie AI platformos',
-    description: 'Saugiam el. pašto prijungimui prie AI platformos svarbu naudoti OAuth ar App Password, aiškiai suprasti prieigas ir pasirinkti sistemą, kuri nenaudoja jūsų laiškų modelių mokymui.',
+    title: 'Kaip saugiai prijungti el. paštą prie AI',
+    description: 'Saugiam el. pašto prijungimui prie AI svarbu OAuth ar App Password, aiškios prieigos ir sistema, kuri nenaudoja jūsų laiškų modelių mokymui.',
     intro: 'Saugus el. pašto prijungimas prie AI platformos prasideda nuo tinkamo autentifikavimo ir aiškaus prieigų supratimo. Reikia žinoti, kokius duomenis sistema pasiekia, kaip jie saugomi ir ar jie naudojami tik paslaugos teikimui.',
     highlights: [
       'Saugiausia naudoti OAuth ar App Password mechanizmus.',
@@ -804,7 +804,7 @@ export const contentPages = [
     cluster: 'comparisons',
     type: 'comparison',
     title: 'Clarivex ar ChatGPT smulkiam verslui Lietuvoje',
-    description: 'ChatGPT puikiai tinka bendroms užklausoms, o Clarivex labiau orientuotas į smulkaus verslo workflow: el. paštą, socialinius tinklus, Telegram ir lietuvišką kasdienę rutiną.',
+    description: 'ChatGPT tinka bendroms užklausoms, Clarivex – smulkaus verslo workflow: el. paštas, socialiniai tinklai, Telegram ir lietuviška kasdienė rutina.',
     intro: 'Renkantis tarp Clarivex ir ChatGPT svarbu suprasti, ko tiksliai reikia verslui. Jei reikia universalaus pokalbių AI, ChatGPT yra stiprus pasirinkimas. Jei reikia AI, kuris labiau orientuotas į lietuvišką kasdienę verslo rutiną ir susietus workflow, Clarivex gali būti praktiškesnis.',
     highlights: [
       'ChatGPT stiprus kaip universalus AI pokalbių įrankis.',
@@ -978,9 +978,9 @@ export const contentPages = [
     path: '/partneriams-ir-ziniasklaidai',
     cluster: 'authority',
     type: 'authority',
-    title: 'Clarivex partneriams ir žiniasklaidai – AI automatizavimas Lietuvoje',
+    title: 'Partneriams ir žiniasklaidai – AI Lietuvoje',
     description:
-      'Oficiali Clarivex informacija žiniasklaidai ir partneriams: AI platforma lietuvių kalba, socialinių tinklų ir el. pašto automatizavimas, lanksti kreditų sistema. Nuorodos ir temos interviu bei katalogams.',
+      'Oficiali Clarivex informacija žiniasklaidai ir partneriams: AI platforma lietuvių kalba, socialiniai tinklai, el. paštas ir lanksti kreditų sistema.',
     intro: 'Jei rašote apie Clarivex, dedate mus į AI įrankių katalogą, ruošiat interviu ar partnerystės puslapį, svarbu naudoti nuoseklų produkto aprašymą. Šis puslapis padeda greitai suprasti, ką Clarivex daro ir kokius signalus verta išlaikyti nuoseklius internete.',
     highlights: [
       'Clarivex yra AI asistentų platforma lietuvių kalba.',

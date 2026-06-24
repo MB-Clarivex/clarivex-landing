@@ -24,10 +24,10 @@ const TermsOfService = () => {
   return (
     <>
       <Helmet>
-        <title>Clarivex naudojimosi sąlygos - platformos taisyklės ir mokėjimai</title>
+        <title>Naudojimosi sąlygos — Clarivex</title>
         <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Clarivex naudojimosi sąlygos - platformos taisyklės ir mokėjimai" />
+        <meta property="og:title" content="Naudojimosi sąlygos — Clarivex" />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
@@ -39,7 +39,7 @@ const TermsOfService = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Clarivex naudojimosi sąlygos - platformos taisyklės ir mokėjimai" />
+        <meta name="twitter:title" content="Naudojimosi sąlygos — Clarivex" />
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={socialImage} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>

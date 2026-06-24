@@ -18,7 +18,7 @@ const copy = {
   lt: {
     title: 'AI naujienų ir įžvalgų blogas',
     description:
-      'Clarivex AI blogas apie dirbtinio intelekto naujienas, reguliaciją ir praktines įžvalgas verslui Lietuvoje ir Europoje.',
+      'Clarivex AI blogas: dirbtinio intelekto naujienos, reguliacija ir praktinės įžvalgos verslui Lietuvoje ir Europoje. Skaitykite naujausius straipsnius.',
     home: 'Pradžia',
     blog: 'Blogas',
     empty: 'Straipsnių dar nėra. Netrukus čia pasirodys naujausios AI naujienos.',
@@ -31,7 +31,7 @@ const copy = {
   en: {
     title: 'AI news and insights blog',
     description:
-      'Clarivex AI blog covering artificial intelligence news, regulation, and practical insights for business.',
+      'Clarivex AI blog: artificial intelligence news, regulation and practical insights for business in Europe and Lithuania. Read the latest articles.',
     home: 'Home',
     blog: 'Blog',
     empty: 'No articles yet. Latest AI news will appear here soon.',
@@ -142,6 +142,8 @@ function BlogIndexPage({ language = 'lt' }) {
                           alt={post.featuredImageAlt || post.title}
                           className="w-full h-48 object-cover"
                           loading="lazy"
+                          width="1200"
+                          height="630"
                         />
                       ) : null}
                       <div className="p-7">
