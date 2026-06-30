@@ -12,6 +12,7 @@ import {
   FileText,
   Search,
   History,
+  Download,
   Server,
   Globe,
   Gauge,
@@ -134,6 +135,12 @@ const capabilities = [
     description:
       'Kiekvienas pakeitimas išsaugomas. „Atšaukti“ grąžina į būseną prieš jūsų paskutinį veiksmą.',
   },
+  {
+    icon: Download,
+    title: 'Parsisiųskite ir talpinkite kur norite',
+    description:
+      'Nesate pririšti prie mūsų — svetainę galite bet kada atsisiųsti (visi failai) ir talpinti savo pasirinktoje vietoje.',
+  },
 ];
 
 const tiers = [
@@ -159,6 +166,10 @@ const faqs = [
   {
     q: 'Ar talpinimas tikrai nemokamas?',
     a: 'Taip. Publikuota svetainė talpinama nemokamai adresu jūsų-vardas.clarivex.ai — be mėnesinio mokesčio už hostingą.',
+  },
+  {
+    q: 'Ar galiu išsivežti svetainę pas save?',
+    a: 'Taip. Svetainę galite bet kada parsisiųsti (visi failai) ir talpinti savo pasirinktoje vietoje arba prie savo domeno — nesate pririšti prie Clarivex.',
   },
   {
     q: 'Kiek kainuoja sukurti svetainę?',
@@ -246,6 +257,26 @@ const SvetainiuKurejasSection = () => {
             Pradėti kurti
             <ChevronRight className="w-4 h-4 ml-1" />
           </Button>
+        </motion.div>
+
+        {/* KAINOS KABLYS */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-16 flex justify-center"
+        >
+          <div className="inline-flex items-start gap-3 rounded-2xl border border-blue-500/30 bg-gradient-to-r from-blue-500/10 to-purple-500/10 px-6 py-5 max-w-3xl">
+            <span className="text-2xl leading-none">☕</span>
+            <p className="text-left text-base md:text-lg text-gray-200 leading-relaxed">
+              Pilnai funkcionuojanti svetainė jums kainuos{' '}
+              <span className="font-semibold text-white">
+                mažiau nei kava degalinėje
+              </span>{' '}
+              — o agentūros už tą patį prašo šimtų ar net tūkstančių eurų.
+            </p>
+          </div>
         </motion.div>
 
         {/* VERTĖ / NAUDA */}
