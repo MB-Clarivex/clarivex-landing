@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
   Sparkles,
+  Share2,
   Wand2,
   Palette,
   LayoutGrid,
@@ -30,11 +31,30 @@ const accentBg = 'bg-blue-500/10';
 
 const APP_URL = 'https://app.clarivex.ai/landing-generator';
 
+const valueItems = [
+  {
+    title: 'Jau turite auditoriją',
+    body: 'Facebook ir Instagram sekėjai turi kur nueiti — svetainė suteikia patikimumo ir vietą užklausoms bei rezervacijoms.',
+  },
+  {
+    title: 'Be techninių žinių',
+    body: 'Nereikia dizainerio ar programuotojo. Prijungiate social arba aprašote — likusį darbą atlieka AI.',
+  },
+  {
+    title: 'Per kelias minutes',
+    body: 'Ne savaitės derinimų su agentūra — veikianti, graži svetainė tą pačią dieną.',
+  },
+  {
+    title: 'Nemokamas talpinimas',
+    body: 'Publikuojate ir talpinate be papildomų mokesčių. Mokate tik už AI naudojimą.',
+  },
+];
+
 const steps = [
   {
     n: '1',
-    title: 'Aprašykite verslą',
-    body: 'Parašykite, ką siūlote, ir pridėkite konkrečias instrukcijas — kainas, paketus, adresus, frazes. Tai naudojama tiksliai, ne prasimanoma.',
+    title: 'Prijunkite social arba aprašykite verslą',
+    body: 'Prijungę Facebook ir Instagram, leidžiate AI surinkti jūsų veiklos kontekstą — toną, paslaugas, įrašus. Arba tiesiog aprašykite ir pridėkite kainas, paketus, adresus.',
   },
   {
     n: '2',
@@ -54,6 +74,12 @@ const steps = [
 ];
 
 const capabilities = [
+  {
+    icon: Share2,
+    title: 'Facebook ir Instagram kontekstas',
+    description:
+      'Prijungę paskyras, leidžiate AI surinkti jūsų veiklą, toną ir įrašus — svetainė kuriama iš to, ką jau turite, ne nuo nulio.',
+  },
   {
     icon: Wand2,
     title: 'AI tekstai ir dizainas',
@@ -136,7 +162,11 @@ const faqs = [
   },
   {
     q: 'Kiek kainuoja sukurti svetainę?',
-    a: 'Mokate tik už generavimą ir redagavimą kreditais — pagal realią AI kainą su mūsų antkainiu. Nuotraukų generavimas turi fiksuotą kainą. Talpinimas nieko nekainuoja.',
+    a: 'Mokate tik už AI naudojimą — kreditais, pagal realų sunaudojimą generuojant ir redaguojant. Talpinimas nieko nekainuoja, jokio mėnesinio abonemento.',
+  },
+  {
+    q: 'Ar reikia prijungti Facebook ir Instagram?',
+    a: 'Nebūtina, bet verta: prijungę paskyras leidžiate AI surinkti jūsų veiklos kontekstą ir įrašus, tad svetainė sukuriama tiksliau ir greičiau. Galite ir tiesiog viską aprašyti ranka.',
   },
   {
     q: 'Ar galiu naudoti savo nuotraukas?',
@@ -204,8 +234,9 @@ const SvetainiuKurejasSection = () => {
           </h1>
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-            Aprašykite verslą — AI sukuria pilną svetainę su tekstais, nuotraukomis
-            ir dizainu. Redaguokite pokalbiu ar pieštuku ir publikuokite nemokamai.
+            Turite verslą ir esate Facebook bei Instagram, bet neturite svetainės?
+            Prijunkite paskyras — AI iš jūsų konteksto sukurs profesionalią svetainę.
+            Greita, be techninių žinių, talpinimas nemokamas.
           </p>
 
           <Button
@@ -215,6 +246,33 @@ const SvetainiuKurejasSection = () => {
             Pradėti kurti
             <ChevronRight className="w-4 h-4 ml-1" />
           </Button>
+        </motion.div>
+
+        {/* VERTĖ / NAUDA */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-20 rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8 backdrop-blur-sm"
+        >
+          <p className="text-center text-lg md:text-xl font-semibold text-white mb-6">
+            Social tinkluose jus jau randa — <span className={accentText}>laikas turėti ir svetainę</span>
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {valueItems.map((item, i) => (
+              <div
+                key={i}
+                className="rounded-xl border border-gray-700/60 bg-gray-900/40 p-4 text-left"
+              >
+                <div className="flex items-center gap-2 mb-2">
+                  <CheckCircle2 className={`w-4 h-4 shrink-0 ${accentText}`} />
+                  <span className="font-medium text-white text-sm">{item.title}</span>
+                </div>
+                <p className="text-gray-400 text-sm leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
         </motion.div>
 
         {/* KAIP VEIKIA */}
@@ -387,8 +445,8 @@ const SvetainiuKurejasSection = () => {
             {[
               {
                 icon: CreditCard,
-                title: 'Mokate už naudojimą',
-                body: 'Kreditais — pagal realią AI kainą su antkainiu. Jokio mokesčio už patį faktą.',
+                title: 'Mokate tik už naudojimą',
+                body: 'Kreditais — pagal realų AI sunaudojimą. Jokio abonemento ar mokesčio už patį faktą.',
               },
               {
                 icon: Server,
