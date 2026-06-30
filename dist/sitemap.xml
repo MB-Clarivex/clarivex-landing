@@ -37,6 +37,12 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://www.clarivex.ai/svetainiu-kurejas</loc>
+    <lastmod>2026-03-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://www.clarivex.ai/kainos</loc>
     <lastmod>2026-03-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -197,6 +203,18 @@
     <lastmod>2026-03-19T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.clarivex.ai/en/blog/ai-regulation-us-chaos-europe-balance-business</loc>
+    <lastmod>2026-06-25T18:39:06.397Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.clarivex.ai/blog/ai-reguliavimas-skyla-i-dvi-trajektorijas-ka-verslui-reiskia-jav-politinis-chaosas-ir-es-balanso</loc>
+    <lastmod>2026-06-25T18:39:06.291Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.clarivex.ai/en/blog/ai-policy-security-mode-five-eyes-warning-europe</loc>

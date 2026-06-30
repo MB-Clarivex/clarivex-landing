@@ -12,6 +12,7 @@ const primaryNavLinks = [
   { id: 'benefits', label: 'Nauda', href: '/nauda' },
   { id: 'telegram', label: 'Telegram', href: '/telegram' },
   { id: 'atsakiklis', label: 'Atsakiklis', href: '/atsakiklis' },
+  { id: 'svetaines', label: 'Svetainės', href: '/svetainiu-kurejas' },
   { id: 'pricing', label: 'Kainodara', href: '/kainos' },
 ];
 

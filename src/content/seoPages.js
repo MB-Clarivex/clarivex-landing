@@ -124,6 +124,14 @@ export const existingPageMetadata = [
     changefreq: 'weekly',
   },
   {
+    path: '/svetainiu-kurejas',
+    title: 'Clarivex AI svetainių kūrėjas – svetainė per kelias minutes',
+    description:
+      'Sukurkite profesionalią svetainę su AI: tekstai, nuotraukos, dizainas, galerijos ir redagavimas pokalbiu. Nemokamas talpinimas adresu jūsų-vardas.clarivex.ai.',
+    priority: '0.85',
+    changefreq: 'weekly',
+  },
+  {
     path: '/kainos',
     title: 'Clarivex AI kainos – kreditai be abonemento',
     description:

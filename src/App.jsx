@@ -33,8 +33,8 @@ function lazyPage(loader) {
 }
 
 const pageModules = isServer
-  ? import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,AtsakiklisPage,ResourcesHubPage,SeoResourcePage,BlogIndexPage,BlogPostPage}.jsx', { eager: true })
-  : import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,AtsakiklisPage,ResourcesHubPage,SeoResourcePage,BlogIndexPage,BlogPostPage}.jsx');
+  ? import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,AtsakiklisPage,SvetainiuKurejasPage,ResourcesHubPage,SeoResourcePage,BlogIndexPage,BlogPostPage}.jsx', { eager: true })
+  : import.meta.glob('./components/{PrivacyPolicy,TermsOfService,DataDeletion,FAQ,Status,PricingPage,FeaturesPage,HowItWorksPage,BenefitsPage,TelegramPage,AtsakiklisPage,SvetainiuKurejasPage,ResourcesHubPage,SeoResourcePage,BlogIndexPage,BlogPostPage}.jsx');
 
 function createPageComponent(modulePath) {
   const moduleOrLoader = pageModules[modulePath];
@@ -61,6 +61,9 @@ const HowItWorksPage = createPageComponent('./components/HowItWorksPage.jsx');
 const BenefitsPage = createPageComponent('./components/BenefitsPage.jsx');
 const TelegramPage = createPageComponent('./components/TelegramPage.jsx');
 const AtsakiklisPage = createPageComponent('./components/AtsakiklisPage.jsx');
+const SvetainiuKurejasPage = createPageComponent(
+  './components/SvetainiuKurejasPage.jsx',
+);
 const ResourcesHubPage = createPageComponent('./components/ResourcesHubPage.jsx');
 const SeoResourcePage = createPageComponent('./components/SeoResourcePage.jsx');
 const BlogIndexPage = createPageComponent('./components/BlogIndexPage.jsx');
@@ -202,6 +205,7 @@ export const routeDefinitions = [
   { path: '/nauda', component: BenefitsPage },
   { path: '/telegram', component: TelegramPage },
   { path: '/atsakiklis', component: AtsakiklisPage },
+  { path: '/svetainiu-kurejas', component: SvetainiuKurejasPage },
   { path: '/resursai', component: ResourcesHubPage },
   { path: '/blog', component: BlogIndexPage, props: { language: 'lt' } },
   { path: '/en/blog', component: BlogIndexPage, props: { language: 'en' } },
