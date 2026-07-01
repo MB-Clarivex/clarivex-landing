@@ -153,13 +153,13 @@ const tiers = [
   {
     name: 'Ekonominis',
     tagline: 'Greita ir taupu',
-    body: 'Sonnet 4.6 ir Haiku modeliai. Tinka, kai svarbiausia greitis ir mažesnė kaina.',
+    body: 'Sonnet 5 ir Haiku modeliai. Tinka, kai svarbiausia greitis ir mažesnė kaina.',
   },
   {
     name: 'Premium',
     tagline: 'Numatytas balansas',
     highlight: true,
-    body: 'Opus 4.8 architektūrai ir dizainui, Sonnet 4.6 tekstams ir redagavimui. Geriausias santykis kokybė / kaina.',
+    body: 'Opus 4.8 architektūrai ir dizainui, Sonnet 5 tekstams ir redagavimui. Geriausias santykis kokybė / kaina.',
   },
   {
     name: 'Maksimalus',

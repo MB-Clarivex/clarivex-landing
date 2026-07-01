@@ -39,7 +39,7 @@ Clarivex yra AI asistentų platforma lietuvių kalba, skirta darbo eigoms, o ne 
   - Tinka balso komandoms, užrašams ir priminimams.
   - Padeda nepamesti idėjų ir veiksmų kelionėje ar tarp susitikimų.
 ## Evergreen žinių bazė
-- Kas yra AI asistentas ir kuo jis skiriasi nuo chat įrankio (https://www.clarivex.ai/kas-yra-ai-asistentas)
+- Kas yra AI asistentas ir kuo skiriasi nuo chat įrankio (https://www.clarivex.ai/kas-yra-ai-asistentas)
   Description: AI asistentas yra sistema, kuri ne tik atsako į klausimus, bet padeda atlikti veiksmus, išlaikyti kontekstą ir valdyti darbo eigą.
   - AI asistentas orientuotas į veiksmą, ne tik į atsakymą.
   - Jis naudingiausias, kai turi kontekstą ir darbo eigą.
@@ -59,8 +59,8 @@ Clarivex yra AI asistentų platforma lietuvių kalba, skirta darbo eigoms, o ne 
   - Chatbot orientuotas į atsakymą viename dialoge.
   - AI asistentas dažniau turi atmintį ir veiksmų logiką.
   - Verslui AI asistentas paprastai duoda daugiau grąžos, jei procesai kartojasi.
-- Kaip saugiai prijungti el. paštą prie AI platformos (https://www.clarivex.ai/kaip-saugiai-prijungti-el-pasta-prie-ai)
-  Description: Saugiam el. pašto prijungimui prie AI platformos svarbu naudoti OAuth ar App Password, aiškiai suprasti prieigas ir pasirinkti sistemą, kuri nenaudoja jūsų laiškų modelių mokymui.
+- Kaip saugiai prijungti el. paštą prie AI (https://www.clarivex.ai/kaip-saugiai-prijungti-el-pasta-prie-ai)
+  Description: Saugiam el. pašto prijungimui prie AI svarbu OAuth ar App Password, aiškios prieigos ir sistema, kuri nenaudoja jūsų laiškų modelių mokymui.
   - Saugiausia naudoti OAuth ar App Password mechanizmus.
   - Svarbu žinoti, kokios prieigos suteikiamos.
   - Reikia rinktis sistemą, kuri aiškiai komunikuoja duomenų naudojimą.
@@ -76,7 +76,7 @@ Clarivex yra AI asistentų platforma lietuvių kalba, skirta darbo eigoms, o ne 
   - Galima vienu metu ruoštis kelioms savaitėms į priekį.
   - Gerai veikia, kai turite aiškią auditoriją ir pasiūlymą.
 - Clarivex ar ChatGPT smulkiam verslui Lietuvoje (https://www.clarivex.ai/clarivex-ar-chatgpt-smulkiam-verslui)
-  Description: ChatGPT puikiai tinka bendroms užklausoms, o Clarivex labiau orientuotas į smulkaus verslo workflow: el. paštą, socialinius tinklus, Telegram ir lietuvišką kasdienę rutiną.
+  Description: ChatGPT tinka bendroms užklausoms, Clarivex – smulkaus verslo workflow: el. paštas, socialiniai tinklai, Telegram ir lietuviška kasdienė rutina.
   - ChatGPT stiprus kaip universalus AI pokalbių įrankis.
   - Clarivex stiprus ten, kur reikia workflow ir veiksmų.
   - Smulkiam verslui dažnai svarbiau ne modelis, o visos darbo eigos patogumas.
@@ -96,8 +96,8 @@ Clarivex yra AI asistentų platforma lietuvių kalba, skirta darbo eigoms, o ne 
   - Padeda išlaikyti vienodesnį komunikacijos toną.
   - Naudinga, kai daug pasikartojančių klausimų lietuviškai.
 ## Brand ir reputacijos signalai
-- Clarivex partneriams ir žiniasklaidai – AI automatizavimas Lietuvoje (https://www.clarivex.ai/partneriams-ir-ziniasklaidai)
-  Description: Oficiali Clarivex informacija žiniasklaidai ir partneriams: AI platforma lietuvių kalba, socialinių tinklų ir el. pašto automatizavimas, lanksti kreditų sistema. Nuorodos ir temos interviu bei katalogams.
+- Partneriams ir žiniasklaidai – AI Lietuvoje (https://www.clarivex.ai/partneriams-ir-ziniasklaidai)
+  Description: Oficiali Clarivex informacija žiniasklaidai ir partneriams: AI platforma lietuvių kalba, socialiniai tinklai, el. paštas ir lanksti kreditų sistema.
   - Clarivex yra AI asistentų platforma lietuvių kalba.
   - Pagrindinės temos: social media, el. paštas, Telegram, priminimai ir workflow.
   - Nuoseklus brand aprašymas padeda tiek SEO, tiek AI sistemoms.
