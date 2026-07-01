@@ -136,6 +136,12 @@ const capabilities = [
       'Kiekvienas pakeitimas išsaugomas. „Atšaukti“ grąžina į būseną prieš jūsų paskutinį veiksmą.',
   },
   {
+    icon: Globe,
+    title: 'Savas domenas — nemokamai',
+    description:
+      'Turite domeną (pvz. mano-verslas.lt)? Prijunkite jį. Pridedate vieną DNS įrašą pas savo tiekėją — kaip įprasta — ir svetainė gyvena jūsų domenu. Jokių papildomų mokesčių.',
+  },
+  {
     icon: Download,
     title: 'Parsisiųskite ir talpinkite kur norite',
     description:
@@ -166,6 +172,10 @@ const faqs = [
   {
     q: 'Ar talpinimas tikrai nemokamas?',
     a: 'Taip. Publikuota svetainė talpinama nemokamai adresu jūsų-vardas.clarivex.ai — be mėnesinio mokesčio už hostingą.',
+  },
+  {
+    q: 'Ar galiu naudoti savo domeną?',
+    a: 'Taip, ir tai nieko papildomai nekainuoja. Turite domeną — prijunkite jį: pridedate vieną DNS įrašą pas savo domeno tiekėją (kaip ir jungiant bet kurią kitą paslaugą), ir svetainė atsidaro jūsų domenu su saugiu SSL. Atsineškite savo domeną — viskas.',
   },
   {
     q: 'Ar galiu išsivežti svetainę pas save?',
@@ -442,15 +452,16 @@ const SvetainiuKurejasSection = () => {
               <p className="text-gray-400 leading-relaxed">
                 Publikuota svetainė gyvena adresu{' '}
                 <span className={accentText}>jūsų-vardas.clarivex.ai</span> be jokio
-                mėnesinio mokesčio už hostingą. Publikuokite ir nuimkite vienu
-                paspaudimu, peržiūrėkite prieš paskelbdami.
+                mėnesinio mokesčio už hostingą. Turite savo domeną? Prijunkite jį —
+                pridedate vieną DNS įrašą pas tiekėją ir viskas, jokių papildomų
+                mokesčių. Publikuokite ir nuimkite vienu paspaudimu.
               </p>
             </div>
             <div className="grid grid-cols-1 gap-2 shrink-0">
               {[
-                { icon: Globe, label: 'Viešas adresas .clarivex.ai' },
+                { icon: Globe, label: 'Savas domenas — nemokamai' },
                 { icon: Rocket, label: 'Publikavimas vienu paspaudimu' },
-                { icon: ShieldCheck, label: 'Peržiūra prieš paskelbiant' },
+                { icon: ShieldCheck, label: 'Saugus SSL automatiškai' },
               ].map((it) => (
                 <div key={it.label} className="flex items-center gap-2">
                   <it.icon className={`w-4 h-4 ${accentText}`} />
